@@ -1,0 +1,301 @@
+#contacto {
+    display:flex;
+    flex-direction:column; 
+    justify-content:center;
+    align-items:center;
+    padding:2rem;
+    font-size:1.2rem;
+    font-family: var(--font);
+    color: var(--textcolor);
+    }
+    
+    #contacto section {
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 3rem;
+    width: 100%;
+    }
+    
+    #contacto h1 {
+    color: var(--colortextodestacado);
+    text-align: center;
+    font-size:4rem;
+    width: 50%;
+    height: 50%;
+    margin: 2rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    }
+    
+    #contacto h3{
+    color: var(--colortextodestacado);
+    font-size: 2rem;
+      }
+    
+    #contacto ul {
+    padding: 30px;
+    }
+    
+    #contacto form {
+    width: 100%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    }
+    
+    #contacto label {
+    margin-top: 10px;
+    }
+    
+    #contacto input,select,textarea {
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #add;
+    border-radius: 4px;
+    width: 100%;
+    }
+    
+    #contacto select {
+    width: 30%;
+    text-align: center;
+    font-size: 1.2rem;
+    }
+    
+    #contacto textarea {
+    min-width: 100%;
+    height: 30vh;
+    }
+    
+    #contacto .contenedorboton {
+    text-align:center;
+    }
+    
+    #contacto button {
+    width: 50%;
+    background-color: var(--textcolor);
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size:2rem;
+    padding: 0.5rem;
+    }
+    
+    #contacto button:hover {
+    background-color: var(--colorbackground);
+    }
+    
+    #contacto .formulario h3{
+    padding: 0.5rem;
+    font-size: 30px;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    }
+    
+    #contacto .mi-formulario {
+    margin: auto;
+    width: 80%;
+    border: 1px solid var(--colorbackground); 
+    padding: 30px;
+    border-radius: 5px;
+    font-size: 30px;
+    }
+    #contacto .acepto {
+    font-weight: bolder;
+    margin: 1rem;
+    padding: 2rem;
+    text-align: center;
+    }
+    #contacto a:hover{
+      opacity: 0.5;
+    }
+    #contacto .aviso {
+    font-size: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    line-height: 2rem;
+    }
+    #contacto .datos{
+    line-height: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    }
+    
+    #contacto .map-container {
+    border: 1px solid #ccc;
+    margin: 2rem;
+    text-align: center;
+    width: 80%;
+    padding: 0.5rem;
+    }
+    
+    #contacto iframe { 
+    width: 100%;
+    height: 60vh;
+    margin:0;
+    }
+    
+    #contacto .sugerencias { 
+    width: 60%;
+    margin: 10rem;
+    padding: 2rem;
+    line-height: rem;
+      }
+      #contacto .sugerencias ul{ 
+    list-style-type: square;
+      }
+          
+      #contacto .sugerencias label{ 
+    display:block;
+    margin:1rem;
+    width: 20%;
+    text-align: center;
+        }
+    
+    /** botón leer mas, leer menos **/
+    #contacto #leemenos_boton {
+    display:none;
+      
+    }
+    
+    #contacto #leemas_boton, #contacto #leemenos_boton {
+    color:white;
+    background-color:var(--textcolor);
+    padding:0.5rem;
+    border-radius:3px;
+    margin: 2rem;
+    }
+    
+    #contacto #leemas_boton:hover, #contacto #leemenos_boton:hover {
+    background-color:var(--colorbackground);
+    }
+    
+    /* Checkbox oculto */
+    #contacto #leermas {
+    display: none;/*ocultar cuadro checkbox*/
+    }
+    
+    #contacto .textooculto {
+    display: none;/*ocultar texto*/
+    margin: 2rem;
+    }
+    
+    /* Mostrar el texto oculto y el botón "Leer menos" cuando el checkbox está marcado, y ocultar el de "Leer más" */
+    #contacto #leermas:checked + .textooculto {
+    display: block;/*mostrar texto cuando el check esta activado*/
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    }
+    
+    #contacto #leermas:checked ~ #leemas_boton {
+    display: none;/*ocultar el label leemas_boton cuando check esta activado*/ 
+    }
+    
+    #contacto #leermas:checked ~ #leemenos_boton {
+    display: inline-block;/*mosstrar el label leemas_menos cuando check esta activado*/ 
+    }
+    
+    /* Estilos para móviles */ 
+    
+    @media (max-width: 600px) { 
+      #contacto .formulario h3 {
+    font-size: 1rem;
+       }
+    #contacto .sugerencias { 
+    font-size: 1.2rem;
+    width: 80%;
+    }
+    #contacto .sugerencias label{ 
+    width: 40%;
+    }
+    #contacto .formulario h3{
+    font-size: 2rem;
+    }
+    #contacto .formulario input{
+    font-size: 1.2rem;
+    }
+          
+    }
+    
+    /* Estilos para tablet */ 
+    
+    @media (max-width: 768px) { 
+      #contacto .formulario h3 {
+    font-size: 1.5rem;
+       }
+    #contacto .sugerencias { 
+    font-size: 1.6rem;
+    width: 90%;
+    }
+    #contacto .sugerencias label{ 
+    width: 50%;
+    }
+    #contacto .formulario h3{
+    font-size: 2.5rem;
+    }
+    #contacto .formulario input{
+    font-size: 1.6rem;
+    }
+          
+    }
+    
+    /*************** ESTILOS RGPD ****************/
+    #rgdp {
+      display:flex;
+      flex-direction: column;
+      height: 100%;
+      font-style: normal;
+      font-family: var(--font);
+      color: var(--textcolor);
+      font-size: 1.2rem;
+    }
+    #rgdp h1{
+    padding: 20px;
+    font-size:2rem;
+    font-weight: bold;
+    color:var(--colortextodestacado);
+    margin:0.5rem; 
+    }
+    #rgdp h3{
+      padding: 10px;
+      font-size:1.5rem;
+      font-weight: bold;
+      color:var(--colortextodestacado);  
+      }
+    #rgdp main{
+      display: flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      align-items:center;
+      padding: 2.5rem;
+      margin: 1.8rem;
+    }
+    #rgdp main .contenido{
+      background-color: white;
+      border-radius:10px;
+      padding: 3.5rem;
+      margin: 2rem 1rem;
+      line-height: 1.5rem;
+    }
+    #rgdp .proteccion-datos{
+      width:40%;
+      margin:auto;
+      text-align:center;
+    }
+    
+    /* Estilos para móviles */ 
+    
+    @media (max-width: 600px) { 
+      #rgdp .proteccion-datos{
+        width:100%;
+    
+      }
+    }
