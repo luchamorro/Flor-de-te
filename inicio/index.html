@@ -3,21 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="inicio.css">
     <title>Document</title>
 </head>
 <body>
-    <nav>
+    <nav class="menu">
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <label for="menu-toggle" class="menu-icon">☰</label>
-    
+        <img src="../img/logos/logo_horizontal.svg" alt="logo flor de te">
         <ul class="ul1">
-            <li class="Menu1">Menu</li>
             <li class="menu"><a href="index.html">Inicio</a></li>
             <li class="menu"><a href="nosotros.html">Nosotros</a></li>
             <li class="menu"><a href="contacto.html">Contacto</a></li>
             <li class="menu"><a href="carrito.html">Carrito</a></li>
-            <li class="menu"><a href="pagina.html">Página</a></li>
+            <li class="menu"><i class="fas fa-shopping-cart"></i><a href="pagina.html">Página</a></li>
         </ul>
     </nav>
+    <section class="hero-carousel">
+        <div class="hero-slide active" style="background-image: url('../img/inicio/hero1.jpeg');">
+            <div class="hero-text">
+                <h1>Flor de Té</h1>
+                <p>La mejor tienda de té en línea</p>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('../img/inicio/hero2.jpeg');">
+            <div class="hero-text">
+                <h1>Flor de Té</h1>
+                <p>Descubre nuestra variedad</p>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('../img/inicio/hero3.jpeg');">
+            <div class="hero-text">
+                <h1>Flor de Té</h1>
+                <p>Calidad y sabor asegurados</p>
+            </div>
+        </div>
+    </section>
+    <div class="carousel-controls">
+        <button id="prev" aria-label="Anterior">&#10094;</button>
+        <button id="next" aria-label="Siguiente">&#10095;</button>
+    </div>
+    <script src="inicio.js"></script>
 </body>
 </html>
