@@ -1,49 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="inicio.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="inicio.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <title>Document</title>
 </head>
+
 <body>
-    <nav class="menu">
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">☰</label>
-        <img src="../img/logos/logo_horizontal.svg" alt="logo flor de te">
-        <ul class="ul1">
-            <li class="menu"><a href="index.html">Inicio</a></li>
-            <li class="menu"><a href="nosotros.html">Nosotros</a></li>
-            <li class="menu"><a href="contacto.html">Contacto</a></li>
-            <li class="menu"><a href="carrito.html">Carrito</a></li>
-            <li class="menu"><i class="fas fa-shopping-cart"></i><a href="pagina.html">Página</a></li>
-        </ul>
-    </nav>
-    <section class="hero-carousel">
-        <div class="hero-slide active" style="background-image: url('../img/inicio/hero1.jpeg');">
-            <div class="hero-text">
-                <h1>Flor de Té</h1>
-                <p>La mejor tienda de té en línea</p>
-            </div>
-        </div>
-        <div class="hero-slide" style="background-image: url('../img/inicio/hero2.jpeg');">
-            <div class="hero-text">
-                <h1>Flor de Té</h1>
-                <p>Descubre nuestra variedad</p>
-            </div>
-        </div>
-        <div class="hero-slide" style="background-image: url('../img/inicio/hero3.jpeg');">
-            <div class="hero-text">
-                <h1>Flor de Té</h1>
-                <p>Calidad y sabor asegurados</p>
-            </div>
-        </div>
-    </section>
-    <div class="carousel-controls">
-        <button id="prev" aria-label="Anterior">&#10094;</button>
-        <button id="next" aria-label="Siguiente">&#10095;</button>
+  <nav class="menu">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <img src="../img/logos/logo_horizontal.svg" alt="logo flor de te" />
+    <ul class="ul1">
+      <li class="menu"><a href="index.html">Inicio</a></li>
+      <li class="menu"><a href="nosotros.html">Nosotros</a></li>
+      <li class="menu"><a href="contacto.html">Contacto</a></li>
+      <li class="menu"><a href="carrito.html">Carrito</a></li>
+    </ul>
+  </nav>
+  <section class="hero-carousel">
+    <div class="hero-slide active" style="background-image: url('../img/inicio/hero1.jpeg')">
+      <div class="hero-text">
+        <h1>Flor de Té</h1>
+        <p>La mejor tienda de té en línea</p>
+      </div>
     </div>
-    <script src="inicio.js"></script>
+    <div class="hero-slide" style="background-image: url('../img/inicio/hero2.jpeg')">
+      <div class="hero-text">
+        <h1>Flor de Té</h1>
+        <p>Descubre nuestra variedad</p>
+      </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('../img/inicio/hero3.jpeg')">
+      <div class="hero-text">
+        <h1>Flor de Té</h1>
+        <p>Calidad y sabor asegurados</p>
+      </div>
+    </div>
+  </section>
+  <div class="carousel-controls">
+    <button id="prev" aria-label="Anterior">&#10094;</button>
+    <button id="next" aria-label="Siguiente">&#10095;</button>
+  </div>
+
+  <section class="sobre-nosotros">
+    <img class="sobre-nosotros-img" src="../img/inicio/sobre-nosotros-2.jpeg" alt="te con decoracion" />
+    <div>
+      <h3>Sobre nosotros</h3>
+      <p class="sobre-nosotros-texto">
+        Nuestra misión es simple: proporcionar una experiencia incomparable en
+        cada taza. En Flor de Té, creemos que el té y el café son mucho más
+        que bebidas; son momentos de conexión, inspiración y calma. Nos
+        esforzamos por enriquecer tus rituales diarios con productos
+        auténticos, sabrosos y elaborados con dedicación. Al priorizar la
+        calidad, la sostenibilidad y la satisfacción de nuestros clientes,
+        aspiramos a convertirnos en tu aliado de confianza en la exploración
+        del maravilloso mundo del té y el café.
+      </p>
+    </div>
+  </section>
+  <div id="catalogoProductos" ></div> 
+
+  <script src="inicio.js"></script>
 </body>
+
 </html>

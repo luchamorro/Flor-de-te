@@ -1,0 +1,271 @@
+[
+    {
+      "id":1,
+      "nombre": "Infusión de Lavanda",
+      "descripcion": "Tiene propiedades relajantes, mejora la calidad del sueño y es antiinflamatorio.",
+      "img": "/img/productos/01_telavanda.png",
+      "filtros": [
+        "Relajante",
+        "Infusión",
+        "Descanso",
+        "Antiinflamatorio"
+      ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":2,
+      "nombre": "Té negro",
+      "descripcion": "Rico en antioxidantes, puede reducir el riesgo de enfermedades cardíacas y estimula la mente.",
+      "img": "/img/productos/02_tenegro.png",
+      "filtros": [
+        "Té",
+        "Antioxidantes",
+        "Estimulante"
+            ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":3,
+      "nombre": "Té verde",
+      "descripcion": "Alto en catequinas, para mejorar el metabolismo, propiedades antiinflamatorias, beneficia la salud de la piel y del sistema inmunológico.",
+      "img": "/img/productos/03_teverde.png",
+      "filtros": [
+        "Té",
+        "Antioxidantes",
+        "Antiinflamatorio"
+            ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":4,
+      "nombre": "Té oolong",
+      "descripcion": "También conocido como Té Azul. Ayuda al control del peso al acelerar el metabolismo, mejora la salud dental gracias a su contenido de fluoruro.",
+      "img": "/img/productos/04_teoolong.png",
+      "filtros": [
+        "Té",
+        "Salud dental"
+            ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":5,
+      "nombre": "Té Rojo",
+      "descripcion": "Ayuda a la digestión, tiene propiedades desintoxicantes y es un estimulante natural.",
+      "img": "/img/productos/05_terojo.png",
+      "filtros": [
+        "Té",
+        "Estimulante",
+        "Digestivo",
+        "Detox"
+            ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":6,
+      "nombre": "Té Blanco",
+      "descripcion": "Contiene polifenoles que ayuda a combatir el  envejecimiento prematuro. Fortalece el sistema inmunológico por su alto contenido de antioxidantes y tiene un sabor suave y delicado.",
+      "img": "/img/productos/06_teblanco.png",
+      "filtros": [
+        "Té",
+        "Antioxidantes"
+            ],
+      "precio": "4,15"
+    
+    },  
+
+    {
+      "id":7,
+      "nombre": "Infusión de Menta",
+      "descripcion": "Alivio digestivo, ideal para refrescarse, puede ayudar a reducir el estrés.",
+      "img": "/img/productos/07_infumenta.png",
+      "filtros": [
+        "Infusión",
+        "Digestivo"
+            ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":8,
+      "nombre": "Infusión de Jengibre",
+      "descripcion": "Mejora la digestión con propiedades antiinflamatorias y refuerza el sistema inmunológico.",
+      "img": "/img/productos/08_infujengibre.png",
+      "filtros": [
+        "Infusión",
+        "Digestivo",
+        "Antiinflamatorio"
+            ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":9,
+      "nombre": "Infusión de Manzanilla",
+      "descripcion": "Ayuda a conciliar el sueño, es antiinflamatorio y proporciona un alivio digestivo.",
+      "img": "/img/productos/09_infumanzanilla.png",
+      "filtros": [
+        "Infusión",
+        "Digestivo",
+        "Antiinflamatorio",
+        "Descanso"
+            ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":10,
+      "nombre": "Infusión de Hibisco",
+      "descripcion": "Reduce la presión arterial, tiene propiedades antioxidantes y tiene un sabor agrio, refrescante y único.",
+      "img": "/img/productos/10_infuhibisco.png",
+      "filtros": [
+        "Infusión",
+        "Refrescante",
+        "Antioxidantes"
+            ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":11,
+      "nombre": "Infusión de Frambuesa",
+      "descripcion": "Rica en antioxidantes, propiedades antiinflamatorias y sabor refrescante.",
+      "img": "/img/productos/11_infuframbuesa.png",
+      "filtros": [
+        "Infusión",
+        "Refrescante",
+        "Antiinflamatorio",
+        "Antioxidantes"
+            ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":12,
+      "nombre": "Infusión de Limón",
+      "descripcion": "Detox, alivia el resfriado y es refrescante.",
+      "img": "/img/productos/12_infulimon.png",
+      "filtros": [
+        "Infusión",
+        "Refrescante",
+        "Detox"
+            ],
+      "precio": "4,15"
+    
+    },
+    {
+      "id":13,
+      "nombre": "Infusión de Ginseng",
+      "descripcion": "Es un energizante natural, refuerza el sistema inmunológico y mejora la concentración.",
+      "img": "/img/productos/13_infuginseng.png",
+      "filtros": [
+        "Infusión",
+        "Estimulante"
+            ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":14,
+      "nombre": "Infusión de Rosa",
+      "descripcion": "Propiedades relajantes, antiinflamatorio natural y mejora la digestión.",
+      "img": "/img/productos/14_infurosa.png",
+      "filtros": [
+        "Infusión",
+        "Relajante",
+        "Antiinflamatorio",
+        "Digestivo"
+            ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":15,
+      "nombre": "Infusión de Cúrcuma",
+      "descripcion": "Propiedades antiinflamatorias,digestivas y refuerza el sistema inmunológico.",
+      "img": "/img/productos/15_infucurcuma.png",
+      "filtros": [
+        "Infusión",
+        "Antiinflamatorio",
+        "Digestivo"
+            ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":16,
+      "nombre": "Infusión de Aloe Vera",
+      "descripcion": "Propiedades hidratantes para la piel. propociona un alivio digestivo, y es antiinflamatorio.",
+      "img": "/img/productos/16_infualoe.png",
+      "filtros": [
+        "Infusión",
+        "Antiinflamatorio",
+        "Digestivo"
+            ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":17,
+      "nombre": "Infusión de Jazmín",
+      "descripcion": "Propiedades relajantes y antioxidantes con un sabor aromático único.",
+      "img": "/img/productos/17_infujazmin.png",
+      "filtros": [
+        "Infusión",
+        "Relajante",
+        "Antioxidantes"
+            ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":18,
+      "nombre": "Infusión de Eucalipto",
+      "descripcion": "Propiedades descongestionantes, antiinflamatorias y un sabor que refresca el aliento.",
+      "img": "/img/productos/18_infueucalipto.png",
+      "filtros": [
+        "Infusión",
+        "Refrescante",
+        "Antiinflamatorio"
+            ],
+      "precio": "4,15"
+    
+    },
+
+    {
+      "id":19,
+      "nombre": "Infusión de Hierba Luisa",
+      "descripcion": "Propiedades digestivas, efecto calmante y sabor refrescante.",
+      "img": "/img/productos/19_infuhierbaluisa.png",
+      "filtros": [
+        "Infusión",
+        "Digestivo",
+        "Refrescante"
+            ],
+      "precio": "4,15"
+    
+    }
+    
+
+    
+
+]
