@@ -1,0 +1,19 @@
+ul {
+ list-style: none;
+}
+
+.elementoProducto{
+ background-color: rgb(246, 234, 245);
+ width: 70%;
+ display: flex;
+ flex-wrap: wrap;
+ gap:2rem;
+ padding: 2rem; 
+}
+
+.imagenCatalogo:hover{
+ filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
+}
+
+
+    
