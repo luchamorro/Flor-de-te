@@ -38,6 +38,7 @@ ul {
     justify-content: center;
     align-items: center;
     filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
+    max-width: 30%;
     /*display: none;*/
 
 }
