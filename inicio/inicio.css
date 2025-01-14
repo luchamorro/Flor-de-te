@@ -16,6 +16,10 @@ html {
   height: 100%;
   font-family: "Poppins", serif;
 }
+
+body{
+  background-image: url(../img/inicio/fondo.jpg);
+}
 h3 {
   color: var(--morado);
   font-size: 2rem;
@@ -156,6 +160,7 @@ h3 {
   display: flex;
   border: #ff6600 3px solid;
   width: 90%;
+  margin: 0 auto; /* Esto centrará el contenedor de productos */
 
 }
 .filtros {
