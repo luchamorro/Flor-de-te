@@ -10,7 +10,7 @@
         "Descanso",
         "Antiinflamatorio"
       ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
@@ -24,7 +24,7 @@
         "Antioxidantes",
         "Estimulante"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
@@ -38,7 +38,7 @@
         "Antioxidantes",
         "Antiinflamatorio"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
@@ -51,7 +51,7 @@
         "Té",
         "Salud dental"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
@@ -66,7 +66,7 @@
         "Digestivo",
         "Detox"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
@@ -79,7 +79,7 @@
         "Té",
         "Antioxidantes"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },  
 
@@ -92,7 +92,7 @@
         "Infusión",
         "Digestivo"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
@@ -106,7 +106,7 @@
         "Digestivo",
         "Antiinflamatorio"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
@@ -121,7 +121,7 @@
         "Antiinflamatorio",
         "Descanso"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
@@ -135,7 +135,7 @@
         "Refrescante",
         "Antioxidantes"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
@@ -150,7 +150,7 @@
         "Antiinflamatorio",
         "Antioxidantes"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
@@ -164,7 +164,7 @@
         "Refrescante",
         "Detox"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
     {
@@ -176,7 +176,7 @@
         "Infusión",
         "Estimulante"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
@@ -191,7 +191,7 @@
         "Antiinflamatorio",
         "Digestivo"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
@@ -205,21 +205,21 @@
         "Antiinflamatorio",
         "Digestivo"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
     {
       "id":16,
       "nombre": "Infusión de Aloe Vera",
-      "descripcion": "Propiedades hidratantes para la piel. propociona un alivio digestivo, y es antiinflamatorio.",
+      "descripcion": "Propiedades hidratantes para la piel. Propociona un alivio digestivo, y es antiinflamatorio.",
       "img": "/img/productos/16_infualoe.png",
       "filtros": [
         "Infusión",
         "Antiinflamatorio",
         "Digestivo"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
@@ -233,7 +233,7 @@
         "Relajante",
         "Antioxidantes"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
@@ -247,7 +247,7 @@
         "Refrescante",
         "Antiinflamatorio"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     },
 
@@ -261,7 +261,7 @@
         "Digestivo",
         "Refrescante"
             ],
-      "precio": "4,15"
+      "precio": 4.15
     
     }
     
