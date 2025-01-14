@@ -20,10 +20,10 @@
     <input type="checkbox" id="menu-toggle" class="menu-toggle" />
     <img src="../img/logos/logo_horizontal.svg" alt="logo flor de te" />
     <ul class="ul1">
-      <li class="menu"><a href="index.html">Inicio</a></li>
-      <li class="menu"><a href="nosotros.html">Nosotros</a></li>
+      <li class="menu"><a href="index.html">Productos</a></li>
+      <li class="menu"><a href="nosotros.html">Sore Nosotras</a></li>
       <li class="menu"><a href="contacto.html">Contacto</a></li>
-      <li class="menu"><a href="carrito.html">Carrito</a></li>
+      <li class="menu"><a href="carrito.html">Carrito <i class="fa-solid fa-cart-shopping"></i></a></li>
     </ul>
   </nav>
   <section class="hero-carousel">
@@ -68,9 +68,20 @@
     </div>
   </section>
   <h3>Catálogo</h3>
+
   <section class="productos">
 
-  <div id="catalogoProductos" ></div> 
+  <div class="div-catalogo" id="catalogoProductos" ></div> 
+  <aside class="filtros">
+    <h4>Filtrar por</h4>
+    <form>
+      <label><input type="checkbox" name="categoria" value="te-negro"> Té Negro</label><br>
+      <label><input type="checkbox" name="categoria" value="te-verde"> Té Verde</label><br>
+      <label><input type="checkbox" name="categoria" value="infusiones"> Infusiones</label><br>
+      <label><input type="checkbox" name="categoria" value="organico"> Orgánico</label><br>
+      <button type="submit">Aplicar Filtros</button>
+    </form>
+  </aside>
   </section>
 
 
