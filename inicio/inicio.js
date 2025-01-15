@@ -1,4 +1,3 @@
-//carrusel hero
 let currentSlide = 0;
 const slides = document.querySelectorAll('.hero-slide');
 const totalSlides = slides.length;
@@ -11,16 +10,10 @@ function goToSlide(n) {
   slides[currentSlide].classList.add('active');
 }
 
-//funcionalidad botones
-prevButton.addEventListener('click', () => {
-  goToSlide(currentSlide - 1);
-});
-
-nextButton.addEventListener('click', () => {
+// Cambiar de slide automáticamente cada 5 segundos
+setInterval(() => {
   goToSlide(currentSlide + 1);
-});
-
-
+}, 5000); // 5000 milisegundos = 5 segundos
 
 // Función para cargar datos desde un archivo JSON
 async function cargarDatos() {    

@@ -2,90 +2,69 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="inicio.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-  <title>Document</title>
+  <link rel="stylesheet" href="inicio.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>Flor de Té</title>
 </head>
 
 <body>
   <nav class="menu">
     <label for="menu-toggle" class="menu-icon">☰</label>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-    <img src="../img/logos/logo_horizontal.svg" alt="logo flor de te" />
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo">
     <ul class="ul1">
       <li class="menu"><a href="index.html">Productos</a></li>
-      <li class="menu"><a href="nosotros.html">Sore Nosotras</a></li>
+      <li class="menu"><a href="nosotros.html">Sobre Nosotras</a></li>
       <li class="menu"><a href="contacto.html">Contacto</a></li>
       <li class="menu"><a href="carrito.html">Carrito <i class="fa-solid fa-cart-shopping"></i></a></li>
     </ul>
   </nav>
+
   <section class="hero-carousel">
     <div class="hero-slide active" style="background-image: url('../img/inicio/hero1.jpeg')">
       <div class="hero-text">
-        <h1>Flor de Té</h1>
-        <p>La mejor tienda de té en línea</p>
+        <h1 class="titulo-hero">FLOR DE TE</h1>
+        <p class="texto-hero">Sabores orgánicos, frescura moderna y el equilibrio que mereces en cada sorbo</p>
+        <button class="btn-hero">COMPRAR</button>
       </div>
     </div>
     <div class="hero-slide" style="background-image: url('../img/inicio/hero2.jpeg')">
       <div class="hero-text">
-        <h1>Flor de Té</h1>
-        <p>Descubre nuestra variedad</p>
+        <h1 class="titulo-hero">Vive el bienestar a sorbos</h1>
+        <p class="texto-hero">Descubre nuestros tés orgánicos y llenos de vida. Cuidarte nunca fue tan fácil (ni tan delicioso).</p>
+        <button class="btn-hero">COMPRAR</button>
       </div>
     </div>
-    <div class="hero-slide" style="background-image: url('../img/inicio/hero3.jpeg')">
+    <div class="hero-slide" style="background-image: url('../img/inicio/hero3.jpg')">
       <div class="hero-text">
-        <h1>Flor de Té</h1>
-        <p>Calidad y sabor asegurados</p>
+        <h1 class="titulo-hero">El bienestar empieza aquí</h1>
+        <p class="texto-hero">En "Flor de Té", cuidamos de ti con blends modernos, orgánicos y auténticos.</p>
+        <button class="btn-hero">COMPRAR</button>
       </div>
     </div>
   </section>
-  <div class="carousel-controls">
-    <button id="prev" aria-label="Anterior">&#10094;</button>
-    <button id="next" aria-label="Siguiente">&#10095;</button>
-  </div>
 
-  <section class="sobre-nosotros">
-    <img class="sobre-nosotros-img" src="../img/inicio/sobre-nosotros-2.jpeg" alt="te con decoracion" />
-    <div>
-      <h3>Sobre nosotros</h3>
-      <p class="sobre-nosotros-texto">
-        Nuestra misión es simple: proporcionar una experiencia incomparable en
-        cada taza. En Flor de Té, creemos que el té y el café son mucho más
-        que bebidas; son momentos de conexión, inspiración y calma. Nos
-        esforzamos por enriquecer tus rituales diarios con productos
-        auténticos, sabrosos y elaborados con dedicación. Al priorizar la
-        calidad, la sostenibilidad y la satisfacción de nuestros clientes,
-        aspiramos a convertirnos en tu aliado de confianza en la exploración
-        del maravilloso mundo del té y el café.
-      </p>
-    </div>
-  </section>
+  <!-- Catálogo -->
   <h3>Catálogo</h3>
-
   <section class="productos">
-
-  <div class="div-catalogo" id="catalogoProductos" ></div> 
-  <aside class="filtros">
-    <h4>Filtrar por</h4>
-    <form>
-      <label><input type="checkbox" name="categoria" value="te-negro"> Té Negro</label><br>
-      <label><input type="checkbox" name="categoria" value="te-verde"> Té Verde</label><br>
-      <label><input type="checkbox" name="categoria" value="infusiones"> Infusiones</label><br>
-      <label><input type="checkbox" name="categoria" value="organico"> Orgánico</label><br>
-      <button type="submit">Aplicar Filtros</button>
-    </form>
-  </aside>
+    <div class="div-catalogo" id="catalogoProductos"></div>
+    <aside class="filtros">
+      <h4>Filtrar por:</h4>
+      <form>
+        <label><input type="checkbox" name="categoria" value="te-negro"> Infusiones</label><br>
+        <label><input type="checkbox" name="categoria" value="te-verde"> Té</label><br>
+        <label><input type="checkbox" name="categoria" value="organico"> Orgánico</label><br>
+        <button type="submit">Aplicar Filtros</button>
+      </form>
+    </aside>
   </section>
 
-
-
+  <!-- Footer -->
   <footer>
     <p class="column-foo-1">
       <a href="index.html">Inicio</a>
@@ -98,14 +77,14 @@
       <a href="tel:+525555555555">+52 55 5555 5555</a>
     </p>
     <p class="column-foo-3">
-     <a href="#">Politicas</a> 
-     <a href="#">Aviso Legal</a> 
-     <a href="#">Politica de Cookies</a> 
-     <a href="#">Politicas de Privacidad</a>
+      <a href="#">Políticas</a>
+      <a href="#">Aviso Legal</a>
+      <a href="#">Política de Cookies</a>
+      <a href="#">Políticas de Privacidad</a>
     </p>
   </footer>
-  <div class="subfooter">     
-    © 2024 Flor de Te
+  <div class="subfooter">
+    © 2024 Flor de Té
     <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
     <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>

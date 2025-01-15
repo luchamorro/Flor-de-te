@@ -1,30 +1,39 @@
-/* Variables de color */
+/* Variables de color y fuente */
 :root {
   --negro: black;
   --burdeos: #cd0038;
   --morado: #6f005e;
   --naranja: #ff6600;
   --blanco: white;
+  --font-primary: "Poppins", serif;
 }
 
 /* Estilos generales */
-body,
-html {
-  margin: 0 auto;
+body, html {
+  margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: "Poppins", serif;
+  font-family: var(--font-primary);
 }
 
-body{
-  background-image: url(../img/inicio/fondo.jpg);
+body {
+  background-image: url(../img/inicio/);
+  background-color: rgba(0, 0, 0, 0.144);
+  background-blend-mode: overlay;
 }
+
 h3 {
   color: var(--morado);
   font-size: 2rem;
   margin-bottom: 1rem;
   text-align: center;
+}
+
+/* Contenido accesible para el logo */
+.logo {
+  width: 7rem;
+  alt: "Logotipo de Flor de Té";
 }
 
 /* Estilos del menú */
@@ -34,10 +43,15 @@ h3 {
   justify-content: space-between;
   background-color: var(--blanco);
   padding: 1rem;
-}
-
-.menu img {
-  height: 70px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 1rem 2rem; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  backdrop-filter: blur(10px); 
+  position: fixed; 
+  width: 100%; 
+  top: 0; 
+  z-index: 11; 
+  transition: background-color 0.3s ease;
 }
 
 .menu ul {
@@ -49,15 +63,18 @@ h3 {
 
 .menu ul li {
   margin: 0 1rem;
-}
-.menu ul li:hover a {
-  color: #cd0038;
-  text-decoration: underline;
+  
 }
 
-.menu ul a {
+.menu ul li a {
   color: var(--negro);
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu ul li:hover a {
+  color: var(--burdeos);
+  text-decoration: underline;
 }
 
 .menu-icon {
@@ -71,13 +88,12 @@ h3 {
   display: none;
 }
 
+/* Estilos del carrusel */
 .hero-carousel {
   position: relative;
   overflow: hidden;
-  width: 100vw; /* Asegura que ocupe todo el ancho del viewport */
+  width: 100%;
   height: 80vh;
-  margin: 0; /* Elimina cualquier margen */
-  padding: 0; /* Elimina cualquier padding */
 }
 
 .hero-slide {
@@ -88,22 +104,65 @@ h3 {
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-slide.active {
   opacity: 1;
+  z-index: 2;
 }
 
 .hero-text {
   position: absolute;
-  bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%);
   color: white;
   text-align: center;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.hero-text h1 {
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.hero-text p {
+  animation: fadeInUp 1s ease-out 1s both;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: white;
+  background-color: var(--burdeos);
+  border-radius: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.btn-hero:hover {
+  transform: scale(1.1);
+  background-color: var(--morado);
+}
+
+/* Hover específico para el botón en la diapositiva activa */
+.hero-slide:active .btn-hero:hover {
+  transform: scale(1.1);
+  background-color: var(--morado);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .carousel-controls {
@@ -128,6 +187,7 @@ h3 {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+/* Estilos de la sección "sobre nosotras" */
 .sobre-nosotros {
   display: flex;
   justify-content: space-evenly;
@@ -135,11 +195,13 @@ h3 {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
+
 .sobre-nosotros-img {
   width: 25%;
   height: auto;
   border-radius: 2rem;
 }
+
 .sobre-nosotros div {
   width: 40%;
   height: auto;
@@ -156,17 +218,24 @@ h3 {
   text-align: justify;
 }
 
+/* Estilos de la sección de productos */
 .productos {
   display: flex;
-  border: #ff6600 3px solid;
-  width: 90%;
-  margin: 0 auto; /* Esto centrará el contenedor de productos */
-
+  width: 80%;
+  margin: 0 auto;
 }
-.filtros {
-  width: 50%;
-  border: #ff6600 3px solid;
 
+.filtros {
+  width: 60%;
+  border: var(--negro) 1px solid;
+  border-radius: 1rem;
+  background-color: white;
+  color: var(--burdeos);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 0 0 2rem;
 }
 
 ul {
@@ -174,24 +243,25 @@ ul {
 }
 
 .elementoProducto {
-  background-color: #ff66007a;
+  background-color: #ff6600c2;
   width: 90%;
-  border-radius: 2rem;
+  border-radius: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
   padding: 2rem;
-  border: #ff6600 3px solid;
 }
 
 .imagenCatalogo {
   border-radius: 2rem;
 }
+
 .imagenCatalogo:hover {
   filter: drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
 }
 
+/* Estilos del footer */
 footer {
   background-color: var(--morado);
   color: var(--blanco);
@@ -222,7 +292,7 @@ footer p a {
   text-align: center;
 }
 
-/* Estilos responsive menú*/
+/* Estilos responsive menú */
 @media (max-width: 768px) {
   .menu {
     flex-direction: column;
@@ -253,5 +323,14 @@ footer p a {
 
   .menu-toggle:checked + .menu ul {
     display: flex;
+  }
+
+  .hero-text {
+    width: 80%;
+    font-size: 0.8rem;
+  }
+
+  .hero-slide {
+    height: 60vh;
   }
 }
