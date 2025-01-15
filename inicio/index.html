@@ -67,15 +67,35 @@
     <div class="div-catalogo" id="catalogoProductos"></div>
     <aside class="filtros">
       <h4>Filtrar por:</h4>
-      <form>
-        <label><input type="checkbox" name="categoria" value="te-negro"> Infusiones</label><br>
-        <label><input type="checkbox" name="categoria" value="te-verde"> Té</label><br>
-        <label><input type="checkbox" name="categoria" value="organico"> Orgánico</label><br>
+      <form id="filtrosForm">
+        <!-- Categorías -->
+        <fieldset>
+          <legend>Tipo de bebida</legend>
+          <label><input type="checkbox" name="categoria" value="infusión"> Infusiones</label><br>
+          <label><input type="checkbox" name="categoria" value="té"> Té</label><br>
+        </fieldset>
+  
+        <!-- Propiedades -->
+        <fieldset>
+          <legend>Propiedades</legend>
+          <label><input type="checkbox" name="propiedades" value="antioxidantes"> Antioxidante</label><br>
+          <label><input type="checkbox" name="propiedades" value="estimulante"> Estimulante</label><br>
+          <label><input type="checkbox" name="propiedades" value="relajante"> Relajante</label><br>
+          <label><input type="checkbox" name="propiedades" value="digestivo"> Digestivo</label><br>
+          <label><input type="checkbox" name="propiedades" value="descanso"> Descanso</label><br>
+          <label><input type="checkbox" name="propiedades" value="antiinflamatorio"> Antiinflamatorio</label><br>
+          <label><input type="checkbox" name="propiedades" value="salud dental"> Salud Dental</label><br>
+          <label><input type="checkbox" name="propiedades" value="detox"> Detox</label><br>
+          <label><input type="checkbox" name="propiedades" value="refrescante"> Refrescante</label><br>
+        </fieldset>
+        
         <button type="submit">Aplicar Filtros</button>
       </form>
+      <button id="borrarFiltros">Borrar Filtros</button>
     </aside>
   </section>
   <button id="verMasBtn">Ver Más</button>
+  
 
 
 
@@ -160,7 +180,7 @@
       </div>
       <div class="testimonio">
         <img src="../img/inicio/pexels-photo-8329344.webp" alt="Foto de cliente" class="foto-testimonio">
-        <p class="texto-testimonio">"Flor de Té ha cambiado mi rutina. Me siento más saludable y enérgico."</p>
+        <p class="texto-testimonio">"Flor de Té ha cambiado mi rutina. Me siento más saludable y enérgica. Los envios son rapidísimos!"</p>
         <p class="nombre-testimonio">- Laura Gómez</p>
       </div>
     </div>

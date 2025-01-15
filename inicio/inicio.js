@@ -15,39 +15,82 @@ setInterval(() => {
   goToSlide(currentSlide + 1);
 }, 5000); // 5000 milisegundos = 5 segundos
 
-//seccion ofertas
+// Función para obtener los valores seleccionados de un grupo de checkboxes
+function getCheckedValues(name) {
+  const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+  return Array.from(checkboxes).map(checkbox => checkbox.value.toLowerCase());
+}
 
-
-// Función para cargar datos desde un archivo JSON
+// Función para cargar los productos
 async function cargarDatos() {    
-    //async es una función asincrónica que siempre devuelve una promesa. Se puede usar await dentro de ella para esperar a que se resuelvan promesas sin bloquear el flujo del programa.
-      try { //try se usa para manejar errores. si algo falla en el bucle try, el programa no se rompe, sino que salta a catch, donde se puede manejar el error.
-      // --- Obtener los datos del archivo JSON:
-          const respuesta = await fetch('productos.json'); // await es: "para aquí hasta que se resuelva la promesa"
-          const datos = await respuesta.json(); //espera a que los datos sean procesados como JSON
-            // --- Seleccionar el div donde se muestran los datos
-            const div = document.getElementById('catalogoProductos');
-            // Generar la lista de datos
-            const lista = document.createElement('ul'); // createElementcrea un elemento HTML especificado por su tagName
+  try {
+    // Obtener los datos del archivo JSON
+    const respuesta = await fetch('productos.json');
+    const datos = await respuesta.json();
+    
+    // Seleccionar el contenedor donde se mostrarán los productos
+    const div = document.getElementById('catalogoProductos');
+    
+    // Crear la lista para mostrar los productos
+    const lista = document.createElement('ul');
+    lista.setAttribute("class", "elementoProducto");
 
-            lista.setAttribute("class", "elementoProducto");
+    // Mostrar todos los productos inicialmente
+    mostrarProductos(datos, lista);
 
-            datos.forEach(producto => {
-              const item = document.createElement('li');
-             item.innerHTML = `<img src="../${producto.img}" alt="${producto.nombre }  width="205" height="212" class = "imagenCatalogo"> <p class="tituloProducto">${producto.nombre}</p> <p>${producto.precio}€   <button><i class="fa-solid fa-cart-shopping"></i></button></p>` //incluir la función para el botón carrito de Alejandro
-              lista.appendChild(item);
-            });
+    // Escuchar el evento de aplicar filtros
+    const filtrosForm = document.getElementById('filtrosForm');
+    filtrosForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const categoriasSeleccionadas = getCheckedValues('categoria');
+      const propiedadesSeleccionadas = getCheckedValues('propiedades');
+      
+      // Filtrar productos según las selecciones
+      const productosFiltrados = datos.filter(producto => {
+        const categoriasProducto = producto.filtros.filter(filtro => categoriasSeleccionadas.includes(filtro.toLowerCase()));
+        const propiedadesProducto = producto.filtros.filter(filtro => propiedadesSeleccionadas.includes(filtro.toLowerCase()));
+        return categoriasProducto.length > 0 || propiedadesProducto.length > 0;
+      });
 
-            // Inserta la lista en el div
-          div.appendChild(lista);
+      // Limpiar la lista y mostrar los productos filtrados
+      lista.innerHTML = '';  // Limpiar lista
+      mostrarProductos(productosFiltrados, lista);
+    });
 
-          } catch (error) {
-            console.error('Error al cargar los datos:', error);
-            document.getElementById('catalogoProductos').textContent = 'Error al cargar los datos.';
-          }
+    // Agregar funcionalidad para el botón de borrar filtros
+    const borrarFiltrosBtn = document.getElementById('borrarFiltros');
+    borrarFiltrosBtn.addEventListener('click', () => {
+      // Restablecer los checkboxes
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(checkbox => checkbox.checked = false);
 
-        }
-        // Llama a la función al cargar la página
-        cargarDatos();
+      // Limpiar la lista y mostrar todos los productos
+      lista.innerHTML = '';
+      mostrarProductos(datos, lista);
+    });
 
+  } catch (error) {
+    console.error('Error al cargar los datos:', error);
+    document.getElementById('catalogoProductos').textContent = 'Error al cargar los datos.';
+  }
+}
 
+// Función para mostrar los productos
+function mostrarProductos(productos, lista) {
+  productos.forEach(producto => {
+    const item = document.createElement('li');
+    item.innerHTML = `
+      <img src="${producto.img}" alt="${producto.nombre}" width="205" height="212" class="imagenCatalogo">
+      <p class="tituloProducto">${producto.nombre}</p>
+      <p>${producto.precio}€ <button><i class="fa-solid fa-cart-shopping"></i></button></p>`;
+    lista.appendChild(item);
+  });
+
+  // Insertar la lista en el contenedor
+  const div = document.getElementById('catalogoProductos');
+  div.innerHTML = '';  // Limpiar contenido previo
+  div.appendChild(lista);
+}
+
+// Llamar a la función para cargar los datos al cargar la página
+cargarDatos();

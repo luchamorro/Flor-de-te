@@ -276,7 +276,6 @@ button:hover {
 
 .filtros {
   width: 60%;
-  border: var(--negro) 1px solid;
   border-radius: 1rem;
   background-color: white;
   color: var(--burdeos);
@@ -414,6 +413,7 @@ ul {
   background-color: var(--blanco);
   padding: 2rem 0;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .testimonios-container {
