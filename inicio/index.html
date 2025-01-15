@@ -22,17 +22,26 @@
         </ul>
     </nav>
 
-<!--Catálogo de productos----------->
-<section class="seccion">
-    <div id="catalogoProductos" ></div> 
-</section>
-<section class="ventanaSuperpuesta">
-<div id="paginaProducto"></div>
-</section>
+    <!--Catálogo de productos-------->
+    <section class="seccion">
+        <div id="catalogoProductos"></div> 
+    </section>
+
+    <div> </div>
+
+    <!---------------------->
 
 
-<!---------------------------------->
-<script src="inicio.js"></script>
+    <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
+        <button class="cerrar" onclick="cerrar()">X</button>
+        <div id="paginaProducto"></div>
+        <div class="botones">
+            <button onclick="anterior()">A</button> 
+            <button onclick="siguiente()">B</button>
+        </div>
+    </section>
+
+    <script src="inicio.js"></script>
 
 </body>
 </html>
