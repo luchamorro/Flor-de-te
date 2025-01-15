@@ -15,6 +15,9 @@ setInterval(() => {
   goToSlide(currentSlide + 1);
 }, 5000); // 5000 milisegundos = 5 segundos
 
+//seccion ofertas
+
+
 // Función para cargar datos desde un archivo JSON
 async function cargarDatos() {    
     //async es una función asincrónica que siempre devuelve una promesa. Se puede usar await dentro de ella para esperar a que se resuelvan promesas sin bloquear el flujo del programa.

@@ -1,25 +1,25 @@
-/* Variables de color y fuente */
+/* Variables de color */
 :root {
   --negro: black;
   --burdeos: #cd0038;
   --morado: #6f005e;
   --naranja: #ff6600;
   --blanco: white;
-  --font-primary: "Poppins", serif;
 }
 
 /* Estilos generales */
-body, html {
-  margin: 0;
+body,
+html {
+  margin: 0 auto;
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: var(--font-primary);
+  font-family: "Poppins", serif;
 }
 
 body {
-  background-image: url(../img/inicio/);
-  background-color: rgba(0, 0, 0, 0.144);
+  background-image: url(../img/inicio/fondo2.avif);
+  background-color: rgba(0, 0, 0, 0.07);
   background-blend-mode: overlay;
 }
 
@@ -30,28 +30,19 @@ h3 {
   text-align: center;
 }
 
-/* Contenido accesible para el logo */
-.logo {
-  width: 7rem;
-  alt: "Logotipo de Flor de Té";
-}
-
 /* Estilos del menú */
+
+/* Estilos generales */
 .menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--blanco);
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.8); 
-  padding: 1rem 2rem; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  backdrop-filter: blur(10px); 
-  position: fixed; 
-  width: 100%; 
-  top: 0; 
-  z-index: 11; 
-  transition: background-color 0.3s ease;
+}
+
+.menu img {
+  height: 70px;
 }
 
 .menu ul {
@@ -63,18 +54,16 @@ h3 {
 
 .menu ul li {
   margin: 0 1rem;
-  
-}
-
-.menu ul li a {
-  color: var(--negro);
-  text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 .menu ul li:hover a {
-  color: var(--burdeos);
+  color: #cd0038;
   text-decoration: underline;
+}
+
+.menu ul a {
+  color: var(--negro);
+  text-decoration: none;
 }
 
 .menu-icon {
@@ -88,12 +77,13 @@ h3 {
   display: none;
 }
 
-/* Estilos del carrusel */
 .hero-carousel {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 100vw; /* Asegura que ocupe todo el ancho del viewport */
   height: 80vh;
+  margin: 0; /* Elimina cualquier margen */
+  padding: 0; /* Elimina cualquier padding */
 }
 
 .hero-slide {
@@ -104,15 +94,18 @@ h3 {
   height: 100%;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .hero-slide.active {
   opacity: 1;
+  pointer-events: auto;
   z-index: 2;
 }
 
@@ -120,9 +113,12 @@ h3 {
   position: absolute;
   color: white;
   text-align: center;
-  animation: fadeInUp 1.2s ease-in-out;
+  animation: none; /* Por defecto, sin animación */
 }
 
+.hero-slide.active .hero-text {
+  animation: fadeInUp 1.2s ease-in-out;
+}
 .hero-text h1 {
   animation: fadeInUp 1s ease-out 0.5s both;
 }
@@ -165,29 +161,6 @@ h3 {
   }
 }
 
-.carousel-controls {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.carousel-controls button {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.carousel-controls button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Estilos de la sección "sobre nosotras" */
 .sobre-nosotros {
   display: flex;
   justify-content: space-evenly;
@@ -218,7 +191,6 @@ h3 {
   text-align: justify;
 }
 
-/* Estilos de la sección de productos */
 .productos {
   display: flex;
   width: 80%;
@@ -231,44 +203,270 @@ h3 {
   border-radius: 1rem;
   background-color: white;
   color: var(--burdeos);
-  text-align: left;
+  text-align: left; /* Cambia el alineamiento del texto a la izquierda */
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1rem 0 0 2rem;
+  flex-direction: column; /* Alinea elementos verticalmente */
+  align-items: flex-start; /* Alinea los hijos al inicio */
+  padding: 1rem 0 0 2rem; /* Añade algo de espacio alrededor del contenido */
 }
 
 ul {
   list-style: none;
 }
 
+/* Cambiar el fondo y el borde del catálogo */
 .elementoProducto {
-  background-color: #ff6600c2;
-  width: 90%;
-  border-radius: 1rem;
+  background-color: #f5f5f5; /* Color de fondo claro */
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
   justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
 }
 
+/* Cambiar el estilo de las imágenes en el catálogo */
 .imagenCatalogo {
-  border-radius: 2rem;
+  width: 200px; /* Ancho fijo */
+  height: auto; /* Altura automática para mantener la proporción */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .imagenCatalogo:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+  filter: brightness(1.1); /* Efecto de brillo */
   filter: drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
 }
 
-/* Estilos del footer */
+/* Cambiar el estilo de los títulos de los productos */
+.tituloProducto {
+  font-size: 1.2rem; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  color: #333; /* Color del texto */
+  margin-top: 0.5rem; /* Espacio superior */
+}
+
+/* Cambiar el estilo de los precios de los productos */
+.elementoProducto p {
+  font-size: 1rem; /* Tamaño de fuente */
+  color: #555; /* Color del texto */
+}
+
+/* Estilo del botón */
+.elementoProducto button {
+  padding: 0.5rem 1rem; /* Relleno del botón */
+  background-color: var(--naranja); /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Mano al pasar el ratón */
+  transition: background-color 0.3s ease;
+}
+
+.elementoProducto button:hover {
+  background-color: var(--burdeos); /* Cambio de color al pasar el ratón */
+}
+
+
+/* Estilos para la Sección del Té del Mes */
+.te-del-mes {
+  background-color: var(--blanco);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.te-del-mes h3 {
+  color: var(--burdeos);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.te-mes-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 80%;
+  align-items: center;
+}
+
+.te-mes-texto {
+  max-width: 50%;
+  text-align: left;
+}
+
+.te-mes-texto h4 {
+  color: var(--morado);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.te-mes-texto p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.te-mes-texto ul {
+  list-style: none;
+  padding: 0;
+}
+
+.te-mes-texto li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.btn-te-mes {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: var(--naranja);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-te-mes:hover {
+  background-color: var(--burdeos);
+}
+
+.te-mes-imagen {
+  max-width: 40%;
+}
+
+.te-mes-imagen .imagen-te {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Estilos para la Sección de Testimonios */
+.testimonios {
+  background-color: var(--blanco);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.testimonios h3 {
+  color: var(--morado);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonios-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.testimonio {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.foto-testimonio {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.texto-testimonio {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.nombre-testimonio {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--burdeos);
+}
+
+/* Estilos para la Sección de Oferta Especial */
+.oferta-especial {
+  background-color: var(--blanco);
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-oferta {
+  color: var(--morado);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.oferta-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.oferta-detalle {
+  max-width: 50%;
+  text-align: left;
+}
+
+.oferta-detalle h4 {
+  color: var(--burdeos);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.oferta-detalle p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.lista-detalle {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-detalle li {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.oferta-imagen {
+  max-width: 40%;
+}
+
+.oferta-imagen .imagen-oferta {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+
 footer {
   background-color: var(--morado);
   color: var(--blanco);
   text-align: center;
   padding: 1rem;
   bottom: 0;
-  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -292,21 +490,28 @@ footer p a {
   text-align: center;
 }
 
-/* Estilos responsive menú */
+/* Estilos responsive para el menú */
 @media (max-width: 768px) {
   .menu {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
   }
 
   .menu-icon {
     display: block;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
   }
 
   .menu ul {
     flex-direction: column;
     width: 100%;
     display: none;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1rem 0;
   }
 
   .menu ul li {
@@ -314,14 +519,14 @@ footer p a {
     margin: 0;
   }
 
-  .menu ul a {
+  .menu ul li a {
     display: block;
     width: 100%;
     padding: 1rem;
     border-top: 1px solid var(--blanco);
   }
 
-  .menu-toggle:checked + .menu ul {
+  .menu-toggle:checked + ul {
     display: flex;
   }
 
