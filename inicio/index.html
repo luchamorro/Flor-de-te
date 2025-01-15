@@ -14,15 +14,25 @@
 
 <body>
   <nav class="menu">
+    <div class="left-section">
     <label for="menu-toggle" class="menu-icon">☰</label>
     <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo">
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <ul class="ul1">
-      <li class="menu"><a href="index.html">Productos <i class="fa-solid fa-leaf"></i></a></li>
-      <li class="menu"><a href="nosotros.html">Sobre Nosotras <i class="fa-solid fa-users"></i></a></li>
-      <li class="menu"><a href="contacto.html">Contacto <i class="fa-solid fa-envelope"></i></a></li>
-      <li class="menu"><a href="carrito.html">Carrito <i class="fa-solid fa-cart-shopping"></i></a></li>
-    </ul>
+      <li class="menu"><a href="index.html">Productos <i class="fa-solid fa-leaf" style="color: var(--naranja);"></i></a></li>
+      <li class="menu"><a href="nosotros.html">Sobre Nosotras <i class="fa-solid fa-users" style="color: var(--naranja);"></i></a></li>
+      <li class="menu"><a href="contacto.html">Contacto <i class="fa-solid fa-envelope"style="color: var(--naranja);"></i></a></li>
+      </ul>
+    </div>
+    <div class="right-section"> 
+        <input type="text" placeholder="Buscar..."> 
+        <div class="user-area"><i class="fa-solid fa-user"></i></div> 
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div> 
+        <select title="idioma"> 
+          <option value="es">ES</option> 
+          <option value="en">EN</option> 
+        </select> 
+      </div>
   </nav>
   
   
@@ -78,15 +88,59 @@
       <p>El Té Oolong, también conocido como el té de los emperadores, es una verdadera joya para los amantes del té. Este té único combina lo mejor del té verde y del té negro, ofreciendo un sabor complejo y una experiencia de degustación incomparable.</p>
       <p>¡Prepárate para un viaje de sabor! 🍵✨</p>
       <ul>
-        <li><i class="fa-solid fa-leaf"></i> Sabor: Floral, afrutado y con un toque de nuez.</li>
-        <li><i class="fa-solid fa-clock"></i> Tiempo de infusión: 3-5 minutos.</li>
-        <li><i class="fa-solid fa-heart"></i> Beneficios: Ayuda a la digestión, promueve la salud del corazón y mejora el metabolismo.</li>
+        <li>🌱 Sabor: Floral, afrutado y con un toque de nuez.</li>
+        <li>⏱️ Tiempo de infusión: 3-5 minutos.</li>
+        <li>🧡 Beneficios: Ayuda a la digestión, promueve la salud del corazón y mejora el metabolismo.</li>
       </ul>
       <button class="btn-te-mes">¡Compra Ahora!</button>
     </div>
     <div class="te-mes-imagen">
       <img src="../img/productos/04_teoolong.png" alt="Té Oolong" class="imagen-te">
     </div>
+  </div>
+</section>
+<!-- Sección de Productos de Merchandising -->
+<section class="merch-section">
+  <h3>Nuestra Colección de Merchandising</h3>
+  <div class="merch-container">
+    <div class="merch-item">
+      <img src="../img/inicio/merch/White And Black Minimalist Mug Mockup Instagram Post.png" alt="Taza Flor de Té" class="merch-image">
+      <h4>Taza Flor de Té</h4>
+      <p>Disfruta de tu té favorito en nuestra taza exclusiva.</p>
+      <button class="btn-merch">Comprar</button>
+    </div>
+    <div class="merch-item">
+      <img src="../img/inicio/merch/Beige Minimalist Totebag Mockup Instagram Post.png" alt="Tote Bag Flor de Té" class="merch-image">
+      <h4>Tote Bag Flor de Té</h4>
+      <p>Lleva tus cosas con nuestra tote bag ecológica.</p>
+      <button class="btn-merch">Comprar</button>
+    </div>
+    <div class="merch-item">
+      <img src="../img/inicio/merch/White Black Minimalist Mockup Cup Coffee Instagram Post.png" alt="Tumbler Flor de Té" class="merch-image">
+      <h4>Tumbler Flor de Té</h4>
+      <p>Mantén tu bebida caliente o fría con estilo.</p>
+      <button class="btn-merch">Comprar</button>
+    </div>
+  </div>
+</section>
+  <!-- Sección de Oferta Especial -->
+<section class="oferta-especial">
+  <h3 class="titulo-oferta">Y de regalo...</h3>
+  <div class="oferta-contenedor">
+    <div class="oferta-imagen">
+      <img src="../img/inicio/infu.jpeg" alt="Oferta Especial" class="imagen-oferta">
+    </div>
+    <div class="oferta-detalle">
+      <h4>Compra 2, Prueba 1 Gratis</h4>
+      <p>Disfruta de nuestros tés y recibe una muestra gratuita sorpresa de una de nuestras infusiones al comprar dos paquetes de té.</p>
+      <p>Explora nuevos sabores y descubre tus nuevos favoritos. ¡Es nuestra manera de agradecerte por ser parte de la familia de Flor de Té!</p>
+      <ul class="lista-detalle">
+        <li>🍃 Selección de infusiones únicas.</li>
+        <li>✨ Muestra gratuita por cada compra de dos paquetes.</li>
+        <li>🌟 Solo por tiempo limitado.</li>
+      </ul>
+    </div>
+    
   </div>
 </section>
 
@@ -111,52 +165,56 @@
       </div>
     </div>
   </section>
-
-  <!-- Sección de Oferta Especial -->
-<section class="oferta-especial">
-  <h3 class="titulo-oferta">Oferta Especial</h3>
-  <div class="oferta-contenedor">
-    <div class="oferta-detalle">
-      <h4>Compra 2, Prueba 1 Gratis</h4>
-      <p>Disfruta de nuestros tés y recibe una muestra gratuita de cualquier infusión que elijas al comprar dos paquetes.</p>
-      <p>Explora nuevos sabores y descubre tus nuevos favoritos. ¡Es nuestra manera de agradecerte por ser parte de la familia de Flor de Té!</p>
-      <ul class="lista-detalle">
-        <li>🍃 Selección de infusiones únicas.</li>
-        <li>✨ Muestra gratuita por cada compra de dos paquetes.</li>
-        <li>🌟 Solo por tiempo limitado.</li>
-      </ul>
-    </div>
-    <div class="oferta-imagen">
-      <img src="ruta/a/la/imagen-oferta.jpg" alt="Oferta Especial" class="imagen-oferta">
-    </div>
-  </div>
-</section>
-
   <!-- Footer -->
-  <footer>
-    <p class="column-foo-1">
-      <a href="index.html">Inicio</a>
-      <a href="nosotros.html">Nosotros</a>
-      <a href="contacto.html">Contacto</a>
-      <a href="carrito.html">Carrito</a>
-    </p>
-    <p class="column-foo-2">
-      <a href="https://goo.gl/maps/8V5H3QJjH6gQYVJj6" target="_blank">Calle 123, Ciudad de México</a>
-      <a href="tel:+525555555555">+52 55 5555 5555</a>
-    </p>
-    <p class="column-foo-3">
-      <a href="#">Políticas</a>
-      <a href="#">Aviso Legal</a>
-      <a href="#">Política de Cookies</a>
-      <a href="#">Políticas de Privacidad</a>
-    </p>
-  </footer>
-  <div class="subfooter">
-    © 2024 Flor de Té
-    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+
+<footer>
+  <div class="footer-container">
+    <div class="comercio-justo">
+      <p><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
+      <p><i class="fa-solid fa-seedling"></i> Sin crueldad animal</p>
+      <p><i class="fa-solid fa-leaf"></i> 100% Orgánico</p>
+      <p><i class="fa-solid fa-trash"></i> Sin microplasticos</p>
+    </div>
+    <hr class="linea-fina">
+    <div class="newsletter">
+      <h3>Suscríbete a nuestra newsletter</h3>
+      <p>Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?</p>
+      <form>
+        <input type="email" placeholder="Introduce tu email">
+        <button type="submit">Suscribirse</button>
+      </form>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h4>Enlaces Útiles</h4>
+        <p>
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="carrito.html">Carrito</a>
+        </p>
+      </div>
+      <div class="footer-column">
+        <h4>Políticas</h4>
+        <p>
+          <a href="#">Políticas</a>
+          <a href="#">Aviso Legal</a>
+          <a href="#">Política de Cookies</a>
+          <a href="#">Políticas de Privacidad</a>
+        </p>
+      </div>
+    </div>
   </div>
+  <div class="subfooter">
+    <p>© 2024 Flor de Té</p>
+  </div>
+</footer>
+
   <script src="inicio.js"></script>
 </body>
 

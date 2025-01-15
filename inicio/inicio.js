@@ -34,7 +34,7 @@ async function cargarDatos() {
 
             datos.forEach(producto => {
               const item = document.createElement('li');
-             item.innerHTML = `<img src="../${producto.img}" alt="${producto.nombre }  width="205" height="212" class = "imagenCatalogo"> <p class="tituloProducto">${producto.nombre}</p> <p>${producto.precio}€   <button>carrito</button></p>` //incluir la función para el botón carrito de Alejandro
+             item.innerHTML = `<img src="../${producto.img}" alt="${producto.nombre }  width="205" height="212" class = "imagenCatalogo"> <p class="tituloProducto">${producto.nombre}</p> <p>${producto.precio}€   <button><i class="fa-solid fa-cart-shopping"></i></button></p>` //incluir la función para el botón carrito de Alejandro
               lista.appendChild(item);
             });
 
