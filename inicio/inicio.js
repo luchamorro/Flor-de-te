@@ -33,12 +33,42 @@ async function cargarDatos() {
 // Función para mostrar el producto basado en el ID
 function mostrarProducto(id) {
   const producto = productos.find(p => p.id === id);
+
+
+    if (producto) {
+      document.getElementById("paginaProducto").innerHTML = `<div class="productoTexto"><p class="tituloProductoGrande" id = "tituloProductoGrande"><button onclick="irPagina(${id})">${producto.nombre}</button></p><p class="descripcionProducto">${producto.descripcion}</p><p>${producto.precio}€ <button>carrito</button></p></div><div class="divImagenProducto"><img src="../${producto.img}" alt= "${producto.nombre}" width="350px" height ="362px" ></div>`;
+      // Asegurar que la ventana está visible
+      document.getElementById("ventanaSuperpuesta").style.display = "flex";
+            
+        }
+}
+
+function irPagina(id) {
+  const producto = productos.find(p => p.id === id);
+
   if (producto) {
-    document.getElementById("paginaProducto").innerHTML = `<div class="productoTexto"><p class="tituloProductoGrande">${producto.nombre}</p><p class="descripcionProducto">${producto.descripcion}</p><p>${producto.precio}€ <button>carrito</button></p></div><div class="divImagenProducto"><img src="../${producto.img}" alt="${producto.nombre}" width="378" height="391"></div>`;
-    // Asegurar que la ventana está visible
-    document.getElementById("ventanaSuperpuesta").style.display = "flex";
+
+
+    // Guardar datos del producto en localStorage
+    localStorage.setItem('productoSeleccionado', JSON.stringify(producto));
+
+    // Redirigir a la nueva página
+    window.location.href = 'pagina_producto.html';
+
+    /*
+    document.getElementById("paginaProductoAparte").innerHTML = `
+      <div class="productoTexto">
+        <p class="tituloProductoGrande" id="tituloProductoGrande">${producto.nombre}</p>
+        <p class="descripcionProducto">${producto.descripcion}</p>
+        <p>${producto.precio}€ <button>carrito</button></p>
+      </div>
+      <div class="divImagenProducto">
+        <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">
+      </div>`;
+    document.getElementById("paginaProductoAparte").style.display = "flex";*/
   }
 }
+
 
 function anterior() {
   const index = productos.findIndex(p => p.id === currentId);
@@ -75,10 +105,3 @@ function cerrar() {
     x.style.display = "none";
   }
 }
-
-const ventanaSup = document.getElementById ("paginaProducto");
-
-ventanaSup.addEventListener("click", function (e) {
-  window.open('https://www.publicdomainpictures.net/pictures/370000/velka/cri-du-goeland-.jpg', '_blank');
-});
-
