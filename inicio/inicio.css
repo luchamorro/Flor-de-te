@@ -88,6 +88,11 @@ button:hover {
   text-decoration: none;
 }
 
+.menu ul li a:hover{
+  color: #cd0038;
+  font-size: 1.1rem;
+}
+
 .left-section{
   display: flex;
   align-items: center;
@@ -97,6 +102,7 @@ button:hover {
 .right-section {
   display: flex;
   align-items: center;
+  width: 20%;
 }
 
 .right-section input[type="text"] {
@@ -109,7 +115,7 @@ button:hover {
 
 .right-section select {
   padding: 8px;
-  margin-right: 10px;
+  margin-left: 15px;
   border: none;
   border-radius: 4px;
   background-color: #fff;
@@ -594,7 +600,7 @@ ul {
 
 /*FOOTER*/
 .footer-container {
-  background-color: var(--morado);
+  background-color: rgb(255, 162, 100);
   color: white;
   padding: 2rem;
   display: flex;
@@ -630,13 +636,19 @@ ul {
   margin-right: 1rem;
 }
 
+.logo-footer{
+  width: 150px;
+}
+
 .newsletter h3 {
-  color: var(--blanco)
+  color: var(--blanco);
   margin-top: 0;
+  text-align: left;
 }
 
 .newsletter p {
   margin-top: 0.5rem;
+  text-align: left;
 }
 
 .newsletter form {
@@ -645,7 +657,7 @@ ul {
 }
 
 .newsletter input[type="email"] {
-  flex: 1;
+  flex: 0.8;
   padding: 0.5rem;
   margin-right: 0.5rem;
   border-radius: 0.25rem;
@@ -703,7 +715,7 @@ ul {
 }
 
 .subfooter {
-  background-color: #6f005e;
+  background-color: rgb(255, 102, 0);
   color: white;
   text-align: center;
   padding: 1rem;
