@@ -28,7 +28,6 @@ a{
   padding: 0;
 }
 
-
 /* Estilos del menú */
 .menu {
   display: flex;
@@ -52,8 +51,9 @@ a{
 .menu ul li {
   margin: 0 1rem;
 }
-.menu ul li:hover a{
-  color: #CD0038;
+
+.menu ul li:hover a {
+  color: var(--burdeos);
   text-decoration: underline;
 }
 
@@ -73,9 +73,67 @@ a{
   display: none;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.left-section{
+  display: flex;
+  align-items: center;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  border: black 1px solid;
+}
+
+.right-section input[type="text"] {
+  padding: 8px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #d0d0d0;
+}
+
+.right-section select {
+  padding: 8px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.right-section .user-area,
+.right-section .cart {
+  color: var(--negro);
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.right-section .cart {
+  position: relative;
+  width: 2.3rem;
+}
+
+.right-section .cart::after {
+  content: '4'; /* Example for cart item count */
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--burdeos);
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
 #contacto {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   padding: 2rem;
@@ -256,54 +314,127 @@ p{
 
 }
 
-/* Estilos para tablet */
 
-@media (max-width: 768px) {
-  #contacto .formulario h3 {
-    font-size: 1.5rem;
-  }
-
-  #contacto .formulario h3 {
-    font-size: 2.5rem;
-  }
-
-  #contacto .formulario input {
-    font-size: 1.6rem;
-  }
-
+/*FOOTER*/
+.footer-container {
+  background-color: var(--morado);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-footer {
-  background-color: var(--morado);
+.comercio-justo { 
+  width: 55%; 
+  text-align: center; 
+  margin-bottom: 1rem; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+} 
+.comercio-justo p { 
+  margin: 0; 
+  padding: 0.5rem 0
+}
+.linea-fina {
+  border: none; /* Elimina cualquier borde predeterminado */
+  border-top: 1px solid #ccc; /* Añade una línea superior fina */
+  margin: 0.5rem 0;
+  padding: 1rem; /* Espaciado alrededor de la línea */
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+}
+
+.newsletter {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 1rem;
+}
+
+.newsletter h3 {
   color: var(--blanco);
+  margin-top: 0;
+}
+
+.newsletter p {
+  margin-top: 0.5rem;
+}
+
+.newsletter form {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.newsletter input[type="email"] {
+  flex: 1;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+
+.newsletter button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  background-color: var(--naranja);
+  color: white;
+  cursor: pointer;
+}
+
+.newsletter .social-media {
+  margin-top: 1rem;
+}
+
+.newsletter .social-media a {
+  color: white;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.footer-columns {
+  display: flex;
+  flex: 2;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-right: 1rem;
+}
+
+.footer-column h4 {
+  margin-top: 0;
+}
+
+.footer-column p {
+  margin: 0.5rem 0;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.subfooter {
+  background-color: #6f005e;
+  color: white;
   text-align: center;
   padding: 1rem;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
 }
 
-footer p{
-  width: 30%;
-  border: #FF6600 3px solid;
-  justify-content: center;
+.subfooter p {
+  margin: 0;
 }
-
-footer p a{
-  text-decoration: none;
-  color: var(--blanco);
-  display: flex;
-}
-
-.subfooter{
-background-color: var(--morado);
-  color: var(--blanco);
-  text-align: center;
-}
-
 /*************** ESTILOS RGPD ****************/
 #rgdp {
   display: flex;
@@ -351,13 +482,4 @@ background-color: var(--morado);
   width: 40%;
   margin: auto;
   text-align: center;
-}
-
-/* Estilos para móviles */
-
-@media (max-width: 600px) {
-  #rgdp .proteccion-datos {
-    width: 100%;
-
-  }
 }
