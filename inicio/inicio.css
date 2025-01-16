@@ -174,34 +174,57 @@ button:hover {
 }
 
 .hero-text-1 {
+  text-align: right;
   margin: 5rem 0 0 60rem;
-  animation: none; /* Por defecto, sin animación */
 }
 
 .hero-text-2 {
   margin: 5rem 60rem 0 0;
-  animation: none; /* Por defecto, sin animación */
 }
 
 .hero-text-3 {
   margin: 5rem 60rem 0 0;
-  animation: none; /* Por defecto, sin animación */
 }
 
 .hero-carousel p{
   font-size: 2rem;
 }
-.hero-slide.active .hero-text {
-  animation: fadeInUp 1.2s ease-in-out;
+/* Estilo de los textos */
+.hero-text-1, .hero-text-2, .hero-text-3 {
+  opacity: 0;  /* Comienza invisible */
+  transform: translateY(20px);  /* Comienza desplazado hacia abajo */
+  transition: opacity 2s ease-out, transform 2s ease-out;
 }
+
+/* Activación de animación para cada diapositiva */
+.hero-slide.active .hero-text-1,
+.hero-slide.active .hero-text-2,
+.hero-slide.active .hero-text-3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .hero-text h1 {
-  animation: fadeInUp 1s ease-out 0.5s both;
+  animation: fadeInUp 1.5s ease-out 1s both;
 }
+
 
 .hero-text p {
-  animation: fadeInUp 1s ease-out 1s both;
+  animation: fadeInUp 2s ease-out 1.5s both;
 }
 
+/* Animación específica para los textos */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .btn-hero {
   display: inline-block;
@@ -224,17 +247,6 @@ button:hover {
 .hero-slide:active .btn-hero:hover {
   transform: scale(1.1);
   background-color: var(--morado);
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* .sobre-nosotros {
