@@ -1,83 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="inicio.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="inicio.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <title>Document</title>
 </head>
+
 <body>
-    <header>
-        <div>
-            <img src="" alt="Logo">
-        </div>
-        <div>
-            <input type="search" name="buscador" id="buscador" class="buscador">
-        </div>
-    </header>
-    <main style="margin: 5rem;">
-        <div>
-            <div style="background-color: rebeccapurple; width: 5rem; height: 5rem;" id="morado">
-                <p>Morado</p>
-                <p>Frio</p>
-                <p>terciario</p>
-            </div>
-            <div style="background-color: red; width: 5rem; height: 5rem;" id="rojo">
-                <p>Rojo</p>
-                <p>Cálido</p>
-                <p>primario</p></div>
-            <div style="background-color: gold; width: 5rem; height: 5rem;" id="amarillo">
-                <p>Amarillo</p>
-                <p>Cálido</p>
-                <p>secundario</p></div>
-            <div style="background-color: green; width: 5rem; height: 5rem;" id="verde">
-                <p>Verde</p>
-                <p>Frio</p>
-                <p>primario</p></div>
-            <div style="background-color: aqua; width: 5rem; height: 5rem;" id="azul">
-                <p>Azul</p>
-                <p>Cálido</p>
-                <p>primario</p></div>
-            <div style="background-color: orangered; width: 5rem; height: 5rem;" id="naranja">
-                <p>Naranja</p>
-                <p>Cálido</p>
-                <p>secundario</p></div>
-        </div>
-        <div>
-            <h2>Carrito de la compra</h2>
-            <div>
-                <img src="" alt="Icono de carrito">
-                <ul id="carrito"><span>Tu carrito está vacío</span>
-                </ul>
-            </div>
-        </div>
-    </main>
-    <script>
-        const buscador = document.getElementById('buscador');
-        const divsColoreados = document.querySelectorAll('main div div');
+  <nav class="menu">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <img src="../img/logos/logo_horizontal.svg" alt="logo flor de te" />
+    <ul class="ul1">
+      <li class="menu"><a href="index.html">Inicio</a></li>
+      <li class="menu"><a href="nosotros.html">Nosotros</a></li>
+      <li class="menu"><a href="contacto.html">Contacto</a></li>
+      <li class="menu"><a href="carrito.html">Carrito</a></li>
+    </ul>
+  </nav>
+  <section class="hero-carousel">
+    <div class="hero-slide active" style="background-image: url('../img/inicio/hero1.jpeg')">
+      <div class="hero-text">
+        <h1>Flor de Té</h1>
+        <p>La mejor tienda de té en línea</p>
+      </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('../img/inicio/hero2.jpeg')">
+      <div class="hero-text">
+        <h1>Flor de Té</h1>
+        <p>Descubre nuestra variedad</p>
+      </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('../img/inicio/hero3.jpeg')">
+      <div class="hero-text">
+        <h1>Flor de Té</h1>
+        <p>Calidad y sabor asegurados</p>
+      </div>
+    </div>
+  </section>
+  <div class="carousel-controls">
+    <button id="prev" aria-label="Anterior">&#10094;</button>
+    <button id="next" aria-label="Siguiente">&#10095;</button>
+  </div>
 
-        buscador.addEventListener('input', function() {
-            const valorBuscado = buscador.value.toLowerCase();
+  <section class="sobre-nosotros">
+    <img class="sobre-nosotros-img" src="../img/inicio/sobre-nosotros-2.jpeg" alt="te con decoracion" />
+    <div>
+      <h3>Sobre nosotros</h3>
+      <p class="sobre-nosotros-texto">
+        Nuestra misión es simple: proporcionar una experiencia incomparable en
+        cada taza. En Flor de Té, creemos que el té y el café son mucho más
+        que bebidas; son momentos de conexión, inspiración y calma. Nos
+        esforzamos por enriquecer tus rituales diarios con productos
+        auténticos, sabrosos y elaborados con dedicación. Al priorizar la
+        calidad, la sostenibilidad y la satisfacción de nuestros clientes,
+        aspiramos a convertirnos en tu aliado de confianza en la exploración
+        del maravilloso mundo del té y el café.
+      </p>
+    </div>
+  </section>
+  <h3>Catálogo</h3>
+  <section class="productos">
 
-            divsColoreados.forEach(div => {
-                const atributo = div.innerHTML.toLowerCase();
-                if (atributo.includes(valorBuscado)) {
-                    div.style.display = 'block';
-                } else {
-                    div.style.display = 'none';
-                }
-            });
-        });
+  <div id="catalogoProductos" ></div> 
+  </section>
 
-        const carrito = document.getElementById('carrito');
-        divsColoreados.forEach(div => {
-            div.addEventListener('click', function() {
-                const atributo = div.innerText;
-                const li = document.createElement('li');
-                li.textContent = atributo;
-                carrito.appendChild(li);
-            });
-        });
-    </script>
+
+
+  <footer>
+    <p class="column-foo-1">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="carrito.html">Carrito</a>
+    </p>
+    <p class="column-foo-2">
+      <a href="https://goo.gl/maps/8V5H3QJjH6gQYVJj6" target="_blank">Calle 123, Ciudad de México</a>
+      <a href="tel:+525555555555">+52 55 5555 5555</a>
+    </p>
+    <p class="column-foo-3">
+     <a href="#">Politicas</a> 
+     <a href="#">Aviso Legal</a> 
+     <a href="#">Politica de Cookies</a> 
+     <a href="#">Politicas de Privacidad</a>
+    </p>
+  </footer>
+  <div class="subfooter">     
+    © 2024 Flor de Te
+    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+  </div>
+  <script src="inicio.js"></script>
 </body>
+
 </html>
