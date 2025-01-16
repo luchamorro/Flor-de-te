@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+    
+  <section>
+    <div id="paginaProductoAparte" style="display: flex;"></div>
+    <div class="botones">
+        <button onclick="anterior()">A</button> 
+        <button onclick="siguiente()">B</button>
+    </div>
+</section>
+
+<script src="inicio.js"></script>
+
+<script>document.addEventListener('DOMContentLoaded', () => {
+    const producto = JSON.parse(localStorage.getItem('productoSeleccionado'));
+  
+    if (producto) {
+      document.getElementById('paginaProductoAparte').innerHTML = `
+        <div class="productoTexto">
+          <p class="tituloProductoGrande" id="tituloProductoGrande">${producto.nombre}</p>
+          <p class="descripcionProducto">${producto.descripcion}</p>
+          <p>${producto.precio}€ <button>carrito</button></p>
+        </div>
+        <div class="divImagenProducto">
+          <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">
+        </div>`;
+    } else {
+      document.getElementById('paginaProductoAparte').innerHTML = '<p>Error al cargar el producto.</p>';
+    }
+  });
+  
+  </script>
+
+</body>
+</html>
