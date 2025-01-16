@@ -1,83 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="inicio.css">
 </head>
+
 <body>
-    <header>
-        <div>
-            <img src="" alt="Logo">
-        </div>
-        <div>
-            <input type="search" name="buscador" id="buscador" class="buscador">
-        </div>
-    </header>
-    <main style="margin: 5rem;">
-        <div>
-            <div style="background-color: rebeccapurple; width: 5rem; height: 5rem;" id="morado">
-                <p>Morado</p>
-                <p>Frio</p>
-                <p>terciario</p>
-            </div>
-            <div style="background-color: red; width: 5rem; height: 5rem;" id="rojo">
-                <p>Rojo</p>
-                <p>Cálido</p>
-                <p>primario</p></div>
-            <div style="background-color: gold; width: 5rem; height: 5rem;" id="amarillo">
-                <p>Amarillo</p>
-                <p>Cálido</p>
-                <p>secundario</p></div>
-            <div style="background-color: green; width: 5rem; height: 5rem;" id="verde">
-                <p>Verde</p>
-                <p>Frio</p>
-                <p>primario</p></div>
-            <div style="background-color: aqua; width: 5rem; height: 5rem;" id="azul">
-                <p>Azul</p>
-                <p>Cálido</p>
-                <p>primario</p></div>
-            <div style="background-color: orangered; width: 5rem; height: 5rem;" id="naranja">
-                <p>Naranja</p>
-                <p>Cálido</p>
-                <p>secundario</p></div>
-        </div>
-        <div>
-            <h2>Carrito de la compra</h2>
-            <div>
-                <img src="" alt="Icono de carrito">
-                <ul id="carrito"><span>Tu carrito está vacío</span>
-                </ul>
-            </div>
-        </div>
-    </main>
-    <script>
-        const buscador = document.getElementById('buscador');
-        const divsColoreados = document.querySelectorAll('main div div');
-
-        buscador.addEventListener('input', function() {
-            const valorBuscado = buscador.value.toLowerCase();
-
-            divsColoreados.forEach(div => {
-                const atributo = div.innerHTML.toLowerCase();
-                if (atributo.includes(valorBuscado)) {
-                    div.style.display = 'block';
-                } else {
-                    div.style.display = 'none';
-                }
-            });
-        });
-
-        const carrito = document.getElementById('carrito');
-        divsColoreados.forEach(div => {
-            div.addEventListener('click', function() {
-                const atributo = div.innerText;
-                const li = document.createElement('li');
-                li.textContent = atributo;
-                carrito.appendChild(li);
-            });
-        });
-    </script>
+    <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+    
+        <ul class="ul1">
+            <li class="Menu1">Menu</li>
+            <li class="menu"><a href="index.html">Inicio</a></li>
+            <li class="menu"><a href="nosotros.html">Nosotros</a></li>
+            <li class="menu"><a href="contacto.html">Contacto</a></li>
+            <li class="menu"><a href="carrito.html">Carrito</a></li>
+            <li class="menu"><a href="pagina.html">Página</a></li>
+        </ul>
+    </nav>
 </body>
+
 </html>
