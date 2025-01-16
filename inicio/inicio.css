@@ -1,0 +1,244 @@
+/* Variables de color */
+:root {
+    --negro: black;
+    --burdeos: #CD0038;
+    --morado: #6F005E;
+    --naranja: #FF6600;
+    --blanco: white;
+}
+
+/* Estilos generales */
+body, html {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", serif;
+}
+h3{
+  color: var(--morado);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center
+}
+
+/* Estilos del menú */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blanco);
+    padding: 1rem;
+}
+
+.menu img {
+    height: 70px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 0 1rem;
+}
+.menu ul li:hover a{
+    color: #CD0038;
+    text-decoration: underline;
+}
+
+.menu ul a {
+    color: var(--negro);
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: var(--negro);
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+.hero-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100vw; /* Asegura que ocupe todo el ancho del viewport */
+  height: 80vh;
+  margin: 0; /* Elimina cualquier margen */
+  padding: 0; /* Elimina cualquier padding */
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.sobre-nosotros {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.sobre-nosotros-img {
+  width: 25%;
+  height: auto;
+  border-radius: 2rem;
+}
+.sobre-nosotros div {
+  width: 40%;
+  height: auto;
+  text-align: center;
+}
+
+.sobre-nosotros h3 {
+  text-align: left;
+}
+
+.sobre-nosotros-texto {
+  width: 100%;
+  height: auto;
+  text-align: justify;
+}
+
+
+
+
+ul {
+    list-style: none;
+   }
+   
+   .elementoProducto{
+    background-color: rgb(246, 234, 245);
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    padding: 2rem; 
+   }
+   
+   .imagenCatalogo:hover{
+    filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
+   }
+   
+   
+
+   
+
+
+   footer {
+    background-color: var(--morado);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+  }
+
+  footer p{
+    width: 30%;
+    border: #FF6600 3px solid;
+    justify-content: center;
+  }
+
+  footer p a{
+    text-decoration: none;
+    color: var(--blanco);
+    display: flex;
+  }
+
+.subfooter{
+  background-color: var(--morado);
+    color: var(--blanco);
+    text-align: center;
+}
+
+
+/* Estilos responsive menú*/
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .menu-icon {
+        display: block;
+    }
+  
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+  
+    .menu ul li {
+        width: 100%;
+        margin: 0;
+    }
+  
+    .menu ul a {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        border-top: 1px solid var(--blanco);
+    }
+  
+    .menu-toggle:checked + .menu ul {
+        display: flex;
+    }
+}
