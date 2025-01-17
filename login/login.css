@@ -108,7 +108,7 @@ nav .right-section .icon {
     margin: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 400px;
-    padding: 25px;
+    padding: 40px;
     background-color:white;
     border-radius: 10px;
 }
@@ -144,8 +144,15 @@ nav .right-section .icon {
     color: #444;
 }
 
+.forgot-password {
+    display: block; /* Asegura que el enlace se comporte como un elemento de bloque */
+    margin-top: 15px; /* Ajusta el valor según lo necesites */
+    text-align: center; /* Esto puede ayudar a centrar el texto */
+}
+
+
 .caja-login input {
-    width: 100%;
+    width: calc(100% - 24px);
     padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -184,7 +191,7 @@ nav .right-section .icon {
 }
 
 .caja2 li {
-    font-size: 14px;
+    font-size: 15px;
     color: #333;
     margin-bottom: 10px;
 }

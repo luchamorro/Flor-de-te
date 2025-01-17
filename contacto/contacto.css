@@ -15,20 +15,15 @@ a{
   text-decoration: none;
 }
 
-#contacto .texto-contacta{
-  width: 100%;
-  min-height: 25rem;
-  background-image: url(herbal-tea-cups-white-background_176873-3254.avif);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f2e9;
   margin: 0;
   padding: 0;
+  background-image: url(tazas-te-hierbas-saludable-canela-rosa-seca-flores-manzanilla-cucharas-sobre-fondo-madera-vista-superior_93675-83840.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
 
 /* Estilos del menú */
 .menu {
@@ -134,7 +129,6 @@ a{
   font-size: 12px;
 }
 
-
 #contacto {
   display: flex;
   justify-content: space-evenly;
@@ -149,17 +143,8 @@ a{
 #contacto .contacto-flex{
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 5%;
-  margin-top: 2%;
-  padding-top:2.5%;
-  padding-left:5%;
-  padding-right: 5%;
-  padding-bottom: 5%;
-  background-color: var(--blanco);
-  background-color:#dde1e6;
-  margin:0;
 }
 
 .map-container{
@@ -169,7 +154,6 @@ a{
   min-height: 15rem;
 
 }
-
 .formulario{
   width: 100%;
   margin-bottom: 5%;
@@ -179,7 +163,6 @@ a{
   box-shadow: 14px 20px 10px rgba(0,0,0,0.1);
   border-radius: 0.5rem;
 }
-
 input{
   font-size: 1.2rem;
   color:var(--negro);
@@ -220,7 +203,7 @@ p{
 }
 
 #contacto h1 {
-  color: var(--burdeos);
+  color: var(--blanco);
   text-align: center;
   font-size: 3rem;
   width: 50%;
@@ -303,25 +286,10 @@ p{
   height: 60vh;
   margin: 0;
 }
-/* Estilos para móviles */
 
-@media (max-width: 600px) {
-
-
-  #contacto .formulario h3 {
-    font-size: 2rem;
-  }
-
-  #contacto .formulario input {
-    font-size: 1.2rem;
-  }
-
-}
-
-
-/*FOOTER*/
+/* Footer */
 .footer-container {
-  background-color: var(--morado);
+  background-color: #6f005e;
   color: white;
   padding: 2rem;
   display: flex;
@@ -330,25 +298,27 @@ p{
   align-items: flex-start;
 }
 
-.comercio-justo { 
-  width: 55%; 
-  text-align: center; 
-  margin-bottom: 1rem; 
+.comercio-justo {
+  width: 55%;
+  text-align: center;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: 0 auto;
-} 
-.comercio-justo p { 
-  margin: 0; 
-  padding: 0.5rem 0
 }
+
+.comercio-justo p {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
 .linea-fina {
-  border: none; /* Elimina cualquier borde predeterminado */
-  border-top: 1px solid #ccc; /* Añade una línea superior fina */
+  border: none;
+  border-top: 1px solid #ccc;
   margin: 0.5rem 0;
-  padding: 1rem; /* Espaciado alrededor de la línea */
-  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  padding: 1rem;
+  width: 100%;
 }
 
 .newsletter {
@@ -358,7 +328,7 @@ p{
 }
 
 .newsletter h3 {
-  color: var(--blanco);
+  color: white;
   margin-top: 0;
 }
 
@@ -383,7 +353,7 @@ p{
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
-  background-color: var(--naranja);
+  background-color: #ff6600;
   color: white;
   cursor: pointer;
 }
@@ -430,7 +400,7 @@ p{
 }
 
 .subfooter {
-  background-color: #6f005e;
+  background-color: #4b0043;
   color: white;
   text-align: center;
   padding: 1rem;
@@ -438,52 +408,4 @@ p{
 
 .subfooter p {
   margin: 0;
-}
-/*************** ESTILOS RGPD ****************/
-#rgdp {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  font-style: normal;
-  font-family: var(--font);
-  color: var(--textcolor);
-  font-size: 1.2rem;
-}
-
-#rgdp h1 {
-  padding: 20px;
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--colortextodestacado);
-  margin: 0.5rem;
-}
-
-#rgdp h3 {
-  padding: 10px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--colortextodestacado);
-}
-
-#rgdp main {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 2.5rem;
-  margin: 1.8rem;
-}
-
-#rgdp main .contenido {
-  background-color: white;
-  border-radius: 10px;
-  padding: 3.5rem;
-  margin: 2rem 1rem;
-  line-height: 1.5rem;
-}
-
-#rgdp .proteccion-datos {
-  width: 40%;
-  margin: auto;
-  text-align: center;
 }

@@ -10,7 +10,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
       <title>Flor de Té</title>
     </head>
-  <body>
+<body>
    <nav class="menu">
       <div class="left-section">
       <label for="menu-toggle" class="menu-icon">☰</label>
@@ -36,13 +36,33 @@
     <div id="contacto">
 
       <div class="texto-contacta">
-        <h1>CONTACTA CON NOSOTROS</h1>
+        <h1>CONTACTO</h1>
       </div>
 
       <section class="contacto-flex">
-         <!--contenedor de mapa-->
 
-         <div class="map-container">
+        <!--contenedor formulario-->
+         
+        <div class="formulario">
+          <h2>Contacta con nosotros</h2>
+          <form class="mi-formulario">
+            <p><label>Nombre</label> <input type="text" required /></p>
+            <p><label>Apellido</label> <input type="text" required /></p>
+            <p><label>Teléfono</label> <input type="tel" required /></p>
+            <p><label>Email</label> <input type="email" required /></p>
+            <p><label>Tu mensaje</label> <input type="text" required /></p>
+            <p class="acepto">
+                <label for="aceptar"><a href="rgpd.html"><strong>Acepto la política de privacidad</strong></a></label>
+                <input id="aceptar" type="checkbox" required />
+            </p>
+            <div class="contenedorboton">
+                <button type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+      <!--contenedor de mapa-->
+
+      <div class="map-container">
             <iframe
                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d726.6889455365114!2d-2.8906401083607727!3d43.2355797368229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4ef2d6fd135b%3A0x46c15f92063a93a5!2sPl.%20Arizgoiti%2C%204!5e0!3m2!1ses!2ses!4v1731399877248!5m2!1ses!2ses"
                allowfullscreen=""
@@ -51,87 +71,59 @@
             ></iframe>
          </div>
 
-         <!--contenedor formulario-->
          
-         <div class="formulario">
-            <h2>Contacta con nosotros</h2>
-            <div class="mi-formulario">
-               <p><label>Nombre</label> <input type="text" required /></p>
-
-               <p><label>Apellido</label> <input type="text" required /></p>
-
-               <p><label>Telefono</label> <input type="tele" required /></p>
-
-               <p><label>Email</label> <input type="email" required /></p>
-
-               <p>
-               <label>Tu mensaje</label> <input type="text" required />
-               </p>
-
-               <div class="contenedorboton">
-               <button type="submit">Enviar</button>
-               </div>
-            </div>
-            <p class="acepto">
-               <label id="aceptar-boton" for="aceptar"
-               ><a href="rgpd.html"
-                  ><strong>Acepto la politica de privacidad</strong></a
-               ></label
-               >
-               <input id="aceptar" type="checkbox" />
-            </p>
-            
-         </div>
       </section>
       
+<!-- Footer -->
 
-    
 <footer>
-   <div class="footer-container">
-     <div class="comercio-justo">
-       <p><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
-       <p><i class="fa-solid fa-seedling"></i> Sin crueldad animal</p>
-       <p><i class="fa-solid fa-leaf"></i> 100% Orgánico</p>
-       <p><i class="fa-solid fa-trash"></i> Sin microplasticos</p>
-     </div>
-     <hr class="linea-fina">
-     <div class="newsletter">
-       <h3>Suscríbete a nuestra newsletter</h3>
-       <p>Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?</p>
-       <form>
-         <input type="email" placeholder="Introduce tu email">
-         <button type="submit">Suscribirse</button>
-       </form>
-       <div class="social-media">
-         <a href="#"><i class="fab fa-tiktok"></i></a>
-         <a href="#"><i class="fab fa-instagram"></i></a>
-         <a href="#"><i class="fab fa-facebook"></i></a>
-       </div>
-     </div>
-     <div class="footer-columns">
-       <div class="footer-column">
-         <h4>Enlaces Útiles</h4>
-         <p>
-           <a href="index.html">Inicio</a>
-           <a href="nosotros.html">Nosotros</a>
-           <a href="contacto.html">Contacto</a>
-           <a href="carrito.html">Carrito</a>
-         </p>
-       </div>
-       <div class="footer-column">
-         <h4>Políticas</h4>
-         <p>
-           <a href="#">Políticas</a>
-           <a href="#">Aviso Legal</a>
-           <a href="#">Política de Cookies</a>
-           <a href="#">Políticas de Privacidad</a>
-         </p>
-       </div>
-     </div>
-   </div>
-   <div class="subfooter">
-     <p>© 2024 Flor de Té</p>
-   </div>
- </footer>
-  </body>
+  <div class="footer-container">
+    <div class="comercio-justo">
+      <p><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
+      <p><i class="fa-solid fa-seedling"></i> Sin crueldad animal</p>
+      <p><i class="fa-solid fa-leaf"></i> 100% Orgánico</p>
+      <p><i class="fa-solid fa-trash"></i> Sin microplasticos</p>
+    </div>
+    <hr class="linea-fina">
+    <div class="newsletter">
+      <h3>Suscríbete a nuestra newsletter</h3>
+      <p>Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?</p>
+      <form>
+        <input type="email" placeholder="Introduce tu email">
+        <button type="submit">Suscribirse</button>
+      </form>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h4>Enlaces Útiles</h4>
+        <p>
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="carrito.html">Carrito</a>
+        </p>
+      </div>
+      <div class="footer-column">
+        <h4>Políticas</h4>
+        <p>
+          <a href="#">Políticas</a>
+          <a href="#">Aviso Legal</a>
+          <a href="#">Política de Cookies</a>
+          <a href="#">Políticas de Privacidad</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="subfooter">
+    <p>© 2024 Flor de Té</p>
+  </div>
+</footer>
+    
+</body>
+
 </html>
