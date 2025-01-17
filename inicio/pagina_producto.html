@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="inicio.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Flor de Té</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="inicio.css">
+      <link rel="stylesheet" href="estilo_popup.css">
+  
+  </head>
 <body>
     
   <section>
     <div id="paginaProductoAparte" style="display: flex;"></div>
     <div class="botones">
-        <button onclick="anterior()">A</button> 
-        <button onclick="siguiente()">B</button>
+      <button id="anteriorBtn" class="botonFlecha"><i class="fa-solid fa-arrow-left"></i></button>
+      <button id="siguienteBtn" class="botonFlecha"><i class="fa-solid fa-arrow-right"></i></button>
     </div>
 </section>
 
-<script src="inicio.js"></script>
 
 <script>document.addEventListener('DOMContentLoaded', () => {
     const producto = JSON.parse(localStorage.getItem('productoSeleccionado'));
@@ -37,6 +46,9 @@
   });
   
   </script>
+
+<script src="inicio.js"></script>
+
 
 </body>
 </html>
