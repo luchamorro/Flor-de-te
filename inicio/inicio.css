@@ -579,7 +579,7 @@ ul {
 
 /*FOOTER*/
 .footer-container {
-  background-color: rgb(255, 162, 100);
+  background-color: rgb(255, 154, 87);
   color: white;
   padding: 2rem;
   display: flex;
@@ -599,7 +599,11 @@ ul {
 } 
 .comercio-justo p { 
   margin: 0; 
-  padding: 0.5rem 0
+  padding: 0.5rem 0;
+  color: white;
+}
+.comercio-justo i{
+  color: white;
 }
 .linea-fina {
   border: none; /* Elimina cualquier borde predeterminado */
