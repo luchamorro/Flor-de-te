@@ -1,0 +1,116 @@
+{
+    "header": {
+      "logoAlt": "logo Flor de Té",
+      "menu": {
+        "inicio": "Inicio",
+        "nosotros": "Nosotros",
+        "contacto": "Contacto",
+        "carrito": "Carrito"
+      },
+      "searchPlaceholder": "Buscar..."
+    },
+    "hero": [
+      {
+        "title": "FLOR DE TÉ",
+        "text": "Sabores orgánicos, frescura moderna y el equilibrio que mereces en cada sorbo",
+        "button": "COMPRAR"
+      },
+      {
+        "title": "Vive la vida a sorbos",
+        "text": "Descubre nuestros tés orgánicos y llenos de vida. Cuidarte nunca fue tan fácil (ni tan delicioso).",
+        "button": "COMPRAR"
+      },
+      {
+        "title": "El bienestar empieza aquí",
+        "text": "En \"Flor de Té\", cuidamos de ti con blends modernos, orgánicos y auténticos.",
+        "button": "COMPRAR"
+      }
+    ],
+    "catalog": {
+      "title": "Catálogo",
+      "filters": {
+        "title": "Filtrar por:",
+        "categories": "Tipo de bebida",
+        "properties": "Propiedades",
+        "applyButton": "Aplicar Filtros",
+        "clearButton": "Borrar Filtros"
+      }
+    },
+    "teaOfTheMonth": {
+      "title": "Té del Mes: Té Oolong",
+      "description": "El Té Oolong, también conocido como el té de los emperadores, es una verdadera joya para los amantes del té. Este té único combina lo mejor del té verde y del té negro, ofreciendo un sabor complejo y una experiencia de degustación incomparable.",
+      "details": [
+        "🌱 Sabor: Floral, afrutado y con un toque de nuez.",
+        "⏱️ Tiempo de infusión: 3-5 minutos.",
+        "🧡 Beneficios: Ayuda a la digestión, promueve la salud del corazón y mejora el metabolismo."
+      ],
+      "button": "¡Compra Ahora!"
+    },
+    "merchandising": {
+      "title": "Nuestra Colección de Merchandising",
+      "items": [
+        {
+          "title": "Taza Flor de Té",
+          "description": "Disfruta de tu té favorito en nuestra taza exclusiva.",
+          "button": "Comprar"
+        },
+        {
+          "title": "Tote Bag Flor de Té",
+          "description": "Lleva tus cosas con nuestra tote bag ecológica.",
+          "button": "Comprar"
+        },
+        {
+          "title": "Tumbler Flor de Té",
+          "description": "Mantén tu bebida caliente o fría con estilo.",
+          "button": "Comprar"
+        }
+      ]
+    },
+    "specialOffer": {
+      "title": "Y de regalo...",
+      "subtitle": "Compra 2, Prueba 1 Gratis",
+      "description": "Disfruta de nuestros tés y recibe una muestra gratuita sorpresa de una de nuestras infusiones al comprar dos paquetes de té.",
+      "details": [
+        "🍃 Selección de infusiones únicas.",
+        "✨ Muestra gratuita por cada compra de dos paquetes.",
+        "🌟 Solo por tiempo limitado."
+      ]
+    },
+    "testimonials": {
+      "title": "Testimonios",
+      "reviews": [
+        {
+          "text": "Los tés de Flor de Té son increíbles. Me encanta la variedad y la calidad. ¡Recomendado 100%!",
+          "author": "Ana Rodríguez"
+        },
+        {
+          "text": "El mejor té que he probado. Orgánico y delicioso, definitivamente mi favorito.",
+          "author": "Juan Pérez"
+        },
+        {
+          "text": "Flor de Té ha cambiado mi rutina. Me siento más saludable y enérgica. ¡Los envíos son rapidísimos!",
+          "author": "Laura Gómez"
+        }
+      ]
+    },
+    "footer": {
+      "fairTrade": "Comercio Justo",
+      "noCruelty": "Sin crueldad animal",
+      "organic": "100% Orgánico",
+      "noMicroplastics": "Sin microplásticos",
+      "newsletter": {
+        "title": "Suscríbete a nuestra newsletter",
+        "text": "Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?",
+        "placeholder": "Introduce tu email",
+        "button": "Suscribirse"
+      },
+      "links": {
+        "title1": "Enlaces Útiles",
+        "items1": ["Inicio", "Nosotros", "Contacto", "Carrito"],
+        "title2": "Políticas",
+        "items2": ["Políticas", "Aviso Legal", "Política de Cookies", "Políticas de Privacidad"]
+      },
+      "copyright": "© 2024 Flor de Té"
+    }
+  }
+  
