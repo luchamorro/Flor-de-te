@@ -18,15 +18,23 @@ async function cargarDatos() {
       item.innerHTML = `
         <img src="../${producto.img}" alt="${producto.nombre}" width="205" height="212" class="imagenCatalogo">
         <p class="tituloProducto">${producto.nombre}</p>
-        <p>${producto.precio}€ <button>carrito</button></p>
+        <p>${producto.precio}€ <button class ="botonCarrito" onclick = "carri"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
       `;
 
       lista.appendChild(item);
 
-      // Agregar evento para mostrar el producto en la ventana superpuesta
-      item.addEventListener("click", () => {
-        mostrarProducto(producto.id);
-      });
+  // Seleccionar solo la imagen dentro del 'li'
+  const imagen = item.querySelector('.imagenCatalogo');
+  imagen.addEventListener("click", () => {
+    mostrarProducto(producto.id);
+  });
+
+  const titulo = item.querySelector('.tituloProducto');
+  titulo.addEventListener("click", () => {
+    mostrarProducto(producto.id);
+  });
+
+  
     });
 
     div.appendChild(lista);

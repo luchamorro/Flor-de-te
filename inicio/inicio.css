@@ -324,6 +324,12 @@ ul {
   margin-top: 0.5rem; /* Espacio superior */
 }
 
+.tituloProducto:hover {
+ 
+  color: var(--burdeos); /* Color del texto */
+  cursor:pointer;
+}
+
 /* Cambiar el estilo de los precios de los productos */
 .elementoProducto p {
   font-size: 1rem; /* Tamaño de fuente */
@@ -620,8 +626,9 @@ ul {
 }
 
 .newsletter h3 {
-  color: var(--blanco)
   margin-top: 0;
+  color: var(--blanco)
+  
 }
 
 .newsletter p {
