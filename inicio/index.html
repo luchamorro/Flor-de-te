@@ -5,15 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="inicio.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
   <title>Flor de Té</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="inicio.css">
     <link rel="stylesheet" href="estilo_popup.css">
 
@@ -100,14 +96,14 @@
     </aside>
   </section>
   
-  <!--Popup de productos-->
-  <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
-    <button class="cerrar" onclick="cerrar()">X</button>
-    <div id="paginaProducto"></div>
-    <div class="botones">
-        <button onclick="anterior()">A</button> 
-        <button onclick="siguiente()">B</button>
-    </div>
+ <!--Popup de productos-->
+ <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
+  <button id="cerrarBtn">X</button>
+  <div id="paginaProducto"></div>
+  <div class="botones">
+    <button id="siguienteBtn">Siguiente</button>
+    <button id="anteriorBtn">Anterior</button>
+  </div>
 </section>
 
 <!-- Sección del Té del Mes -->
@@ -248,6 +244,7 @@
 </footer>
 
 <script src="inicio.js"></script>
+<script src="carrusel.js"></script>
 </body>
 
 </html>

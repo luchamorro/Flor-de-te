@@ -34,10 +34,12 @@ h4{
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
-p{
-  color: white;
-}
 
+p{
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
 
 button{
   padding: 0.5rem 1rem; /* Relleno del botón */
@@ -182,6 +184,9 @@ button:hover {
 .hero-text-1 {
   text-align: right;
   margin: 5rem 0 0 60rem;
+}
+.hero-carousel p{
+  color: white;
 }
 
 .hero-text-2 {
@@ -330,6 +335,10 @@ ul {
 
 .elementoProducto button:hover {
   background-color: var(--burdeos); /* Cambio de color al pasar el ratón */
+}
+
+#borrarFiltros{
+  margin-top: 0.5rem;
 }
 
 
