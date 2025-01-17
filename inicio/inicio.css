@@ -336,19 +336,18 @@ ul {
   color: #555; /* Color del texto */
 }
 
-/* Estilo del botón */
+/* Estilo del botón producto */
 .elementoProducto button {
-  padding: 0.5rem 1rem; /* Relleno del botón */
-  background-color: var(--naranja); /* Color de fondo */
-  color: white; /* Color del texto */
-  border: none; /* Sin borde */
-  border-radius: 5px; /* Bordes redondeados */
+  background: none; /* Color de fondo */
+  color: var(--burdeos); /* Color del texto */
+  border: none; 
   cursor: pointer; /* Mano al pasar el ratón */
   transition: background-color 0.3s ease;
+  font-size: 1rem;
 }
 
 .elementoProducto button:hover {
-  background-color: var(--burdeos); /* Cambio de color al pasar el ratón */
+  color: var(--naranja); /* Cambio de color al pasar el ratón */
 }
 
 
