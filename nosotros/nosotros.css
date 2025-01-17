@@ -1,0 +1,57 @@
+align-items: center;
+background-color: rgb(98, 15, 98);
+}
+
+footer p{
+  width: 30%;
+  border: #FF6600 3px solid;
+  justify-content: center;
+}
+
+footer p a{
+  text-decoration: none;
+  color: var(--blanco);
+  display: flex;
+}
+
+.subfooter{
+background-color: var(--morado);
+  color: var(--blanco);
+  text-align: center;
+}
+
+
+/* Estilos responsive menú*/
+@media (max-width: 768px) {
+  .menu {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .menu-icon {
+      display: block;
+  }
+
+  .menu ul {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+  }
+
+  .menu ul li {
+      width: 100%;
+      margin: 0;
+  }
+
+  .menu ul a {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      border-top: 1px solid var(--blanco);
+  }
+
+  .menu-toggle:checked + .menu ul {
+      display: flex;
+  }
+}
+

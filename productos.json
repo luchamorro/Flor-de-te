@@ -3,7 +3,7 @@
       "id":1,
       "nombre": "Infusión de Lavanda",
       "descripcion": "Tiene propiedades relajantes, mejora la calidad del sueño y es antiinflamatorio.",
-      "img": "/img/productos/01_telavanda.png",
+      "img": "/img/productos/01_infulavanda.png",
       "filtros": [
         "Relajante",
         "Infusión",
@@ -255,7 +255,7 @@
       "id":19,
       "nombre": "Infusión de Hierba Luisa",
       "descripcion": "Propiedades digestivas, efecto calmante y sabor refrescante.",
-      "img": "/img/productos/19_infuhierbaluisa.png",
+      "img": "/img/productos/18_infucanela.png",
       "filtros": [
         "Infusión",
         "Digestivo",
@@ -264,5 +264,5 @@
       "precio": "4,15"
     
     }
-
+    
 ]

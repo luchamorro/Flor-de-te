@@ -774,3 +774,31 @@ ul {
     height: 60vh;
   }
 }
+
+ul {
+ list-style: none;
+}
+
+#catalogoProductos{
+    display: flex;
+    justify-content: center;
+}
+
+.elementoProducto{
+ background-color: rgb(246, 234, 245);
+ width: 70%;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap:1rem;
+ padding: 2rem; 
+}
+
+.imagenCatalogo:hover{
+ filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
+}
+
+.seccion{
+    display: flex;
+    justify-content: center;
+}
