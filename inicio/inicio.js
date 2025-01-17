@@ -18,15 +18,23 @@ async function cargarDatos() {
       item.innerHTML = `
         <img src="../${producto.img}" alt="${producto.nombre}" width="205" height="212" class="imagenCatalogo">
         <p class="tituloProducto">${producto.nombre}</p>
-        <p>${producto.precio}€ <button>carrito</button></p>
+        <p>${producto.precio}€ <button class ="botonCarrito" onclick = "carri"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
       `;
 
       lista.appendChild(item);
 
-      // Agregar evento para mostrar el producto en la ventana superpuesta
-      item.addEventListener("click", () => {
-        mostrarProducto(producto.id);
-      });
+  // Seleccionar solo la imagen dentro del 'li'
+  const imagen = item.querySelector('.imagenCatalogo');
+  imagen.addEventListener("click", () => {
+    mostrarProducto(producto.id);
+  });
+
+  const titulo = item.querySelector('.tituloProducto');
+  titulo.addEventListener("click", () => {
+    mostrarProducto(producto.id);
+  });
+
+  
     });
 
     div.appendChild(lista);
@@ -40,14 +48,15 @@ async function cargarDatos() {
 function mostrarProducto(id) {
   const producto = productos.find(p => p.id === id);
 
+  //Popup producto
   if (producto) {
     document.getElementById("paginaProducto").innerHTML = `
       <div class="productoTexto">
         <p class="tituloProductoGrande" id="tituloProductoGrande">
-          <button onclick="irPagina(${id})">${producto.nombre}</button>
+          <button class= "botonTituloProductoGrande" onclick="irPagina(${id})">${producto.nombre}</button>
         </p>
         <p class="descripcionProducto">${producto.descripcion}</p>
-        <p>${producto.precio}€ <button>carrito</button></p>
+        <p>${producto.precio}€ <button class ="botonCarrito" onclick="abrirCarrito()"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
       </div>
       <div class="divImagenProducto">
         <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">
@@ -97,3 +106,7 @@ function cerrar() {
 
 // Cargar los datos al cargar la página
 cargarDatos();
+
+function abrirCarrito() {
+window.open("https://es.stackoverflow.com/questions/87417/como-quitar-el-estilo-de-botones-y-dropdown-menu-en-internet-explorer");
+}

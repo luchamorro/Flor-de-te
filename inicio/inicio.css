@@ -324,6 +324,13 @@ ul {
   margin-top: 0.5rem; /* Espacio superior */
 }
 
+.tituloProducto:hover{
+
+color: var(--burdeos);
+cursor: pointer;
+
+}
+
 /* Cambiar el estilo de los precios de los productos */
 .elementoProducto p {
   font-size: 1rem; /* Tamaño de fuente */
@@ -778,4 +785,18 @@ ul {
 .seccion{
     display: flex;
     justify-content: center;
+}
+
+button.botonCarrito{
+  font-size:0.9rem;
+  padding: 0;
+  z-index: 1400;
+  background: none;
+  color: var(--burdeos)
+}
+
+button.botonCarrito:hover{
+  background: none;
+  color: var(--naranja)
+  
 }
