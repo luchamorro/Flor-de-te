@@ -116,5 +116,41 @@
       },
       "copyright": "© 2024 Flor de Té"
     }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Contact Us",
+    "form": {
+      "name": "Name",
+      "last_name": "Last Name",
+      "phone": "Phone",
+      "email": "Email",
+      "message": "Your Message",
+      "privacy_policy": "I accept the privacy policy",
+      "submit": "Send"
+    },
+    "footer": {
+      "fair_trade": "Fair Trade",
+      "cruelty_free": "Cruelty-Free",
+      "organic": "100% Organic",
+      "plastic_free": "No Microplastics",
+      "subscribe_newsletter": "Subscribe to our newsletter",
+      "offers": "Offers, news, and exclusive discounts. Don’t miss out!",
+      "social_media": "Follow us on social media",
+      "useful_links": {
+        "title": "Useful Links",
+        "home": "Home",
+        "about_us": "About Us",
+        "contact": "Contact",
+        "cart": "Cart"
+      },
+      "policies": {
+        "title": "Policies",
+        "legal_notice": "Legal Notice",
+        "cookies_policy": "Cookies Policy",
+        "privacy_policy": "Privacy Policy"
+      },
+      "copyright": "© 2024 Flor de Té"
+    }
   }
 }
