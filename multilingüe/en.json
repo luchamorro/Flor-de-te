@@ -1,116 +1,120 @@
 {
-    "header": {
-      "logoAlt": "Flor de Té logo",
-      "menu": {
-        "inicio": "Home",
-        "nosotros": "About Us",
-        "contacto": "Contact",
-        "carrito": "Cart"
-      },
-      "searchPlaceholder": "Search..."
-    },
-    "hero": [
-      {
-        "title": "FLOR DE TÉ",
-        "text": "Organic flavors, modern freshness, and the balance you deserve in every sip",
-        "button": "SHOP NOW"
-      },
-      {
-        "title": "Live life sip by sip",
-        "text": "Discover our organic teas full of life. Taking care of yourself has never been so easy (or so delicious).",
-        "button": "SHOP NOW"
-      },
-      {
-        "title": "Well-being starts here",
-        "text": "At 'Flor de Té,' we care for you with modern, organic, and authentic blends.",
-        "button": "SHOP NOW"
-      }
-    ],
-    "catalog": {
-      "title": "Catalog",
-      "filters": {
-        "title": "Filter by:",
-        "categories": "Type of drink",
-        "properties": "Properties",
-        "applyButton": "Apply Filters",
-        "clearButton": "Clear Filters"
+  "home": {
+    "menu": {
+      "home": "Home",
+      "about_us": "About Us",
+      "contact": "Contact",
+      "search_placeholder": "Search...",
+      "language": {
+        "es": "ES",
+        "en": "EN"
       }
     },
-    "teaOfTheMonth": {
-      "title": "Tea of the Month: Oolong Tea",
-      "description": "Oolong Tea, also known as the tea of emperors, is a true gem for tea lovers. This unique tea combines the best of green and black tea, offering a complex flavor and an unparalleled tasting experience.",
-      "details": [
-        "🌱 Flavor: Floral, fruity, with a hint of nuttiness.",
-        "⏱️ Steeping time: 3-5 minutes.",
-        "🧡 Benefits: Aids digestion, promotes heart health, and boosts metabolism."
-      ],
-      "button": "Shop Now!"
-    },
-    "merchandising": {
-      "title": "Our Merchandising Collection",
-      "items": [
-        {
-          "title": "Flor de Té Mug",
-          "description": "Enjoy your favorite tea in our exclusive mug.",
-          "button": "Buy"
-        },
-        {
-          "title": "Flor de Té Tote Bag",
-          "description": "Carry your essentials with our eco-friendly tote bag.",
-          "button": "Buy"
-        },
-        {
-          "title": "Flor de Té Tumbler",
-          "description": "Keep your drink hot or cold in style.",
-          "button": "Buy"
-        }
-      ]
-    },
-    "specialOffer": {
-      "title": "And as a gift...",
-      "subtitle": "Buy 2, Try 1 Free",
-      "description": "Enjoy our teas and receive a surprise free sample of one of our infusions when you purchase two tea packages.",
-      "details": [
-        "🍃 Selection of unique infusions.",
-        "✨ Free sample with every two packages purchased.",
-        "🌟 Limited time offer."
-      ]
-    },
-    "testimonials": {
-      "title": "Testimonials",
-      "reviews": [
-        {
-          "text": "Flor de Té's teas are amazing. I love the variety and quality. Highly recommended!",
-          "author": "Ana Rodriguez"
-        },
-        {
-          "text": "The best tea I've ever tried. Organic and delicious, definitely my favorite.",
-          "author": "Juan Perez"
-        },
-        {
-          "text": "Flor de Té has changed my routine. I feel healthier and more energetic. Shipping is super fast!",
-          "author": "Laura Gomez"
-        }
-      ]
-    },
-    "footer": {
-      "fairTrade": "Fair Trade",
-      "noCruelty": "Cruelty-Free",
-      "organic": "100% Organic",
-      "noMicroplastics": "Microplastic-Free",
+    "main_title": "Welcome to Flor de Té",
+    "sections": {
+      "intro": {
+        "title": "Discover the Essence of Tea and Coffee",
+        "description": "At Flor de Té, we bring you organic and sustainable blends to brighten your day. Discover our unique selection of teas and coffees crafted with passion and care."
+      },
+      "highlights": {
+        "1": "100% Organic Ingredients",
+        "2": "Fair Trade Products",
+        "3": "Unique and Exquisite Flavors"
+      },
       "newsletter": {
         "title": "Subscribe to our newsletter",
-        "text": "Exclusive offers, news, and discounts. Don’t miss out!",
+        "description": "Get exclusive offers, news, and discounts. Don’t miss out!",
         "placeholder": "Enter your email",
         "button": "Subscribe"
       },
-      "links": {
-        "title1": "Useful Links",
-        "items1": ["Home", "About Us", "Contact", "Cart"],
-        "title2": "Policies",
-        "items2": ["Policies", "Legal Notice", "Cookie Policy", "Privacy Policy"]
+      "footer": {
+        "fair_trade": "Fair Trade",
+        "cruelty_free": "Cruelty-Free",
+        "organic": "100% Organic",
+        "plastic_free": "No Microplastics",
+        "useful_links": {
+          "title": "Useful Links",
+          "home": "Home",
+          "about_us": "About Us",
+          "contact": "Contact",
+          "cart": "Cart"
+        },
+        "policies": {
+          "title": "Policies",
+          "legal_notice": "Legal Notice",
+          "cookies_policy": "Cookies Policy",
+          "privacy_policy": "Privacy Policy"
+        },
+        "copyright": "© 2024 Flor de Té"
+      }
+    }
+  },
+  "about_us": {
+    "menu": {
+      "home": "Home",
+      "about_us": "About Us",
+      "contact": "Contact",
+      "search_placeholder": "Search...",
+      "language": {
+        "es": "ES",
+        "en": "EN"
+      }
+    },
+    "title": "Who We Are",
+    "sections": {
+      "mission": {
+        "title": "Our Mission",
+        "description": "Our mission is simple: to provide an unparalleled experience in every cup. At FLOR DE TÉ, we believe tea and coffee are more than just beverages; they are moments of connection, inspiration, and calm. We strive to enrich your daily rituals with authentic, flavorful products crafted with dedication. By prioritizing quality, sustainability, and customer satisfaction, we aim to become your trusted ally in exploring the wonderful world of tea and coffee."
+      },
+      "values": {
+        "title": "Values",
+        "description": "At Flor De Té, we believe tea and coffee are more than just beverages: they are experiences that connect, inspire, and elevate everyday moments. Every bean and leaf we offer reflects our dedication to excellence, innovation, sustainability, customer care, and quality. These values guide everything we do, ensuring each cup is a testament to our passion for perfection."
+      },
+      "commitment": {
+        "title": "Commitment",
+        "points": {
+          "1": {
+            "title": "Commitment",
+            "description": "We are dedicated to offering the best in every aspect of our store, from product selection to customer service. Our commitment extends to producer communities, ensuring fair and responsible practices."
+          },
+          "2": {
+            "title": "Innovation",
+            "description": "We constantly seek new ways to surprise our customers, blending tradition with creativity. We experiment with flavors, techniques, and presentations to create unique and memorable experiences."
+          },
+          "3": {
+            "title": "Customer Care",
+            "description": "The customer is at the center of everything we do. We offer warm, personalized attention, ensuring every visit to our store is special and satisfying."
+          },
+          "4": {
+            "title": "Quality",
+            "description": "Every product we offer is carefully selected to ensure freshness, flavor, and excellence. We are committed to maintaining the highest standards in every cup of tea or coffee that reaches our customers."
+          }
+        }
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "At Flor De Té, we aspire to be a reference in creating unique experiences around tea and coffee, offering the highest quality products that connect people with authentic flavors from around the world. Our vision is to build a community passionate about tea and coffee, where tradition and innovation meet to inspire unforgettable moments. We are committed to leading with sustainability, respect for the environment, and support for small producers, elevating each cup to an expression of art and dedication."
+      }
+    },
+    "footer": {
+      "fair_trade": "Fair Trade",
+      "cruelty_free": "Cruelty-Free",
+      "organic": "100% Organic",
+      "plastic_free": "No Microplastics",
+      "useful_links": {
+        "title": "Useful Links",
+        "home": "Home",
+        "about_us": "About Us",
+        "contact": "Contact",
+        "cart": "Cart"
+      },
+      "policies": {
+        "title": "Policies",
+        "legal_notice": "Legal Notice",
+        "cookies_policy": "Cookies Policy",
+        "privacy_policy": "Privacy Policy"
       },
       "copyright": "© 2024 Flor de Té"
     }
   }
-  
+}
