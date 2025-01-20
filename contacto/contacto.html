@@ -1,82 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Flor de Té</title>
       <link rel="stylesheet" href="contacto.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-      <title>Flor de Té</title>
-    </head>
+  
+  </head>
 <body>
-   <nav class="menu">
-      <div class="left-section">
-      <label for="menu-toggle" class="menu-icon">☰</label>
-      <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo">
-      <input type="checkbox" id="menu-toggle" class="menu-toggle">
-      <ul class="ul1">
-        <li class="menu"><a href="index.html">Productos <i class="fa-solid fa-leaf"></i></a></li>
-        <li class="menu"><a href="nosotros.html">Sobre Nosotras <i class="fa-solid fa-users"></i></a></li>
-        <li class="menu"><a href="contacto.html">Contacto <i class="fa-solid fa-envelope"></i></a></li>
-        </ul>
+  <nav class="menu">
+    <div class="left-section">
+    <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    </div>
+    <div class="right-section"> 
+        <input type="text" placeholder="Buscar..."> 
+        <div class="user-area"><i class="fa-solid fa-user"></i></div> 
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div> 
+        <select title="idioma"> 
+          <option value="es">ES</option> 
+          <option value="en">EN</option> 
+        </select> 
       </div>
-      <div class="right-section"> 
-          <input type="text" placeholder="Buscar..."> 
-          <div class="user-area"><i class="fa-solid fa-user"></i></div> 
-          <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div> 
-          <select title="idioma"> 
-            <option value="es">ES</option> 
-            <option value="en">EN</option> 
-          </select> 
-        </div>
-    </nav>
+  </nav>
 
     <div id="contacto">
 
-      <div class="texto-contacta">
+      <div class="contacto-texto">
         <h1>CONTACTO</h1>
       </div>
+      <div class="iconos-contacto">
 
-      <section class="contacto-flex">
-
-        <!--contenedor formulario-->
-         
-        <div class="formulario">
-          <h2>Contacta con nosotros</h2>
-          <form class="mi-formulario">
-            <p><label>Nombre</label> <input type="text" required /></p>
-            <p><label>Apellido</label> <input type="text" required /></p>
-            <p><label>Teléfono</label> <input type="tel" required /></p>
-            <p><label>Email</label> <input type="email" required /></p>
-            <p><label>Tu mensaje</label> <input type="text" required /></p>
-            <p class="acepto">
-                <label for="aceptar"><a href="rgpd.html"><strong>Acepto la política de privacidad</strong></a></label>
-                <input id="aceptar" type="checkbox" required />
-            </p>
-            <div class="contenedorboton">
-                <button type="submit">Enviar</button>
-            </div>
-          </form>
+        <div class="icono-lugar">
+          <i class="fas fa-house"></i>
+          <h3>Dirección</h3>
+          <p>Avda, de Ercilla, 48901 <br> Bilbao, Vizcaya</p>
         </div>
+        <div class="icono-tel">
+          <i class="fas fa-phone-alt"></i>
+          <h3>Teléfono</h3>
+          <p>+34 968201818</p>
+        </div>
+        <div class="icono-email">
+          <i class="fas fa-envelope"></i>
+          <h3>Correo Electrónico</h3>
+          <p>flor-de-té@hotmail.com</p>
+        </div>
+
+      </div>
+      <div class="contenedor1">
+        <div class="seccion-logo">
+          <img src="../img/logos/logo_horizontal.svg" alt="logo-form">
+        </div>
+
+        <div class="contenedor-formulario">
+          <div class="texto-form">
+            <h2>¿Podemos ayudarte?</h2>
+          </div>
+  
+          <form id="formulario">
+            <label for="asunto">Asunto</label>
+            <select name="asunto" id="asunto">
+              <option value="atencion-cliente">Atención al cliente</option>
+              <option value="Sugerencias">Sugerencias</option>
+            </select>
+            <br>
+            <label>Nombre</label> <input type="text" required />
+            <label>Apellido</label> <input type="text" required />
+            <label>Teléfono</label> <input type="tel" placeholder="999-999-999" />
+
+            <label for="email">Dirección de correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com">
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="¿Cómo podemos ayudarte?"></textarea>
+
+            <div class="contenedor-checkbox">
+              <input type="checkbox" id="privacidad" name="privacidad">
+              <label for="privacidad">He leído y acepto la política de privacidad</label>
+            </div>
+
+            <button type="submit">Enviar</button>
+          </form>
+          <div class="politica">
+            <p>Le informamos que los datos de carácter personal proporcionados a través del presente formulario, serán tratados por CAFÉS SALZILLO como responsable de esta web. La finalidad de la recogida y tratamiento de los datos personales que le solicitamos es la de la prestación del servicio que solicite en el presente, y en su caso, el envío de comunicaciones comerciales que pudieran ser de su interés. La legitimación se realiza a través del consentimiento del interesado. Le informamos que los datos facilitados estarán ubicados en los servidores con medidas de seguridad según NRGPD y Ley 3/2018. Usted, como interesado podrá ejercer los derechos de acceso, rectificación, cancelación y oposición, así como el de portabilidad, limitación y retirada, utilizando los formularios habilitados que disponemos para ellos o bien dirigir un email a salzillo@cafes-salzillo.es, así como el derecho de presentar una reclamación ante una autoridad de control. Puede consultar la información adicional y detallada sobre Protección de Datos en nuestra Política de privacidad Marque la casilla, si desea recibir información sobre nuestros productos y/o servicios.</p>
+          </div>
+        </div>
+      </div>
+
       <!--contenedor de mapa-->
 
-      <div class="map-container">
+      <div class="contenedor-map">
             <iframe
                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d726.6889455365114!2d-2.8906401083607727!3d43.2355797368229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4ef2d6fd135b%3A0x46c15f92063a93a5!2sPl.%20Arizgoiti%2C%204!5e0!3m2!1ses!2ses!4v1731399877248!5m2!1ses!2ses"
                allowfullscreen=""
                loading="lazy"
                referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-         </div>
-
-         
-      </section>
+      </div>
       
-<!-- Footer -->
+      <div class="iconos-tiendas">
+        <div class="icono-tiendas">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h3>FLor de té 
+          El Corte Inglés</h3>
+          <p>Gran vía, Bilbao</p>
+          <p>Tlf: 968 385 717</p>
+        </div>
+        <div class="icono-tiendas">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <h3>FLor de té 
+          Artea</h3>
+          <p>Av artea 3, Algorta</p>
+          <p>Tlf: 968 385 720</p>
+          </div>
+          <div class="icono-tiendas">
+            <i class="fa-solid fa-bag-shopping"></i>
+          <h3>FLor de té</h3>
+          <p>Centro comercial Max Center</p>
+          <p> Tlf: 968 385 722</p>
+          </div>
+        </div>
+      
+      
+    </div>
+      
+ <!-- Footer -->
 
-<footer>
+ <footer>
   <div class="footer-container">
     <div class="comercio-justo">
       <p><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
@@ -86,6 +147,7 @@
     </div>
     <hr class="linea-fina">
     <div class="newsletter">
+      <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo-footer">
       <h3>Suscríbete a nuestra newsletter</h3>
       <p>Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?</p>
       <form>
@@ -123,7 +185,5 @@
     <p>© 2024 Flor de Té</p>
   </div>
 </footer>
-    
 </body>
-
 </html>
