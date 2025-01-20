@@ -1,301 +1,505 @@
-#contacto {
-    display:flex;
-    flex-direction:column; 
-    justify-content:center;
-    align-items:center;
-    padding:2rem;
-    font-size:1.2rem;
-    font-family: var(--font);
-    color: var(--textcolor);
-    }
-    
-    #contacto section {
-    background-color: #ffffff;
-    padding: 5px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 3rem;
-    width: 100%;
-    }
-    
-    #contacto h1 {
-    color: var(--colortextodestacado);
-    text-align: center;
-    font-size:4rem;
-    width: 50%;
-    height: 50%;
-    margin: 2rem;
-    padding: 0.5rem;
-    font-weight: bold;
-    }
-    
-    #contacto h3{
-    color: var(--colortextodestacado);
-    font-size: 2rem;
-      }
-    
-    #contacto ul {
-    padding: 30px;
-    }
-    
-    #contacto form {
-    width: 100%;
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    }
-    
-    #contacto label {
-    margin-top: 10px;
-    }
-    
-    #contacto input,select,textarea {
-    padding: 5px;
-    margin-top: 5px;
-    border: 1px solid #add;
-    border-radius: 4px;
-    width: 100%;
-    }
-    
-    #contacto select {
-    width: 30%;
-    text-align: center;
-    font-size: 1.2rem;
-    }
-    
-    #contacto textarea {
-    min-width: 100%;
-    height: 30vh;
-    }
-    
-    #contacto .contenedorboton {
-    text-align:center;
-    }
-    
-    #contacto button {
-    width: 50%;
-    background-color: var(--textcolor);
-    border-radius: 4px;
-    cursor: pointer;
-    color: white;
-    font-size:2rem;
-    padding: 0.5rem;
-    }
-    
-    #contacto button:hover {
-    background-color: var(--colorbackground);
-    }
-    
-    #contacto .formulario h3{
-    padding: 0.5rem;
-    font-size: 30px;
-    margin: auto;
-    width: 50%;
-    height: 50%;
-    text-align: center;
-    }
-    
-    #contacto .mi-formulario {
-    margin: auto;
-    width: 80%;
-    border: 1px solid var(--colorbackground); 
-    padding: 30px;
-    border-radius: 5px;
-    font-size: 30px;
-    }
-    #contacto .acepto {
-    font-weight: bolder;
-    margin: 1rem;
-    padding: 2rem;
-    text-align: center;
-    }
-    #contacto a:hover{
-      opacity: 0.5;
-    }
-    #contacto .aviso {
-    font-size: 1rem;
-    margin: 1rem;
-    padding: 1rem;
-    text-align: center;
-    line-height: 2rem;
-    }
-    #contacto .datos{
-    line-height: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2rem;
-    }
-    
-    #contacto .map-container {
-    border: 1px solid #ccc;
-    margin: 2rem;
-    text-align: center;
-    width: 80%;
-    padding: 0.5rem;
-    }
-    
-    #contacto iframe { 
-    width: 100%;
-    height: 60vh;
-    margin:0;
-    }
-    
-    #contacto .sugerencias { 
-    width: 60%;
-    margin: 10rem;
-    padding: 2rem;
-    line-height: rem;
-      }
-      #contacto .sugerencias ul{ 
-    list-style-type: square;
-      }
-          
-      #contacto .sugerencias label{ 
-    display:block;
-    margin:1rem;
-    width: 20%;
-    text-align: center;
-        }
-    
-    /** botón leer mas, leer menos **/
-    #contacto #leemenos_boton {
-    display:none;
-      
-    }
-    
-    #contacto #leemas_boton, #contacto #leemenos_boton {
-    color:white;
-    background-color:var(--textcolor);
-    padding:0.5rem;
-    border-radius:3px;
-    margin: 2rem;
-    }
-    
-    #contacto #leemas_boton:hover, #contacto #leemenos_boton:hover {
-    background-color:var(--colorbackground);
-    }
-    
-    /* Checkbox oculto */
-    #contacto #leermas {
-    display: none;/*ocultar cuadro checkbox*/
-    }
-    
-    #contacto .textooculto {
-    display: none;/*ocultar texto*/
-    margin: 2rem;
-    }
-    
-    /* Mostrar el texto oculto y el botón "Leer menos" cuando el checkbox está marcado, y ocultar el de "Leer más" */
-    #contacto #leermas:checked + .textooculto {
-    display: block;/*mostrar texto cuando el check esta activado*/
-    opacity: 1;
-    transition: opacity 0.5s ease;
-    }
-    
-    #contacto #leermas:checked ~ #leemas_boton {
-    display: none;/*ocultar el label leemas_boton cuando check esta activado*/ 
-    }
-    
-    #contacto #leermas:checked ~ #leemenos_boton {
-    display: inline-block;/*mosstrar el label leemas_menos cuando check esta activado*/ 
-    }
-    
-    /* Estilos para móviles */ 
-    
-    @media (max-width: 600px) { 
-      #contacto .formulario h3 {
-    font-size: 1rem;
-       }
-    #contacto .sugerencias { 
-    font-size: 1.2rem;
-    width: 80%;
-    }
-    #contacto .sugerencias label{ 
-    width: 40%;
-    }
-    #contacto .formulario h3{
-    font-size: 2rem;
-    }
-    #contacto .formulario input{
-    font-size: 1.2rem;
-    }
-          
-    }
-    
-    /* Estilos para tablet */ 
-    
-    @media (max-width: 768px) { 
-      #contacto .formulario h3 {
-    font-size: 1.5rem;
-       }
-    #contacto .sugerencias { 
-    font-size: 1.6rem;
-    width: 90%;
-    }
-    #contacto .sugerencias label{ 
-    width: 50%;
-    }
-    #contacto .formulario h3{
-    font-size: 2.5rem;
-    }
-    #contacto .formulario input{
-    font-size: 1.6rem;
-    }
-          
-    }
-    
-    /*************** ESTILOS RGPD ****************/
-    #rgdp {
-      display:flex;
-      flex-direction: column;
-      height: 100%;
-      font-style: normal;
-      font-family: var(--font);
-      color: var(--textcolor);
-      font-size: 1.2rem;
-    }
-    #rgdp h1{
-    padding: 20px;
-    font-size:2rem;
-    font-weight: bold;
-    color:var(--colortextodestacado);
-    margin:0.5rem; 
-    }
-    #rgdp h3{
-      padding: 10px;
-      font-size:1.5rem;
-      font-weight: bold;
-      color:var(--colortextodestacado);  
-      }
-    #rgdp main{
-      display: flex;
-      flex-direction:column;
-      justify-content:flex-start;
-      align-items:center;
-      padding: 2.5rem;
-      margin: 1.8rem;
-    }
-    #rgdp main .contenido{
-      background-color: white;
-      border-radius:10px;
-      padding: 3.5rem;
-      margin: 2rem 1rem;
-      line-height: 1.5rem;
-    }
-    #rgdp .proteccion-datos{
-      width:40%;
-      margin:auto;
-      text-align:center;
-    }
-    
-    /* Estilos para móviles */ 
-    
-    @media (max-width: 600px) { 
-      #rgdp .proteccion-datos{
-        width:100%;
-    
-      }
-    }
+
+:root {
+  --negro: black;
+  --burdeos: #CD0038;
+  --morado: #6F005E;
+  --naranja: #FF6600;
+  --blanco: white;
+}
+.contacto-texto {
+  background-image: url(hojas-y-flores-para-infusion.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  justify-content:center;
+  text-align: center;
+}
+/* Estilos generales */
+body,
+html {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Space Grotesk", serif;
+}
+
+h1{
+  color: var(--blanco);
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: var(--morado);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+h4{
+  color: var(--burdeos);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p{
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+button{
+  padding: 0.5rem 1rem; /* Relleno del botón */
+  background-color: var(--naranja); /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Mano al pasar el ratón */
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--burdeos); /* Cambio de color al pasar el ratón */
+}
+
+
+/* Estilos del menú */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 235, 222);
+  padding: 1rem;
+  border-radius: 50px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  line-height: normal;
+  position: fixed;
+  width: 115.7rem;
+  top: 0;
+  z-index: 100;
+}
+
+.menu img {
+  height: 65px;
+  margin-left: 2rem;
+  ;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  width: 20%;
+  justify-content: space-evenly;
+
+}
+
+.menu ul li a {
+  color: var(--negro);
+  text-decoration: none;
+}
+
+.menu ul li a:hover {
+  color: #cd0038;
+  font-size: 1.1rem;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+.right-section input[type="text"] {
+  padding: 8px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(255, 206, 173);
+}
+
+.right-section select {
+  padding: 8px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.right-section .user-area,
+.right-section .cart {
+  color: var(--negro);
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.right-section .cart {
+  position: relative;
+  width: 2.3rem;
+}
+
+.right-section .cart::after {
+  content: '4';
+  /* Example for cart item count */
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--burdeos);
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+/*estilos iconos*/
+.contactanos {
+display: flex;
+flex-direction: column;
+gap: 5rem;
+}
+
+.contactanos h2{
+  text-align: center;
+  color: var(--morado);
+  font-weight: bold;
+}
+.iconos-contacto {
+  display: flex;
+  justify-content: space-around; /* Espaciado igual entre los elementos */
+  text-align: center; /* Centra el texto de cada ícono */
+  padding: 20px;
+  background-color: var(--blanco);
+  gap: 2rem;
+}
+
+.icono-lugar{
+  background-color: #f9f9f9;
+}
+
+.icono-tel{
+  background-color: #f9f9f9;
+}
+.icono-email{
+  background-color: #f9f9f9;
+}
+.iconos-contacto div {
+  flex: 1; /* Asegura que los elementos ocupen espacio igual */
+  margin: 0 10px; /* Margen entre columnas */
+}
+
+.iconos-contacto i {
+  font-size: 40px; /* Tamaño del ícono */
+  color: var(--morado); 
+  margin-bottom: 10px; /* Espacio debajo del ícono */
+}
+
+.iconos-contacto h3 {
+  font-size: 18px;
+  color: #555; /* Color gris oscuro */
+  margin: 10px 0;
+}
+
+.iconos-contacto p {
+  font-size: 16px;
+  color: #333 /* Texto verde oscuro */
+}
+
+/* Formulario */
+.contenedor1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contenedor-formulario {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  color: var(--morado);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #f4f4f4;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--morado);
+  box-shadow: 0 0 5px rgba(111, 0, 94, 0.5);
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-group input {
+  margin-right: 10px;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: var(--burdeos);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--morado);
+}
+
+/* Estilo para el texto de la política */
+.politica p {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 2rem;
+}
+/*estilo map*/
+
+.contenedor-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  margin: 2rem;
+  text-align: center;
+  width: 80%;
+  padding: 0.5rem;
+  }
+  
+  #contacto iframe { 
+  width: 95%;
+  height: 60vh;
+  margin:0;
+  }
+
+
+/*estilos iconos*/
+
+.nuestras-tiendas h2{
+  text-align: center;
+  color: var(--morado);
+  font-weight: bold;
+}
+.iconos-tiendas {
+  display: flex;
+  justify-content: space-around; /* Espaciado igual entre los elementos */
+  text-align: center; /* Centra el texto de cada ícono */
+  padding: 20px;
+  background-color: var(--blanco);
+  gap: 2rem;
+}
+
+.icono-tienda1{
+  background-color: #f9f9f9;
+}
+
+.icono-tienda2{
+  background-color: #f9f9f9;
+}
+.icono-tienda3{
+  background-color: #f9f9f9;
+}
+.iconos-tiendas div {
+  flex: 1; /* Asegura que los elementos ocupen espacio igual */
+  margin: 0 10px; /* Margen entre columnas */
+}
+
+.iconos-tiendas i {
+  font-size: 40px; /* Tamaño del ícono */
+  color: var(--morado); 
+  margin-bottom: 10px; /* Espacio debajo del ícono */
+}
+
+.iconos-tiendas h3 {
+  font-size: 18px;
+  color: #555; /* Color gris oscuro */
+  margin: 10px 0;
+}
+
+.iconos-tiendas p {
+  font-size: 16px;
+  color: #333 /* Texto verde oscuro */
+}
+
+/*FOOTER*/
+.footer-container {
+  background-color: rgb(255, 154, 87);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.comercio-justo { 
+  width: 55%; 
+  text-align: center; 
+  margin-bottom: 1rem; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+} 
+.comercio-justo p { 
+  margin: 0; 
+  padding: 0.5rem 0;
+  color: white;
+}
+.comercio-justo i{
+  color: white;
+}
+.linea-fina {
+  border: none; /* Elimina cualquier borde predeterminado */
+  border-top: 1px solid #ccc; /* Añade una línea superior fina */
+  margin: 0.5rem 0;
+  padding: 1rem; /* Espaciado alrededor de la línea */
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+}
+
+.newsletter {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 1rem;
+}
+
+.logo-footer{
+  width: 150px;
+}
+
+.newsletter h3 {
+  color: var(--blanco);
+  margin-top: 0;
+  text-align: left;
+}
+
+.newsletter p {
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.newsletter form {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.newsletter input[type="email"] {
+  flex: 0.8;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+
+.newsletter button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  background-color: var(--naranja);
+  color: white;
+  cursor: pointer;
+}
+
+.newsletter .social-media {
+  margin-top: 1rem;
+}
+
+.newsletter .social-media a {
+  color: white;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.footer-columns {
+  display: flex;
+  flex: 2;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-right: 1rem;
+}
+
+.footer-column h4 {
+  margin-top: 0;
+}
+
+.footer-column p {
+  margin: 0.5rem 0;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.subfooter {
+  background-color: rgb(255, 102, 0);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.subfooter p {
+  margin: 0;
+}

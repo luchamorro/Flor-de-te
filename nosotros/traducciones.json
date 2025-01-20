@@ -1,0 +1,46 @@
+{
+  "en": {
+    "titulo": "Who We Are",
+    "descripcion": "Our mission is simple: to provide an unparalleled experience in every cup. At FLOR DE TÉ, we believe in the power of tea to transform your well-being and bring moments of peace.",
+    "boton": "Learn More",
+    "contacto": "Contact Us",
+    "cuidarte_titulo": "Caring for You, the Most Important",
+    "cuidarte_descripcion": "Our mission is simple: to provide an unparalleled experience in every cup. At FLOR DE TÉ, we believe that tea and coffee are more than beverages; they are moments of connection, inspiration, and calm.",
+    "valores_titulo": "Tea to Be Together",
+    "valores_descripcion": "At Flor De Té, we believe tea and coffee are much more than beverages: they are experiences that connect, inspire, and elevate everyday moments.",
+    "compromiso_titulo": "Commitment",
+    "compromiso_descripcion": "We are dedicated to offering the best in every aspect of our store, from product selection to customer service.",
+    "innovacion_titulo": "Innovation",
+    "innovacion_descripcion": "We are constantly seeking new ways to surprise our customers, blending tradition with creativity.",
+    "cuidado_titulo": "Customer Care",
+    "cuidado_descripcion": "The customer is at the heart of everything we do. We offer warm and personalized attention to ensure every visit is special.",
+    "calidad_titulo": "Quality",
+    "calidad_descripcion": "Every product we offer is carefully selected to guarantee freshness, flavor, and excellence.",
+    "vision_titulo": "Our Vision",
+    "vision_descripcion": "At Flor De Té, we aspire to be a reference in creating unique experiences around tea and coffee, offering the highest quality products that connect people with authentic flavors from around the world.",
+    
+    "inicio": "Home",
+    "catalogo": "Catalog",
+    "nosotros": "About Us",
+    "contacto": "Contact",
+    "carrito": "Cart",
+    
+    "comercio_justo": "Fair Trade",
+    "sin_crueldad": "Cruelty-Free",
+    "organico": "100% Organic",
+    "sin_microplasticos": "No Microplastics",
+    
+    "suscribete": "Subscribe to our newsletter",
+    "ofertas": "Offers, news, and exclusive discounts. Don't miss it!",
+    
+    "enlaces": "Useful Links",
+    "politicas": "Policies",
+    "aviso": "Legal Notice",
+    "cookies": "Cookie Policy",
+    "privacidad": "Privacy Policy",
+    
+    "social_tiktok": "TikTok",
+    "social_instagram": "Instagram",
+    "social_facebook": "Facebook"
+  }
+}

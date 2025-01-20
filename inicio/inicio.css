@@ -71,8 +71,7 @@ button:hover {
   width: 98%; /*115.7rem;*/
   top: 0;
   z-index: 100;
-  box-sizing: border-box;
- 
+  box-sizing: border-box; 
 }
 
 .menu img {
@@ -95,7 +94,6 @@ button:hover {
 
 .menu ul li a:hover{
   color: #cd0038;
-  font-size: 1.1rem;
 }
 
 .left-section{
@@ -199,52 +197,29 @@ button:hover {
 }
 
 .hero-text-2 {
-  margin: 5rem 60rem 0 0;
+  margin: 5rem 55rem 0 0;
+  animation: none; /* Por defecto, sin animación */
 }
 
 .hero-text-3 {
-  margin: 5rem 60rem 0 0;
+  margin: 5rem 55rem 0 0;
+  animation: none; /* Por defecto, sin animación */
 }
 
 .hero-carousel p{
   font-size: 2rem;
 }
-/* Estilo de los textos */
-.hero-text-1, .hero-text-2, .hero-text-3 {
-  opacity: 0;  /* Comienza invisible */
-  transform: translateY(20px);  /* Comienza desplazado hacia abajo */
-  transition: opacity 2s ease-out, transform 2s ease-out;
+.hero-slide.active .hero-text {
+  animation: fadeInUp 1.2s ease-in-out;
 }
-
-/* Activación de animación para cada diapositiva */
-.hero-slide.active .hero-text-1,
-.hero-slide.active .hero-text-2,
-.hero-slide.active .hero-text-3 {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
 .hero-text h1 {
-  animation: fadeInUp 1.5s ease-out 1s both;
+  animation: fadeInUp 1s ease-out 0.5s both;
 }
-
 
 .hero-text p {
-  animation: fadeInUp 2s ease-out 1.5s both;
+  animation: fadeInUp 1s ease-out 1s both;
 }
 
-/* Animación específica para los textos */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 .btn-hero {
   display: inline-block;
@@ -267,6 +242,17 @@ button:hover {
 .hero-slide:active .btn-hero:hover {
   transform: scale(1.1);
   background-color: var(--morado);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .productos {
@@ -694,19 +680,13 @@ ul {
   margin-right: 1rem;
 }
 
-.logo-footer{
-  width: 150px;
-}
-
 .newsletter h3 {
-  color: var(--blanco);
+  color: var(--blanco)
   margin-top: 0;
-  text-align: left;
 }
 
 .newsletter p {
   margin-top: 0.5rem;
-  text-align: left;
 }
 
 .newsletter form {
@@ -715,7 +695,7 @@ ul {
 }
 
 .newsletter input[type="email"] {
-  flex: 0.8;
+  flex: 1;
   padding: 0.5rem;
   margin-right: 0.5rem;
   border-radius: 0.25rem;
@@ -773,7 +753,7 @@ ul {
 }
 
 .subfooter {
-  background-color: rgb(255, 102, 0);
+  background-color: var(--naranja);
   color: white;
   text-align: center;
   padding: 1rem;
