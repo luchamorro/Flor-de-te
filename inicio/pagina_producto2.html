@@ -40,31 +40,15 @@
         </select> 
       </div>
   </nav>
-  
-  
+  <section class="paginaDeProducto">
 
-  <section class="hero-carousel">
-    <div class="hero-slide active" style="background-image: url('../img/inicio/hero1.jpeg')">
-      <div class="hero-text">
-        <h1 class="titulo-hero">FLOR DE TE</h1>
-        <p class="texto-hero">Sabores orgánicos, frescura moderna y el equilibrio que mereces en cada sorbo</p>
-        <button class="btn-hero">COMPRAR</button>
-      </div>
+    <div id="paginaProductoAparte" style="display: flex;"></div>
+    <div class="botones">
+      <button id="anteriorBtn" class="botonFlecha"><i class="fa-solid fa-arrow-left"></i></button>
+      <button id="siguienteBtn" class="botonFlecha"><i class="fa-solid fa-arrow-right"></i></button>
     </div>
-    <div class="hero-slide" style="background-image: url('../img/inicio/hero2.jpeg')">
-      <div class="hero-text">
-        <h1 class="titulo-hero">Vive la vida a sorbos</h1>
-        <p class="texto-hero">Descubre nuestros tés orgánicos y llenos de vida. Cuidarte nunca fue tan fácil (ni tan delicioso).</p>
-        <button class="btn-hero">COMPRAR</button>
-      </div>
-    </div>
-    <div class="hero-slide" style="background-image: url('../img/inicio/hero3.jpg')">
-      <div class="hero-text">
-        <h1 class="titulo-hero">El bienestar empieza aquí</h1>
-        <p class="texto-hero">En "Flor de Té", cuidamos de ti con blends modernos, orgánicos y auténticos.</p>
-        <button class="btn-hero">COMPRAR</button>
-      </div>
-    </div>
+
+    
   </section>
 
   <!-- Catálogo -->
@@ -262,6 +246,71 @@
             <li class="menu"><a href="pagina.html">Página</a></li>
         </ul>
     </nav>
+
+    <script>
+
+
+        let productos = [];
+        let currentId = 0;
+      
+        document.addEventListener('DOMContentLoaded', async () => {
+          try {
+            const respuesta = await fetch('productos.json');
+            productos = await respuesta.json();
+      
+            const productoSeleccionado = JSON.parse(localStorage.getItem('productoSeleccionado'));
+            if (productoSeleccionado) {
+              currentId = productoSeleccionado.id;
+              mostrarProducto(productoSeleccionado);
+            } else {
+              document.getElementById('paginaProductoAparte').innerHTML = '<p>Error al cargar el producto.</p>';
+            }
+      
+            // Asignar eventos a los botones
+            document.getElementById('anteriorBtn').addEventListener('click', mostrarAnterior);
+            document.getElementById('siguienteBtn').addEventListener('click', mostrarSiguiente);
+          } catch (error) {
+            console.error('Error al cargar los datos del JSON:', error);
+          }
+        });
+      
+        function mostrarProducto(producto) {
+          document.getElementById('paginaProductoAparte').innerHTML = `
+            <div class="productoTexto">
+              <p class="tituloProductoGrande" id="tituloProductoGrande">${producto.nombre}</p>
+              <p class="descripcionProducto">${producto.descripcion}</p>
+              <p>${producto.precio}€ <button>carrito</button></p>
+            </div>
+            <div class="divImagenProducto">
+              <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">
+            </div>`;
+        }
+      
+        function mostrarAnterior() {
+          const index = productos.findIndex(p => p.id === currentId);
+          if (index > 0) {
+            currentId = productos[index - 1].id;
+          } else {
+            currentId = productos[productos.length - 1].id; // Último producto
+          }
+          mostrarProducto(productos.find(p => p.id === currentId));
+        }
+      
+        function mostrarSiguiente() {
+          const index = productos.findIndex(p => p.id === currentId);
+          if (index < productos.length - 1) {
+            currentId = productos[index + 1].id;
+          } else {
+            currentId = productos[0].id; // Primer producto
+          }
+          mostrarProducto(productos.find(p => p.id === currentId));
+        }
+      
+      
+       
+        </script>
+        <script src="pagina_producto.js"></script>
+
 
     <script src="inicio.js"></script>
 

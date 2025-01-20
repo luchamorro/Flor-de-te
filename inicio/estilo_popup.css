@@ -36,11 +36,17 @@
        padding-left: 3rem;
    }
    
-   .botones{
-       align-self:center;
-       position: fixed;
-       bottom: 2rem;
+   .botonesPaginaProducto{
+      display: flex;
+      justify-content: center;
+     
    }
+
+   .botones{
+    display: flex;
+    justify-content: center;
+   
+ }
      
    
    .divImagenProducto{
