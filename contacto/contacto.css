@@ -6,87 +6,117 @@
   --naranja: #FF6600;
   --blanco: white;
 }
-* {
-margin: 0;
-padding: 0;
-}
-
-a{
-  text-decoration: none;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f3f2e9;
-  margin: 0;
-  padding: 0;
-  background-image: url(tazas-te-hierbas-saludable-canela-rosa-seca-flores-manzanilla-cucharas-sobre-fondo-madera-vista-superior_93675-83840.jpg);
+.contacto-texto {
+  background-image: url(hojas-y-flores-para-infusion.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  justify-content:center;
+  text-align: center;
 }
+/* Estilos generales */
+body,
+html {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Space Grotesk", serif;
+}
+
+h1{
+  color: var(--blanco);
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: var(--morado);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+h4{
+  color: var(--burdeos);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p{
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+button{
+  padding: 0.5rem 1rem; /* Relleno del botón */
+  background-color: var(--naranja); /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Mano al pasar el ratón */
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--burdeos); /* Cambio de color al pasar el ratón */
+}
+
 
 /* Estilos del menú */
 .menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--blanco);
+  background-color: rgb(255, 235, 222);
   padding: 1rem;
+  border-radius: 50px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  line-height: normal;
+  position: fixed;
+  width: 115.7rem;
+  top: 0;
+  z-index: 100;
 }
 
 .menu img {
-  height: 70px;
+  height: 65px;
+  margin-left: 2rem;
+  ;
 }
 
 .menu ul {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  width: 20%;
+  justify-content: space-evenly;
+
 }
 
-.menu ul li {
-  margin: 0 1rem;
-}
-
-.menu ul li:hover a {
-  color: var(--burdeos);
-  text-decoration: underline;
-}
-
-.menu ul a {
+.menu ul li a {
   color: var(--negro);
   text-decoration: none;
 }
 
-.menu-icon {
-  display: none;
-  font-size: 2rem;
-  color: var(--negro);
-  cursor: pointer;
+.menu ul li a:hover {
+  color: #cd0038;
+  font-size: 1.1rem;
 }
 
-.menu-toggle {
-  display: none;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  padding: 10px 20px;
-}
-
-.left-section{
+.left-section {
   display: flex;
   align-items: center;
+  width: 70%;
 }
 
 .right-section {
   display: flex;
   align-items: center;
-  border: black 1px solid;
+  width: 20%;
 }
 
 .right-section input[type="text"] {
@@ -94,12 +124,12 @@ body {
   margin-right: 10px;
   border: none;
   border-radius: 4px;
-  background-color: #d0d0d0;
+  background-color: rgb(255, 206, 173);
 }
 
 .right-section select {
   padding: 8px;
-  margin-right: 10px;
+  margin-left: 15px;
   border: none;
   border-radius: 4px;
   background-color: #fff;
@@ -118,7 +148,8 @@ body {
 }
 
 .right-section .cart::after {
-  content: '4'; /* Example for cart item count */
+  content: '4';
+  /* Example for cart item count */
   position: absolute;
   top: -5px;
   right: -5px;
@@ -129,167 +160,222 @@ body {
   font-size: 12px;
 }
 
-#contacto {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 2rem;
-  font-size: 1.2rem;
-  font-family: var(--font);
-  color: var(--negro);
+/*estilos iconos*/
+.contactanos {
+display: flex;
+flex-direction: column;
+gap: 5rem;
 }
 
-#contacto .contacto-flex{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.map-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 15rem;
-
-}
-.formulario{
-  width: 100%;
-  margin-bottom: 5%;
-  margin-top: 2%;
-  padding-top:2.5%;
-  background-color: var(--blanco);
-  box-shadow: 14px 20px 10px rgba(0,0,0,0.1);
-  border-radius: 0.5rem;
-}
-input{
-  font-size: 1.2rem;
-  color:var(--negro);
-  text-indent:1rem;
-  border: red 0.12 rem solid;
-  margin-bottom: 1rem;
-  margin-top: 0.5rem;
-  width:100%;
-  min-height: 2.5rem;
-  border-radius: 0.8rem;
-}
-p{
-  font-size: 1.2rem;
-}
-
-.contenedorboton {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  width: 8rem;
-  height: 3rem;
-  background-color: var(--blanco);
-  border:var(--naranja) solid 0.2rem;
+.contactanos h2{
   text-align: center;
-
-}
-
-#contacto h2 {
-  text-align: center;
-}
-
-#contacto section {
-  padding:10px;
-  border-radius: 8px;
-  
-  margin: 3rem;
-  width: 100%;
-}
-
-#contacto h1 {
-  color: var(--blanco);
-  text-align: center;
-  font-size: 3rem;
-  width: 50%;
-  height: 50%;
-  margin: 2rem;
-  padding: 0.5rem;
+  color: var(--morado);
   font-weight: bold;
 }
-
-
-#contacto ul {
-  padding: 30px;
-}
-
-#contacto label {
-  margin-top: 10px;
-}
-
-#contacto button {
-  border-radius: 4px;
-  cursor: pointer;
-
-  font-size: 2rem;
-  padding: 0.5rem;
-  background: none;
-}
-
-#contacto button:hover {
-  background-color: var(--naranja);
-  color: var(--blanco);
-}
-
-#contacto .mi-formulario {
-  margin: auto;
-  width: 80%;
+.iconos-contacto {
+  display: flex;
+  justify-content: space-around; /* Espaciado igual entre los elementos */
+  text-align: center; /* Centra el texto de cada ícono */
   padding: 20px;
-  border-radius: 5px;
-  font-size: 30px;
+  background-color: var(--blanco);
+  gap: 2rem;
 }
 
-#contacto .acepto {
-  font-weight: bolder;
-  margin: 1rem;
-  padding: 2rem;
-  text-align: center;
+.icono-lugar{
+  background-color: #f9f9f9;
 }
 
-#contacto a:hover {
-  opacity: 0.5;
+.icono-tel{
+  background-color: #f9f9f9;
+}
+.icono-email{
+  background-color: #f9f9f9;
+}
+.iconos-contacto div {
+  flex: 1; /* Asegura que los elementos ocupen espacio igual */
+  margin: 0 10px; /* Margen entre columnas */
 }
 
-#contacto .aviso {
-  font-size: 1rem;
-  margin: 1rem;
-  padding: 1rem;
-  text-align: center;
-  line-height: 2rem;
+.iconos-contacto i {
+  font-size: 40px; /* Tamaño del ícono */
+  color: var(--morado); 
+  margin-bottom: 10px; /* Espacio debajo del ícono */
 }
 
-#contacto .datos {
-  line-height: 1.5rem;
+.iconos-contacto h3 {
+  font-size: 18px;
+  color: #555; /* Color gris oscuro */
+  margin: 10px 0;
+}
+
+.iconos-contacto p {
+  font-size: 16px;
+  color: #333 /* Texto verde oscuro */
+}
+
+/* Formulario */
+.contenedor1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contenedor-formulario {
+  background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 2rem;
+  padding: 100px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#contacto .map-container {
+form {
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  color: var(--morado);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #f4f4f4;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--morado);
+  box-shadow: 0 0 5px rgba(111, 0, 94, 0.5);
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-group input {
+  margin-right: 10px;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: var(--burdeos);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--morado);
+}
+
+/* Estilo para el texto de la política */
+.politica p {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 2rem;
+}
+/*estilo map*/
+
+.contenedor-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #ccc;
   margin: 2rem;
   text-align: center;
   width: 80%;
   padding: 0.5rem;
-  min-height: 15rem;
-}
-
-#contacto iframe {
-  width: 100%;
+  }
+  
+  #contacto iframe { 
+  width: 95%;
   height: 60vh;
-  margin: 0;
+  margin:0;
+  }
+
+
+/*estilos iconos*/
+
+.nuestras-tiendas h2{
+  text-align: center;
+  color: var(--morado);
+  font-weight: bold;
+}
+.iconos-tiendas {
+  display: flex;
+  justify-content: space-around; /* Espaciado igual entre los elementos */
+  text-align: center; /* Centra el texto de cada ícono */
+  padding: 20px;
+  background-color: var(--blanco);
+  gap: 2rem;
 }
 
-/* Footer */
+.icono-tienda1{
+  background-color: #f9f9f9;
+}
+
+.icono-tienda2{
+  background-color: #f9f9f9;
+}
+.icono-tienda3{
+  background-color: #f9f9f9;
+}
+.iconos-tiendas div {
+  flex: 1; /* Asegura que los elementos ocupen espacio igual */
+  margin: 0 10px; /* Margen entre columnas */
+}
+
+.iconos-tiendas i {
+  font-size: 40px; /* Tamaño del ícono */
+  color: var(--morado); 
+  margin-bottom: 10px; /* Espacio debajo del ícono */
+}
+
+.iconos-tiendas h3 {
+  font-size: 18px;
+  color: #555; /* Color gris oscuro */
+  margin: 10px 0;
+}
+
+.iconos-tiendas p {
+  font-size: 16px;
+  color: #333 /* Texto verde oscuro */
+}
+
+/*FOOTER*/
 .footer-container {
-  background-color: #6f005e;
+  background-color: rgb(255, 154, 87);
   color: white;
   padding: 2rem;
   display: flex;
@@ -298,27 +384,29 @@ p{
   align-items: flex-start;
 }
 
-.comercio-justo {
-  width: 55%;
-  text-align: center;
-  margin-bottom: 1rem;
+.comercio-justo { 
+  width: 55%; 
+  text-align: center; 
+  margin-bottom: 1rem; 
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: 0 auto;
-}
-
-.comercio-justo p {
-  margin: 0;
+} 
+.comercio-justo p { 
+  margin: 0; 
   padding: 0.5rem 0;
+  color: white;
 }
-
+.comercio-justo i{
+  color: white;
+}
 .linea-fina {
-  border: none;
-  border-top: 1px solid #ccc;
+  border: none; /* Elimina cualquier borde predeterminado */
+  border-top: 1px solid #ccc; /* Añade una línea superior fina */
   margin: 0.5rem 0;
-  padding: 1rem;
-  width: 100%;
+  padding: 1rem; /* Espaciado alrededor de la línea */
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
 }
 
 .newsletter {
@@ -327,13 +415,19 @@ p{
   margin-right: 1rem;
 }
 
+.logo-footer{
+  width: 150px;
+}
+
 .newsletter h3 {
-  color: white;
+  color: var(--blanco);
   margin-top: 0;
+  text-align: left;
 }
 
 .newsletter p {
   margin-top: 0.5rem;
+  text-align: left;
 }
 
 .newsletter form {
@@ -342,7 +436,7 @@ p{
 }
 
 .newsletter input[type="email"] {
-  flex: 1;
+  flex: 0.8;
   padding: 0.5rem;
   margin-right: 0.5rem;
   border-radius: 0.25rem;
@@ -353,7 +447,7 @@ p{
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
-  background-color: #ff6600;
+  background-color: var(--naranja);
   color: white;
   cursor: pointer;
 }
@@ -400,7 +494,7 @@ p{
 }
 
 .subfooter {
-  background-color: #4b0043;
+  background-color: rgb(255, 102, 0);
   color: white;
   text-align: center;
   padding: 1rem;
