@@ -13,12 +13,12 @@ html {
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: "Poppins", serif;
+  font-family: "Space Grotesk", serif;
 }
 
 h1{
   color: var(--blanco);
-  font-size: 2.5rem;
+  font-size: 5rem;
   margin-bottom: 1rem;
 }
 
@@ -34,6 +34,10 @@ h4{
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
+p{
+  color: white;
+}
+
 
 button{
   padding: 0.5rem 1rem; /* Relleno del botón */
@@ -50,67 +54,53 @@ button:hover {
 }
 
 /* Estilos del menú */
+
 .menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--blanco);
+  background-color: rgb(255, 235, 222);
   padding: 1rem;
+  border-radius: 50px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  line-height: normal;
+  position: fixed;
+  width: 115.7rem;
+  top: 0;
+  z-index: 100;
 }
 
 .menu img {
-  height: 70px;
+  height: 65px;
+  margin-left: 2rem;;
 }
 
-.menu ul {
+.menu ul{
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
-}
+  width: 20%;
+  justify-content: space-evenly;
 
-.menu ul li {
-  margin: 0 1rem;
 }
-
-.menu ul li:hover a {
-  color: var(--burdeos);
-  text-decoration: underline;
-}
-
-.menu ul a {
+.menu ul li a{
   color: var(--negro);
   text-decoration: none;
 }
 
-.menu-icon {
-  display: none;
-  font-size: 2rem;
-  color: var(--negro);
-  cursor: pointer;
-}
-
-.menu-toggle {
-  display: none;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  padding: 10px 20px;
+.menu ul li a:hover{
+  color: #cd0038;
 }
 
 .left-section{
   display: flex;
   align-items: center;
+  width:70%;
 }
 
 .right-section {
   display: flex;
   align-items: center;
-  border: black 1px solid;
 }
 
 .right-section input[type="text"] {
@@ -118,7 +108,7 @@ button:hover {
   margin-right: 10px;
   border: none;
   border-radius: 4px;
-  background-color: #d0d0d0;
+  background-color: rgb(255, 206, 173);
 }
 
 .right-section select {
@@ -158,9 +148,10 @@ button:hover {
   position: relative;
   overflow: hidden;
   width: 100vw; /* Asegura que ocupe todo el ancho del viewport */
-  height: 80vh;
+  height: 120vh;
   margin: 0; /* Elimina cualquier margen */
   padding: 0; /* Elimina cualquier padding */
+  margin-top: -150px;
 }
 
 .hero-slide {
@@ -186,13 +177,24 @@ button:hover {
   z-index: 2;
 }
 
-.hero-text {
-  position: absolute;
-  color: white;
-  text-align: center;
+.hero-text-1 {
+  margin: 5rem 0 0 63rem;
   animation: none; /* Por defecto, sin animación */
 }
 
+.hero-text-2 {
+  margin: 5rem 55rem 0 0;
+  animation: none; /* Por defecto, sin animación */
+}
+
+.hero-text-3 {
+  margin: 5rem 55rem 0 0;
+  animation: none; /* Por defecto, sin animación */
+}
+
+.hero-carousel p{
+  font-size: 2rem;
+}
 .hero-slide.active .hero-text {
   animation: fadeInUp 1.2s ease-in-out;
 }
@@ -203,6 +205,7 @@ button:hover {
 .hero-text p {
   animation: fadeInUp 1s ease-out 1s both;
 }
+
 
 .btn-hero {
   display: inline-block;
