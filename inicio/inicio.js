@@ -1,35 +1,79 @@
 let productos = [];
 let currentId = 0;
 
-// Función para cargar los datos del archivo JSON y mostrar el catálogo
+// Función para obtener los valores seleccionados de un grupo de checkboxes
+function getCheckedValues(name) {
+  const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+  return Array.from(checkboxes).map(checkbox => checkbox.value.toLowerCase());
+}
+
+// Función para mostrar productos en la lista
+function mostrarProductos(datos, lista) {
+  datos.forEach(producto => {
+    const item = document.createElement('li');
+    item.innerHTML = `
+      <img src="../${producto.img}" alt="${producto.nombre}" width="205" height="212" class="imagenCatalogo">
+      <p class="tituloProducto">${producto.nombre}</p>
+      <p>${producto.precio}€ <button class="botonCarrito"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
+    `;
+
+    // Añadir eventos a la imagen y título
+    const imagen = item.querySelector('.imagenCatalogo');
+    imagen.addEventListener("click", () => mostrarProducto(producto.id));
+    const titulo = item.querySelector('.tituloProducto');
+    titulo.addEventListener("click", () => mostrarProducto(producto.id));
+
+    lista.appendChild(item);
+  });
+}
+
+// Función principal para cargar los datos del archivo JSON
 async function cargarDatos() {
   try {
     const respuesta = await fetch('productos.json');
     productos = await respuesta.json();
 
     const div = document.getElementById('catalogoProductos');
-    div.innerHTML = ''; // Asegurarse de limpiar el contenedor
+    div.innerHTML = ''; // Limpiar contenedor
 
     const lista = document.createElement('ul');
     lista.setAttribute("class", "elementoProducto");
+    div.appendChild(lista);
 
-    productos.forEach(producto => {
-      const item = document.createElement('li');
-      item.innerHTML = `
-        <img src="../${producto.img}" alt="${producto.nombre}" width="205" height="212" class="imagenCatalogo">
-        <p class="tituloProducto">${producto.nombre}</p>
-        <p>${producto.precio}€ <button>carrito</button></p>
-      `;
+    // Mostrar todos los productos inicialmente
+    mostrarProductos(productos, lista);
 
-      lista.appendChild(item);
+    // Manejar el evento del formulario de filtros
+    const filtrosForm = document.getElementById('filtrosForm');
+    filtrosForm.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-      // Agregar evento para mostrar el producto en la ventana superpuesta
-      item.addEventListener("click", () => {
-        mostrarProducto(producto.id);
+      const categoriasSeleccionadas = getCheckedValues('categoria');
+      const propiedadesSeleccionadas = getCheckedValues('propiedades');
+
+      // Filtrar productos según las selecciones
+      const productosFiltrados = productos.filter(producto => {
+        const categoriasProducto = producto.filtros.filter(filtro => categoriasSeleccionadas.includes(filtro.toLowerCase()));
+        const propiedadesProducto = producto.filtros.filter(filtro => propiedadesSeleccionadas.includes(filtro.toLowerCase()));
+        return categoriasProducto.length > 0 || propiedadesProducto.length > 0;
       });
+
+      // Limpiar la lista y mostrar productos filtrados
+      lista.innerHTML = '';
+      mostrarProductos(productosFiltrados, lista);
     });
 
-    div.appendChild(lista);
+    // Botón para borrar filtros
+    const borrarFiltrosBtn = document.getElementById('borrarFiltros');
+    borrarFiltrosBtn.addEventListener('click', () => {
+      // Restablecer checkboxes
+      document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
+
+      // Limpiar la lista y mostrar todos los productos
+      lista.innerHTML = '';
+      mostrarProductos(productos, lista);
+    });
+
   } catch (error) {
     console.error('Error al cargar los datos:', error);
     document.getElementById('catalogoProductos').textContent = 'Error al cargar los datos.';
@@ -44,17 +88,20 @@ function mostrarProducto(id) {
     document.getElementById("paginaProducto").innerHTML = `
       <div class="productoTexto">
         <p class="tituloProductoGrande" id="tituloProductoGrande">
-          <button onclick="irPagina(${id})">${producto.nombre}</button>
+          <button id="verPaginaProducto">${producto.nombre}</button>
         </p>
         <p class="descripcionProducto">${producto.descripcion}</p>
-        <p>${producto.precio}€ <button>carrito</button></p>
+        <p>${producto.precio}€ <button id="botonCarritoProducto">carrito</button></p>
       </div>
       <div class="divImagenProducto">
         <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">
       </div>
     `;
-    document.getElementById("ventanaSuperpuesta").style.display = "flex"; // Mostrar la ventana superpuesta
-    currentId = id; // Actualizar el ID actual
+    document.getElementById("ventanaSuperpuesta").style.display = "flex"; // Mostrar ventana
+    currentId = id; // Actualizar ID actual
+
+    // Eventos para botones en la ventana emergente
+    document.getElementById('verPaginaProducto').addEventListener('click', () => irPagina(id));
   }
 }
 
@@ -94,6 +141,11 @@ function siguiente() {
 function cerrar() {
   document.getElementById("ventanaSuperpuesta").style.display = "none";
 }
+
+// Asignar eventos a los botones principales
+document.getElementById('siguienteBtn').addEventListener('click', siguiente);
+document.getElementById('anteriorBtn').addEventListener('click', anterior);
+document.getElementById('cerrarBtn').addEventListener('click', cerrar);
 
 // Cargar los datos al cargar la página
 cargarDatos();
