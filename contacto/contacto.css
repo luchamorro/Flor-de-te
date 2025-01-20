@@ -6,6 +6,7 @@
   --naranja: #FF6600;
   --blanco: white;
 }
+
 .contacto-texto {
   background-image: url(hojas-y-flores-para-infusion.jpg);
   background-repeat: no-repeat;
@@ -160,6 +161,7 @@ button:hover {
   font-size: 12px;
 }
 
+
 /*estilos iconos*/
 .contactanos {
 display: flex;
@@ -183,13 +185,31 @@ gap: 5rem;
 
 .icono-lugar{
   background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .icono-tel{
   background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .icono-email{
   background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .iconos-contacto div {
   flex: 1; /* Asegura que los elementos ocupen espacio igual */
@@ -213,7 +233,9 @@ gap: 5rem;
   color: #333 /* Texto verde oscuro */
 }
 
+
 /* Formulario */
+
 .contenedor1{
   display: flex;
   flex-direction: row;
@@ -226,14 +248,17 @@ gap: 5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px;
-  width: 400px;
+  padding: 200px;
+  width: 40%;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-form {
-  width: 100%;
+.formulario{
+  position: relative;
+  z-index: 1;
+
+  
 }
 
 .form-group {
@@ -343,13 +368,31 @@ button:hover {
 
 .icono-tienda1{
   background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .icono-tienda2{
   background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .icono-tienda3{
   background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .iconos-tiendas div {
   flex: 1; /* Asegura que los elementos ocupen espacio igual */
