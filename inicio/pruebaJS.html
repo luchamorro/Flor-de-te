@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="inicio.css">
 </head>
+<style>
+    main div div{
+        margin: 6rem;
+    }
+</style>
 <body>
     <header>
         <div>
@@ -21,27 +25,38 @@
                 <p>Morado</p>
                 <p>Frio</p>
                 <p>terciario</p>
+                <button>carrito</button>
             </div>
             <div style="background-color: red; width: 5rem; height: 5rem;" id="rojo">
                 <p>Rojo</p>
                 <p>Cálido</p>
-                <p>primario</p></div>
+                <p>primario</p>
+                <button>carrito</button>
+            </div>
             <div style="background-color: gold; width: 5rem; height: 5rem;" id="amarillo">
                 <p>Amarillo</p>
                 <p>Cálido</p>
-                <p>secundario</p></div>
+                <p>secundario</p>
+                <button>carrito</button>
+            </div>
             <div style="background-color: green; width: 5rem; height: 5rem;" id="verde">
                 <p>Verde</p>
                 <p>Frio</p>
-                <p>primario</p></div>
+                <p>primario</p>
+                <button>carrito</button>
+            </div>
             <div style="background-color: aqua; width: 5rem; height: 5rem;" id="azul">
                 <p>Azul</p>
                 <p>Cálido</p>
-                <p>primario</p></div>
+                <p>primario</p>
+                <button>carrito</button>
+            </div>
             <div style="background-color: orangered; width: 5rem; height: 5rem;" id="naranja">
                 <p>Naranja</p>
                 <p>Cálido</p>
-                <p>secundario</p></div>
+                <p>secundario</p>
+                <button>carrito</button>
+            </div>
         </div>
         <div>
             <h2>Carrito de la compra</h2>
@@ -55,6 +70,7 @@
     <script>
         const buscador = document.getElementById('buscador');
         const divsColoreados = document.querySelectorAll('main div div');
+        let compra = document.querySelectorAll('div button')
 
         buscador.addEventListener('input', function() {
             const valorBuscado = buscador.value.toLowerCase();
@@ -69,15 +85,14 @@
             });
         });
 
-        const carrito = document.getElementById('carrito');
         divsColoreados.forEach(div => {
             div.addEventListener('click', function() {
-                const atributo = div.innerText;
-                const li = document.createElement('li');
-                li.textContent = atributo;
-                carrito.appendChild(li);
-            });
-        });
+                const atributo = div.cloneNode(true);
+                atributo.querySelector('button').remove();
+                carrito.appendChild(atributo);
+    });
+});
+
     </script>
 </body>
 </html>
