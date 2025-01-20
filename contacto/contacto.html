@@ -1,126 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contacto</title>
-     <!--  FAVICON -->
-     <link rel="shortcut icon" href="images/Favicon.svg"  type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
-	<link rel="stylesheet" href="css/contacto.css"/>
-</head>
+    <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Flor de Té</title>
+      <link rel="stylesheet" href="contacto.css">
+  
+  </head>
 <body>
-   <div class="anouncementbar">Federación de Balonmano Basauri</div>
-   <header class="header1">
-    <a href="index.html"><img class="logo1" src="images/Logo.png" alt="Brand Logo"></a>
-<nav>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">☰</label>
-
-    <ul class="ul1">
-        <li class="Menu1">Menu</li>
-        <li class="menu"><a href="index.html">Inicio</a></li>
-        <li class="menu"><a href="nosotros.html">Nosotros</a></li>
-        <li class="menu"><a href="contacto.html">Contacto</a></li>
-        <li class="menu"><a href="carrito.html">Carrito</a></li>
-        <li class="menu"><a href="pagina.html">Página</a></li>
+  <nav class="menu">
+    <div class="left-section">
+    <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
     </ul>
-</nav>
-</header>
+    </div>
+    <div class="right-section"> 
+        <input type="text" placeholder="Buscar..."> 
+        <div class="user-area"><i class="fa-solid fa-user"></i></div> 
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div> 
+        <select title="idioma"> 
+          <option value="es">ES</option> 
+          <option value="en">EN</option> 
+        </select> 
+      </div>
+  </nav>
 
-  
-   <div id="contacto">
-      <h1>CONTACTO</h1>
-   
-         <section>
-        
+    <div id="contacto">
 
-         <div class="formulario">
-         <h3>CONTACTA CON NOSOTROS</h3>
+      <div class="contacto-texto">
+        <h1>CONTACTO</h1>
+      </div>
+      <div class="contactanos">
+        <div class="texto-contactanos">
+          <h3>Siempre al lado de nuestros Clientes</h3>
+        </div>
         
-            <form class="mi-formulario">
-               <p><label>Nombre</label>
-               <input type="text" required></p>
- 
-             <p><label>Apellido</label>
-               <input type="text" required></p>
- 
-              <p><label>Telefono</label>
-               <input type="tele" required></p>
- 
-              <p><label>Email</label>
-               <input type="email" required></p>
- 
-               <p><label>Confirmar email</label>
-               <input type="email" required></p>
-               
-          <div class="contenedorboton">
-                    <button type="submit">Enviar</button>
+        <div class="iconos-contacto">
+          <div class="icono-lugar">
+            <i class="fas fa-house"></i>
+            <p>Dirección</p>
+            <p>Avda, de Ercilla, 48901 <br> Bilbao, Vizcaya</p>
           </div>
-            </form>
-             <p class="acepto"> <label id="aceptar-boton" for="aceptar"><a href="rgpd.html"><strong>Acepto la politica de privacidad</strong></a></label> 
-              <input id="aceptar" type="checkbox"></p> 
-            <p class="aviso">Antes de rellenar el formulario recuerda que es importante que conozcas que me preocupo sobre la protección de tus datos personales. Responsable: Club Balonmano Alcobendas Finalidad: Envío de artículos del blog, novedades, así como el aviso de nuevas actividades de carácter comercial  de balonmanoalcobendas.es Legitimación: Consentimiento del interesado. Destinatarios: No se cederán datos a terceros, salvo autorización expresa u obligación legal. Derechos: Tienes derecho a acceder, rectificar y suprimir los datos en todo momento, portabilidad de los datos, limitación u oposición a su tratamiento, transparencia y derecho a no ser objeto de decisiones automatizadas. Plazo de conservación de los datos: Hasta que no se solicite su supresión por el interesado. Información adicional: Puede consultar la información adicional y detallada sobre nuestra <a href="rgpd.html">Política de Privacidad </a>y Aviso Legal.</p>
-          
-            </div>
-         </section>   
-         
-         <section class="datos">
-            <p> Nuestros datos:</p>
-            <p> Dirección:  Pl. Arizgoiti nº 400 48970 Basauri, Vizcaya  </p>
-            <p> Teléfono: </p>
-            <p> 631 423 5670 </p>
-            <p> Email: </p>
-            <p>flor.de.te.com </p>
 
-            <div class="map-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d726.6889455365114!2d-2.8906401083607727!3d43.2355797368229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4ef2d6fd135b%3A0x46c15f92063a93a5!2sPl.%20Arizgoiti%2C%204!5e0!3m2!1ses!2ses!4v1731399877248!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-         
-         </section>
-       
-       <section class="sugerencias">
-         
-          <h3>Envía tus sugerencias</h3>
-  
-          <input id="leermas" type="checkbox">
-         
-        
-          <div class="textooculto"> 
-          <h5>¿Cómo debes hacerlo?</h5>
-          <p>Escribe a nuestro correo y danos tus sugerencias.</p>
-          <p>Puedes escribirnos acerca de:</p>
+          <div class="icono-tel">
+            <i class="fas fa-phone-alt"></i>
+            <p>Teléfono</p>
+            <p>+34 968201818</p>
+          </div>
 
-        <ul>
-          <li>Dinos como podemos mejorar.</li>
-          <li>Informanos sobre eventos que organize tu equipo de balonmano.</li>
-          <li>Si tienes una noticia relacionada con el balonmano local, envianosla.</li>
-        </ul>
-
+          <div class="icono-email">
+            <i class="fas fa-envelope"></i>
+            <p>Correo Electrónico</p>
+            <p>flor-de-té@hotmail.com</p>
+          </div>
+        </div>
       </div>
 
-         
-         <label id="leemenos_boton" for="leermas">Leer menos</label> 
-         <label id="leemas_boton" for="leermas">Leer más </label> 
-       
-       
-      </section>
-    </div>
+      <div class="contenedor1">
+        <div class="seccion-logo">
+          <img src="../img/logos/logo_horizontal.svg" alt="logo-form">
+        </div>
 
-    <footer>
-      <nav>
-          <h2>nuestras redes sociales</h2>
-          <ul class="social_media">
-              <a href="https://www.facebook.com"><img class="social" src="images/fb.png"></a>
-              <a href="https://www.instagram.com"><img class="social" src="images/IG.png"></a>
-              <a href="https://www.x.com"><img class="social" src="images/x.jpg" alt="Social Media Team"></a>
-              <a href="https://www.linkedin.com"><img class="social" src="images/linkedin.png"></a>
-          </ul>
-      </nav>
-      <div class="copyright">
-      <p>BBF Brand™ © All Rights Reserved | contactanos por soporte@balonmanobasauri.com</p>
-      <img src="images/Payment.svg" alt="payment seal">
+        <div class="contenedor-formulario">
+          <div class="texto-form">
+            <h3>¿Podemos ayudarte?</h3>
+          </div>
+  
+          <form id="formulario">
+            <div class="form-group">
+              <label for="asunto">Asunto</label>
+              <select name="asunto" id="asunto" required>
+                <option value="atencion-cliente">Atención al cliente</option>
+                <option value="Sugerencias">Sugerencias</option>
+              </select>
+            </div>
+          
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+          
+            <div class="form-group">
+              <label for="apellido">Apellido</label>
+              <input type="text" id="apellido" name="apellido" required />
+            </div>
+          
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="999-999-999" />
+            </div>
+          
+            <div class="form-group">
+              <label for="email">Dirección de correo electrónico</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+            </div>
+          
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="¿Cómo podemos ayudarte?" required></textarea>
+            </div>
+          
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="privacidad" name="privacidad" required />
+              <label for="privacidad">He leído y acepto la política de privacidad</label>
+            </div>
+          
+            <button type="submit">Enviar</button>
+          </form>
+          <div class="politica">
+            <p>Le informamos que los datos de carácter personal proporcionados a través del presente formulario, serán tratados por CAFÉS SALZILLO como responsable de esta web. La finalidad de la recogida y tratamiento de los datos personales que le solicitamos es la de la prestación del servicio que solicite en el presente, y en su caso, el envío de comunicaciones comerciales que pudieran ser de su interés. La legitimación se realiza a través del consentimiento del interesado. Le informamos que los datos facilitados estarán ubicados en los servidores con medidas de seguridad según NRGPD y Ley 3/2018. Usted, como interesado podrá ejercer los derechos de acceso, rectificación, cancelación y oposición, así como el de portabilidad, limitación y retirada, utilizando los formularios habilitados que disponemos para ellos o bien dirigir un email a salzillo@cafes-salzillo.es, así como el derecho de presentar una reclamación ante una autoridad de control. Puede consultar la información adicional y detallada sobre Protección de Datos en nuestra Política de privacidad Marque la casilla, si desea recibir información sobre nuestros productos y/o servicios.</p>
+          </div>
+        </div>
+      </div>
+
+      <!--contenedor de mapa-->
+
+      <div class="contenedor-map">
+            <iframe
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d726.6889455365114!2d-2.8906401083607727!3d43.2355797368229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4ef2d6fd135b%3A0x46c15f92063a93a5!2sPl.%20Arizgoiti%2C%204!5e0!3m2!1ses!2ses!4v1731399877248!5m2!1ses!2ses"
+               allowfullscreen=""
+               loading="lazy"
+               referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+      </div>
+      <div class="nuestras-tiendas">
+
+        <h2>Visita Nuestras Tiendas</h2>
+
+        <div class="iconos-tiendas">
+          
+          <div class="icono-tienda1">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <h3>FLor de té El Corte Inglés</h3>
+            <p>Gran vía, Bilbao</p>
+            <p>Tlf: 968 385 717</p>
+          </div>
+          <div class="icono-tienda2">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <h3>FLor de té Artea</h3>
+            <p>Av artea 3, Algorta</p>
+            <p>Tlf: 968 385 720</p>
+          </div>
+
+          <div class="icono-tienda3">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <h3>FLor de té</h3>
+            <p>Centro comercial Max Center</p>
+            <p> Tlf: 968 385 722</p>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+      
+ <!-- Footer -->
+
+ <footer>
+  <div class="footer-container">
+    <div class="comercio-justo">
+      <p><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
+      <p><i class="fa-solid fa-seedling"></i> Sin crueldad animal</p>
+      <p><i class="fa-solid fa-leaf"></i> 100% Orgánico</p>
+      <p><i class="fa-solid fa-trash"></i> Sin microplasticos</p>
+    </div>
+    <hr class="linea-fina">
+    <div class="newsletter">
+      <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo-footer">
+      <h3>Suscríbete a nuestra newsletter</h3>
+      <p>Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?</p>
+      <form>
+        <input type="email" placeholder="Introduce tu email">
+        <button type="submit">Suscribirse</button>
+      </form>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h4>Enlaces Útiles</h4>
+        <p>
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="carrito.html">Carrito</a>
+        </p>
+      </div>
+      <div class="footer-column">
+        <h4>Políticas</h4>
+        <p>
+          <a href="#">Políticas</a>
+          <a href="#">Aviso Legal</a>
+          <a href="#">Política de Cookies</a>
+          <a href="#">Políticas de Privacidad</a>
+        </p>
+      </div>
+    </div>
   </div>
-  </footer>
-     </body>
-  </html>
+  <div class="subfooter">
+    <p>© 2024 Flor de Té</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,370 @@
+:root {
+    --negro: black;
+    --burdeos: #CD0038;
+    --morado: #6F005E;
+    --naranja: #FF6600;
+    --blanco: white;
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f2e9;
+    margin: 0;
+    padding: 0;
+    background-image: url(hojas-y-flores-para-infusion.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Estilos del menú */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 235, 222);
+    padding: 1rem;
+    border-radius: 50px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    line-height: normal;
+    position: fixed;
+    width: 115.7rem;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .menu img {
+    height: 65px;
+    margin-left: 2rem;
+    ;
+  }
+  
+  .menu ul {
+    display: flex;
+    list-style: none;
+    width: 20%;
+    justify-content: space-evenly;
+  
+  }
+  
+  .menu ul li a {
+    color: var(--negro);
+    text-decoration: none;
+  }
+  
+  .menu ul li a:hover {
+    color: #cd0038;
+    font-size: 1.1rem;
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+    width: 70%;
+  }
+  
+  .right-section {
+    display: flex;
+    align-items: center;
+    width: 20%;
+  }
+  
+  .right-section input[type="text"] {
+    padding: 8px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(255, 206, 173);
+  }
+  
+  .right-section select {
+    padding: 8px;
+    margin-left: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .right-section .user-area,
+  .right-section .cart {
+    color: var(--negro);
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .right-section .cart {
+    position: relative;
+    width: 2.3rem;
+  }
+  
+  .right-section .cart::after {
+    content: '4';
+    /* Example for cart item count */
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--burdeos);
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+/* Contenedor Login */
+
+.contenedor-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5rem;
+    margin: 80px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    
+}
+
+.caja-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    padding: 40px;
+    background-color:white;
+    border-radius: 10px;
+}
+
+.caja2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    padding: 25px;
+    background-color:white;
+    border-radius: 10px;
+}
+
+.caja-login h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.caja-login form {
+    width: 100%;
+}
+
+.caja-login label {
+    display: block;
+    font-size: 14px;
+    margin: 10px 0 5px;
+    color: #444;
+}
+
+.forgot-password {
+    display: block; /* Asegura que el enlace se comporte como un elemento de bloque */
+    margin-top: 15px; /* Ajusta el valor según lo necesites */
+    text-align: center; /* Esto puede ayudar a centrar el texto */
+}
+
+
+.caja-login input {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.caja-login button {
+    background-color: #6f005e;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.caja-login button:hover {
+    background-color:var(--naranja);
+}
+
+.caja2 h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.caja2 ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.caja2 li {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.caja2 button {
+    background-color:var(--morado);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--blanco);
+    width: 100%;
+    margin-top: 15px;
+}
+
+.caja2 button:hover {
+    background-color:var(--naranja);
+}
+
+/*FOOTER*/
+.footer-container {
+    background-color: rgb(255, 154, 87);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .comercio-justo { 
+    width: 55%; 
+    text-align: center; 
+    margin-bottom: 1rem; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+  } 
+  .comercio-justo p { 
+    margin: 0; 
+    padding: 0.5rem 0;
+    color: white;
+  }
+  .comercio-justo i{
+    color: white;
+  }
+  .linea-fina {
+    border: none; /* Elimina cualquier borde predeterminado */
+    border-top: 1px solid #ccc; /* Añade una línea superior fina */
+    margin: 0.5rem 0;
+    padding: 1rem; /* Espaciado alrededor de la línea */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  }
+  
+  .newsletter {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 1rem;
+  }
+  
+  .logo-footer{
+    width: 150px;
+  }
+  
+  .newsletter h3 {
+    color: var(--blanco);
+    margin-top: 0;
+    text-align: left;
+  }
+  
+  .newsletter p {
+    margin-top: 0.5rem;
+    text-align: left;
+  }
+  
+  .newsletter form {
+    display: flex;
+    margin-top: 0.5rem;
+  }
+  
+  .newsletter input[type="email"] {
+    flex: 0.8;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 0.25rem;
+    border: none;
+  }
+  
+  .newsletter button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: var(--naranja);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .newsletter .social-media {
+    margin-top: 1rem;
+  }
+  
+  .newsletter .social-media a {
+    color: white;
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .footer-columns {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-right: 1rem;
+  }
+  
+  .footer-column h4 {
+    margin-top: 0;
+  }
+  
+  .footer-column p {
+    margin: 0.5rem 0;
+  }
+  
+  .footer-column a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .footer-column a:hover {
+    text-decoration: underline;
+  }
+  
+  .subfooter {
+    background-color: rgb(255, 102, 0);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .subfooter p {
+    margin: 0;
+  }
