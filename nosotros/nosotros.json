@@ -1,6 +1,6 @@
 {
   "en": {
-    "titulo": "Who We Are",
+    "titulo": "About Us",
     "descripcion": "Our mission is simple: to provide an unparalleled experience in every cup. At FLOR DE TÉ, we believe in the power of tea to transform your well-being and bring moments of peace.",
     "boton": "Learn More",
     "contacto": "Contact Us",
@@ -8,6 +8,7 @@
     "cuidarte_descripcion": "Our mission is simple: to provide an unparalleled experience in every cup. At FLOR DE TÉ, we believe that tea and coffee are more than beverages; they are moments of connection, inspiration, and calm.",
     "valores_titulo": "Tea to Be Together",
     "valores_descripcion": "At Flor De Té, we believe tea and coffee are much more than beverages: they are experiences that connect, inspire, and elevate everyday moments.",
+    "valores": "Values",
     "compromiso_titulo": "Commitment",
     "compromiso_descripcion": "We are dedicated to offering the best in every aspect of our store, from product selection to customer service.",
     "innovacion_titulo": "Innovation",
@@ -32,6 +33,7 @@
     
     "suscribete": "Subscribe to our newsletter",
     "ofertas": "Offers, news, and exclusive discounts. Don't miss it!",
+    "input_placeholder": "Enter your email",
     
     "enlaces": "Useful Links",
     "politicas": "Policies",

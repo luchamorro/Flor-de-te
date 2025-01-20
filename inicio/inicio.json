@@ -1,0 +1,105 @@
+{
+    "en": {
+      "inicio": "Home",
+      "catalogo": "Catalog",
+      "nosotros": "About Us",
+      "contacto": "Contact",
+      "carrito": "Cart",
+      "hero-carousel": {
+        "slide1-title": "FLOR DE TÉ",
+        "slide1-text": "Organic flavors, modern freshness, and the balance you deserve in every sip",
+        "slide1-button": "SHOP NOW",
+        "slide2-title": "Live life, one sip at a time",
+        "slide2-text": "Discover our organic and vibrant teas. Taking care of yourself has never been so easy (or so delicious).",
+        "slide2-button": "SHOP NOW",
+        "slide3-title": "Well-being starts here",
+        "slide3-subtitle": "right <b>here</b>",
+        "slide3-text": "At 'Flor de Té', we take care of you with modern, organic, and authentic blends.",
+        "slide3-button": "SHOP NOW"
+      },
+      "catalogo": {
+        "title": "Catalog",
+        "filters-title": "Filter by:",
+        "filter-category": "Type of Beverage",
+        "infusion": "Infusions",
+        "tea": "Tea",
+        "filter-properties": "Properties",
+        "antioxidants": "Antioxidant",
+        "stimulant": "Stimulant",
+        "relaxing": "Relaxing",
+        "digestive": "Digestive",
+        "rest": "Rest",
+        "anti-inflammatory": "Anti-inflammatory",
+        "dental-health": "Dental Health",
+        "detox": "Detox",
+        "refreshing": "Refreshing",
+        "apply-filters": "Apply Filters",
+        "clear-filters": "Clear Filters"
+      },
+      "popup-productos": {
+        "close": "X",
+        "next": "Next",
+        "previous": "Previous"
+      },
+      "te-del-mes": {
+        "title": "Tea of the Month: Oolong Tea",
+        "subtitle": "Discover Oolong Tea",
+        "description": "Oolong Tea, also known as the tea of emperors, is a true gem for tea lovers. This unique tea combines the best of green and black tea, offering a complex flavor and an unparalleled tasting experience.",
+        "benefits": "Get ready for a flavor journey! 🍵✨",
+        "taste": "🌱 Flavor: Floral, fruity, and with a hint of nut.",
+        "infusion-time": "⏱️ Infusion time: 3-5 minutes.",
+        "health-benefits": "🧡 Benefits: Aids digestion, promotes heart health, and boosts metabolism.",
+        "cta": "Buy Now!"
+      },
+      "merchandising": {
+        "title": "Our Merchandising Collection",
+        "product1-title": "Flor de Té Mug",
+        "product1-description": "Enjoy your favorite tea in our exclusive mug.",
+        "product2-title": "Flor de Té Tote Bag",
+        "product2-description": "Carry your essentials with our eco-friendly tote bag.",
+        "product3-title": "Flor de Té Tumbler",
+        "product3-description": "Keep your drink hot or cold in style.",
+        "cta": "Buy"
+      },
+      "oferta-especial": {
+        "title": "And as a gift...",
+        "subtitle": "Buy 2, Try 1 Free",
+        "description1": "Enjoy our teas and receive a surprise free sample of one of our infusions when you buy two packs of tea.",
+        "description2": "Explore new flavors and find your new favorites. It's our way of thanking you for being part of the Flor de Té family!",
+        "list1": "🍃 Selection of unique infusions.",
+        "list2": "✨ Free sample with every purchase of two packs.",
+        "list3": "🌟 Only for a limited time."
+      },
+      "testimonios": {
+        "title": "Testimonials",
+        "testimonial1-text": "\"Flor de Té teas are amazing. I love the variety and quality. Highly recommended!\"",
+        "testimonial1-author": "- Ana Rodríguez",
+        "testimonial2-text": "\"The best tea I've ever tasted. Organic and delicious, definitely my favorite.\"",
+        "testimonial2-author": "- Juan Pérez",
+        "testimonial3-text": "\"Flor de Té has changed my routine. I feel healthier and more energetic. Delivery is super fast!\"",
+        "testimonial3-author": "- Laura Gómez"
+      },
+      "popup-newsletter": {
+        "discount-title": "15% Discount",
+        "discount-description": "Subscribe to our newsletter to get exclusive discounts and stay updated on the latest Flor de Té products.",
+        "email-placeholder": "Enter your email",
+        "subscribe": "Subscribe"
+      },
+      "comercio_justo": "Fair Trade",
+      "sin_crueldad": "Cruelty-Free",
+      "organico": "100% Organic",
+      "sin_microplasticos": "No Microplastics",
+      "suscribete": "Subscribe to our newsletter",
+      "ofertas": "Offers, news, and exclusive discounts. Don't miss it!",
+      "input_placeholder": "Enter your email",
+      "enlaces": "Useful Links",
+      "politicas": "Policies",
+      "aviso": "Legal Notice",
+      "cookies": "Cookie Policy",
+      "privacidad": "Privacy Policy",
+      "social_tiktok": "TikTok",
+      "social_instagram": "Instagram",
+      "social_facebook": "Facebook"
+    }
+  }
+  
