@@ -91,7 +91,8 @@ function mostrarProducto(id) {
           <button id="verPaginaProducto" class = "verPaginaProducto">${producto.nombre}</button>
         </p>
         <p class="descripcionProducto">${producto.descripcion}</p>
-        <p>${producto.precio}€ <button id="botonCarritoProducto">carrito</button></p>
+        <p>${producto.precio}€ <button id="botonCarrito"><i>Comprar</i></button></p>
+
       </div>
       <div class="divImagenProducto">
         <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">

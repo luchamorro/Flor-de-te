@@ -57,7 +57,8 @@
         </select> 
       </div>
   </nav>
- 
+  <div id="fechayhora"></div>
+
 
   <section>
     <div id="paginaProductoAparte" style="display: flex;"></div>
@@ -174,7 +175,7 @@
         <div class = "productoDescrip">
           <img src="../${producto.img}" alt="${producto.nombre}" width="503px" height="563px">
         <div ><p>${producto.descripcion}</p>
-        <p>${producto.precio}€ <button>carrito</button></p></div> </div>`;
+        <p>${producto.precio}€ <button>Comprar</button></p></div> </div>`;
   }
 
   function mostrarAnterior() {
@@ -196,14 +197,11 @@
     }
     mostrarProducto(productos.find(p => p.id === currentId));
   }
-
-
- 
   </script>
 
 <script src="inicio.js"></script>
 <script src="pagina_producto.js"></script>
-
+<script src="fechayhora.js"></script>
 
 </body>
 </html>
