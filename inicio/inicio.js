@@ -142,3 +142,21 @@ function anadirCompra(id) {
     currentId = id; // Actualizar el ID actual
   }
 }
+
+//buscador de productos
+const buscador = document.getElementById('buscador');
+        const divsColoreados = document.querySelectorAll('main div div');
+        let compra = document.querySelectorAll('div button')
+
+        buscador.addEventListener('input', function() {
+            const valorBuscado = buscador.value.toLowerCase();
+
+            divsColoreados.forEach(div => {
+                const atributo = div.innerHTML.toLowerCase();
+                if (atributo.includes(valorBuscado)) {
+                    div.style.display = 'block';
+                } else {
+                    div.style.display = 'none';
+                }
+            });
+        });
