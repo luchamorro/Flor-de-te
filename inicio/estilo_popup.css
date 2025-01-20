@@ -36,11 +36,20 @@
        padding-left: 3rem;
    }
    
-   .botones{
-       align-self:center;
-       position: fixed;
-       bottom: 2rem;
+   .botonesPaginaProducto{
+      display: flex;
+      justify-content: center;
+     
    }
+
+   .botones{
+    display: flex;
+    justify-content: center;
+   
+ }
+ .botonCarritoProducto{
+  background: none;
+ }
      
    
    .divImagenProducto{
@@ -50,19 +59,11 @@
        top: 4rem
    }
    
-   .enlaceTituloProducto{
-       text-decoration: none;
-   }
-   
    .productoTexto{
        width: auto;
        height: auto;
    }
-   
-   .tituloProductoGrande{ /*---modificar*/
-       font-size: 1.8rem; 
-   }
-   
+  
    .descripcionProducto{
        font-family: Arial, Helvetica, sans-serif; /*---modificar*/
        max-width: 80%;
@@ -74,6 +75,53 @@
        padding: 20px;
        background-color: white;
      }
+
+
+.cerrarBtn{
+    width: 2rem;
+    align-self:last baseline;
+    background: none;
+    color: rgb(64, 58, 58);
+    padding: 2rem;
+    padding-right: 3rem;
+    font-size: 1.3rem;
+  }
+  
+  .cerrarBtn:hover{
+  
+    background: none;
+    color: var(--burdeos);
+  font-weight: 600;
+  }
+  
+  button.botonFlecha{
+    background-color: white;
+    border-radius: 100%;
+    border: solid rgb(161, 159, 159) 0.03rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: grey;
+    transition: background-color 0.3s ease;
+  
+  }
+  
+  button.botonFlecha:hover{
+    
+    background: solid;
+    background-color: rgb(161, 159, 159);
+    color: aliceblue;
+  
+  }
+
+  button.verPaginaProducto {
+    background: none;
+color:black;
+padding: 0;
+font-weight: bold;
+font-size: 1.5rem;
+
+  }
+     
 
 
 

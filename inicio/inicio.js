@@ -28,6 +28,33 @@ function mostrarProductos(datos, lista) {
 }
 
 // Función principal para cargar los datos del archivo JSON
+// Función para obtener los valores seleccionados de un grupo de checkboxes
+function getCheckedValues(name) {
+  const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+  return Array.from(checkboxes).map(checkbox => checkbox.value.toLowerCase());
+}
+
+// Función para mostrar productos en la lista
+function mostrarProductos(datos, lista) {
+  datos.forEach(producto => {
+    const item = document.createElement('li');
+    item.innerHTML = `
+      <img src="../${producto.img}" alt="${producto.nombre}" width="205" height="212" class="imagenCatalogo">
+      <p class="tituloProducto">${producto.nombre}</p>
+      <p>${producto.precio}€ <button class="botonCarrito"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
+    `;
+
+    // Añadir eventos a la imagen y título
+    const imagen = item.querySelector('.imagenCatalogo');
+    imagen.addEventListener("click", () => mostrarProducto(producto.id));
+    const titulo = item.querySelector('.tituloProducto');
+    titulo.addEventListener("click", () => mostrarProducto(producto.id));
+
+    lista.appendChild(item);
+  });
+}
+
+// Función principal para cargar los datos del archivo JSON
 async function cargarDatos() {
   try {
     const respuesta = await fetch('productos.json');
@@ -35,9 +62,46 @@ async function cargarDatos() {
 
     const div = document.getElementById('catalogoProductos');
     div.innerHTML = ''; // Limpiar contenedor
+    div.innerHTML = ''; // Limpiar contenedor
 
     const lista = document.createElement('ul');
     lista.setAttribute("class", "elementoProducto");
+    div.appendChild(lista);
+
+    // Mostrar todos los productos inicialmente
+    mostrarProductos(productos, lista);
+
+    // Manejar el evento del formulario de filtros
+    const filtrosForm = document.getElementById('filtrosForm');
+    filtrosForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const categoriasSeleccionadas = getCheckedValues('categoria');
+      const propiedadesSeleccionadas = getCheckedValues('propiedades');
+
+      // Filtrar productos según las selecciones
+      const productosFiltrados = productos.filter(producto => {
+        const categoriasProducto = producto.filtros.filter(filtro => categoriasSeleccionadas.includes(filtro.toLowerCase()));
+        const propiedadesProducto = producto.filtros.filter(filtro => propiedadesSeleccionadas.includes(filtro.toLowerCase()));
+        return categoriasProducto.length > 0 || propiedadesProducto.length > 0;
+      });
+
+      // Limpiar la lista y mostrar productos filtrados
+      lista.innerHTML = '';
+      mostrarProductos(productosFiltrados, lista);
+    });
+
+    // Botón para borrar filtros
+    const borrarFiltrosBtn = document.getElementById('borrarFiltros');
+    borrarFiltrosBtn.addEventListener('click', () => {
+      // Restablecer checkboxes
+      document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
+
+      // Limpiar la lista y mostrar todos los productos
+      lista.innerHTML = '';
+      mostrarProductos(productos, lista);
+    });
+
     div.appendChild(lista);
 
 <<<<<<< HEAD
@@ -115,7 +179,7 @@ function mostrarProducto(id) {
       <div class="productoTexto">
         <p class="tituloProductoGrande" id="tituloProductoGrande">
 <<<<<<< HEAD
-          <button class= "botonTituloProductoGrande" onclick="irPagina(${id})">${producto.nombre}</button>
+          <button class= "botonTituloProductoGrande" id="verPaginaProducto" class = "verPaginaProducto">${producto.nombre}</button>
         </p>
         <p class="descripcionProducto">${producto.descripcion}</p>
         <p>${producto.precio}€ <button class ="botonCarrito" onclick="abrirCarrito()"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
@@ -123,6 +187,8 @@ function mostrarProducto(id) {
           <button id="verPaginaProducto">${producto.nombre}</button>
         </p>
         <p class="descripcionProducto">${producto.descripcion}</p>
+        <p>${producto.precio}€ <button id="botonCarrito"><i>Comprar</i></button></p>
+
         <p>${producto.precio}€ <button id="botonCarritoProducto">carrito</button></p>
 >>>>>>> d5b6b3e76da81eb6ba597b0ca12fa9b32e776993
       </div>
@@ -130,6 +196,11 @@ function mostrarProducto(id) {
         <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">
       </div>
     `;
+    document.getElementById("ventanaSuperpuesta").style.display = "flex"; // Mostrar ventana
+    currentId = id; // Actualizar ID actual
+
+    // Eventos para botones en la ventana emergente
+    document.getElementById('verPaginaProducto').addEventListener('click', () => irPagina(id));
     document.getElementById("ventanaSuperpuesta").style.display = "flex"; // Mostrar ventana
     currentId = id; // Actualizar ID actual
 
@@ -174,6 +245,11 @@ function siguiente() {
 function cerrar() {
   document.getElementById("ventanaSuperpuesta").style.display = "none";
 }
+
+// Asignar eventos a los botones principales
+document.getElementById('siguienteBtn').addEventListener('click', siguiente);
+document.getElementById('anteriorBtn').addEventListener('click', anterior);
+document.getElementById('cerrarBtn').addEventListener('click', cerrar);
 
 // Asignar eventos a los botones principales
 document.getElementById('siguienteBtn').addEventListener('click', siguiente);
