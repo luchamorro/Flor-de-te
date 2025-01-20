@@ -1,0 +1,336 @@
+:root {
+    --negro: black;
+    --burdeos: #CD0038;
+    --morado: #6F005E;
+    --naranja: #FF6600;
+    --blanco: white;
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f2e9;
+    margin: 0;
+    padding: 0;
+    background-image: url(hojas-y-flores-para-infusion.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Header Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav .left-section {
+    display: flex;
+    align-items: center;
+}
+
+nav img.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #6f005e;
+}
+
+nav .right-section {
+    display: flex;
+    align-items: center;
+}
+
+nav .right-section input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+nav .right-section select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+nav .right-section .icon {
+    margin-left: 15px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Contenedor Login */
+
+.contenedor-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5rem;
+    margin: 80px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    
+}
+
+.caja-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    padding: 40px;
+    background-color:white;
+    border-radius: 10px;
+}
+
+.caja2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    padding: 25px;
+    background-color:white;
+    border-radius: 10px;
+}
+
+.caja-login h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.caja-login form {
+    width: 100%;
+}
+
+.caja-login label {
+    display: block;
+    font-size: 14px;
+    margin: 10px 0 5px;
+    color: #444;
+}
+
+.forgot-password {
+    display: block; /* Asegura que el enlace se comporte como un elemento de bloque */
+    margin-top: 15px; /* Ajusta el valor según lo necesites */
+    text-align: center; /* Esto puede ayudar a centrar el texto */
+}
+
+
+.caja-login input {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.caja-login button {
+    background-color: #6f005e;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.caja-login button:hover {
+    background-color:var(--naranja);
+}
+
+.caja2 h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.caja2 ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.caja2 li {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.caja2 button {
+    background-color:var(--morado);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--blanco);
+    width: 100%;
+    margin-top: 15px;
+}
+
+.caja2 button:hover {
+    background-color:var(--naranja);
+}
+
+/* Footer */
+.footer-container {
+    background-color: #6f005e;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.comercio-justo {
+    width: 55%;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.comercio-justo p {
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+.linea-fina {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    width: 100%;
+}
+
+.newsletter {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 1rem;
+}
+
+.newsletter h3 {
+    color: white;
+    margin-top: 0;
+}
+
+.newsletter p {
+    margin-top: 0.5rem;
+}
+
+.newsletter form {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.newsletter input[type="email"] {
+    flex: 1;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 0.25rem;
+    border: none;
+}
+
+.newsletter button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: #ff6600;
+    color: white;
+    cursor: pointer;
+}
+
+.newsletter .social-media {
+    margin-top: 1rem;
+}
+
+.newsletter .social-media a {
+    color: white;
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.footer-columns {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-right: 1rem;
+}
+
+.footer-column h4 {
+    margin-top: 0;
+}
+
+.footer-column p {
+    margin: 0.5rem 0;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.subfooter {
+    background-color: #4b0043;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.subfooter p {
+    margin: 0;
+}
