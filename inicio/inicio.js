@@ -98,7 +98,6 @@ async function cargarDatos() {
     document.getElementById('catalogoProductos').textContent = 'Error al cargar los datos.';
   }
 }
-tu diseño
 // Función para mostrar un producto basado en su ID
 function mostrarProducto(id) {
   const producto = productos.find(p => p.id === id);
