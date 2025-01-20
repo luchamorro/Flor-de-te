@@ -68,11 +68,11 @@ button:hover {
   margin: 20px;
   line-height: normal;
   position: fixed;
-  width: 115.7rem;
+  width: 98%;
   top: 0;
   z-index: 100;
+  box-sizing: border-box;
 }
-
 .menu img {
   height: 65px;
   margin-left: 2rem;;

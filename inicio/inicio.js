@@ -98,7 +98,7 @@ async function cargarDatos() {
     document.getElementById('catalogoProductos').textContent = 'Error al cargar los datos.';
   }
 }
-
+tu diseño
 // Función para mostrar un producto basado en su ID
 function mostrarProducto(id) {
   const producto = productos.find(p => p.id === id);
@@ -216,17 +216,19 @@ function anadirCompra(id) {
 
 //buscador de productos
 const buscador = document.getElementById('buscador');
-const catalogo = document.querySelectorAll('#catalogoProductos .elementoProducto li');
+const catalogoDiv = document.querySelector('.div-catalogo');
 
 buscador.addEventListener('input', function() {
-    const valorBuscado = buscador.value.toLowerCase().trim();
+    const busqueda = this.value.toLowerCase().trim();
+    const productos = catalogoDiv.getElementsByClassName('elementoProducto');
 
-    catalogo.forEach(item => {
-      const etiqueta = item.innerHTML.toLowerCase();
-      if (etiqueta.includes(valorBuscado)) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-    }
-    })
+    Array.from(productos).forEach(producto => {
+        const titulo = producto.querySelector('.tituloProducto').textContent.toLowerCase();
+        
+        if (titulo.includes(busqueda)) {
+            producto.style.display = 'block';
+        } else {
+            producto.style.display = 'none';
+        }
+    });
 });
