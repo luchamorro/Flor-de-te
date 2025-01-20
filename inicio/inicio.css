@@ -81,13 +81,14 @@ button:hover {
 .menu ul{
   display: flex;
   list-style: none;
-  width: 20%;
+  width: 30%;
   justify-content: space-evenly;
 
 }
 .menu ul li a{
   color: var(--negro);
   text-decoration: none;
+  font-size: 1.2rem;
 }
 
 .menu ul li a:hover{
@@ -104,23 +105,28 @@ button:hover {
 .right-section {
   display: flex;
   align-items: center;
-  width: 20%;
+  gap:1rem;
+  width: 30%;
 }
 
 .right-section input[type="text"] {
-  padding: 8px;
+  padding: 0.8rem;
   margin-right: 10px;
+  width: 50%;
   border: none;
-  border-radius: 4px;
+  border-radius: 1rem;
   background-color: rgb(255, 206, 173);
 }
 
 .right-section select {
-  padding: 8px;
-  margin-left: 15px;
+  padding: 0.8rem;
+  margin-left: 1rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 1rem;
   background-color: #fff;
+}
+.user-area i, .cart i {
+  font-size: 1.3rem; /* Ajusta el tamaño según tus necesidades */
 }
 
 .right-section .user-area,
@@ -128,6 +134,7 @@ button:hover {
   color: var(--negro);
   margin-left: 10px;
   cursor: pointer;
+  
 }
 
 .right-section .cart {
@@ -138,8 +145,8 @@ button:hover {
 .right-section .cart::after {
   content: '4'; /* Example for cart item count */
   position: absolute;
-  top: -5px;
-  right: -5px;
+  top: -3px;
+  right: -15px;
   background-color: var(--burdeos);
   color: #fff;
   border-radius: 50%;
@@ -398,10 +405,12 @@ ul {
 
 .te-mes-imagen {
   max-width: 40%;
+  
 }
 
 .te-mes-imagen .imagen-te {
   width: 100%;
+  border-radius: 1rem;
 
 }
 /* Estilos para la Sección de Testimonios */
@@ -480,7 +489,7 @@ ul {
 }
 
 .oferta-detalle p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #333;
   margin-bottom: 0.5rem;
 }
