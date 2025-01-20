@@ -39,25 +39,32 @@
       <div class="contacto-texto">
         <h1>CONTACTO</h1>
       </div>
-      <div class="iconos-contacto">
+      <div class="contactanos">
+        <div class="texto-contactanos">
+          <h3>Siempre al lado de nuestros Clientes</h3>
+        </div>
+        
+        <div class="iconos-contacto">
+          <div class="icono-lugar">
+            <i class="fas fa-house"></i>
+            <p>Dirección</p>
+            <p>Avda, de Ercilla, 48901 <br> Bilbao, Vizcaya</p>
+          </div>
 
-        <div class="icono-lugar">
-          <i class="fas fa-house"></i>
-          <h3>Dirección</h3>
-          <p>Avda, de Ercilla, 48901 <br> Bilbao, Vizcaya</p>
-        </div>
-        <div class="icono-tel">
-          <i class="fas fa-phone-alt"></i>
-          <h3>Teléfono</h3>
-          <p>+34 968201818</p>
-        </div>
-        <div class="icono-email">
-          <i class="fas fa-envelope"></i>
-          <h3>Correo Electrónico</h3>
-          <p>flor-de-té@hotmail.com</p>
-        </div>
+          <div class="icono-tel">
+            <i class="fas fa-phone-alt"></i>
+            <p>Teléfono</p>
+            <p>+34 968201818</p>
+          </div>
 
+          <div class="icono-email">
+            <i class="fas fa-envelope"></i>
+            <p>Correo Electrónico</p>
+            <p>flor-de-té@hotmail.com</p>
+          </div>
+        </div>
       </div>
+
       <div class="contenedor1">
         <div class="seccion-logo">
           <img src="../img/logos/logo_horizontal.svg" alt="logo-form">
@@ -65,31 +72,48 @@
 
         <div class="contenedor-formulario">
           <div class="texto-form">
-            <h2>¿Podemos ayudarte?</h2>
+            <h3>¿Podemos ayudarte?</h3>
           </div>
   
           <form id="formulario">
-            <label for="asunto">Asunto</label>
-            <select name="asunto" id="asunto">
-              <option value="atencion-cliente">Atención al cliente</option>
-              <option value="Sugerencias">Sugerencias</option>
-            </select>
-            <br>
-            <label>Nombre</label> <input type="text" required />
-            <label>Apellido</label> <input type="text" required />
-            <label>Teléfono</label> <input type="tel" placeholder="999-999-999" />
-
-            <label for="email">Dirección de correo electrónico</label>
-            <input type="email" id="email" name="email" placeholder="tu@email.com">
-
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" placeholder="¿Cómo podemos ayudarte?"></textarea>
-
-            <div class="contenedor-checkbox">
-              <input type="checkbox" id="privacidad" name="privacidad">
+            <div class="form-group">
+              <label for="asunto">Asunto</label>
+              <select name="asunto" id="asunto" required>
+                <option value="atencion-cliente">Atención al cliente</option>
+                <option value="Sugerencias">Sugerencias</option>
+              </select>
+            </div>
+          
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+          
+            <div class="form-group">
+              <label for="apellido">Apellido</label>
+              <input type="text" id="apellido" name="apellido" required />
+            </div>
+          
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="999-999-999" />
+            </div>
+          
+            <div class="form-group">
+              <label for="email">Dirección de correo electrónico</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+            </div>
+          
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="¿Cómo podemos ayudarte?" required></textarea>
+            </div>
+          
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="privacidad" name="privacidad" required />
               <label for="privacidad">He leído y acepto la política de privacidad</label>
             </div>
-
+          
             <button type="submit">Enviar</button>
           </form>
           <div class="politica">
@@ -108,29 +132,33 @@
                referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
       </div>
-      
-      <div class="iconos-tiendas">
-        <div class="icono-tiendas">
-        <i class="fa-solid fa-bag-shopping"></i>
-        <h3>FLor de té 
-          El Corte Inglés</h3>
-          <p>Gran vía, Bilbao</p>
-          <p>Tlf: 968 385 717</p>
-        </div>
-        <div class="icono-tiendas">
-          <i class="fa-solid fa-bag-shopping"></i>
-          <h3>FLor de té 
-          Artea</h3>
-          <p>Av artea 3, Algorta</p>
-          <p>Tlf: 968 385 720</p>
-          </div>
-          <div class="icono-tiendas">
+      <div class="nuestras-tiendas">
+
+        <h2>Visita Nuestras Tiendas</h2>
+
+        <div class="iconos-tiendas">
+          
+          <div class="icono-tienda1">
             <i class="fa-solid fa-bag-shopping"></i>
-          <h3>FLor de té</h3>
-          <p>Centro comercial Max Center</p>
-          <p> Tlf: 968 385 722</p>
+            <h3>FLor de té El Corte Inglés</h3>
+            <p>Gran vía, Bilbao</p>
+            <p>Tlf: 968 385 717</p>
+          </div>
+          <div class="icono-tienda2">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <h3>FLor de té Artea</h3>
+            <p>Av artea 3, Algorta</p>
+            <p>Tlf: 968 385 720</p>
+          </div>
+
+          <div class="icono-tienda3">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <h3>FLor de té</h3>
+            <p>Centro comercial Max Center</p>
+            <p> Tlf: 968 385 722</p>
           </div>
         </div>
+      </div>
       
       
     </div>
