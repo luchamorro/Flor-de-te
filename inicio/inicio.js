@@ -109,7 +109,6 @@ function mostrarProducto(id) {
           <button id="verPaginaProducto" class = "verPaginaProducto">${producto.nombre}</button>
         </p>
         <p class="descripcionProducto">${producto.descripcion}</p>
-        <p>${producto.precio}€ <button id="botonCarritoProducto">carrito</button></p>
         <p>${producto.precio}€ <button onclick="anadirCompra(${producto.id})">carrito</button></p>
       </div>
       <div class="divImagenProducto">
@@ -215,19 +214,62 @@ function anadirCompra(id) {
 
 // Buscador
 const buscador = document.getElementById('buscador');
-const catalogoDiv = document.querySelector('.div-catalogo');
+const menuBuscador = document.createElement('div');
+menuBuscador.classList.add('menuBuscador');
+document.querySelector('.right-section').appendChild(menuBuscador);
 
-buscador.addEventListener('input', function() {
-    const busqueda = this.value.toLowerCase().trim();
-    const productos = catalogoDiv.getElementsByClassName('elementoProducto');
+// Evento de búsqueda
+buscador.addEventListener('input', function(item) {
+    const busca = item.target.value.toLowerCase().trim();
+    
+    if (busca.length < 2) {
+        menuBuscador.style.display = 'none';
+        return;
+    }
 
-    Array.from(productos).forEach(producto => {
-        const titulo = producto.querySelector('.tituloProducto').textContent.toLowerCase();
-        
-        if (titulo.includes(busqueda)) {
-            producto.style.display = 'flex';  // o 'block' según tu diseño
-        } else {
-            producto.style.display = 'none';
-        }
-    });
+    // Filtrar productos
+    const filtro = productos.filter(producto => 
+        producto.nombre.toLowerCase().includes(busca));
+
+    // Mostrar resultados
+    if (filtro.length) {
+        menuBuscador.style.display = 'block';
+        menuBuscador.innerHTML = filtro.map(producto => `
+            <div class="productoBuscado" style="
+                display: flex;
+                align-items: center;
+                padding: 0.5rem;
+                border-bottom: 1px solid #eee;
+                cursor: pointer;
+            ">
+                <img src="../${producto.img}" alt="${producto.nombre}" style="
+                    width: 50px;
+                    height: 50px;
+                    object-fit: cover;
+                    margin-right: 1rem;
+                ">
+                <div>
+                    <div style="font-weight: bold;">${producto.nombre}</div>
+                    <div>${producto.precio}€</div>
+                </div>
+            </div>
+        `).join('');
+
+        // Evento click en resultados
+        document.querySelectorAll('.productoBuscado').forEach((item, index) => {
+            item.addEventListener('click', function anadirCompra(id) {
+              
+                buscador.value = '';
+            });
+        });
+    } else {
+        menuBuscador.innerHTML = '<div style="padding: 1rem;">No se encontraron resultados</div>';
+    }
+});
+
+// Cerrar resultados al hacer click fuera
+document.addEventListener('click', (e) => {
+    if (!menuBuscador.contains(e.target) && e.target !== buscador) {
+        menuBuscador.style.display = 'none';
+    }
 });

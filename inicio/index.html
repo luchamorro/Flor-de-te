@@ -32,7 +32,7 @@
         </ul>
       </div>
       <div class="right-section">
-        <input data-translate="placeholder-nav" type="text" placeholder="Buscar..." />
+        <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." />
         <div class="user-area"><i class="fa-solid fa-user"></i></div>
         <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
         <select id="language-select" title="idioma">
@@ -100,10 +100,10 @@
         <label>
           <input data-translate="infusion" type="checkbox" name="categoria" value="infusión" />
           Infusiones
-        </label><br />
+        </label><br>
         <label>
           <input data-translate="tea" type="checkbox" name="categoria" value="té" /> Té
-        </label><br />
+        </label><br>
       </fieldset>
 
       <!-- Propiedades -->
@@ -112,39 +112,39 @@
         <label>
           <input data-translate="antioxidants" type="checkbox" name="propiedades" value="antioxidantes" />
           Antioxidante
-        </label><br />
+        </label><br>
         <label>
           <input data-translate="stimulant" type="checkbox" name="propiedades" value="estimulante" />
           Estimulante
-        </label><br />
+        </label><br>
         <label>
           <input data-translate="relaxing" type="checkbox" name="propiedades" value="relajante" />
           Relajante
-        </label><br />
+        </label><br>
         <label>
           <input data-translate="digestive" type="checkbox" name="propiedades" value="digestivo" />
           Digestivo
-        </label><br />
+        </label><br>
         <label>
           <input data-translate="rest" type="checkbox" name="propiedades" value="descanso" />
           Descanso
-        </label><br />
+        </label><br>
         <label>
           <input data-translate="anti-inflammatory" type="checkbox" name="propiedades" value="antiinflamatorio" />
           Antiinflamatorio
-        </label><br />
+        </label><br>
         <label>
           <input data-translate="dental-health" type="checkbox" name="propiedades" value="salud dental" />
           Salud Dental
-        </label><br />
+        </label><br>
         <label>
           <input data-translate="detox" type="checkbox" name="propiedades" value="detox" />
           Detox
-        </label><br />
+        </label><br>
         <label>
           <input data-translate="refreshing" type="checkbox" name="propiedades" value="refrescante" />
           Refrescante
-        </label><br />
+        </label><br>
       </fieldset>
     </form>
             <button data-translate="apply-filters" type="submit">Aplicar Filtros</button>
@@ -165,24 +165,15 @@
         </article>
       </section>
 
-      <!--Popup de productos-->
-      <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
-        <button class ="cerrarBtn" id="cerrarBtn">X</button>
-        <div id="paginaProducto"></div>
-        <div class="botones">
-          <button data-translate="navigation-next" id="siguienteBtn">Siguiente</button>
-          <button data-translate="navigation-previous" id="anteriorBtn">Anterior</button>
-        </div>
-      </section>
-      <!--Popup de productos-->
-  <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
-    <button class="cerrar" onclick="cerrar()">X</button>
-    <div id="paginaProducto"></div>
-    <div class="botones">
-        <button onclick="anterior()">A</button> 
-        <button onclick="siguiente()">B</button>
-    </div>
-  </section>
+     <!--Popup de productos-->
+     <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
+      <button class ="cerrarBtn" id="cerrarBtn">X</button>
+      <div id="paginaProducto"></div>
+      <div class="botones">
+        <button id="anteriorBtn" class="botonFlecha"><i class="fa-solid fa-arrow-left"></i></button>
+        <button id="siguienteBtn" class="botonFlecha"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </section>
 
       <!-- Sección del Té del Mes -->
       <section class="te-del-mes">
