@@ -684,10 +684,7 @@ cursor: pointer;
 }
 
 .newsletter h3 {
-<<<<<<< HEAD
   color: var(--blanco);
-=======
->>>>>>> 3cd7853e37b230e31681418b01ef4012264d3d25
   margin-top: 0;
   color: var(--blanco)
   
@@ -842,7 +839,6 @@ ul {
     justify-content: center;
 }
 
-<<<<<<< HEAD
 /*Alejandro haciendo el carrito*/
 .filtroCatalogo{
   display: flex;
@@ -891,7 +887,6 @@ text-align: center;
 .carritoSection button{
   margin: 0 12rem;
 }
-=======
 button.botonCarrito{
   font-size:0.9rem;
   padding: 0;
@@ -914,4 +909,3 @@ button.botonCarrito:hover{
   padding-bottom: 0.3rem;
   font-size: 0.9rem;
   }
->>>>>>> 3cd7853e37b230e31681418b01ef4012264d3d25
