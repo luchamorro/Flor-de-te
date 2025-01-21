@@ -828,8 +828,6 @@ ul {
 .seccion{
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
-=======
 }
 
 /*Alejandro haciendo el carrito*/
@@ -879,5 +877,4 @@ text-align: center;
 }
 .carritoSection button{
   margin: 0 12rem;
->>>>>>> carrito
 }
