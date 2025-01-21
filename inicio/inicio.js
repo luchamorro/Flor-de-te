@@ -74,12 +74,30 @@ async function cargarDatos() {
       mostrarProductos(productos, lista);
     });
 
+    lista.setAttribute('id', 'ulProductos') // Agregar id por Alejandro
+
+    productos.forEach(producto => {
+      const item = document.createElement('li');
+      item.innerHTML = `
+        <img src="../${producto.img}" alt="${producto.nombre}" width="205" height="212" class="imagenCatalogo">
+        <p class="tituloProducto">${producto.nombre}</p>
+        <p>${producto.precio}€ <button>carrito</button></p>
+      `;
+
+      lista.appendChild(item);
+
+      // Agregar evento para mostrar el producto en la ventana superpuesta
+      item.addEventListener("click", () => {
+        mostrarProducto(producto.id);
+      });
+    });
+
+    div.appendChild(lista);
   } catch (error) {
     console.error('Error al cargar los datos:', error);
     document.getElementById('catalogoProductos').textContent = 'Error al cargar los datos.';
   }
 }
-
 // Función para mostrar un producto basado en su ID
 function mostrarProducto(id) {
   const producto = productos.find(p => p.id === id);
@@ -92,6 +110,7 @@ function mostrarProducto(id) {
         </p>
         <p class="descripcionProducto">${producto.descripcion}</p>
         <p>${producto.precio}€ <button id="botonCarritoProducto">carrito</button></p>
+        <p>${producto.precio}€ <button onclick="anadirCompra(${producto.id})">carrito</button></p>
       </div>
       <div class="divImagenProducto">
         <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">
@@ -106,7 +125,7 @@ function mostrarProducto(id) {
 }
 
 // Función para redirigir a la página del producto
-function irPagina(id) {
+function irPagina(id) {mostrarProducto
   const producto = productos.find(p => p.id === id);
 
   if (producto) {
@@ -149,3 +168,66 @@ document.getElementById('cerrarBtn').addEventListener('click', cerrar);
 
 // Cargar los datos al cargar la página
 cargarDatos();
+
+function anadirCompra(id) {
+  const producto = productos.find(p => p.id == id);
+  // Comprueba si el producto está en el carrito
+  const carritoList = document.getElementById('carrito');
+  const comprobacion = carritoList.querySelectorAll('.tituloProducto');
+
+  for (let item of comprobacion) {
+    if (item.textContent === producto.nombre) {
+      return; // Termina si el producto existe
+    }
+  }
+
+  if (producto) {
+    let anadirProducto = document.createElement("li");
+    let nombre = document.createElement("p");
+    let pic = document.createElement('img');
+    let precio = document.createElement('p');
+    let borrar = document.createElement('span');
+
+    nombre.setAttribute('class', 'tituloProducto');
+    nombre.innerHTML = `${producto.nombre}`;
+
+    pic.setAttribute("src", `../${producto.img}`);
+    pic.setAttribute("alt", `${producto.nombre}`);
+    
+    precio.innerHTML = `${producto.precio}€`;
+
+    borrar.innerHTML = `&#128465;`
+
+    document.getElementById('carrito').appendChild(anadirProducto);
+    anadirProducto.appendChild(nombre);
+    anadirProducto.appendChild(pic);
+    anadirProducto.appendChild(precio);
+    anadirProducto.appendChild(borrar);
+
+    // borrar un producto de la cessta
+    borrar.addEventListener('click', function() {
+      anadirProducto.remove();
+    });
+
+    currentId = id; // Actualizar el ID actual
+  }
+}
+
+// Buscador
+const buscador = document.getElementById('buscador');
+const catalogoDiv = document.querySelector('.div-catalogo');
+
+buscador.addEventListener('input', function() {
+    const busqueda = this.value.toLowerCase().trim();
+    const productos = catalogoDiv.getElementsByClassName('elementoProducto');
+
+    Array.from(productos).forEach(producto => {
+        const titulo = producto.querySelector('.tituloProducto').textContent.toLowerCase();
+        
+        if (titulo.includes(busqueda)) {
+            producto.style.display = 'flex';  // o 'block' según tu diseño
+        } else {
+            producto.style.display = 'none';
+        }
+    });
+});b

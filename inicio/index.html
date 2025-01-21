@@ -21,6 +21,23 @@
     <link rel="stylesheet" href="inicio.css" />
     <link rel="stylesheet" href="estilo_popup.css" />
   </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="inicio.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <title>Flor de Té</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="estilo_popup.css">
+
+</head>
 
   <body>
     <nav class="menu">
@@ -33,11 +50,11 @@
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="../contacto/contacto.html">Contacto</a></li>
         </ul>
       </div>
       <div class="right-section">
-        <input type="text" placeholder="Buscar..." />
+        <input type="search" placeholder="Buscar..." />
         <div class="user-area"><i class="fa-solid fa-user"></i></div>
         <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
         <select title="idioma">
@@ -51,8 +68,7 @@
       <section class="hero-carousel">
         <div
           class="hero-slide active"
-          style="background-image: url('../img/inicio/hero1.jpeg')"
-        >
+          style="background-image: url('../img/inicio/hero1.jpeg')">
           <div class="hero-text-1">
             <h1 class="titulo-hero">FLOR DE TÉ</h1>
             <p class="texto-hero">
@@ -96,90 +112,50 @@
       </section>
 
       <!-- Catálogo -->
-      <h3>Catálogo</h3>
-      <section class="productos">
-        <div class="div-catalogo" id="catalogoProductos"></div>
-        <aside class="filtros">
-          <h4>Filtrar por:</h4>
-          <form id="filtrosForm">
-            <!-- Categorías -->
-            <fieldset>
-              <legend>Tipo de bebida</legend>
-              <label
-                ><input type="checkbox" name="categoria" value="infusión" />
-                Infusiones</label
-              ><br />
-              <label
-                ><input type="checkbox" name="categoria" value="té" /> Té</label
-              ><br />
-            </fieldset>
+  <h3>Catálogo</h3>
+  <section class="productos">
+      <aside class="filtros">
+        <h4>Filtrar por:</h4>
+        <form id="filtrosForm">
+          <!-- Categorías -->
+          <fieldset>
+            <legend>Tipo de bebida</legend>
+            <label><input type="checkbox" name="categoria" value="infusión"> Infusiones</label><br>
+            <label><input type="checkbox" name="categoria" value="té"> Té</label><br>
+          </fieldset>
+    
+          <!-- Propiedades -->
+          <fieldset>
+            <legend>Propiedades</legend>
+            <label><input type="checkbox" name="propiedades" value="antioxidantes"> Antioxidante</label><br>
+            <label><input type="checkbox" name="propiedades" value="estimulante"> Estimulante</label><br>
+            <label><input type="checkbox" name="propiedades" value="relajante"> Relajante</label><br>
+            <label><input type="checkbox" name="propiedades" value="digestivo"> Digestivo</label><br>
+            <label><input type="checkbox" name="propiedades" value="descanso"> Descanso</label><br>
+            <label><input type="checkbox" name="propiedades" value="antiinflamatorio"> Antiinflamatorio</label><br>
+            <label><input type="checkbox" name="propiedades" value="salud dental"> Salud Dental</label><br>
+            <label><input type="checkbox" name="propiedades" value="detox"> Detox</label><br>
+            <label><input type="checkbox" name="propiedades" value="refrescante"> Refrescante</label><br>
+          </fieldset>
+          
+          <button type="submit">Aplicar Filtros</button>
+        </form>
+        <button id="borrarFiltros">Borrar Filtros</button>
+      </aside>
 
-            <!-- Propiedades -->
-            <fieldset>
-              <legend>Propiedades</legend>
-              <label
-                ><input
-                  type="checkbox"
-                  name="propiedades"
-                  value="antioxidantes"
-                />
-                Antioxidante</label
-              ><br />
-              <label
-                ><input
-                  type="checkbox"
-                  name="propiedades"
-                  value="estimulante"
-                />
-                Estimulante</label
-              ><br />
-              <label
-                ><input type="checkbox" name="propiedades" value="relajante" />
-                Relajante</label
-              ><br />
-              <label
-                ><input type="checkbox" name="propiedades" value="digestivo" />
-                Digestivo</label
-              ><br />
-              <label
-                ><input type="checkbox" name="propiedades" value="descanso" />
-                Descanso</label
-              ><br />
-              <label
-                ><input
-                  type="checkbox"
-                  name="propiedades"
-                  value="antiinflamatorio"
-                />
-                Antiinflamatorio</label
-              ><br />
-              <label
-                ><input
-                  type="checkbox"
-                  name="propiedades"
-                  value="salud dental"
-                />
-                Salud Dental</label
-              ><br />
-              <label
-                ><input type="checkbox" name="propiedades" value="detox" />
-                Detox</label
-              ><br />
-              <label
-                ><input
-                  type="checkbox"
-                  name="propiedades"
-                  value="refrescante"
-                />
-                Refrescante</label
-              ><br />
-            </fieldset>
-
-            <button type="submit">Aplicar Filtros</button>
-          </form>
-          <button id="borrarFiltros">Borrar Filtros</button>
-        </aside>
-      </section>
+      <div class="div-catalogo" id="catalogoProductos"></div>
+      <!-- Carrito de compra -->
+      <article class="carritoSection">
+        <h4>Carrito de compra</h4>
+        <div>
+          <ul id="carrito">
+          </ul>
+        </div>
+        <div>
+          <button type="button">Checkout</button>
+        </div>
+      </article>
+  </section>
 
       <!--Popup de productos-->
       <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
@@ -190,6 +166,18 @@
           <button id="anteriorBtn">Anterior</button>
         </div>
       </section>
+
+  
+  
+  <!--Popup de productos-->
+  <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
+    <button class="cerrar" onclick="cerrar()">X</button>
+    <div id="paginaProducto"></div>
+    <div class="botones">
+        <button onclick="anterior()">A</button> 
+        <button onclick="siguiente()">B</button>
+    </div>
+  </section>
 
       <!-- Sección del Té del Mes -->
       <section class="te-del-mes">
@@ -405,4 +393,7 @@
     <script src="carrusel.js"></script>
     <script src="../inicio/pop-up-newsletter.js"></script>
   </body>
+
+</body>
+
 </html>
