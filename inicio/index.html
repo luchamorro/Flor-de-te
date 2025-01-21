@@ -4,18 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="inicio.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
   <title>Flor de Té</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="inicio.css">
     <link rel="stylesheet" href="estilo_popup.css">
-
 </head>
 
   <body>
@@ -97,58 +92,26 @@
       <!-- Categorías -->
       <fieldset>
         <legend data-translate="filter-category">Tipo de bebida</legend>
-        <label>
-          <input data-translate="infusion" type="checkbox" name="categoria" value="infusión" />
-          Infusiones
-        </label><br>
-        <label>
-          <input data-translate="tea" type="checkbox" name="categoria" value="té" /> Té
-        </label><br>
+        <label><input data-translate="infusion" type="checkbox" name="categoria" value="infusión"> Infusiones</label><br>
+        <label><input data-translate="tea" type="checkbox" name="categoria" value="té"> Té</label><br>
       </fieldset>
 
       <!-- Propiedades -->
       <fieldset>
         <legend data-translate="filter-properties">Propiedades</legend>
-        <label>
-          <input data-translate="antioxidants" type="checkbox" name="propiedades" value="antioxidantes" />
-          Antioxidante
-        </label><br>
-        <label>
-          <input data-translate="stimulant" type="checkbox" name="propiedades" value="estimulante" />
-          Estimulante
-        </label><br>
-        <label>
-          <input data-translate="relaxing" type="checkbox" name="propiedades" value="relajante" />
-          Relajante
-        </label><br>
-        <label>
-          <input data-translate="digestive" type="checkbox" name="propiedades" value="digestivo" />
-          Digestivo
-        </label><br>
-        <label>
-          <input data-translate="rest" type="checkbox" name="propiedades" value="descanso" />
-          Descanso
-        </label><br>
-        <label>
-          <input data-translate="anti-inflammatory" type="checkbox" name="propiedades" value="antiinflamatorio" />
-          Antiinflamatorio
-        </label><br>
-        <label>
-          <input data-translate="dental-health" type="checkbox" name="propiedades" value="salud dental" />
-          Salud Dental
-        </label><br>
-        <label>
-          <input data-translate="detox" type="checkbox" name="propiedades" value="detox" />
-          Detox
-        </label><br>
-        <label>
-          <input data-translate="refreshing" type="checkbox" name="propiedades" value="refrescante" />
-          Refrescante
-        </label><br>
+        <label><input data-translate="antioxidants" type="checkbox" name="propiedades" value="antioxidantes"> Antioxidante </label><br>
+        <label><input data-translate="stimulant" type="checkbox" name="propiedades" value="estimulante"> Estimulante </label><br>
+        <label><input data-translate="relaxing" type="checkbox" name="propiedades" value="relajante"> Relajante </label><br>
+        <label><input data-translate="digestive" type="checkbox" name="propiedades" value="digestivo"> Digestivo </label><br>
+        <label><input data-translate="rest" type="checkbox" name="propiedades" value="descanso"> Descanso </label><br>
+        <label><input data-translate="anti-inflammatory" type="checkbox" name="propiedades" value="antiinflamatorio"> Antiinflamatorio </label><br>
+        <label><input data-translate="dental-health" type="checkbox" name="propiedades" value="salud dental"> Salud Dental </label><br>
+        <label><input data-translate="detox" type="checkbox" name="propiedades" value="detox"> Detox </label><br>
+        <label><input data-translate="refreshing" type="checkbox" name="propiedades" value="refrescante"> Refrescante </label><br>
       </fieldset>
-    </form>
             <button data-translate="apply-filters" type="submit">Aplicar Filtros</button>
-          <button data-translate="clear-filters" id="borrarFiltros">Borrar Filtros</button>
+          </form>
+            <button data-translate="clear-filters" id="borrarFiltros">Borrar Filtros</button>
         </aside>
 
         <div class="div-catalogo" id="catalogoProductos"></div>
