@@ -105,7 +105,7 @@ button:hover {
   align-items: center;
 }
 
-.right-section input[type="text"] {
+.right-section input[type="search"] {
   padding: 8px;
   margin-right: 10px;
   border: none;
