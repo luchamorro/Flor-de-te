@@ -1,26 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/b58110c1d4.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Flor de Té</title>
-    <link rel="stylesheet" href="inicio.css" />
-    <link rel="stylesheet" href="estilo_popup.css" />
-  </head>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -112,7 +91,6 @@
 <!-- Catálogo -->
 <h3 data-translate="catalog-title">Catálogo</h3>
 <section class="productos">
-  <div class="div-catalogo" id="catalogoProductos"></div>
   <aside class="filtros">
     <h4 data-translate="filters-title">Filtrar por:</h4>
     <form id="filtrosForm">
@@ -172,6 +150,19 @@
             <button data-translate="apply-filters" type="submit">Aplicar Filtros</button>
           <button data-translate="clear-filters" id="borrarFiltros">Borrar Filtros</button>
         </aside>
+
+        <div class="div-catalogo" id="catalogoProductos"></div>
+        <!-- CARRITO-->
+        <article class="carritoSection">
+          <h4>Carrito de compra</h4>
+          <div>
+            <ul id="carrito">
+            </ul>
+          </div>
+          <div>
+            <button type="button">Checkout</button>
+          </div>
+        </article>
       </section>
 
       <!--Popup de productos-->
@@ -405,7 +396,7 @@
     <script src="inicio.js"></script>
     <script src="fechayhora.js"></script>
     <script src="carrusel.js"></script>
-    <script src="../inicio/pop-up-newsletter.js"></script>
+    <script src="pop-up-newsletter.js"></script>
     <script src="idiomas_inicio.js"></script>
   </body>
 </html>

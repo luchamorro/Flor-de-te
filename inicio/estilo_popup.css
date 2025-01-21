@@ -1,17 +1,16 @@
-   
-   .ventanaSuperpuesta{
-       position: fixed;
-       top: 10%;
-       left: 10%;
-       width: 100%;
-       height: 60%;
-       background-color: rgb(255, 255, 255);
-       z-index: 19;
-       filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
-       width: 50%;
-       display: none;
-       flex-direction: column;
-       padding-bottom: 4rem;
+.ventanaSuperpuesta{
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 100%;
+  height: 60%;
+  background-color: rgb(255, 255, 255);
+  z-index: 19;
+  filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
+  width: 80%;
+  display: none;
+  flex-direction: column;
+  padding-bottom: 4rem;
 
 }
 
@@ -23,7 +22,7 @@ align-self:last baseline;
 
 #paginaProducto{
   height: auto;
-  width: 80%;
+  width: auto;
   display: flex;
   justify-content:space-between;
   /*flex-wrap: wrap;*/
@@ -36,19 +35,10 @@ align-self:last baseline;
   padding-left: 3rem;
 }
 
-.botonesPaginaProducto{
- display: flex;
- justify-content: center;
-
-}
-
 .botones{
-display: flex;
-justify-content: center;
-
-}
-.botonCarritoProducto{
-background: none;
+  align-self:center;
+  position: fixed;
+  bottom: 2rem;
 }
 
 
@@ -59,9 +49,17 @@ height: auto;
   top: 4rem
 }
 
+.enlaceTituloProducto{
+  text-decoration: none;
+}
+
 .productoTexto{
   width: auto;
   height: auto;
+}
+
+.tituloProductoGrande{ /*---modificar*/
+  font-size: 1.8rem; 
 }
 
 .descripcionProducto{
@@ -74,50 +72,4 @@ height: auto;
   flex-direction: column; /* Asegúrate de usar flex si lo necesitas */
   padding: 20px;
   background-color: white;
-}
-
-
-button.cerrarBtn{
-width: 2rem;
-align-self:last baseline;
-background: none;
-color: rgb(64, 58, 58);
-padding: 2rem;
-padding-right: 3rem;
-font-size: 1.3rem;
-}
-
-.cerrarBtn:hover{
-
-background: none;
-color: var(--burdeos);
-font-weight: 600;
-}
-
-button.botonFlecha{
-background-color: white;
-border-radius: 100%;
-border: solid rgb(161, 159, 159) 0.03rem;
-padding: 0.8rem;
-font-size: 1rem;
-color: grey;
-transition: background-color 0.3s ease;
-
-}
-
-button.botonFlecha:hover{
-
-background: solid;
-background-color: rgb(161, 159, 159);
-color: aliceblue;
-
-}
-
-button.verPaginaProducto {
-background: none;
-color:black;
-padding: 0;
-font-weight: bold;
-font-size: 1.5rem;
-
 }

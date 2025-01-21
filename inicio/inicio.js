@@ -230,4 +230,4 @@ buscador.addEventListener('input', function() {
             producto.style.display = 'none';
         }
     });
-});b
+});
