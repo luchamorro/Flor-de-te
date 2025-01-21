@@ -3,7 +3,7 @@
       "id":1,
       "nombre": "Infusión de Lavanda",
       "descripcion": "Tiene propiedades relajantes, mejora la calidad del sueño y es antiinflamatorio.",
-      "img": "/img/productos/01_telavanda.png",
+      "img": "/img/productos/01_infulavanda.png",
       "filtros": [
         "Relajante",
         "Infusión",

@@ -68,12 +68,11 @@ button:hover {
   margin: 20px;
   line-height: normal;
   position: fixed;
-  width: 98%; /*115.7rem;*/
+  width: 98%;
   top: 0;
-  z-index: 100;
-  box-sizing: border-box; 
+  z-index: 18;
+  box-sizing: border-box;
 }
-
 .menu img {
   height: 65px;
   margin-left: 2rem;;
@@ -109,8 +108,8 @@ button:hover {
   width: 30%;
 }
 
-.right-section input[type="text"] {
-  padding: 0.8rem;
+.right-section input[type="search"] {
+  padding: 8px;
   margin-right: 10px;
   width: 50%;
   border: none;
@@ -261,12 +260,13 @@ button:hover {
 
 .productos {
   display: flex;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
 .filtros {
-  width: 60%;
+  width: 20%;  /*cambiado de 60 -> 100 -AL*/
+  height: 25%; /*añadido -AL*/
   border-radius: 1rem;
   background-color: white;
   color: var(--burdeos);
@@ -274,7 +274,7 @@ button:hover {
   display: flex;
   flex-direction: column; /* Alinea elementos verticalmente */
   align-items: flex-start; /* Alinea los hijos al inicio */
-  padding: 1rem 0 0 2rem; /* Añade algo de espacio alrededor del contenido */
+  padding: 1rem 0 0 0rem; /* Añade algo de espacio alrededor del contenido */
 }
 
 ul {
@@ -283,17 +283,23 @@ ul {
 
 
 /* Cambiar el fondo y el borde del catálogo */
+.div-catalogo{
+  width: 80%;
+  margin: 0  0 0 -5rem;
+  display: flex;
+  justify-content: flex-start;
+}
 .elementoProducto {
-  background-color: #f5f5f5; /* Color de fondo claro */
+  width: 100%;
+  background-color: rgb(246, 234, 245);
   border: 1px solid #ddd; /* Borde gris claro */
   border-radius: 10px; /* Bordes redondeados */
-  padding: 1rem;
+  padding: 2rem; 
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
 }
-
 /* Cambiar el estilo de las imágenes en el catálogo */
 .imagenCatalogo {
   width: 200px; /* Ancho fijo */
@@ -314,6 +320,13 @@ ul {
   font-weight: bold; /* Negrita */
   color: #333; /* Color del texto */
   margin-top: 0.5rem; /* Espacio superior */
+}
+
+.tituloProducto:hover{
+
+color: var(--burdeos);
+cursor: pointer;
+
 }
 
 /* Cambiar el estilo de los precios de los productos */
@@ -589,7 +602,7 @@ ul {
   padding: 20px;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 25;
   border-radius: 1rem;
   width: 30rem;
 }
@@ -639,7 +652,7 @@ ul {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 15;
 }
 
 
@@ -686,8 +699,10 @@ ul {
 }
 
 .newsletter h3 {
-  color: var(--blanco)
+  color: var(--blanco);
   margin-top: 0;
+  color: var(--blanco)
+  
 }
 
 .newsletter p {
@@ -828,15 +843,7 @@ ul {
     justify-content: center;
 }
 
-.elementoProducto{
- background-color: rgb(246, 234, 245);
- width: 70%;
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
- gap:1rem;
- padding: 2rem; 
-}
+
 
 .imagenCatalogo:hover{
  filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
@@ -846,3 +853,74 @@ ul {
     display: flex;
     justify-content: center;
 }
+
+/*Alejandro haciendo el carrito*/
+.filtroCatalogo{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.carritoSection{
+  background-color: rgb(246, 234, 245);
+  position: sticky;
+  top: 7rem;
+  z-index: 15;
+  width: 20rem;
+  height: 25rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0rem 0 0 2rem;
+}
+.carritoSection h4{
+text-align: center;
+}
+.carritoSection li{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.carritoSection div{
+  width: 100%;
+}
+.carritoSection img{
+  width: 5rem;
+}
+.carritoSection .tituloProducto{
+  width: 100%
+}
+.carritoSection p{
+  width: 40%;
+  text-align: center;
+  margin: 2rem 0;
+}
+.carritoSection span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.carritoSection button{
+  margin: 0 12rem;
+}
+button.botonCarrito{
+  font-size:0.9rem;
+  padding: 0;
+  z-index: 1400;
+  background: none;
+  color: var(--burdeos)
+}
+
+button.botonCarrito:hover{
+  background: none;
+  color: var(--naranja)
+  
+}
+
+#fechayhora{
+  display: flex;
+  justify-content: end;
+  padding-right: 1rem;
+  color: var(--morado);
+  padding-bottom: 0.3rem;
+  font-size: 0.9rem;
+  }
