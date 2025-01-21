@@ -180,6 +180,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   z-index: 1;
+
 }
 
 .hero-slide.active {
@@ -189,20 +190,23 @@ button:hover {
 }
 
 .hero-text-1 {
+  max-width: 40rem;
   text-align: right;
-  margin: 5rem 0 0 60rem;
+  margin: 5rem 0 0 65rem;
 }
 .hero-carousel p{
   color: white;
 }
 
 .hero-text-2 {
-  margin: 5rem 55rem 0 0;
+  max-width: 40rem;
+  margin: 5rem 60rem 0 0;
   animation: none; /* Por defecto, sin animación */
 }
 
 .hero-text-3 {
-  margin: 5rem 55rem 0 0;
+  max-width: 30rem;
+  margin: 5rem 72rem 0 0;
   animation: none; /* Por defecto, sin animación */
 }
 
