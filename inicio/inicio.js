@@ -213,7 +213,7 @@ function anadirCompra(id) {
   }
 }
 
-//buscador de productos
+// Buscador
 const buscador = document.getElementById('buscador');
 const catalogoDiv = document.querySelector('.div-catalogo');
 
@@ -225,9 +225,9 @@ buscador.addEventListener('input', function() {
         const titulo = producto.querySelector('.tituloProducto').textContent.toLowerCase();
         
         if (titulo.includes(busqueda)) {
-            producto.style.display = 'block';
+            producto.style.display = 'flex';  // o 'block' según tu diseño
         } else {
             producto.style.display = 'none';
         }
     });
-});
+});b
