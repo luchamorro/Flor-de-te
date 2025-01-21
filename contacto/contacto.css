@@ -16,6 +16,10 @@
   display: flex;
   justify-content:center;
   text-align: center;
+  transition: transform 0.3s ease-in-out; 
+}
+.contacto-texto:hover{
+  transform: scale(1.05);
 }
 /* Estilos generales */
 body,
@@ -66,6 +70,14 @@ button:hover {
   background-color: var(--burdeos); /* Cambio de color al pasar el ratón */
 }
 
+.cuerpo-contacto{
+  margin: 5rem auto;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+}
 
 /* Estilos del menú */
 .menu {
@@ -161,7 +173,6 @@ button:hover {
   font-size: 12px;
 }
 
-
 /*estilos iconos*/
 .contactanos {
 display: flex;
@@ -238,41 +249,49 @@ gap: 5rem;
 
 .contenedor1{
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content:center;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 90%;           /* Ajusta el ancho máximo */
+  gap: 2rem;                /* Añade separación entre los contenedores */
 }
+.contenedor-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;/* Hace que el contenedor del logo ocupe un espacio flexible */
+  max-width: 45%; 
+}
+
 .contenedor-formulario {
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 200px;
-  width: 40%;
+  margin: 50px auto;
+  padding: 50px;
+  width: 30%;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 .formulario{
-  position: relative;
+  position: absolute;
   z-index: 1;
-
+  max-height: 50px;
   
 }
-
 .form-group {
   width: 100%;
   margin-bottom: 1.5rem;
 }
-
 .form-group label {
   font-size: 1.2rem;
   color: var(--morado);
   display: block;
   margin-bottom: 0.5rem;
 }
-
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -284,27 +303,36 @@ gap: 5rem;
   background-color: #f4f4f4;
   transition: all 0.3s ease;
 }
-
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--morado);
   box-shadow: 0 0 5px rgba(111, 0, 94, 0.5);
 }
-
 .form-group textarea {
   resize: vertical;
   height: 150px;
 }
-
 .checkbox-group {
   display: flex;
   align-items: center;
-  margin-bottom: 1.5rem;
+  gap: 1px;
+  font-size: 0.9rem;
+  color: #555;
 }
 
-.checkbox-group input {
-  margin-right: 10px;
+.checkbox-group input [type="checkbox"] {
+  margin: 0;
+  width:16px;
+  height:16px ;
+}
+.checkbox-group a {
+  color: var(--morado); 
+  text-decoration: none;
+}
+
+.checkbox-group a:hover {
+  text-decoration: underline; 
 }
 
 button {
@@ -336,15 +364,14 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ccc;
-  margin: 2rem;
+  margin: 2rem auto;
   text-align: center;
   width: 80%;
-  padding: 0.5rem;
+  padding: 1rem;
   }
   
   #contacto iframe { 
-  width: 95%;
+  width: 80%;
   height: 60vh;
   margin:0;
   }
@@ -352,10 +379,10 @@ button:hover {
 
 /*estilos iconos*/
 
-.nuestras-tiendas h2{
-  text-align: center;
-  color: var(--morado);
-  font-weight: bold;
+.nuestras-tiendas {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 .iconos-tiendas {
   display: flex;

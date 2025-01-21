@@ -36,132 +36,122 @@
 
     <div id="contacto">
 
-      <div class="contacto-texto">
-        <h1>CONTACTO</h1>
-      </div>
-      <div class="contactanos">
-        <div class="texto-contactanos">
-          <h3>Siempre al lado de nuestros Clientes</h3>
+      <div class="cuerpo-contacto">
+
+        <div class="contacto-texto">
+          <h1>CONTACTO</h1>
         </div>
+        <div class="contactanos">
+          <div class="texto-contactanos">
+            <h3>Siempre al lado de nuestros Clientes</h3>
+          </div>
+          
+          <div class="iconos-contacto">
+            <div class="icono-lugar">
+              <i class="fas fa-house"></i>
+              <p>Dirección</p>
+              <p>Avda, de Ercilla, 48901 <br> Bilbao, Vizcaya</p>
+            </div>
+
+            <div class="icono-tel">
+              <i class="fas fa-phone-alt"></i>
+              <p>Teléfono</p>
+              <p>+34 968201818</p>
+            </div>
+
+            <div class="icono-email">
+              <i class="fas fa-envelope"></i>
+              <p>Correo Electrónico</p>
+              <p>flor-de-té@hotmail.com</p>
+            </div>
+          </div>
         
-        <div class="iconos-contacto">
-          <div class="icono-lugar">
-            <i class="fas fa-house"></i>
-            <p>Dirección</p>
-            <p>Avda, de Ercilla, 48901 <br> Bilbao, Vizcaya</p>
-          </div>
-
-          <div class="icono-tel">
-            <i class="fas fa-phone-alt"></i>
-            <p>Teléfono</p>
-            <p>+34 968201818</p>
-          </div>
-
-          <div class="icono-email">
-            <i class="fas fa-envelope"></i>
-            <p>Correo Electrónico</p>
-            <p>flor-de-té@hotmail.com</p>
-          </div>
-        </div>
-       
-      </div>
-
-      <div class="contenedor1">
-        <div class="seccion-logo">
-          <img src="../img/logos/logo_horizontal.svg" alt="logo-form">
         </div>
 
-        <div class="contenedor-formulario">
-          <div class="texto-form">
-            <h3>¿Podemos ayudarte?</h3>
+        <div class="contenedor1">
+          <div class="contenedor-logo">
+            <img src="../img/logos/logo_horizontal.svg" alt="logo-form">
           </div>
-  
-          <form id="formulario">
-            <div class="form-group">
-              <label for="asunto">Asunto</label>
-              <select name="asunto" id="asunto" required>
-                <option value="atencion-cliente">Atención al cliente</option>
-                <option value="Sugerencias">Sugerencias</option>
-              </select>
+
+          <div class="contenedor-formulario">
+            <div class="texto-form">
+              <h3>¿Podemos ayudarte?</h3>
             </div>
-          
-            <div class="form-group">
-              <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" name="nombre" required />
-            </div>
-          
-            <div class="form-group">
-              <label for="apellido">Apellido</label>
-              <input type="text" id="apellido" name="apellido" required />
-            </div>
-          
-            <div class="form-group">
-              <label for="telefono">Teléfono</label>
-              <input type="tel" id="telefono" name="telefono" placeholder="999-999-999" />
-            </div>
-          
-            <div class="form-group">
-              <label for="email">Dirección de correo electrónico</label>
-              <input type="email" id="email" name="email" placeholder="tu@email.com" required />
-            </div>
-          
-            <div class="form-group">
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" placeholder="¿Cómo podemos ayudarte?" required></textarea>
-            </div>
-          
-            <div class="form-group checkbox-group">
-              <input type="checkbox" id="privacidad" name="privacidad" required />
-              <label for="privacidad">He leído y acepto la política de privacidad</label>
-            </div>
-          
-            <button type="submit">Enviar</button>
-          </form>
-          <div class="politica">
-            <p>Le informamos que los datos de carácter personal proporcionados a través del presente formulario, serán tratados por CAFÉS SALZILLO como responsable de esta web. La finalidad de la recogida y tratamiento de los datos personales que le solicitamos es la de la prestación del servicio que solicite en el presente, y en su caso, el envío de comunicaciones comerciales que pudieran ser de su interés. La legitimación se realiza a través del consentimiento del interesado. Le informamos que los datos facilitados estarán ubicados en los servidores con medidas de seguridad según NRGPD y Ley 3/2018. Usted, como interesado podrá ejercer los derechos de acceso, rectificación, cancelación y oposición, así como el de portabilidad, limitación y retirada, utilizando los formularios habilitados que disponemos para ellos o bien dirigir un email a salzillo@cafes-salzillo.es, así como el derecho de presentar una reclamación ante una autoridad de control. Puede consultar la información adicional y detallada sobre Protección de Datos en nuestra Política de privacidad Marque la casilla, si desea recibir información sobre nuestros productos y/o servicios.</p>
+    
+            <form id="formulario">
+              <div class="form-group">
+                <label for="asunto">Asunto</label>
+                <select name="asunto" id="asunto" required>
+                  <option value="atencion-cliente">Atención al cliente</option>
+                  <option value="Sugerencias">Sugerencias</option>
+                </select>
+              </div>
+            
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required />
+              </div>
+            
+              <div class="form-group">
+                <label for="email">Dirección de correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+              </div>
+            
+              <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="¿Cómo podemos ayudarte?" required></textarea>
+              </div>
+            
+              <div class="form-group checkbox-group">
+                <input type="checkbox" id="privacidad" name="privacidad" required />
+                <label for="privacidad">He leído y acepto la política de privacidad</label>
+              </div>
+            
+              <button type="submit">Enviar</button>
+            </form>
+            
           </div>
         </div>
-      </div>
 
-      <!--contenedor de mapa-->
+        <!--contenedor de mapa-->
 
-      <div class="contenedor-map">
-            <iframe
-               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d726.6889455365114!2d-2.8906401083607727!3d43.2355797368229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4ef2d6fd135b%3A0x46c15f92063a93a5!2sPl.%20Arizgoiti%2C%204!5e0!3m2!1ses!2ses!4v1731399877248!5m2!1ses!2ses"
-               allowfullscreen=""
-               loading="lazy"
-               referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-      </div>
-      <div class="nuestras-tiendas">
+        <div class="contenedor-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d726.6889455365114!2d-2.8906401083607727!3d43.2355797368229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4ef2d6fd135b%3A0x46c15f92063a93a5!2sPl.%20Arizgoiti%2C%204!5e0!3m2!1ses!2ses!4v1731399877248!5m2!1ses!2ses"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+        </div>
+        <div class="nuestras-tiendas">
 
-        <h2>Visita Nuestras Tiendas</h2>
+          <h3>Visita Nuestras Tiendas</h3>
 
-        <div class="iconos-tiendas">
-          
-          <div class="icono-tienda1">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <h3>FLor de té El Corte Inglés</h3>
-            <p>Gran vía, Bilbao</p>
-            <p>Tlf: 968 385 717</p>
-          </div>
-          <div class="icono-tienda2">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <h3>FLor de té Artea</h3>
-            <p>Av artea 3, Algorta</p>
-            <p>Tlf: 968 385 720</p>
-          </div>
+          <div class="iconos-tiendas">
+            
+            <div class="icono-tienda1">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <h3>FLor de té El Corte Inglés</h3>
+              <p>Gran vía, Bilbao</p>
+              <p>Tlf: 968 385 717</p>
+            </div>
+            <div class="icono-tienda2">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <h3>FLor de té Artea</h3>
+              <p>Av artea 3, Algorta</p>
+              <p>Tlf: 968 385 720</p>
+            </div>
 
-          <div class="icono-tienda3">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <h3>FLor de té</h3>
-            <p>Centro comercial Max Center</p>
-            <p> Tlf: 968 385 722</p>
+            <div class="icono-tienda3">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <h3>FLor de té</h3>
+              <p>Centro comercial Max Center</p>
+              <p> Tlf: 968 385 722</p>
+            </div>
           </div>
         </div>
-      </div>
       
-      
+      </div>
     </div>
       
  <!-- Footer -->
