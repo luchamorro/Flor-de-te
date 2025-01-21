@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,23 +21,6 @@
     <link rel="stylesheet" href="inicio.css" />
     <link rel="stylesheet" href="estilo_popup.css" />
   </head>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="inicio.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-  <title>Flor de Té</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="inicio.css">
-    <link rel="stylesheet" href="estilo_popup.css">
-
-</head>
 
   <body>
     <nav class="menu">
@@ -61,13 +44,14 @@
           <option value="en">EN</option>
         </select>
       </div>
-      <div id="fechayhora"></div> <!--reubicar este div-->
     </nav>
+
     <main>
       <section class="hero-carousel">
         <div
           class="hero-slide active"
-          style="background-image: url('../img/inicio/hero1.jpeg')">
+          style="background-image: url('../img/inicio/hero1.jpeg')"
+        >
           <div class="hero-text-1">
             <h1 class="titulo-hero">FLOR DE TÉ</h1>
             <p class="texto-hero" data-translate="slide1-text">
@@ -176,22 +160,13 @@
 
       <!--Popup de productos-->
       <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
-        <button class ="cerrarBtn" id="cerrarBtn">X</button>
+        <button id="cerrarBtn">X</button>
         <div id="paginaProducto"></div>
         <div class="botones">
           <button data-translate="navigation-next" id="siguienteBtn">Siguiente</button>
           <button data-translate="navigation-previous" id="anteriorBtn">Anterior</button>
         </div>
       </section>
-      <!--Popup de productos-->
-  <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
-    <button class="cerrar" onclick="cerrar()">X</button>
-    <div id="paginaProducto"></div>
-    <div class="botones">
-        <button onclick="anterior()">A</button> 
-        <button onclick="siguiente()">B</button>
-    </div>
-  </section>
 
       <!-- Sección del Té del Mes -->
       <section class="te-del-mes">
@@ -403,7 +378,6 @@
   </footer>
 
     <script src="inicio.js"></script>
-    <script src="fechayhora.js"></script>
     <script src="carrusel.js"></script>
     <script src="../inicio/pop-up-newsletter.js"></script>
     <script src="idiomas_inicio.js"></script>
