@@ -1,44 +1,44 @@
-   
+      
    .ventanaSuperpuesta{
-       position: fixed;
-       top: 10%;
-       left: 10%;
-       width: 100%;
-       height: 60%;
-       background-color: rgb(255, 255, 255);
-       z-index: 19;
-       filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
-       width: 50%;
-       display: none;
-       flex-direction: column;
-       padding-bottom: 4rem;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 100%;
+    height: 60%;
+    background-color: rgb(255, 255, 255);
+    z-index: 19;
+    filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
+    width: 50%;
+    display: none;
+    flex-direction: column;
+    padding-bottom: 4rem;
 
 }
 
 .cerrar{
 
-  width: 1.8rem;
+width: 1.8rem;
 align-self:last baseline;
 }
 
 #paginaProducto{
-  height: auto;
-  width: 80%;
-  display: flex;
-  justify-content:space-between;
-  /*flex-wrap: wrap;*/
-  align-items: center;
-  gap: 1rem;
-  /*width: 60%;*/  
- /* padding-right: 10rem;
-  padding-left: 10rem;*/
-  padding: 2rem;
-  padding-left: 3rem;
+height: auto;
+width: 80%;
+display: flex;
+justify-content:space-between;
+/*flex-wrap: wrap;*/
+align-items: center;
+gap: 1rem;
+/*width: 60%;*/  
+/* padding-right: 10rem;
+padding-left: 10rem;*/
+padding: 2rem;
+padding-left: 3rem;
 }
 
 .botonesPaginaProducto{
- display: flex;
- justify-content: center;
+display: flex;
+justify-content: center;
 
 }
 
@@ -55,25 +55,25 @@ background: none;
 .divImagenProducto{
 height: auto;    
 /*position: fixed;*/
-  right: 2rem;
-  top: 4rem
+right: 2rem;
+top: 4rem
 }
 
 .productoTexto{
-  width: auto;
-  height: auto;
+width: auto;
+height: auto;
 }
 
 .descripcionProducto{
-  font-family: Arial, Helvetica, sans-serif; /*---modificar*/
-  max-width: 80%;
+font-family: Arial, Helvetica, sans-serif; /*---modificar*/
+max-width: 80%;
 }
 
 #paginaProductoAparte {
-  display: none; /* Oculto por defecto */
-  flex-direction: column; /* Asegúrate de usar flex si lo necesitas */
-  padding: 20px;
-  background-color: white;
+display: none; /* Oculto por defecto */
+flex-direction: column; /* Asegúrate de usar flex si lo necesitas */
+padding: 20px;
+background-color: white;
 }
 
 
