@@ -106,7 +106,7 @@ function mostrarProducto(id) {
     document.getElementById("paginaProducto").innerHTML = `
       <div class="productoTexto">
         <p class="tituloProductoGrande" id="tituloProductoGrande">
-          <button id="verPaginaProducto">${producto.nombre}</button>
+          <button id="verPaginaProducto" class = "verPaginaProducto">${producto.nombre}</button>
         </p>
         <p class="descripcionProducto">${producto.descripcion}</p>
         <p>${producto.precio}€ <button id="botonCarritoProducto">carrito</button></p>

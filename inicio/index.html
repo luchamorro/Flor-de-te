@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -62,8 +62,8 @@
           <option value="en">EN</option>
         </select>
       </div>
+      <div id="fechayhora"></div> <!--reubicar este div-->
     </nav>
-
     <main>
       <section class="hero-carousel">
         <div
@@ -159,17 +159,14 @@
 
       <!--Popup de productos-->
       <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
-        <button id="cerrarBtn">X</button>
+        <button class ="cerrarBtn" id="cerrarBtn">X</button>
         <div id="paginaProducto"></div>
         <div class="botones">
-          <button id="siguienteBtn">Siguiente</button>
-          <button id="anteriorBtn">Anterior</button>
+          <button id="anteriorBtn" class="botonFlecha"><i class="fa-solid fa-arrow-left"></i></button>
+          <button id="siguienteBtn" class="botonFlecha"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
       </section>
-
-  
-  
-  <!--Popup de productos-->
+      <!--Popup de productos-->
   <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
     <button class="cerrar" onclick="cerrar()">X</button>
     <div id="paginaProducto"></div>
@@ -390,10 +387,8 @@
     </footer>
 
     <script src="inicio.js"></script>
+    <script src="fechayhora.js"></script>
     <script src="carrusel.js"></script>
     <script src="../inicio/pop-up-newsletter.js"></script>
   </body>
-
-</body>
-
 </html>

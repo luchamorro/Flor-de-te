@@ -309,6 +309,13 @@ ul {
   margin-top: 0.5rem; /* Espacio superior */
 }
 
+.tituloProducto:hover{
+
+color: var(--burdeos);
+cursor: pointer;
+
+}
+
 /* Cambiar el estilo de los precios de los productos */
 .elementoProducto p {
   font-size: 1rem; /* Tamaño de fuente */
@@ -677,8 +684,13 @@ ul {
 }
 
 .newsletter h3 {
+<<<<<<< HEAD
   color: var(--blanco);
+=======
+>>>>>>> 3cd7853e37b230e31681418b01ef4012264d3d25
   margin-top: 0;
+  color: var(--blanco)
+  
 }
 
 .newsletter p {
@@ -830,6 +842,7 @@ ul {
     justify-content: center;
 }
 
+<<<<<<< HEAD
 /*Alejandro haciendo el carrito*/
 .filtroCatalogo{
   display: flex;
@@ -878,3 +891,27 @@ text-align: center;
 .carritoSection button{
   margin: 0 12rem;
 }
+=======
+button.botonCarrito{
+  font-size:0.9rem;
+  padding: 0;
+  z-index: 1400;
+  background: none;
+  color: var(--burdeos)
+}
+
+button.botonCarrito:hover{
+  background: none;
+  color: var(--naranja)
+  
+}
+
+#fechayhora{
+  display: flex;
+  justify-content: end;
+  padding-right: 1rem;
+  color: var(--morado);
+  padding-bottom: 0.3rem;
+  font-size: 0.9rem;
+  }
+>>>>>>> 3cd7853e37b230e31681418b01ef4012264d3d25
