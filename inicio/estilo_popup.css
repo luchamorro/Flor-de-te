@@ -2,7 +2,7 @@
   position: fixed;
   top: 10%;
   left: 23%;
-  height: 60%;
+  height: 65%;
   background-color: rgb(255, 255, 255);
   z-index: 1000;
   filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
@@ -20,10 +20,10 @@ align-self:last baseline;
 }
 
 #paginaProducto{
-  height: auto;
+  height: 100%;
   width: 80%;
   display: flex;
-  justify-content:space-between;
+  justify-content:first baseline;
   /*flex-wrap: wrap;*/
   align-items: center;
   gap: 1rem;
@@ -36,7 +36,8 @@ align-self:last baseline;
 
 .botonesPaginaProducto{
  display: flex;
- justify-content: center;
+ justify-content:center;
+
 
 }
 
@@ -119,3 +120,81 @@ font-weight: bold;
 font-size: 1.5rem;
 
 }
+
+@media only screen and (max-width: 1050px) {
+
+  .ventanaSuperpuesta{
+    position: fixed;
+    top: 0;
+    left: 5%;
+    height: 90%;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000;
+    filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
+    width: 90%;
+    display: none;
+    flex-direction: column;
+    padding-bottom: 4rem;
+  
+  }
+  
+  #paginaProducto{
+    height:100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content:center;
+    align-items: center;
+    /*width: 60%;*/  
+   /* padding-right: 10rem;
+    padding-left: 10rem;*/
+    
+    padding-left: 3rem;
+
+  }
+  
+  .divImagenProducto{
+    height: auto;    
+
+    /*position: fixed;*/
+      right: 2rem;
+      top: 4rem
+    }
+    
+  
+
+     .botones{
+      display: flex;
+      gap: 2rem;
+      bottom: 2rem;
+      padding-inline: 3rem;
+      justify-content: center;
+      position:absolute;
+
+      
+
+     }
+
+     .divImagenProducto{
+      height: fit-content;  
+      width: fit-content; 
+      /*position: fixed;*/
+        right: 2rem;
+        top: 0rem;
+      }
+
+      .productoTexto{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .descripcionProducto{
+        display: flex;
+        align-items: center;
+      }
+
+} 
