@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="inicio.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Productos</title>
+    <link rel="stylesheet" href="productos.css" />
+  </head>
+  <body>
+    <nav class="menu">
+      <div class="left-section">
+        <img
+          src="/img/logos/logo_horizontal.svg"
+          alt="logo Flor de Té"
+          class="logo"
+        />
+        <ul>
+          <li>
+            <a href="panel.html">Administrar</a>
+          </li>
+        </ul>
+      </div>
+      <div class="right-section">
+        <input type="text" placeholder="Buscar..." />
+        <div class="user-area"><i class="fa-solid fa-user"></i></div>
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+        <select title="idioma">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </nav>
+
+    <!-- Tabla de productos -->
+    <div class="tabla-container">
+      <h1>Productos</h1>
+      <!-- Botones de acción -->
+      <div class="acciones">
+        <button class="btn-nuevo" onclick="agregarProducto()">
+          <i class="fa-solid fa-plus"></i> Nuevo
+        </button>
+        <button class="btn-modificar" onclick="editarProducto()">
+          <i class="fa-solid fa-pen"></i> Modificar
+        </button>
+        <button class="btn-eliminar" onclick="eliminarProducto()">
+          <i class="fa-solid fa-trash"></i> Eliminar
+        </button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th><input type="checkbox" id="select-all" /></th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Imagen</th>
+            <th>Filtros</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+
+        <tbody id="tablaProductos">
+          <!-- Las filas se agregarán dinámicamente aquí -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Contenedor para cargar el modal dinámicamente -->
+    <div id="modal-container"></div>
+
+    <script src="productos.js"></script>
+  </body>
+</html>
