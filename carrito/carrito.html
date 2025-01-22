@@ -40,6 +40,11 @@
     height: 7rem;
     }
 
+    #carrito_container{
+ display: flex;
+ justify-content: center;
+}
+
 </style>
   </head>
 <body>
@@ -72,7 +77,7 @@
   <section class="carrito_section">
     <h3><span>Juan Carlos</span>, estos son los productos de tu carrito:</h3>
     <div class="separador"></div>
-    <div id="carrito_container" style="display: flex;"></div>
+    <ul id="carrito_container" style="display: flex;"></ul>
 </section>
 
 
@@ -128,64 +133,21 @@
 
 <script>
 
+document.addEventListener('DOMContentLoaded', () => {
+  const carritoDestino = document.getElementById('carrito_container'); 
 
-  let productos = [];
-  let currentId = 0;
+  const carritoGuardado = localStorage.getItem('carritoLleno');
 
-  document.addEventListener('DOMContentLoaded', async () => {
-    try {
-      const respuesta = await fetch('productos.json');
-      productos = await respuesta.json();
-
-      const productoSeleccionado = JSON.parse(localStorage.getItem('productoSeleccionado'));
-      if (productoSeleccionado) {
-        currentId = productoSeleccionado.id;
-        mostrarProducto(productoSeleccionado);
-      } else {
-        document.getElementById('paginaProductoAparte').innerHTML = '<p>Error al cargar el producto.</p>';
-      }
-
-      // Asignar eventos a los botones
-      document.getElementById('anteriorBtn').addEventListener('click', mostrarAnterior);
-      document.getElementById('siguienteBtn').addEventListener('click', mostrarSiguiente);
-    } catch (error) {
-      console.error('Error al cargar los datos del JSON:', error);
-    }
-  });
-
-  function mostrarProducto(producto) {
-    document.getElementById('paginaProductoAparte').innerHTML = `
-        <h3>${producto.nombre}</h3>
-        <div class = "productoDescrip">
-          <img src="../${producto.img}" alt="${producto.nombre}" width="503px" height="563px">
-        <div ><p>${producto.descripcion}</p>
-        <p>${producto.precio}€ <button>Comprar</button></p></div> </div>`;
+  if (carritoDestino && carritoGuardado) {
+    
+    carritoDestino.innerHTML = carritoGuardado;
   }
+});
 
-  function mostrarAnterior() {
-    const index = productos.findIndex(p => p.id === currentId);
-    if (index > 0) {
-      currentId = productos[index - 1].id;
-    } else {
-      currentId = productos[productos.length - 1].id; // Último producto
-    }
-    mostrarProducto(productos.find(p => p.id === currentId));
-  }
-
-  function mostrarSiguiente() {
-    const index = productos.findIndex(p => p.id === currentId);
-    if (index < productos.length - 1) {
-      currentId = productos[index + 1].id;
-    } else {
-      currentId = productos[0].id; // Primer producto
-    }
-    mostrarProducto(productos.find(p => p.id === currentId));
-  }
   </script>
 
-<script src="inicio.js"></script>
-<script src="pagina_producto.js"></script>
-<script src="fechayhora.js"></script>
+<script src="../inicio/inicio.js"></script>
+<script src="../inicio/fechayhora.js"></script>
 
 </body>
 </html>

@@ -14,7 +14,7 @@ function mostrarProductos(datos, lista) {
     item.innerHTML = `
       <img src="../${producto.img}" alt="${producto.nombre}" width="205" height="212" class="imagenCatalogo">
       <p class="tituloProducto">${producto.nombre}</p>
-      <p>${producto.precio}€ <button class="botonCarrito" onclick = "anadirCompra(${producto.id}"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
+      <p>${producto.precio}€ <button class="botonCarrito" onclick = "anadirCompra(${producto.id})"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
     `;
 
     // Añadir eventos a la imagen y título
@@ -91,7 +91,7 @@ function mostrarProducto(id) {
           <button id="verPaginaProducto" class = "verPaginaProducto">${producto.nombre}</button>
         </p>
         <p class="descripcionProducto">${producto.descripcion}</p>
-        <p>${producto.precio}€ <button onclick="anadirCompra(${producto.id})" id="botonCarrito" onclick="anadirCompra(${producto.id}"><i>Comprar</i></button></p>
+        <p>${producto.precio}€ <button onclick="anadirCompra(${producto.id})"><i>Comprar</i></button></p>
       </div>
       <div class="divImagenProducto">
         <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">
@@ -170,12 +170,12 @@ function anadirCompra(id) {
     let borrar = document.createElement('span');
 
     nombre.setAttribute('class', 'tituloProducto');
-    nombre.innerHTML = `${productoEncontrado.nombre}`;
+    nombre.innerHTML = `${producto.nombre}`;
 
-    pic.setAttribute("src", `../${productoEncontrado.img}`);
-    pic.setAttribute("alt", `${productoEncontrado.nombre}`);
+    pic.setAttribute("src", `../${producto.img}`);
+    pic.setAttribute("alt", `${producto.nombre}`);
     
-    precio.innerHTML = `${productoEncontrado.precio}€`;
+    precio.innerHTML = `${producto.precio}€`;
 
     borrar.innerHTML = `&#128465;`
 
@@ -193,3 +193,33 @@ function anadirCompra(id) {
     currentId = id; // Actualizar el ID actual
   }
 }
+
+// Redirigir a la página del carrito
+function checkOut() {
+  const carritoList = document.getElementById('carrito');
+
+  if (carritoList) {
+    localStorage.setItem('carritoLleno', carritoList.innerHTML);
+    // Redirigir a otra página
+    window.location.href = '../carrito/carrito.html';
+  }
+}
+
+
+
+
+
+
+
+/*
+// Función para redirigir a la página del producto
+function irPagina(id) {
+  const producto = productos.find(p => p.id === id);
+
+  if (producto) {
+    localStorage.setItem('productoSeleccionado', JSON.stringify(producto));
+    window.location.href = 'pagina_producto.html';
+  }
+}
+
+*/
