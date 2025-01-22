@@ -11,7 +11,6 @@
   <title>Flor de Té</title>
     <link rel="stylesheet" href="inicio.css">
     <link rel="stylesheet" href="estilo_popup.css">
-
 </head>
 
   <body>
@@ -93,64 +92,32 @@
       <!-- Categorías -->
       <fieldset>
         <legend data-translate="filter-category">Tipo de bebida</legend>
-        <label>
-          <input data-translate="infusion" type="checkbox" name="categoria" value="infusión" />
-          Infusiones
-        </label><br>
-        <label>
-          <input data-translate="tea" type="checkbox" name="categoria" value="té" /> Té
-        </label><br>
+        <label><input data-translate="infusion" type="checkbox" name="categoria" value="infusión"> Infusiones</label><br>
+        <label><input data-translate="tea" type="checkbox" name="categoria" value="té"> Té</label><br>
       </fieldset>
 
       <!-- Propiedades -->
       <fieldset>
         <legend data-translate="filter-properties">Propiedades</legend>
-        <label>
-          <input data-translate="antioxidants" type="checkbox" name="propiedades" value="antioxidantes" />
-          Antioxidante
-        </label><br>
-        <label>
-          <input data-translate="stimulant" type="checkbox" name="propiedades" value="estimulante" />
-          Estimulante
-        </label><br>
-        <label>
-          <input data-translate="relaxing" type="checkbox" name="propiedades" value="relajante" />
-          Relajante
-        </label><br>
-        <label>
-          <input data-translate="digestive" type="checkbox" name="propiedades" value="digestivo" />
-          Digestivo
-        </label><br>
-        <label>
-          <input data-translate="rest" type="checkbox" name="propiedades" value="descanso" />
-          Descanso
-        </label><br>
-        <label>
-          <input data-translate="anti-inflammatory" type="checkbox" name="propiedades" value="antiinflamatorio" />
-          Antiinflamatorio
-        </label><br>
-        <label>
-          <input data-translate="dental-health" type="checkbox" name="propiedades" value="salud dental" />
-          Salud Dental
-        </label><br>
-        <label>
-          <input data-translate="detox" type="checkbox" name="propiedades" value="detox" />
-          Detox
-        </label><br>
-        <label>
-          <input data-translate="refreshing" type="checkbox" name="propiedades" value="refrescante" />
-          Refrescante
-        </label><br>
+        <label><input data-translate="antioxidants" type="checkbox" name="propiedades" value="antioxidantes"> Antioxidante </label><br>
+        <label><input data-translate="stimulant" type="checkbox" name="propiedades" value="estimulante"> Estimulante </label><br>
+        <label><input data-translate="relaxing" type="checkbox" name="propiedades" value="relajante"> Relajante </label><br>
+        <label><input data-translate="digestive" type="checkbox" name="propiedades" value="digestivo"> Digestivo </label><br>
+        <label><input data-translate="rest" type="checkbox" name="propiedades" value="descanso"> Descanso </label><br>
+        <label><input data-translate="anti-inflammatory" type="checkbox" name="propiedades" value="antiinflamatorio"> Antiinflamatorio </label><br>
+        <label><input data-translate="dental-health" type="checkbox" name="propiedades" value="salud dental"> Salud Dental </label><br>
+        <label><input data-translate="detox" type="checkbox" name="propiedades" value="detox"> Detox </label><br>
+        <label><input data-translate="refreshing" type="checkbox" name="propiedades" value="refrescante"> Refrescante </label><br>
       </fieldset>
-    </form>
             <button data-translate="apply-filters" type="submit">Aplicar Filtros</button>
-          <button data-translate="clear-filters" id="borrarFiltros">Borrar Filtros</button>
+          </form>
+            <button data-translate="clear-filters" id="borrarFiltros">Borrar Filtros</button>
         </aside>
 
         <div class="div-catalogo" id="catalogoProductos"></div>
         <!-- CARRITO-->
         <article class="carritoSection">
-          <h4>Carrito de compra</h4>
+          <h4 data-translate="title-carrito">Carrito de compra</h4>
           <div>
             <ul id="carrito">
             </ul>
