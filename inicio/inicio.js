@@ -14,7 +14,7 @@ function mostrarProductos(datos, lista) {
     item.innerHTML = `
       <img src="../${producto.img}" alt="${producto.nombre}" width="205" height="212" class="imagenCatalogo">
       <p class="tituloProducto">${producto.nombre}</p>
-      <p>${producto.precio}€ <button class="botonCarrito"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
+      <p>${producto.precio}€ <button class="botonCarrito" onclick = "anadirCompra(${producto.id}"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
     `;
 
     // Añadir eventos a la imagen y título
@@ -91,8 +91,7 @@ function mostrarProducto(id) {
           <button id="verPaginaProducto" class = "verPaginaProducto">${producto.nombre}</button>
         </p>
         <p class="descripcionProducto">${producto.descripcion}</p>
-        <p>${producto.precio}€ <button id="botonCarrito"><i>Comprar</i></button></p>
-
+        <p>${producto.precio}€ <button onclick="anadirCompra(${producto.id})" id="botonCarrito" onclick="anadirCompra(${producto.id}"><i>Comprar</i></button></p>
       </div>
       <div class="divImagenProducto">
         <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">
@@ -150,3 +149,47 @@ document.getElementById('cerrarBtn').addEventListener('click', cerrar);
 
 // Cargar los datos al cargar la página
 cargarDatos();
+
+function anadirCompra(id) {
+  const producto = productos.find(p => p.id == id);
+  // Comprueba si el producto está en el carrito
+  const carritoList = document.getElementById('carrito');
+  const comprobacion = carritoList.querySelectorAll('.tituloProducto');
+
+  for (let item of comprobacion) {
+    if (item.textContent === producto.nombre) {
+      return; // Termina si el producto existe
+    }
+  }
+
+  if (producto) {
+    let anadirProducto = document.createElement("li");
+    let nombre = document.createElement("p");
+    let pic = document.createElement('img');
+    let precio = document.createElement('p');
+    let borrar = document.createElement('span');
+
+    nombre.setAttribute('class', 'tituloProducto');
+    nombre.innerHTML = `${productoEncontrado.nombre}`;
+
+    pic.setAttribute("src", `../${productoEncontrado.img}`);
+    pic.setAttribute("alt", `${productoEncontrado.nombre}`);
+    
+    precio.innerHTML = `${productoEncontrado.precio}€`;
+
+    borrar.innerHTML = `&#128465;`
+
+    document.getElementById('carrito').appendChild(anadirProducto);
+    anadirProducto.appendChild(nombre);
+    anadirProducto.appendChild(pic);
+    anadirProducto.appendChild(precio);
+    anadirProducto.appendChild(borrar);
+
+    // borrar un producto de la cessta
+    borrar.addEventListener('click', function() {
+      anadirProducto.remove();
+    });
+
+    currentId = id; // Actualizar el ID actual
+  }
+}

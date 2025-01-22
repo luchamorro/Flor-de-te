@@ -1,46 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/b58110c1d4.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Flor de Té</title>
-    <link rel="stylesheet" href="inicio.css" />
-    <link rel="stylesheet" href="estilo_popup.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <title>Flor de Té</title>
+    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="estilo_popup.css">
+</head>
 
   <body>
     <nav class="menu">
       <div class="left-section">
-        <img
-          src="../img/logos/logo_horizontal.svg"
-          alt="logo Flor de Té"
-          class="logo"
-        />
+        <a href="../inicio/index.html">
+          <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo" />
+        </a>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="../inicio/index.html" data-translate="inicio">Inicio</a></li>
+          <li><a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a></li>
+          <li><a href="../nosotros/nosotros.html" data-translate="nosotros">Nosotros</a></li>
+          <li><a href="../contacto/contacto.html" data-translate="contacto">Contacto</a></li>
         </ul>
       </div>
       <div class="right-section">
-        <input type="text" placeholder="Buscar..." />
+        <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." />
         <div class="user-area"><i class="fa-solid fa-user"></i></div>
         <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
-        <select title="idioma">
+        <select id="language-select" title="idioma">
           <option value="es">ES</option>
           <option value="en">EN</option>
         </select>
@@ -51,15 +41,14 @@
       <section class="hero-carousel">
         <div
           class="hero-slide active"
-          style="background-image: url('../img/inicio/hero1.jpeg')"
-        >
+          style="background-image: url('../img/inicio/hero1.jpeg')">
           <div class="hero-text-1">
             <h1 class="titulo-hero">FLOR DE TÉ</h1>
-            <p class="texto-hero">
+            <p class="texto-hero" data-translate="slide1-text">
               Sabores orgánicos, frescura moderna y <br />
               el equilibrio que mereces en cada sorbo
             </p>
-            <button class="btn-hero">COMPRAR</button>
+            <button class="btn-hero" data-translate="slide1-button" data-translate="slide1-button" >COMPRAR</button>
           </div>
         </div>
         <div
@@ -67,15 +56,15 @@
           style="background-image: url('../img/inicio/hero2-copia.jpeg')"
         >
           <div class="hero-text-2">
-            <h1 class="titulo-hero">
+            <h1 class="titulo-hero" data-translate="slide2-title">
               Vive la vida <br />
               a sorbos
             </h1>
-            <p class="texto-hero">
+            <p class="texto-hero" data-translate="slide2-text">
               Descubre nuestros tés orgánicos y llenos de vida. <br />
               Cuidarte nunca fue tan fácil (ni tan delicioso).
             </p>
-            <button class="btn-hero">COMPRAR</button>
+            <button class="btn-hero" data-translate="slide2-button">COMPRAR</button>
           </div>
         </div>
         <div
@@ -83,136 +72,92 @@
           style="background-image: url('../img/inicio/hero3-copia.jpg')"
         >
           <div class="hero-text-3">
-            <h1 class="titulo-hero">
+            <h1 class="titulo-hero" data-translate="slide3-title">
               El bienestar <br />empieza <br /><b>aquí</b>
             </h1>
-            <p class="texto-hero">
+            <p class="texto-hero" data-translate="slide3-text">
               En "Flor de Té", cuidamos de ti con <br />blends modernos,
               orgánicos y auténticos.
             </p>
-            <button class="btn-hero">COMPRAR</button>
+            <button class="btn-hero" data-translate="slide3-button">COMPRAR</button>
           </div>
         </div>
       </section>
+<!-- Catálogo -->
+<h3 data-translate="catalog-title">Catálogo</h3>
+<section class="productos">
+  <aside class="filtros">
+    <h4 data-translate="filters-title">Filtrar por:</h4>
+    <form id="filtrosForm">
+      <!-- Categorías -->
+      <fieldset>
+        <legend data-translate="filter-category">Tipo de bebida</legend>
+        <label><input data-translate="infusion" type="checkbox" name="categoria" value="infusión"> Infusiones</label><br>
+        <label><input data-translate="tea" type="checkbox" name="categoria" value="té"> Té</label><br>
+      </fieldset>
 
-      <!-- Catálogo -->
-      <h3>Catálogo</h3>
-      <section class="productos">
-        <div class="div-catalogo" id="catalogoProductos"></div>
-        <aside class="filtros">
-          <h4>Filtrar por:</h4>
-          <form id="filtrosForm">
-            <!-- Categorías -->
-            <fieldset>
-              <legend>Tipo de bebida</legend>
-              <label
-                ><input type="checkbox" name="categoria" value="infusión" />
-                Infusiones</label
-              ><br />
-              <label
-                ><input type="checkbox" name="categoria" value="té" /> Té</label
-              ><br />
-            </fieldset>
-
-            <!-- Propiedades -->
-            <fieldset>
-              <legend>Propiedades</legend>
-              <label
-                ><input
-                  type="checkbox"
-                  name="propiedades"
-                  value="antioxidantes"
-                />
-                Antioxidante</label
-              ><br />
-              <label
-                ><input
-                  type="checkbox"
-                  name="propiedades"
-                  value="estimulante"
-                />
-                Estimulante</label
-              ><br />
-              <label
-                ><input type="checkbox" name="propiedades" value="relajante" />
-                Relajante</label
-              ><br />
-              <label
-                ><input type="checkbox" name="propiedades" value="digestivo" />
-                Digestivo</label
-              ><br />
-              <label
-                ><input type="checkbox" name="propiedades" value="descanso" />
-                Descanso</label
-              ><br />
-              <label
-                ><input
-                  type="checkbox"
-                  name="propiedades"
-                  value="antiinflamatorio"
-                />
-                Antiinflamatorio</label
-              ><br />
-              <label
-                ><input
-                  type="checkbox"
-                  name="propiedades"
-                  value="salud dental"
-                />
-                Salud Dental</label
-              ><br />
-              <label
-                ><input type="checkbox" name="propiedades" value="detox" />
-                Detox</label
-              ><br />
-              <label
-                ><input
-                  type="checkbox"
-                  name="propiedades"
-                  value="refrescante"
-                />
-                Refrescante</label
-              ><br />
-            </fieldset>
-
-            <button type="submit">Aplicar Filtros</button>
+      <!-- Propiedades -->
+      <fieldset>
+        <legend data-translate="filter-properties">Propiedades</legend>
+        <label><input data-translate="antioxidants" type="checkbox" name="propiedades" value="antioxidantes"> Antioxidante </label><br>
+        <label><input data-translate="stimulant" type="checkbox" name="propiedades" value="estimulante"> Estimulante </label><br>
+        <label><input data-translate="relaxing" type="checkbox" name="propiedades" value="relajante"> Relajante </label><br>
+        <label><input data-translate="digestive" type="checkbox" name="propiedades" value="digestivo"> Digestivo </label><br>
+        <label><input data-translate="rest" type="checkbox" name="propiedades" value="descanso"> Descanso </label><br>
+        <label><input data-translate="anti-inflammatory" type="checkbox" name="propiedades" value="antiinflamatorio"> Antiinflamatorio </label><br>
+        <label><input data-translate="dental-health" type="checkbox" name="propiedades" value="salud dental"> Salud Dental </label><br>
+        <label><input data-translate="detox" type="checkbox" name="propiedades" value="detox"> Detox </label><br>
+        <label><input data-translate="refreshing" type="checkbox" name="propiedades" value="refrescante"> Refrescante </label><br>
+      </fieldset>
+            <button data-translate="apply-filters" type="submit">Aplicar Filtros</button>
           </form>
-          <button id="borrarFiltros">Borrar Filtros</button>
+            <button data-translate="clear-filters" id="borrarFiltros">Borrar Filtros</button>
         </aside>
+
+        <div class="div-catalogo" id="catalogoProductos"></div>
+        <!-- CARRITO-->
+        <article class="carritoSection">
+          <h4 data-translate="title-carrito">Carrito de compra</h4>
+          <div>
+            <ul id="carrito">
+            </ul>
+          </div>
+          <div>
+            <button type="button">Checkout</button>
+          </div>
+        </article>
       </section>
 
-      <!--Popup de productos-->
-      <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
-        <button class ="cerrarBtn" id="cerrarBtn">X</button>
-        <div id="paginaProducto"></div>
-        <div class="botones">
-          <button id="anteriorBtn" class="botonFlecha"><i class="fa-solid fa-arrow-left"></i></button>
-          <button id="siguienteBtn" class="botonFlecha"><i class="fa-solid fa-arrow-right"></i></button>
-        </div>
-      </section>
+     <!--Popup de productos-->
+     <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
+      <button class ="cerrarBtn" id="cerrarBtn">X</button>
+      <div id="paginaProducto"></div>
+      <div class="botones">
+        <button id="anteriorBtn" class="botonFlecha"><i class="fa-solid fa-arrow-left"></i></button>
+        <button id="siguienteBtn" class="botonFlecha"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </section>
 
       <!-- Sección del Té del Mes -->
       <section class="te-del-mes">
-        <h3>Té del Mes: Té Oolong</h3>
+        <h3 data-translate="product-of-the-month-title">Té del Mes: Té Oolong</h3>
         <div class="te-mes-container">
           <div class="te-mes-texto">
-            <h4>Descubre el Té Oolong</h4>
-            <p>
+            <h4 data-translate="product-of-the-month-subtitle">Descubre el Té Oolong</h4>
+            <p data-translate="product-of-the-month-description">
               El Té Oolong, también conocido como el té de los emperadores, es
               una verdadera joya para los amantes del té. Este té único combina
               lo mejor del té verde y del té negro, ofreciendo un sabor complejo
               y una experiencia de degustación incomparable.
             </p>
-            <p>¡Prepárate para un viaje de sabor! 🍵✨</p>
+            <p data-translate="product-of-the-month-benefits">¡Prepárate para un viaje de sabor! 🍵✨</p>
             <ul>
-              <li>🌱 Sabor: Floral, afrutado y con un toque de nuez.</li>
-              <li>⏱️ Tiempo de infusión: 3-5 minutos.</li>
-              <li>
-                🧡 Beneficios: Ayuda a la digestión, promueve la salud del
-                corazón y mejora el metabolismo.
-              </li>
+              <li data-translate="product-of-the-month-taste">🌱 Sabor: Floral, afrutado y con un toque de nuez.</li>
+              <li data-translate="product-of-the-month-infusion-time">⏱️ Tiempo de infusión: 3-5 minutos.</li>
+              <li data-translate="product-of-the-month-health-benefits">🧡 Beneficios: Ayuda a la digestión, promueve la salud del
+                corazón y mejora el metabolismo.</li>
             </ul>
-            <button class="btn-te-mes">¡Compra Ahora!</button>
+            <button data-translate="product-of-the-month-cta" class="btn-te-mes">¡Compra Ahora!</button>
           </div>
           <div class="te-mes-imagen">
             <img
@@ -225,7 +170,7 @@
       </section>
       <!-- Sección de Productos de Merchandising -->
       <section class="merch-section">
-        <h3>Nuestra Colección de Merchandising</h3>
+        <h3 data-translate="merchandise-title">Nuestra Colección de Merchandising</h3>
         <div class="merch-container">
           <div class="merch-item">
             <img
@@ -233,9 +178,9 @@
               alt="Taza Flor de Té"
               class="merch-image"
             />
-            <h4>Taza Flor de Té</h4>
-            <p>Disfruta de tu té favorito en nuestra taza exclusiva.</p>
-            <button class="btn-merch">Comprar</button>
+            <h4 data-translate="merchandise-product1-title">Taza Flor de Té</h4>
+            <p data-translate="merchandise-product1-description">Disfruta de tu té favorito en nuestra taza exclusiva.</p>
+            <button data-translate="slide1-button" class="btn-merch">Comprar</button>
           </div>
           <div class="merch-item">
             <img
@@ -243,9 +188,9 @@
               alt="Tote Bag Flor de Té"
               class="merch-image"
             />
-            <h4>Tote Bag Flor de Té</h4>
-            <p>Lleva tus cosas con nuestra tote bag ecológica.</p>
-            <button class="btn-merch">Comprar</button>
+            <h4 data-translate="merchandise-product2-title">Tote Bag Flor de Té</h4>
+            <p data-translate="merchandise-product2-description">Lleva tus cosas con nuestra tote bag ecológica.</p>
+            <button data-translate="slide1-button" class="btn-merch">Comprar</button>
           </div>
           <div class="merch-item">
             <img
@@ -253,15 +198,16 @@
               alt="Tumbler Flor de Té"
               class="merch-image"
             />
-            <h4>Tumbler Flor de Té</h4>
-            <p>Mantén tu bebida caliente o fría con estilo.</p>
-            <button class="btn-merch">Comprar</button>
+            <h4 data-translate="merchandise-product3-title">Tumbler Flor de Té</h4>
+            <p data-translate=""merchandise-product3-description">Mantén tu bebida caliente o fría con estilo.</p>
+            <button data-translate="slide1-button" class="btn-merch">Comprar</button>
           </div>
         </div>
       </section>
+
       <!-- Sección de Oferta Especial -->
       <section class="oferta-especial">
-        <h3 class="titulo-oferta">Y de regalo...</h3>
+        <h3 data-translate="promotion-title" class="titulo-oferta">Y de regalo...</h3>
         <div class="oferta-contenedor">
           <div class="oferta-imagen">
             <img
@@ -271,20 +217,20 @@
             />
           </div>
           <div class="oferta-detalle">
-            <h4>Compra 2, Prueba 1 Gratis</h4>
-            <p>
+            <h4 data-translate="promotion-subtitle">Compra 2, Prueba 1 Gratis</h4>
+            <p data-translate="promotion-description1">
               Disfruta de nuestros tés y recibe una muestra gratuita sorpresa de
               una de nuestras infusiones al comprar dos paquetes de té.
             </p>
-            <p>
+            <p data-translate="promotion-description2">
               Explora nuevos sabores y descubre tus nuevos favoritos. ¡Es
               nuestra manera de agradecerte por ser parte de la familia de Flor
               de Té!
             </p>
             <ul class="lista-detalle">
-              <li>🍃 Selección de infusiones únicas.</li>
-              <li>✨ Muestra gratuita por cada compra de dos paquetes.</li>
-              <li>🌟 Solo por tiempo limitado.</li>
+              <li data-translate="promotion-list1">🍃 Selección de infusiones únicas.</li>
+              <li data-translate="promotion-list2">✨ Muestra gratuita por cada compra de dos paquetes.</li>
+              <li data-translate="promotion-list3">🌟 Solo por tiempo limitado.</li>
             </ul>
           </div>
         </div>
@@ -292,7 +238,7 @@
 
       <!-- Sección de Testimonios -->
       <section class="testimonios">
-        <h3>Testimonios</h3>
+        <h3 data-translate="testimonials-title">Testimonios</h3>
         <div class="testimonios-container">
           <div class="testimonio">
             <img
@@ -300,7 +246,7 @@
               alt="Foto de cliente"
               class="foto-testimonio"
             />
-            <p class="texto-testimonio">
+            <p data-translate="testimonial1-text" class="texto-testimonio">
               "Los tés de Flor de Té son increíbles. Me encanta la variedad y la
               calidad. ¡Recomendado 100%!"
             </p>
@@ -312,7 +258,7 @@
               alt="Foto de cliente"
               class="foto-testimonio"
             />
-            <p class="texto-testimonio">
+            <p data-translate="testimonial2-text" class="texto-testimonio">
               "El mejor té que he probado. Orgánico y delicioso, definitivamente
               mi favorito."
             </p>
@@ -324,7 +270,7 @@
               alt="Foto de cliente"
               class="foto-testimonio"
             />
-            <p class="texto-testimonio">
+            <p data-translate="testimonial3-text" class="texto-testimonio">
               "Flor de Té ha cambiado mi rutina. Me siento más saludable y
               enérgica. Los envios son rapidísimos!"
             </p>
@@ -332,84 +278,79 @@
           </div>
         </div>
       </section>
-    </main>
+    
 
     <div id="popupBackground"></div>
     <div id="popupDiv">
       <button id="closePopup">&times;</button>
-      <h4>15% de descuento</h4>
-      <p>
+      <h4 data-translate="title-popup">15% de descuento</h4>
+      <p data-translate="description-popup">
         Suscríbete a nuestra newsletter para conseguir descuentos exclusivos y conocer las últimas novedades de los productos de Flor de Té.</p>
       <form>
-        <input type="email" placeholder="Introduce tu email" />
-        <button class="suscribirse"submit">Suscribirse</button>
+        <input data-translate="emailPlacehoder" type="email" placeholder="Introduce tu email" />
+        <button data-translate="subscribeButton" class="suscribirse"submit">Suscribirse</button>
       </form>
     </div>
-   
-    <footer>
-      <div class="footer-container">
-        <div class="comercio-justo">
-          <p><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
-          <p><i class="fa-solid fa-seedling"></i> Sin crueldad animal</p>
-          <p><i class="fa-solid fa-leaf"></i> 100% Orgánico</p>
-          <p><i class="fa-solid fa-trash"></i> Sin microplasticos</p>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="comercio-justo">
+        <p data-translate="comercio_justo"><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
+        <p data-translate="sin_crueldad"><i class="fa-solid fa-seedling"></i> Sin crueldad animal</p>
+        <p data-translate="organico"><i class="fa-solid fa-leaf"></i> 100% Orgánico</p>
+        <p data-translate="sin_microplasticos"><i class="fa-solid fa-trash"></i> Sin microplásticos</p>
+      </div>
+      <hr class="linea-fina" />
+      <div class="newsletter">
+        <img
+          src="../img/logos/logo_horizontal.svg"
+          alt="logo Flor de Té"
+          class="logo-footer"
+        />
+        <h3 data-translate="suscribete">Suscríbete a nuestra newsletter</h3>
+        <p data-translate="ofertas">
+          Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?
+        </p>
+        <form>
+          <input data-translate="input_placeholder" type="email" placeholder="Introduce tu email" />
+          <button type="submit">Suscribirse</button>
+        </form>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
         </div>
-        <hr class="linea-fina" />
-        <div class="newsletter">
-          <img
-            src="../img/logos/logo_horizontal.svg"
-            alt="logo Flor de Té"
-            class="logo-footer"
-          />
-          <h3>Suscríbete a nuestra newsletter</h3>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4 data-translate="enlaces">Enlaces Útiles</h4>
           <p>
-            Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?
+            <a href="index.html" data-translate="inicio">Inicio</a>
+            <a href="nosotros.html" data-translate="nosotros">Nosotros</a>
+            <a href="contacto.html" data-translate="contacto">Contacto</a>
+            <a href="carrito.html" data-translate="carrito">Carrito</a>
           </p>
-          <form>
-            <input type="email" placeholder="Introduce tu email" />
-            <button type="submit">Suscribirse</button>
-          </form>
-          <div class="social-media">
-            <a href="#"><i class="fab fa-tiktok"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-          </div>
         </div>
-        <div class="footer-columns">
-          <div class="footer-column">
-            <h4>Enlaces Útiles</h4>
-            <p>
-              <a href="index.html">Inicio</a>
-              <a href="nosotros.html">Nosotros</a>
-              <a href="contacto.html">Contacto</a>
-              <a href="carrito.html">Carrito</a>
-            </p>
-          </div>
-          <div class="footer-column">
-            <h4>Políticas</h4>
-            <p>
-              <a href="#">Políticas</a>
-              <a href="#">Aviso Legal</a>
-              <a href="#">Política de Cookies</a>
-              <a href="#">Políticas de Privacidad</a>
-            </p>
-          </div>
+        <div class="footer-column">
+          <h4 data-translate="politicas">Políticas</h4>
+          <p>
+            <a href="#" data-translate="politicas">Políticas</a>
+            <a href="#" data-translate="aviso">Aviso Legal</a>
+            <a href="#" data-translate="cookies">Política de Cookies</a>
+            <a href="#" data-translate="privacidad">Políticas de Privacidad</a>
+          </p>
         </div>
       </div>
-      <div class="subfooter">
-        <p>© 2024 Flor de Té</p>
-      </div>
-    </footer>
+    </div>
+    <div class="subfooter">
+      <p>© 2024 Flor de Té</p>
+    </div>
+  </footer>
 
     <script src="inicio.js"></script>
+    <script src="fechayhora.js"></script>
     <script src="carrusel.js"></script>
-    <script src="../inicio/pop-up-newsletter.js"></script>
+    <script src="pop-up-newsletter.js"></script>
+    <script src="idiomas_inicio.js"></script>
   </body>
-  <script src="inicio.js"></script>
-  <script src="fechayhora.js"></script>
-
-    <script src="inicio.js"></script>
-
-</body>
-
 </html>
