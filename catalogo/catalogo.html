@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <title>Flor de Té</title>
+    <link rel="stylesheet" href="../inicio/inicio.css">
+    <link rel="stylesheet" href="../inicio/estilo_popup.css">
+
+</head>
+<body>
+    <nav class="menu">
+        <div class="left-section">
+          <a href="../inicio/index.html">
+            <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo" />
+          </a>
+          <ul>
+            <li><a href="../inicio/index.html" data-translate="inicio">Inicio</a></li>
+            <li><a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a></li>
+            <li><a href="../nosotros/nosotros.html" data-translate="nosotros">Nosotros</a></li>
+            <li><a href="../contacto/contacto.html" data-translate="contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="right-section">
+          <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." />
+          <div class="user-area"><i class="fa-solid fa-user"></i></div>
+          <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+          <select id="language-select" title="idioma">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+        <div id="fechayhora"></div> <!--reubicar este div-->
+      </nav>
+
+
+      <h3 data-translate="catalog-title">Catálogo</h3>
+      <div>
+        <h4>Comprar Té e Infusiones</h4>
+        <p>
+          Comprar té online en Flor de Té. Descubre todas las variedades cuidadosamente seleccionadas, con mezclas únicas que destacan por su calidad y autenticidad. Cada té ha sido elegido con esmero para brindarte una experiencia inigualable. Nos dedicamos cada día a ofrecerte lo mejor de nuestro mundo: el té perfecto para ti.
+          </p>
+      </div>
+<section class="productos">
+  <aside class="filtros">
+    <h4 data-translate="filters-title">Filtrar por:</h4>
+    <form id="filtrosForm">
+      <!-- Categorías -->
+      <fieldset>
+        <legend data-translate="filter-category">Tipo de bebida</legend>
+        <label>
+          <input data-translate="infusion" type="checkbox" name="categoria" value="infusión" />
+          Infusiones
+        </label><br>
+        <label>
+          <input data-translate="tea" type="checkbox" name="categoria" value="té" /> Té
+        </label><br>
+      </fieldset>
+
+      <!-- Propiedades -->
+      <fieldset>
+        <legend data-translate="filter-properties">Propiedades</legend>
+        <label>
+          <input data-translate="antioxidants" type="checkbox" name="propiedades" value="antioxidantes" />
+          Antioxidante
+        </label><br>
+        <label>
+          <input data-translate="stimulant" type="checkbox" name="propiedades" value="estimulante" />
+          Estimulante
+        </label><br>
+        <label>
+          <input data-translate="relaxing" type="checkbox" name="propiedades" value="relajante" />
+          Relajante
+        </label><br>
+        <label>
+          <input data-translate="digestive" type="checkbox" name="propiedades" value="digestivo" />
+          Digestivo
+        </label><br>
+        <label>
+          <input data-translate="rest" type="checkbox" name="propiedades" value="descanso" />
+          Descanso
+        </label><br>
+        <label>
+          <input data-translate="anti-inflammatory" type="checkbox" name="propiedades" value="antiinflamatorio" />
+          Antiinflamatorio
+        </label><br>
+        <label>
+          <input data-translate="dental-health" type="checkbox" name="propiedades" value="salud dental" />
+          Salud Dental
+        </label><br>
+        <label>
+          <input data-translate="detox" type="checkbox" name="propiedades" value="detox" />
+          Detox
+        </label><br>
+        <label>
+          <input data-translate="refreshing" type="checkbox" name="propiedades" value="refrescante" />
+          Refrescante
+        </label><br>
+      </fieldset>
+    </form>
+            <button data-translate="apply-filters" type="submit">Aplicar Filtros</button>
+          <button data-translate="clear-filters" id="borrarFiltros">Borrar Filtros</button>
+        </aside>
+
+        <div class="div-catalogo" id="catalogoProductos"></div>
+        <!-- CARRITO-->
+        <article class="carritoSection">
+          <h4>Carrito de compra</h4>
+          <div>
+            <ul id="carrito">
+            </ul>
+          </div>
+          <div>
+            <button type="button">Checkout</button>
+          </div>
+        </article>
+      </section>
+
+     <!--Popup de productos-->
+     <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
+      <button class ="cerrarBtn" id="cerrarBtn">X</button>
+      <div id="paginaProducto"></div>
+      <div class="botones">
+        <button id="anteriorBtn" class="botonFlecha"><i class="fa-solid fa-arrow-left"></i></button>
+        <button id="siguienteBtn" class="botonFlecha"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </section>
+    <script src="../inicio/inicio.js"></script>
+    <script src="../inicio/fechayhora.js"></script>
+    <script src="../inicio/idiomas_inicio.js"></script>
+    <script src="../inicio/pagina_producto.js"></script>
+</body>
+</html>
