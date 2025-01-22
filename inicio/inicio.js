@@ -112,6 +112,9 @@ function calcularTotal() {
         <br>
           <button onclick="anadirCompra(${producto.id})" id="botonCarrito"><i>Comprar</i></button>
           <p class="descripcionProducto">${producto.descripcion}</p>
+          <ul class="listaPropiedades">
+          <li>${producto.filtros}</li>
+          </ul>
         </div>
       `;
       document.getElementById("ventanaSuperpuesta").style.display = "flex"; // Mostrar ventana
