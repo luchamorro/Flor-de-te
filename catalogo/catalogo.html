@@ -11,41 +11,36 @@
   <title>Flor de Té</title>
     <link rel="stylesheet" href="../inicio/inicio.css">
     <link rel="stylesheet" href="../inicio/estilo_popup.css">
-
 </head>
-<body>
+
+  <body>
     <nav class="menu">
-        <div class="left-section">
-          <a href="../inicio/index.html">
-            <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo" />
-          </a>
-          <ul>
-            <li><a href="../inicio/index.html" data-translate="inicio">Inicio</a></li>
-            <li><a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a></li>
-            <li><a href="../nosotros/nosotros.html" data-translate="nosotros">Nosotros</a></li>
-            <li><a href="../contacto/contacto.html" data-translate="contacto">Contacto</a></li>
-          </ul>
-        </div>
-        <div class="right-section">
-          <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." />
-          <div class="user-area"><i class="fa-solid fa-user"></i></div>
-          <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
-          <select id="language-select" title="idioma">
-            <option value="es">ES</option>
-            <option value="en">EN</option>
-          </select>
-        </div>
-        <div id="fechayhora"></div> <!--reubicar este div-->
-      </nav>
-
-
-      <h3 data-translate="catalog-title">Catálogo</h3>
-      <div>
-        <h4>Comprar Té e Infusiones</h4>
-        <p>
-          Comprar té online en Flor de Té. Descubre todas las variedades cuidadosamente seleccionadas, con mezclas únicas que destacan por su calidad y autenticidad. Cada té ha sido elegido con esmero para brindarte una experiencia inigualable. Nos dedicamos cada día a ofrecerte lo mejor de nuestro mundo: el té perfecto para ti.
-          </p>
+      <div class="left-section">
+        <a href="../inicio/index.html">
+          <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo" />
+        </a>
+        <ul>
+          <li><a href="../inicio/index.html" data-translate="inicio">Inicio</a></li>
+          <li><a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a></li>
+          <li><a href="../nosotros/nosotros.html" data-translate="nosotros">Nosotros</a></li>
+          <li><a href="../contacto/contacto.html" data-translate="contacto">Contacto</a></li>
+        </ul>
       </div>
+      <div class="right-section">
+        <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." />
+        <div class="user-area"><i class="fa-solid fa-user"></i></div>
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+        <select id="language-select" title="idioma">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+      <div id="fechayhora"></div> <!--reubicar este div-->
+    </nav>
+    <main>
+      
+<!-- Catálogo -->
+<h3 data-translate="catalog-title">Catálogo</h3>
 <section class="productos">
   <aside class="filtros">
     <h4 data-translate="filters-title">Filtrar por:</h4>
@@ -53,64 +48,32 @@
       <!-- Categorías -->
       <fieldset>
         <legend data-translate="filter-category">Tipo de bebida</legend>
-        <label>
-          <input data-translate="infusion" type="checkbox" name="categoria" value="infusión" />
-          Infusiones
-        </label><br>
-        <label>
-          <input data-translate="tea" type="checkbox" name="categoria" value="té" /> Té
-        </label><br>
+        <label><input data-translate="infusion" type="checkbox" name="categoria" value="infusión"> Infusiones</label><br>
+        <label><input data-translate="tea" type="checkbox" name="categoria" value="té"> Té</label><br>
       </fieldset>
 
       <!-- Propiedades -->
       <fieldset>
         <legend data-translate="filter-properties">Propiedades</legend>
-        <label>
-          <input data-translate="antioxidants" type="checkbox" name="propiedades" value="antioxidantes" />
-          Antioxidante
-        </label><br>
-        <label>
-          <input data-translate="stimulant" type="checkbox" name="propiedades" value="estimulante" />
-          Estimulante
-        </label><br>
-        <label>
-          <input data-translate="relaxing" type="checkbox" name="propiedades" value="relajante" />
-          Relajante
-        </label><br>
-        <label>
-          <input data-translate="digestive" type="checkbox" name="propiedades" value="digestivo" />
-          Digestivo
-        </label><br>
-        <label>
-          <input data-translate="rest" type="checkbox" name="propiedades" value="descanso" />
-          Descanso
-        </label><br>
-        <label>
-          <input data-translate="anti-inflammatory" type="checkbox" name="propiedades" value="antiinflamatorio" />
-          Antiinflamatorio
-        </label><br>
-        <label>
-          <input data-translate="dental-health" type="checkbox" name="propiedades" value="salud dental" />
-          Salud Dental
-        </label><br>
-        <label>
-          <input data-translate="detox" type="checkbox" name="propiedades" value="detox" />
-          Detox
-        </label><br>
-        <label>
-          <input data-translate="refreshing" type="checkbox" name="propiedades" value="refrescante" />
-          Refrescante
-        </label><br>
+        <label><input data-translate="antioxidants" type="checkbox" name="propiedades" value="antioxidantes"> Antioxidante </label><br>
+        <label><input data-translate="stimulant" type="checkbox" name="propiedades" value="estimulante"> Estimulante </label><br>
+        <label><input data-translate="relaxing" type="checkbox" name="propiedades" value="relajante"> Relajante </label><br>
+        <label><input data-translate="digestive" type="checkbox" name="propiedades" value="digestivo"> Digestivo </label><br>
+        <label><input data-translate="rest" type="checkbox" name="propiedades" value="descanso"> Descanso </label><br>
+        <label><input data-translate="anti-inflammatory" type="checkbox" name="propiedades" value="antiinflamatorio"> Antiinflamatorio </label><br>
+        <label><input data-translate="dental-health" type="checkbox" name="propiedades" value="salud dental"> Salud Dental </label><br>
+        <label><input data-translate="detox" type="checkbox" name="propiedades" value="detox"> Detox </label><br>
+        <label><input data-translate="refreshing" type="checkbox" name="propiedades" value="refrescante"> Refrescante </label><br>
       </fieldset>
-    </form>
             <button data-translate="apply-filters" type="submit">Aplicar Filtros</button>
-          <button data-translate="clear-filters" id="borrarFiltros">Borrar Filtros</button>
+          </form>
+            <button data-translate="clear-filters" id="borrarFiltros">Borrar Filtros</button>
         </aside>
 
         <div class="div-catalogo" id="catalogoProductos"></div>
         <!-- CARRITO-->
         <article class="carritoSection">
-          <h4>Carrito de compra</h4>
+          <h4 data-translate="title-carrito">Carrito de compra</h4>
           <div>
             <ul id="carrito">
             </ul>
@@ -130,9 +93,65 @@
         <button id="siguienteBtn" class="botonFlecha"><i class="fa-solid fa-arrow-right"></i></button>
       </div>
     </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="comercio-justo">
+        <p data-translate="comercio_justo"><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
+        <p data-translate="sin_crueldad"><i class="fa-solid fa-seedling"></i> Sin crueldad animal</p>
+        <p data-translate="organico"><i class="fa-solid fa-leaf"></i> 100% Orgánico</p>
+        <p data-translate="sin_microplasticos"><i class="fa-solid fa-trash"></i> Sin microplásticos</p>
+      </div>
+      <hr class="linea-fina" />
+      <div class="newsletter">
+        <img
+          src="../img/logos/logo_horizontal.svg"
+          alt="logo Flor de Té"
+          class="logo-footer"
+        />
+        <h3 data-translate="suscribete">Suscríbete a nuestra newsletter</h3>
+        <p data-translate="ofertas">
+          Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?
+        </p>
+        <form>
+          <input data-translate="input_placeholder" type="email" placeholder="Introduce tu email" />
+          <button type="submit">Suscribirse</button>
+        </form>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4 data-translate="enlaces">Enlaces Útiles</h4>
+          <p>
+            <a href="index.html" data-translate="inicio">Inicio</a>
+            <a href="nosotros.html" data-translate="nosotros">Nosotros</a>
+            <a href="contacto.html" data-translate="contacto">Contacto</a>
+            <a href="carrito.html" data-translate="carrito">Carrito</a>
+          </p>
+        </div>
+        <div class="footer-column">
+          <h4 data-translate="politicas">Políticas</h4>
+          <p>
+            <a href="#" data-translate="politicas">Políticas</a>
+            <a href="#" data-translate="aviso">Aviso Legal</a>
+            <a href="#" data-translate="cookies">Política de Cookies</a>
+            <a href="#" data-translate="privacidad">Políticas de Privacidad</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="subfooter">
+      <p>© 2024 Flor de Té</p>
+    </div>
+  </footer>
+
     <script src="../inicio/inicio.js"></script>
     <script src="../inicio/fechayhora.js"></script>
     <script src="../inicio/idiomas_inicio.js"></script>
     <script src="../inicio/pagina_producto.js"></script>
-</body>
+  </body>
 </html>

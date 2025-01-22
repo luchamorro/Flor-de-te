@@ -14,7 +14,7 @@ function mostrarProductos(datos, lista) {
     item.innerHTML = `
       <img src="../${producto.img}" alt="${producto.nombre}" width="205" height="212" class="imagenCatalogo">
       <p class="tituloProducto">${producto.nombre}</p>
-      <p>${producto.precio}€ <button class="botonCarrito"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
+      <p>${producto.precio}€ <button class="botonCarrito" onclick = "anadirCompra(${producto.id}"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
     `;
 
     // Añadir eventos a la imagen y título
@@ -74,57 +74,56 @@ async function cargarDatos() {
       mostrarProductos(productos, lista);
     });
 
-    lista.setAttribute('id', 'ulProductos') // Agregar id por Alejandro
-
-    productos.forEach(producto => {
-      const item = document.createElement('li');
-      item.innerHTML = `
-        <img src="../${producto.img}" alt="${producto.nombre}" width="205" height="212" class="imagenCatalogo">
-        <p class="tituloProducto">${producto.nombre}</p>
-        <p>${producto.precio}€ <button>carrito</button></p>
-      `;
-
-      lista.appendChild(item);
-
-      // Agregar evento para mostrar el producto en la ventana superpuesta
-      item.addEventListener("click", () => {
-        mostrarProducto(producto.id);
-      });
-    });
-
-    div.appendChild(lista);
   } catch (error) {
     console.error('Error al cargar los datos:', error);
     document.getElementById('catalogoProductos').textContent = 'Error al cargar los datos.';
   }
 }
-// Función para mostrar un producto basado en su ID
-function mostrarProducto(id) {
-  const producto = productos.find(p => p.id === id);
 
-  if (producto) {
-    document.getElementById("paginaProducto").innerHTML = `
-      <div class="productoTexto">
-        <p class="tituloProductoGrande" id="tituloProductoGrande">
-          <button id="verPaginaProducto" class = "verPaginaProducto">${producto.nombre}</button>
-        </p>
-        <p class="descripcionProducto">${producto.descripcion}</p>
-        <p>${producto.precio}€ <button onclick="anadirCompra(${producto.id})">carrito</button></p>
-      </div>
-      <div class="divImagenProducto">
-        <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">
-      </div>
-    `;
-    document.getElementById("ventanaSuperpuesta").style.display = "flex"; // Mostrar ventana
-    currentId = id; // Actualizar ID actual
 
-    // Eventos para botones en la ventana emergente
-    document.getElementById('verPaginaProducto').addEventListener('click', () => irPagina(id));
-  }
+
+function calcularTotal() {
+  const total = (contador * precio);
+  document.getElementById('resultado').innerText = `Total: ${total.toFixed(2)}€`;
 }
 
+
+  // Función para mostrar un producto basado en su ID
+  function mostrarProducto(id) {
+    const producto = productos.find(p => p.id === id);
+
+    if (producto) {
+      document.getElementById("paginaProducto").innerHTML = `
+            <div class="divImagenProducto">
+          <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">
+        </div>
+        <div class="productoTexto">
+          <p class="tituloProductoGrande" id="tituloProductoGrande">
+            <button id="verPaginaProducto" class = "verPaginaProducto">${producto.nombre}</button>
+          </p>
+          <p class="precioDisplay">${producto.precio}€</p> 
+          <p>100 gramos</p>
+          <div class="contador">
+            <button onclick="botonMenos()">-</button>
+            <p class="num" id="contador"></p>
+            <button onclick="botonMas()">+</button>
+            <br>
+        </div>
+        <br>
+          <button onclick="anadirCompra(${producto.id})" id="botonCarrito"><i>Comprar</i></button>
+          <p class="descripcionProducto">${producto.descripcion}</p>
+        </div>
+      `;
+      document.getElementById("ventanaSuperpuesta").style.display = "flex"; // Mostrar ventana
+      currentId = id; // Actualizar ID actual
+
+      // Eventos para botones en la ventana emergente
+      document.getElementById('verPaginaProducto').addEventListener('click', () => irPagina(id));
+    }
+  }
+
 // Función para redirigir a la página del producto
-function irPagina(id) {mostrarProducto
+function irPagina(id) {
   const producto = productos.find(p => p.id === id);
 
   if (producto) {
@@ -211,65 +210,3 @@ function anadirCompra(id) {
     currentId = id; // Actualizar el ID actual
   }
 }
-
-// Buscador
-const buscador = document.getElementById('buscador');
-const menuBuscador = document.createElement('div');
-menuBuscador.classList.add('menuBuscador');
-document.querySelector('.right-section').appendChild(menuBuscador);
-
-// Evento de búsqueda
-buscador.addEventListener('input', function(item) {
-    const busca = item.target.value.toLowerCase().trim();
-    
-    if (busca.length < 2) {
-        menuBuscador.style.display = 'none';
-        return;
-    }
-
-    // Filtrar productos
-    const filtro = productos.filter(producto => 
-        producto.nombre.toLowerCase().includes(busca));
-
-    // Mostrar resultados
-    if (filtro.length) {
-        menuBuscador.style.display = 'block';
-        menuBuscador.innerHTML = filtro.map(producto => `
-            <div class="productoBuscado" style="
-                display: flex;
-                align-items: center;
-                padding: 0.5rem;
-                border-bottom: 1px solid #eee;
-                cursor: pointer;
-            ">
-                <img src="../${producto.img}" alt="${producto.nombre}" style="
-                    width: 50px;
-                    height: 50px;
-                    object-fit: cover;
-                    margin-right: 1rem;
-                ">
-                <div>
-                    <div style="font-weight: bold;">${producto.nombre}</div>
-                    <div>${producto.precio}€</div>
-                </div>
-            </div>
-        `).join('');
-
-        // Evento click en resultados
-        document.querySelectorAll('.productoBuscado').forEach((item, index) => {
-            item.addEventListener('click', function anadirCompra(id) {
-              
-                buscador.value = '';
-            });
-        });
-    } else {
-        menuBuscador.innerHTML = '<div style="padding: 1rem;">No se encontraron resultados</div>';
-    }
-});
-
-// Cerrar resultados al hacer click fuera
-document.addEventListener('click', (e) => {
-    if (!menuBuscador.contains(e.target) && e.target !== buscador) {
-        menuBuscador.style.display = 'none';
-    }
-});
