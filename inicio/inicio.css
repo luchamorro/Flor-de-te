@@ -142,7 +142,7 @@ button:hover {
 }
 
 .right-section .cart::after {
-  content: '4'; /* Example for cart item count */
+  content: attr(data-content);
   position: absolute;
   top: -3px;
   right: -15px;
@@ -280,15 +280,98 @@ button:hover {
 ul {
   list-style: none;
 }
+/*INTRO*/
+.intro{
+  margin:10rem 0 10rem 0rem;
+}
 
+.intro-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  margin: 0 auto;
+}
 
-/* Cambiar el fondo y el borde del catálogo */
-.div-catalogo{
-  width: 80%;
-  margin: 0  0 0 -5rem;
+.intro-texto {
+  text-align: center; 
+}
+
+/*BESTSELLERS*/
+.bestsellers-container{
+  display: flex;
+  gap: 2rem;
+  max-width: 100%;
+  margin-top: 2rem;
+  
+}
+.bestsellers-texto{
+  background-color: rgb(255, 235, 222);
+  width: 35%;
+  padding: 1.5rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+/* Contenedor principal del catálogo */
+.div-catalogo {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: flex-start;
+  background-color: white;
+  margin-right: 3rem;
 }
+
+/* Lista de productos */
+.listaProductos {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+  list-style-type: none; /* Elimina el círculo en los elementos li */
+}
+
+/* Cada producto */
+.productoItem {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 1rem;
+  width: 220px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen del producto */
+.imagenCatalogo {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+/* Título del producto */
+.tituloProducto {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Descripción del producto */
+.descripcionProducto {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Precio del producto */
+.precioProducto {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+}
+
 .elementoProducto {
   width: 100%;
   background-color: rgb(246, 234, 245);
@@ -352,6 +435,7 @@ cursor: pointer;
 
 #borrarFiltros{
   margin-top: 0.5rem;
+  display: none;
 }
 
 
@@ -899,6 +983,25 @@ text-align: center;
   justify-content: center;
   cursor: pointer;
 }
+
+.carritoSection .masMenos{
+  width: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.carritoSection .suma, .carritoSection .resta{
+  height: 1rem;
+  width: 1rem;
+  margin: 0.5rem auto; 
+  padding: unset;
+}
+.carritoSection .masMenos p{
+  margin: 0 auto;
+}
+
+
 .carritoSection button{
   margin: 0 12rem;
 }

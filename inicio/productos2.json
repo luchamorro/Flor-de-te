@@ -1,0 +1,45 @@
+[
+    {
+      "id":1,
+      "nombre": "Infusión de Lavanda",
+      "descripcion": "Tiene propiedades relajantes, mejora la calidad del sueño y es antiinflamatorio.",
+      "img": "/img/productos/01_infulavanda.png",
+      "filtros": [
+        "Relajante",
+        "Infusión",
+        "Descanso",
+        "Antiinflamatorio"
+      ],
+      "precio": 4.15
+
+    },
+
+    {
+      "id":2,
+      "nombre": "Té negro",
+      "descripcion": "Rico en antioxidantes, puede reducir el riesgo de enfermedades cardíacas y estimula la mente.",
+      "img": "/img/productos/02_tenegro.png",
+      "filtros": [
+        "Té",
+        "Antioxidantes",
+        "Estimulante"
+            ],
+      "precio": 4.15
+
+    },
+
+    {
+      "id":3,
+      "nombre": "Té verde",
+      "descripcion": "Alto en catequinas, para mejorar el metabolismo, propiedades antiinflamatorias, beneficia la salud de la piel y del sistema inmunológico.",
+      "img": "/img/productos/03_teverde.png",
+      "filtros": [
+        "Té",
+        "Antioxidantes",
+        "Antiinflamatorio"
+            ],
+      "precio": 4.15
+
+    }
+
+]
