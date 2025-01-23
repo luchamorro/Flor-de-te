@@ -1,17 +1,16 @@
-      
-   .ventanaSuperpuesta{
-    position: fixed;
-    top: 10%;
-    left: 10%;
-    width: 100%;
-    height: 60%;
-    background-color: rgb(255, 255, 255);
-    z-index: 19;
-    filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
-    width: 50%;
-    display: none;
-    flex-direction: column;
-    padding-bottom: 4rem;
+.ventanaSuperpuesta{
+  position: fixed;
+  top: 10%;
+  left: 23%;
+  height: 65%;
+  background-color: rgb(255, 255, 255);
+  z-index: 1000;
+  filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
+  width: 50%;
+  display: none;
+  flex-direction: column;
+  padding-bottom: 4rem;
+  border-radius: 1rem;
 
 }
 
@@ -22,23 +21,25 @@ align-self:last baseline;
 }
 
 #paginaProducto{
-height: auto;
-width: 80%;
-display: flex;
-justify-content:space-between;
-/*flex-wrap: wrap;*/
-align-items: center;
-gap: 1rem;
-/*width: 60%;*/  
-/* padding-right: 10rem;
-padding-left: 10rem;*/
-padding: 2rem;
-padding-left: 3rem;
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content:first baseline;
+  /*flex-wrap: wrap;*/
+  align-items: center;
+  gap: 1rem;
+  /*width: 60%;*/  
+ /* padding-right: 10rem;
+  padding-left: 10rem;*/
+  padding: 2rem;
+  padding-left: 3rem;
 }
 
+
 .botonesPaginaProducto{
-display: flex;
-justify-content: center;
+ display: flex;
+ justify-content:center;
+
 
 }
 
@@ -55,8 +56,8 @@ background: none;
 .divImagenProducto{
 height: auto;    
 /*position: fixed;*/
-right: 2rem;
-top: 4rem
+  right: 2rem;
+  top: 4rem;
 }
 
 .productoTexto{
@@ -65,8 +66,11 @@ height: auto;
 }
 
 .descripcionProducto{
-font-family: Arial, Helvetica, sans-serif; /*---modificar*/
-max-width: 80%;
+  font-family: "Space Grotesk", serif;
+  max-width: 90%;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
 
 #paginaProductoAparte {
@@ -76,6 +80,17 @@ padding: 20px;
 background-color: white;
 }
 
+.contador{
+display: flex;
+}
+.num{
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+.precioDisplay{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
 button.cerrarBtn{
 width: 2rem;
@@ -102,8 +117,8 @@ padding: 0.8rem;
 font-size: 1rem;
 color: grey;
 transition: background-color 0.3s ease;
-
 }
+
 
 button.botonFlecha:hover{
 
@@ -115,9 +130,69 @@ color: aliceblue;
 
 button.verPaginaProducto {
 background: none;
-color:black;
+color: var(--morado);
 padding: 0;
+margin-bottom: 1rem;
 font-weight: bold;
-font-size: 1.5rem;
+font-size: 2rem;
+
+}
+
+
+@media only screen and (max-width: 1050px) {
+
+  .ventanaSuperpuesta{
+    position: fixed;
+    top: 0;
+    left: 5%;
+    height: 90%;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000;
+    filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
+    width: 90%;
+    display: none;
+    flex-direction: column;
+    padding-bottom: 4rem;
+  
+  }
+  
+  #paginaProducto{
+    height:100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content:center;
+    align-items: center;
+    /*width: 60%;*/  
+   /* padding-right: 10rem;
+    padding-left: 10rem;*/
+    
+    padding-left: 3rem;
+    flex-wrap:wrap-reverse;
+
+  }
+  
+  .divImagenProducto{
+    height: auto;    
+    /*position: fixed;*/
+      right: 2rem;
+      top: 4rem
+    }
+    
+  
+
+     .botones{
+      display: flex;
+      gap: 2rem;
+      position: relative;
+     }
+
+     .divImagenProducto{
+      height: fit-content;  
+      width: fit-content; 
+      /*position: fixed;*/
+        right: 2rem;
+        top: 0rem;
+      }
 
 }

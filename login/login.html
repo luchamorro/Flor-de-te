@@ -11,57 +11,62 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Flor de Té</title>
       <link rel="stylesheet" href="login.css">
-  
+      <link rel="stylesheet" href="../inicio/inicio.css">
+
   </head>
 <body>
   <nav class="menu">
     <div class="left-section">
-    <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo">
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="nosotros.html">Nosotros</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
+      <a href="../inicio/index.html">
+        <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo" />
+      </a>
+      <ul>
+        <li><a href="../inicio/index.html" data-translate="inicio">Inicio</a></li>
+        <li><a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a></li>
+        <li><a href="../nosotros/nosotros.html" data-translate="nosotros">Nosotros</a></li>
+        <li><a href="../contacto/contacto.html" data-translate="contacto">Contacto</a></li>
+      </ul>
     </div>
-    <div class="right-section"> 
-        <input type="text" placeholder="Buscar..."> 
-        <div class="user-area"><i class="fa-solid fa-user"></i></div> 
-        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div> 
-        <select title="idioma"> 
-          <option value="es">ES</option> 
-          <option value="en">EN</option> 
-        </select> 
-      </div>
+    <div class="right-section">
+      <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." />
+      <div class="user-area"><i class="fa-solid fa-user"></i></div>
+      <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+      <select id="language-select" title="idioma">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+      </select>
+    </div>
+    <div id="fechayhora"></div> <!--reubicar este div-->
   </nav>
     
 <div class="contenedor-login">
    
     <div class="caja-login">
-        <h2>Identificarse</h2>
-        <p>¿Ya tiene una cuenta? Inicie sesión para continuar.</p>
+        <h2 data-translate="login_title">Identificarse</h2>
+        <p data-translate="login_subtitle">¿Ya tiene una cuenta? Inicie sesión para continuar.</p>
         
         <form id="logear">
-            <label for="email">Dirección de correo electrónico</label>
+            <label data-translate="email_label" for="email">Dirección de correo electrónico</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="password">Contraseña</label>
+            <label data-translate="password_label" for="password">Contraseña</label>
             <input type="password" id="password" name="password" required>
 
-            <button type="submit">Identificarse</button>
+            <button data-translate="login_button" type="submit">Identificarse</button>
            
-            <a href="#" class="forgot-password">¿Ha olvidado su contraseña?</a>
+            <a href="#" data-translate="forgot_password" class="forgot-password">¿Ha olvidado su contraseña?</a>
         </form>
 
     </div>
     
     <div class="caja2">
-        <h2>¿Es nuevo? DESCUBRE EL MEJOR TÉ DE ESPECIALIDAD</h2>
+        <h2 data-translate="register_title">¿Es nuevo? DESCUBRE EL MEJOR TÉ DE ESPECIALIDAD</h2>
         <ul>
-          <li><i class="fa-solid fa-check"></i> Ver pedidos y gestionar la información de la cuenta</li>
-          <li><i class="fa-solid fa-check"></i> Añadir productos a la lista de deseos</li>
-          <li><i class="fa-solid fa-check"></i> Crear su cuenta gratuita en pocos pasos</li>
+          <li data-translate="register_features1"><i class="fa-solid fa-check"></i> Ver pedidos y gestionar la información de la cuenta</li>
+          <li data-translate="register_features2"><i class="fa-solid fa-check"></i> Añadir productos a la lista de deseos</li>
+          <li data-translate="register_features1"><i class="fa-solid fa-check"></i> Crear su cuenta gratuita en pocos pasos</li>
       </ul>
-        <button onclick="location.href='#'">Crear una cuenta</button>
+        <button data-translate="register_button" onclick="location.href='#'">Crear una cuenta</button>
     </div>
 </div>
 
@@ -70,18 +75,24 @@
 <footer>
   <div class="footer-container">
     <div class="comercio-justo">
-      <p><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
-      <p><i class="fa-solid fa-seedling"></i> Sin crueldad animal</p>
-      <p><i class="fa-solid fa-leaf"></i> 100% Orgánico</p>
-      <p><i class="fa-solid fa-trash"></i> Sin microplasticos</p>
+      <p data-translate="comercio_justo"><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
+      <p data-translate="sin_crueldad"><i class="fa-solid fa-seedling"></i> Sin crueldad animal</p>
+      <p data-translate="organico"><i class="fa-solid fa-leaf"></i> 100% Orgánico</p>
+      <p data-translate="sin_microplasticos"><i class="fa-solid fa-trash"></i> Sin microplásticos</p>
     </div>
-    <hr class="linea-fina">
+    <hr class="linea-fina" />
     <div class="newsletter">
-      <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo-footer">
-      <h3>Suscríbete a nuestra newsletter</h3>
-      <p>Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?</p>
+      <img
+        src="../img/logos/logo_horizontal.svg"
+        alt="logo Flor de Té"
+        class="logo-footer"
+      />
+      <h3 data-translate="suscribete">Suscríbete a nuestra newsletter</h3>
+      <p data-translate="ofertas">
+        Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?
+      </p>
       <form>
-        <input type="email" placeholder="Introduce tu email">
+        <input data-translate="input_placeholder" type="email" placeholder="Introduce tu email" />
         <button type="submit">Suscribirse</button>
       </form>
       <div class="social-media">
@@ -92,21 +103,21 @@
     </div>
     <div class="footer-columns">
       <div class="footer-column">
-        <h4>Enlaces Útiles</h4>
+        <h4 data-translate="enlaces">Enlaces Útiles</h4>
         <p>
-          <a href="index.html">Inicio</a>
-          <a href="nosotros.html">Nosotros</a>
-          <a href="contacto.html">Contacto</a>
-          <a href="carrito.html">Carrito</a>
+          <a href="index.html" data-translate="inicio">Inicio</a>
+          <a href="nosotros.html" data-translate="nosotros">Nosotros</a>
+          <a href="contacto.html" data-translate="contacto">Contacto</a>
+          <a href="carrito.html" data-translate="carrito">Carrito</a>
         </p>
       </div>
       <div class="footer-column">
-        <h4>Políticas</h4>
+        <h4 data-translate="politicas">Políticas</h4>
         <p>
-          <a href="#">Políticas</a>
-          <a href="#">Aviso Legal</a>
-          <a href="#">Política de Cookies</a>
-          <a href="#">Políticas de Privacidad</a>
+          <a href="#" data-translate="politicas">Políticas</a>
+          <a href="#" data-translate="aviso">Aviso Legal</a>
+          <a href="#" data-translate="cookies">Política de Cookies</a>
+          <a href="#" data-translate="privacidad">Políticas de Privacidad</a>
         </p>
       </div>
     </div>
@@ -115,5 +126,6 @@
     <p>© 2024 Flor de Té</p>
   </div>
 </footer>
+<script src="idioma_login.js"></script>
 </body>
 </html>

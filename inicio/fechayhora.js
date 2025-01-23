@@ -19,6 +19,7 @@ function mostrarFechaHora() {
 
     // formateo fecha y hora
     const fechaFormateada = new Intl.DateTimeFormat('es-Es', opcionesFecha).format(fecha); //cambiar a 'en-En' para inglés - eu-Eu para euskera
+    // const fechaFormateadaEn = new Intl.DateTimeFormat('en-EN', opcionesFecha).format(fecha); 
     const horaFormateada = new Intl.DateTimeFormat('es-ES', opcionesHora).format(fecha);
 
     // como se muestra 
