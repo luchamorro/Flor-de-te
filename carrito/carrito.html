@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 setTimeout(obtenerPrecio, 100);
+setTimeout(borrarProducto, 100);
 
 function obtenerPrecio(){ 
   let sumaTotal = 0;
@@ -147,7 +148,7 @@ function obtenerPrecio(){
     } 
     });
     
-    ivaTotal = sumaTotal * 0.19;
+    ivaTotal = sumaTotal * 0.21;
     subTotal = sumaTotal - ivaTotal;
 
 
@@ -164,7 +165,27 @@ function obtenerPrecio(){
 }
 
  
+function borrarProducto(){
 
+  const papelera = document.querySelectorAll(".carrito_container li span");
+  
+
+
+  papelera.forEach(item => {
+    item.addEventListener('click', function() {
+      
+      /* anadirProducto.remove();*/
+      item.parentNode.remove();
+      obtenerPrecio()
+
+      item.setAttribute("cursor", "pointer");
+
+
+    });
+  });
+
+
+}
 
 
 
