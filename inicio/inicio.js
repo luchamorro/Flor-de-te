@@ -174,6 +174,7 @@ function anadirCompra(id) {
 
     pic.setAttribute("src", `../${producto.img}`);
     pic.setAttribute("alt", `${producto.nombre}`);
+    precio.setAttribute('class','precio');
     
     precio.innerHTML = `${producto.precio}€`;
 

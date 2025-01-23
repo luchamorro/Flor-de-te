@@ -13,39 +13,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
       <link rel="stylesheet" href="../inicio/estilo_popup.css">
-<style>
+      <link rel="stylesheet" href="carrito.css">
+      <link rel="stylesheet" href="../inicio/inicio.css">
 
-
-    .carrito_section{
-      position: relative;
-      top: 7rem;
-    }
-
-    #paginaProductoAparte{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .productoDescrip{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        position: relative;
-         width: 60%;
-    }
-    
-    .separador{
-    
-    height: 7rem;
-    }
-
-    #carrito_container{
- display: flex;
- justify-content: center;
-}
-
-</style>
   </head>
 <body>
 
@@ -74,13 +44,29 @@
     <div id="fechayhora"></div> <!--reubicar este div-->
   </nav>
  
-  <section class="carrito_section">
-    <h3><span>Juan Carlos</span>, estos son los productos de tu carrito:</h3>
+  <main>
     <div class="separador"></div>
-    <ul id="carrito_container" style="display: flex;"></ul>
+  <section class="carrito_section">
+    <p class="saludoCliente"><span>Juan Carlos</span>, estos son los productos de tu carrito:</p>
+   
+    <ul id="carrito_container" style="display: flex;" class="carrito_container"></ul>
+  </section>
+
+<!------------------------------------->
+
+<!-- Precios -->
+ <section> 
+<div id="cart-summary">
+  <p class="precioTotal"><b>Total: $<span id="total"></span></b></p>
+  <p>Subtotal: $<span id="subtotal">0.00</span></p>
+  <p>IVA: $<span id="iva"></span></p>
+  <button id="finalizarCompra">Confirmar compra</button>
+  
+</div>
+
+<!------------------------------------->
 </section>
-
-
+</main>
 
 <footer>
   <div class="footer-container">
@@ -143,6 +129,47 @@ document.addEventListener('DOMContentLoaded', () => {
     carritoDestino.innerHTML = carritoGuardado;
   }
 });
+
+setTimeout(obtenerPrecio, 100);
+
+function obtenerPrecio(){ 
+  let sumaTotal = 0;
+  let subTotal = 0;
+  let ivaTotal = 0;
+
+  const precios = document.querySelectorAll(".precio");
+
+    precios.forEach(elemento =>{
+    const precio = parseFloat (elemento.innerText); 
+      if (!isNaN(precio)) { 
+      sumaTotal += precio;
+   
+    } 
+    });
+    
+    ivaTotal = sumaTotal * 0.19;
+    subTotal = sumaTotal - ivaTotal;
+
+
+        const total = document.getElementById("total");
+        total.innerText = sumaTotal.toFixed(2); //con 2 decimales
+
+        const total2 = document.getElementById("iva");
+        total2.innerText = ivaTotal.toFixed(2);
+
+        const total3 = document.getElementById("subtotal");
+        total3.innerText = subTotal.toFixed(2);
+
+
+}
+
+ 
+
+
+
+
+
+
 
   </script>
 

@@ -1,0 +1,119 @@
+:root {
+    --negro: black;
+    --burdeos: #cd0038;
+    --morado: #6f005e;
+    --naranja: #ff6600;
+    --blanco: white;
+  }
+
+  main{
+display:flex;
+width: 100%;
+
+
+  }
+
+
+#cart-summary {
+ 
+   border: solid rgb(182, 90, 232) 0.05rem;
+   border-radius: 1rem;
+    width: 20rem;
+    margin: 15rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(244, 226, 245);
+    padding-bottom: 3rem;
+    padding-top:2rem
+    
+
+}
+
+
+button {
+    background-color: #e93e0a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #df3308;
+}
+
+
+/*-------------------------------*/
+
+
+  #paginaProductoAparte{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .productoDescrip{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+       width: 60%;
+  }
+  
+  .separador{
+  
+  height: 7rem;
+  }
+
+  #carrito_container img {
+    width: 180px; 
+    height: auto; 
+    object-fit: cover; /* Ajusta cómo se escala la imagen */
+    border-radius: 0.5rem;
+  }
+
+  #carrito_container  {
+    display: flex;
+    gap: 1rem;
+    margin: 3rem;
+    flex-wrap: wrap;
+
+  }
+
+.carrito_section{
+    margin-top: 7.5rem;
+}
+
+
+  #carrito_container li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  border: solid rgb(222, 155, 222) 0.05rem;
+  border-radius: 2rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+  }
+
+
+  #carrito_container li .tituloProducto{
+    font-size: 1rem;
+    padding-top: 10%;
+    
+}
+
+.saludoCliente{
+
+    font-size: 1.3rem;
+    padding-left: 3rem;
+    padding-top: 2rem;
+}
+
+.precioTotal{
+    font-size: 1.8rem;
+}
+
