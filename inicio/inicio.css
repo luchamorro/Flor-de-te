@@ -377,14 +377,14 @@ ul {
 }
 
 /* Título del producto */
-.tituloProducto {
+.tituloProductoCatalogo {
   font-size: 2rem;
   font-weight: bold;
   margin: 10px 0;
   color: #333;
 }
 
-.tituloProducto:hover {
+.tituloProductoCatalogo:hover {
   color: var(--burdeos);
   cursor: pointer;
 }
