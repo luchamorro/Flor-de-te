@@ -1,35 +1,30 @@
-document
-  .getElementById("formularioLogin")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita que el formulario se envíe automáticamente
+document.addEventListener("DOMContentLoaded", function () {
+  // Cargar datos del usuario desde localStorage
+  const usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
+  if (usuarioConectado) {
+    document.getElementById("userName").textContent = usuarioConectado.nombre;
+  } else {
+    window.location.href = "../inicio/login.html";
+  }
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+  // Logout
+  document.getElementById("logoutBtn").addEventListener("click", function () {
+    localStorage.removeItem("usuarioConectado");
+    window.location.href = "../inicio/index.html";
+  });
 
-    let usuario = null;
-    // Simulación de validación
+  // Subir y mostrar la foto
+  const uploadPhoto = document.getElementById("uploadPhoto");
+  const profilePicture = document.getElementById("profilePicture");
 
-    if (email === "administrador@ejemplo.com" && password === "123456") {
-      usuario = {
-        nombre: "Administrador",
-        email: "administrador@ejemplo.com",
-        esAdmin: true,
+  uploadPhoto.addEventListener("change", function (event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        profilePicture.src = e.target.result;
       };
-    } else {
-      usuario = {
-        nombre: "Usuario",
-        email: email,
-        esAdmin: false,
-      };
-    }
-
-    // Guardamos el objeto en el localStorage
-    localStorage.setItem("usuarioConectado", usuario);
-
-    // Redireccionamos a la página de de productos
-    if (usuario.esAdmin) {
-      window.location.href = "../administrar/panel.html";
-    } else {
-      window.location.href = "../inicio/pagina_producto.html";
+      reader.readAsDataURL(file);
     }
   });
+});
