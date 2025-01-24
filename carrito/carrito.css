@@ -10,7 +10,6 @@
 display:flex;
 width: 100%;
 
-
   }
 
 
@@ -25,8 +24,7 @@ width: 100%;
     align-items: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: rgb(244, 226, 245);
-    padding-bottom: 3rem;
-    padding-top:2rem
+    padding-bottom: 2rem;
     
 
 }
@@ -36,9 +34,9 @@ button {
     background-color: #e93e0a;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 0.8rem 1rem;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 0.3rem;
 }
 
 button:hover {
@@ -48,21 +46,6 @@ button:hover {
 
 /*-------------------------------*/
 
-
-  #paginaProductoAparte{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  
-  .productoDescrip{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      position: relative;
-       width: 60%;
-  }
-  
   .separador{
   
   height: 7rem;
@@ -78,6 +61,7 @@ button:hover {
   #carrito_container  {
     display: flex;
     gap: 1rem;
+
     margin: 3rem;
     flex-wrap: wrap;
 
@@ -117,3 +101,37 @@ button:hover {
     font-size: 1.8rem;
 }
 
+.papelera{
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+   main {
+    display: flex;
+    flex-direction: column;
+        
+    }
+
+    #carrito_container{
+      margin: 0rem;
+    }
+
+      #cart-summary {
+        margin:2rem;
+         }
+  
+         section{
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+         }
+
+         .carrito_section{
+          margin-top: 0rem;
+          padding-bottom: 1rem;
+          padding-top: 1rem;
+      }
+      
+    
+}

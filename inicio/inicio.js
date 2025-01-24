@@ -178,6 +178,8 @@ function anadirCompra(id) {
     
     precio.innerHTML = `${producto.precio}€`;
 
+    borrar.setAttribute('class', 'papelera');
+
     borrar.innerHTML = `&#128465;`
 
     document.getElementById('carrito').appendChild(anadirProducto);

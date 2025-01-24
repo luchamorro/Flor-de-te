@@ -174,11 +174,14 @@ function borrarProducto(){
   papelera.forEach(item => {
     item.addEventListener('click', function() {
       
+      item.setAttribute("cursor", "pointer");
+
       /* anadirProducto.remove();*/
       item.parentNode.remove();
       obtenerPrecio()
 
-      item.setAttribute("cursor", "pointer");
+
+
 
 
     });
