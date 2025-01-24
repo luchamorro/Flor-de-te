@@ -85,9 +85,9 @@
       </section>
 
       <section class="intro">
-        <h3>Placeres Orgánicos, Té e Infusiones a Granel</h3>
+        <h3 data-translate="titulo-intro">Placeres Orgánicos, Té e Infusiones a Granel</h3>
         <div class="intro-container">
-          <p class="intro-texto">
+          <p class="intro-texto" data-translate="texto-intro">
             En Flor de Té, nuestra pasión por el bienestar y el sabor auténtico
             se refleja en cada hoja y mezcla que seleccionamos. Ofrecemos una
             cuidada variedad de tés e infusiones a granel, 100% orgánicos, que
@@ -107,10 +107,10 @@
 <section class="bestsellers-section">
   <div class="bestsellers-container">
     <div class="bestsellers-texto">
-      <h4 data-translate="">
+      <h4 data-translate="titulo-minicatalogo">
         Tés e infusiones que todos quereis tener en casa
       </h4>
-      <p data-translate="">
+      <p data-translate="texto-minicatalogo">
         En Flor de Té, tus preferencias nos inspiran. Explora nuestra
         selección de los tés más queridos por nuestra comunidad. Desde
         mezclas revitalizantes hasta infusiones reconfortantes, aquí
@@ -121,27 +121,20 @@
         data-translate="product-of-the-month-cta"
         class="btn-te-mes"
       >
-        ¡Compra Ahora!
+        Todos los productos
       </button>
     </div>
 
     <div class="bestsellers-productos">
-      <div class="div-catalogo" id="catalogoProductos"></div>
+      <form id="filtrosForm">
+      </form>
+        <button data-translate="clear-filters" id="borrarFiltrosMini">Borrar Filtros</button>
+    </aside>
+      <div class="div-catalogo" id="catalogoProductosMini"></div>
     </div>
   </div>
 </section>
 
-
-<h3 data-translate="catalog-title">Catálogo</h3>
-<section class="productos">
-  <aside class="filtros">
-    <form id="filtrosForm">
-          </form>
-            <button data-translate="clear-filters" id="borrarFiltros">Borrar Filtros</button>
-        </aside>
-        <div class="div-catalogo" id="catalogoProductos"></div>
-      
-      </section>
 
      <!--Popup de productos-->
      <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">

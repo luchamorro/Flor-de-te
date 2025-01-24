@@ -1,0 +1,53 @@
+{
+    "en": {
+        "inicio": "Home",
+        "catalogo-nav": "Catalog",
+        "nosotros": "About Us",
+        "contacto": "Contact",
+        "placeholder-nav":"Looking for...",
+
+        "catalog-title": "Catalog",
+        "filters-title": "Filter by:",
+        "filter-category": "Type of Beverage",
+        "infusion": "Infusions",
+        "tea": "Tea",
+        "filter-properties": "Properties",
+        "antioxidants": "Antioxidant",
+        "stimulant": "Stimulant",
+        "relaxing": "Relaxing",
+        "digestive": "Digestive",
+        "rest": "Rest",
+        "anti-inflammatory": "Anti-inflammatory",
+        "dental-health": "Dental Health",
+        "detox": "Detox",
+        "refreshing": "Refreshing",
+        "apply-filters": "Apply Filters",
+        "clear-filters": "Clear Filters",
+        "title-carrito": "Shopping Cart",
+  
+        "navigation-next": "Next",
+        "navigation-previous": "Previous",
+
+
+
+
+        "comercio_justo": "Fair Trade",
+        "sin_crueldad": "Cruelty-Free",
+        "organico": "100% Organic",
+        "sin_microplasticos": "No Microplastics",
+        
+        "suscribete": "Subscribe to our newsletter",
+        "ofertas": "Offers, news, and exclusive discounts. Don't miss it!",
+        "input_placeholder": "Enter your email",
+        
+        "enlaces": "Useful Links",
+        "politicas": "Policies",
+        "aviso": "Legal Notice",
+        "cookies": "Cookie Policy",
+        "privacidad": "Privacy Policy",
+        
+        "social_tiktok": "TikTok",
+        "social_instagram": "Instagram",
+        "social_facebook": "Facebook"
+    }
+}

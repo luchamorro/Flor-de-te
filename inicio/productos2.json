@@ -15,17 +15,17 @@
     },
 
     {
-      "id":2,
-      "nombre": "Té negro",
-      "descripcion": "Rico en antioxidantes, puede reducir el riesgo de enfermedades cardíacas y estimula la mente.",
-      "img": "/img/productos/02_tenegro.png",
+      "id":15,
+      "nombre": "Infusión de Cúrcuma",
+      "descripcion": "Propiedades antiinflamatorias,digestivas y refuerza el sistema inmunológico.",
+      "img": "/img/productos/15_infucurcuma.png",
       "filtros": [
-        "Té",
-        "Antioxidantes",
-        "Estimulante"
+        "Infusión",
+        "Antiinflamatorio",
+        "Digestivo"
             ],
       "precio": 4.15
-
+    
     },
 
     {
