@@ -1,42 +1,66 @@
-![Ecoders](/img/logos/ecodersLogo.png)
+![Ecoders](/img/logos/bannerEcoders.png)
 <h1>Presentación del proyecto</h1>
-<h2>Orión Getxo</h2>
+<h2>Flor de Té</h2>
 
-![Club Orión](/Assets/img_index/logo.png)
+![Club Orión](/img/logos/logo_horizontal.svg)
 
-<p>Este proyecto responde a la necesidad del Club Orion Getxo de contar con presencia en internet para darse a conocer, poder mostrar su actividad (reuniones, quedadas, campeonatos, etc.). También para poder captar asociados y darles toda la información necesaria del día a día del club.</p>
-<p>En definitiva, un punto de encuentro de todos aquellos interesados en el mundo del tiro con arco, sobretodo de Getxo y alrededores.</p>
-<p>Desde la dirección del club se contactó con Grupo3 solicitando el desarrollo de una página web que contuviera por lo menos una serie de elementos que ellos consideraban mínimos para el proyecto que eran:</p>
+<p>For de Té es un proyecto de e-commerce del ámbito de herboristería, centrado en el deleite de los sentidos y la relajación, para los amantes de las infusiones y tisanas, hecho por un grupo de coders comprometidos con el medio ambiente.</p>
+
+<p>En For de Té, aspiramos a ser un referente en la creación de experiencias únicas alrededor del té y el café, ofreciendo productos de la más alta calidad que conecten a las personas con los sabores auténticos de todo el mundo.</p>
+
+<p> Nuestra misión es simple: proporcionar una experiencia incomparable en cada taza. For de Té, creemos que el té y el café son mucho más que bebidas; son momentos de conexión, inspiración y calma. </p>
+
+<p>Nos dedicamos a ofrecer lo mejor en cada aspecto de nuestra tienda, cuidando cada detalle y compromiso:</p>
     <ul>
-        <li>Idioma (castellano)</li>
-        <li>Menús Ocultos ajustados al formato de pantalla</li>
-        <li>Carrusel de imágenes de las actividades del club</li>
-        <li>Responsive para móviles, tablets y ordenadores personales</li>
-        <li>Animaciones</li>
-        <li>Redactar un Readme (este mismo) que contenga información del desarrollo y uso de la página web</li>
-        <li>Posicionamiento SEO</li>
-        <li>Seguimiento del proyecto por parte del cliente en base a versiones de GIT, metodología SCRUM</li>
+        <li><ins>El cliente</ins> es el centro de todo lo que hacemos. Ofrecemos una atención cálida y personalizada, asegurándonos de que cada visita a nuestra tienda sea especial y satisfactoria. </li>
+        <li><ins>Cada producto</ins> que ofrecemos está cuidadosamente seleccionado para garantizar frescura, sabor y excelencia.</li>
+        <li><ins>Nuestro compromiso</ins> con el medio ambiente nos lleva a buscar el mejor producto del mercado ecológico, garantizamos que es 100% orgánico, cruelty free, de comercio justo y sin microplásticos.</li>
+        <li><ins>Innovación</ins> es sinónimo de disfrute, así que buscamos constantemente nuevas formas de sorprender a nuestros clientes, combinando tradición con exotismo, salud con creatividad, sutileza y deleite.</li>
     </ul>
 
+<p>En Flor De Té, creemos que el té y el café son mucho más que bebidas: son experiencias que conectan, inspiran y elevan los momentos cotidianos.</p>
+
+
 <h1>Desarrollo del proyecto</h1>
-<p>Este proyecto se ha realizado usando lenguajes de programación HTML5 y CSS3 en los que el equipo de Grupo3 tiene sobrada experiencia, mediante el desarrollo estructurado de las páginas web siguiendo un estándar de carpetas con documentos CSS propios de cada página web y un CSS general donde se recogen todo el diseño que debe ser común para el sitio.</p>
+
+<p>Se han empleado para este proyecto los lenguajes de programación HTML5, CSS & javaScript, además de prototipado en figma y por su puesto GitHub para el control de versiones.</p>
+
+<p>El diseño ha sido una preocupación fundamental para el buen resultado de nuestra e-commerce y todas las imagenes en él incluidas son de creación y edicióon propia, con programas de diseño gráfico como Gymp e Inkscape y el uso de inteligencias artificiales como Dall-e mini de Crayon y Leonardo.Ai para obtener fuentes de isnpiración y bocetos rápidos de lo que pretendíamos hacer</p>
+
      
 <h1>Estructura del sitio</h1>
-<p>El sitio cuenta con una página Home de presentación del club con noticias de última hora y que da acceso a las demás páginas.</p>
 
-![Página de inicio](Assets/Read_me/Home.jpg)
+<p>Nuestra primera intuición nos ha llevado a hacer una web con la menor cantidad de páginas posible, con el fin de evitar el laberinto de enlaces y pestañas en que estas suelen convertirse. Finalmente la web Flor de Té consta de:</p>
 
-<p>Los eventos están agrupados y tienen a su vez una página con los programas de las distintas actividades.</p>
+<p>Una página de inicio</p>
 
-![Actividades](Assets/Read_me/Actividades.jpg)
+![Página de inicio](img/screenShots/Inicio.png)
 
-<p>Existe un formulario de contacto donde las personas interesadas pueden dirigir sus preguntas y comentarios al club así como solicitar información. Así mismo existe un formulario donde quien quiera integrarse en el club o participar de manera unitaria en alguna de las actividades pueda inscribirse y pagar la cuantía a través de los distintos modelos de pago.</p>
+<p>Más abajo de la misma una selección de los productos mejor valorados por nuestros custommers</p>
 
-![Formualrio de contacto](Assets/Read_me/Inscripcion.jpg)
+![Más valorados](FALTA FOTO!!!!!!!)
 
-<p>Durante las actividades que realiza el club se toman fotografías que se incorporan a la página de galería para que los visitantes puedan ver cómo son estas.</p>
+<p>Un pequeño apartado para el producto del mes</p>
 
-![Galeria](Assets/Read_me/Galeria.jpg)
+![Formualrio de contacto](img/screenShots/teDelMes.png)
+
+<p>Y por ultimo una sección a promociones, otros artículos y testimonios</p>
+
+![promo](img/screenShots/promo.png)
+![otros artículos](img/screenShots/merch.png)
+![testimonios](img/screenShots/testimonio.png)
+
+
+
+
+
+
+
+
+
+
+
+
 
 <p>Los socios se han mostrado interesados en manifestar su apoyo por lo que se ha creado una página donde se recogen sus comentarios.</p>
 
