@@ -339,7 +339,7 @@ ul {
   width: 33%;
   height: 30%;
   padding: 2rem;
-  margin: 3rem ;
+  margin: 3rem 0 0 11rem;
   border-radius: 1rem;
   text-align: justify;
 }
@@ -350,7 +350,7 @@ ul {
   display: flex;
   justify-content: center;
   background-color: white;
-  padding-right: 3rem; /* Cambié margin-right a padding-right */
+  margin-right: 9rem; /* Cambié margin-right a padding-right */
 }
 
 #catalogoProductos{
