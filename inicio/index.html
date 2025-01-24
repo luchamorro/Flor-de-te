@@ -117,12 +117,12 @@
         encontrarás esos sabores que hacen de cada sorbo un momento
         especial. 🌿✨
       </p>
-      <button
+      <a href="../catalogo/catalogo.html"><button
         data-translate="product-of-the-month-cta"
         class="btn-te-mes"
       >
         Todos los productos
-      </button>
+      </button></a> 
     </div>
 
     <div class="bestsellers-productos">
@@ -133,7 +133,20 @@
       <div class="div-catalogo" id="catalogoProductosMini"></div>
     </div>
   </div>
+    <!-- CARRITO-->
+    <article class="carritoSection" id="none">
+      <h4 data-translate="title-carrito">Carrito de compra</h4>
+      <div>
+        <ul id="carrito"></ul>
+      </div>
+      <div>
+        <button type="button">Checkout</button>
+      </div>
+    </article>
 </section>
+
+
+
 
 
      <!--Popup de productos-->
@@ -165,7 +178,7 @@
               <li data-translate="product-of-the-month-health-benefits">🧡 Beneficios: Ayuda a la digestión, promueve la salud del
                 corazón y mejora el metabolismo.</li>
             </ul>
-            <button data-translate="product-of-the-month-cta" class="btn-te-mes">¡Compra Ahora!</button>
+            <a href="../catalogo/catalogo.html"><button data-translate="product-of-the-month-cta" class="btn-te-mes">¡Compra Ahora!</button></a>
           </div>
           <div class="te-mes-imagen">
             <img
@@ -299,6 +312,25 @@
         <button data-translate="subscribeButton" class="suscribirse"submit">Suscribirse</button>
       </form>
     </div>
+
+    <div id="popupLoginDiv" class="popup-login">
+      <button id="closeLoginPopup" class="close-popup">&times;</button>
+      <div class="contenedor-login">
+        <div class="caja-login">
+          <h2>Identificarse</h2>
+          <p>¿Ya tiene una cuenta? Inicie sesión para continuar.</p>
+          <form id="formularioLogin">
+            <label for="email">Dirección de correo electrónico</label>
+            <input type="email" id="email" name="email" required />
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required />
+            <button type="submit">Identificarse</button>
+            <a href="#" class="forgot-password">¿Ha olvidado su contraseña?</a>
+          </form>
+        </div>
+      </div>
+    </div>
+
   </main>
   <footer>
     <div class="footer-container">
@@ -334,6 +366,7 @@
           <h4 data-translate="enlaces">Enlaces Útiles</h4>
           <p>
             <a href="index.html" data-translate="inicio">Inicio</a>
+            <a href="../catalogo/catalogo.html" data-translate="catalogo-nav"></a>
             <a href="nosotros.html" data-translate="nosotros">Nosotros</a>
             <a href="contacto.html" data-translate="contacto">Contacto</a>
             <a href="carrito.html" data-translate="carrito">Carrito</a>
@@ -359,6 +392,7 @@
     <script src="fechayhora.js"></script>
     <script src="carrusel.js"></script>
     <script src="pop-up-newsletter.js"></script>
+    <script src="popUpLogin.js"></script>
     <script src="idiomas_inicio.js"></script>
   </body>
 </html>
