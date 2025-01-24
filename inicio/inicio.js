@@ -12,9 +12,10 @@ function mostrarProductos(datos, lista) {
   datos.forEach(producto => {
     const item = document.createElement('li');
     item.innerHTML = `
-      <img src="../${producto.img}" alt="${producto.nombre}" width="250" height="265" class="imagenCatalogo">
-      <p class="tituloProductoCatalogo">${producto.nombre}</p>
-      <p>${producto.precio}€ <br> <button class="botonCarrito" onclick = "anadirCompra(${producto.id})"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
+      <img src="../${producto.img}" alt="${producto.nombre}" width="205" height="212" class="imagenCatalogo">
+      <p class="tituloProducto">${producto.nombre}</p>
+      <p>${producto.precio}€ <br>
+      <button class="botonCarrito" onclick = "anadirCompra(${producto.id})"><i>Comprar </i><i class="fa-solid fa-cart-shopping"></i></button></p>
 
       `;
 
@@ -34,7 +35,7 @@ async function cargarDatos() {
     const respuesta = await fetch('productos2.json');
     productos = await respuesta.json();
 
-    const div = document.getElementById('catalogoProductos');
+    const div = document.getElementById('catalogoProductosMini');
     div.innerHTML = ''; // Limpiar contenedor
 
     const lista = document.createElement('ul');
@@ -65,7 +66,7 @@ async function cargarDatos() {
     });
 
     // Botón para borrar filtros
-    const borrarFiltrosBtn = document.getElementById('borrarFiltros');
+    const borrarFiltrosBtn = document.getElementById('borrarFiltrosMini');
     borrarFiltrosBtn.addEventListener('click', () => {
       // Restablecer checkboxes
       document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
@@ -77,7 +78,7 @@ async function cargarDatos() {
 
   } catch (error) {
     console.error('Error al cargar los datos:', error);
-    document.getElementById('catalogoProductos').textContent = 'Error al cargar los datos.';
+    document.getElementById('catalogoProductosMini').textContent = 'Error al cargar los datos.';
   }
 }
 
