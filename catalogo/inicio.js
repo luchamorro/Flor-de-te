@@ -311,10 +311,10 @@ function botonMas(id){
  carritoIcon.setAttribute('data-content', listaCompra.length);
 
  //Cambiar el numero del monto
- let monto = document.getElementById(`monto${producto.id}`)
- let aumento = listaCompra.length;
+ let monto = document.getElementById(`monto${producto.id}`);
+ let aumento = listaCompra.filter(item => item.id === producto.id).length;
  monto.innerText = 'x' + aumento;
- console.log(listaCompra);
+ console.log(monto.innerText);
 };
 
 //
@@ -331,9 +331,8 @@ function botonMenos(id){
 
  //Cambiar el numero del monto
  let monto = document.getElementById(`monto${producto.id}`)
- let aumento = listaCompra.length;
+ let aumento = listaCompra.filter(item => item.id === producto.id).length;
  monto.innerText = 'x' + aumento;
- console.log(listaCompra);
 };
 
 
