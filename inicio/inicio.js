@@ -14,7 +14,7 @@ function mostrarProductos(datos, lista) {
     item.innerHTML = `
       <img src="../${producto.img}" alt="${producto.nombre}" width="205" height="212" class="imagenCatalogo">
       <p class="tituloProducto">${producto.nombre}</p>
-      <p>${producto.precio}€ <button class="botonCarrito" onclick = "anadirCompra(${producto.id})"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
+      <p>${producto.precio}€ <button class="botonCarrito" onclick="anadirCompra(${producto.id})"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
     `;
 
     // Añadir eventos a la imagen y título
@@ -30,7 +30,7 @@ function mostrarProductos(datos, lista) {
 // Función principal para cargar los datos del archivo JSON
 async function cargarDatos() {
   try {
-    const respuesta = await fetch('productos.json');
+    const respuesta = await fetch('productos2.json');
     productos = await respuesta.json();
 
     const div = document.getElementById('catalogoProductos');
@@ -86,16 +86,28 @@ function mostrarProducto(id) {
 
   if (producto) {
     document.getElementById("paginaProducto").innerHTML = `
-      <div class="productoTexto">
-        <p class="tituloProductoGrande" id="tituloProductoGrande">
-          <button id="verPaginaProducto" class = "verPaginaProducto">${producto.nombre}</button>
-        </p>
-        <p class="descripcionProducto">${producto.descripcion}</p>
-        <p>${producto.precio}€ <button onclick="anadirCompra(${producto.id})"><i>Comprar</i></button></p>
-      </div>
-      <div class="divImagenProducto">
-        <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">
-      </div>
+                <div class="divImagenProducto">
+          <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">
+        </div>
+        <div class="productoTexto">
+          <p class="tituloProductoGrande" id="tituloProductoGrande">
+            <button id="verPaginaProducto" class = "verPaginaProducto">${producto.nombre}</button>
+          </p>
+          <p class="precioDisplay">${producto.precio}€</p> 
+          <p>100 gramos</p>
+          <div class="contador">
+            <button onclick="botonMenos(${producto.id})">-</button>
+            <p class="num" id="contador"></p>
+            <button onclick="botonMas(${producto.id})">+</button>
+            <br>
+        </div>
+        <br>
+          <button onclick="anadirCompra(${producto.id})" id="botonCarrito"><i>Comprar</i></button>
+          <p class="descripcionProducto">${producto.descripcion}</p>
+          <ul class="listaPropiedades">
+          <li>${producto.filtros}</li>
+          </ul>
+        </div>
     `;
     document.getElementById("ventanaSuperpuesta").style.display = "flex"; // Mostrar ventana
     currentId = id; // Actualizar ID actual

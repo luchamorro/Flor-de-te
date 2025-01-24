@@ -105,6 +105,11 @@ button:hover {
     cursor: pointer;
 }
 
+.borrar{
+  cursor: pointer;
+}
+
+
 
 @media (max-width: 768px) {
    main {

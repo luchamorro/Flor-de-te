@@ -1,175 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-      <title>Flor de Té</title>
-      <link rel="stylesheet" href="nosotros.css">
-      <link rel="stylesheet" href="../inicio/inicio.css">
-      <link rel="stylesheet" href="estilo_popup.css">
-  
-  </head>
-  
-  <body>
-    <nav class="menu">
-      <div class="left-section">
-      <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+  <title>Flor de Té</title>
+  <link rel="stylesheet" href="nosotros.css" />
+  <link rel="stylesheet" href="../inicio/inicio.css" />
+</head>
+
+<body>
+  <nav class="menu">
+    <div class="left-section">
+      <a href="../inicio/index.html">
+        <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo" />
+      </a>
       <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="../inicio/index.html" class="nav-inicio" data-translate="inicio">Inicio</a></li>
+        <li><a href="../catalogo/catalogo.html" class="nav-catalogo" data-translate="catalogo">Catálogo</a></li>
+        <li><a href="../nosotros/nosotros.html" class="nav-nosotros" data-translate="nosotros">Nosotros</a></li>
+        <li><a href="../contacto/contacto.html" class="nav-contacto" data-translate="contacto">Contacto</a></li>
       </ul>
+    </div>
+    <div class="right-section">
+      <input type="text" placeholder="Buscar..." />
+      <div class="user-area"><i class="fa-solid fa-user"></i></div>
+      <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+      <select id="language-select" title="idioma">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+      </select>
+    </div>
+  </nav>
+
+  <div class="titulo">
+    <h3 class="titulo-texto" data-translate="titulo">Sobre Nosotros</h3>
+  </div>
+
+  <div class="te-mes-container">
+    <div class="te-mes-texto">
+      <h4 class="te-mes-titulo" data-translate="cuidarte_titulo">Cuidarte, lo más importante</h4>
+      <p class="te-mes-descripcion" data-translate="cuidarte_descripcion">
+        Nuestra misión es simple: proporcionar una experiencia incomparable en cada taza. En FLOR DE TÉ, creemos que el té y el café son mucho más que bebidas; son momentos de conexión, inspiración y calma.
+      </p>
+    </div>
+    <div class="te-mes-imagen">
+      <img src="../img/inicio/sobre-nosotros-2.jpeg" alt="te con especias" class="imagen-te" />
+    </div>
+  </div>
+
+  <!--valores section-->
+  <div class="valores-section">
+    <div class="text-content">
+      <h4 class="valores-titulo" data-translate="valores_titulo">Té para estar juntos</h4>
+      <p class="valores-descripcion" data-translate="valores_descripcion">
+        En Flor De Té, creemos que el té y el café son mucho más que bebidas: son experiencias que conectan, inspiran y elevan los momentos cotidianos.
+      </p>
+    </div>
+  </div>
+
+  <div class="imagen-valores">
+    <img src="../img/inicio/woman-pours-tea-into-cup-late-night.jpg" alt="mujer sirviendo te" />
+  </div>
+
+  <!--Valores Section-->
+  <section class="valores">
+    <h3 class="valores-h3" data-translate="valores">Valores</h3>
+    <div class="valores-container">
+      <div class="valores-div">
+        <h4 class="valor-titulo" data-translate="compromiso_titulo">Compromiso</h4>
+        <p class="valor-descripcion" data-translate="compromiso_descripcion">
+          Nos dedicamos a ofrecer lo mejor en cada aspecto de nuestra tienda, desde la selección de productos hasta el servicio al cliente.
+        </p>
       </div>
-      <div class="right-section"> 
-          <input type="text" placeholder="Buscar..."> 
-          <div class="user-area"><i class="fa-solid fa-user"></i></div> 
-          <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div> 
-          <select title="idioma"> 
-            <option value="es">ES</option> 
-            <option value="en">EN</option> 
-          </select> 
-        </div>
-    </nav>
-
-    <div class="titulo">
-      <h3> Quienes Somos</h3>
+      <div class="valores-div">
+        <h4 class="valor-titulo" data-translate="innovacion_titulo">Innovación</h4>
+        <p class="valor-descripcion" data-translate="innovacion_descripcion">
+          Buscamos constantemente nuevas formas de sorprender a nuestros clientes, combinando tradición con creatividad.
+        </p>
+      </div>
+      <div class="valores-div">
+        <h4 class="valor-titulo" data-translate="cuidado_titulo">Cuidado al cliente</h4>
+        <p class="valor-descripcion" data-translate="cuidado_descripcion">
+          El cliente es el centro de todo lo que hacemos. Ofrecemos una atención cálida y personalizada, asegurándonos de que cada visita a nuestra tienda sea especial y satisfactoria.
+        </p>
+      </div>
+      <div class="valores-div">
+        <h4 class="valor-titulo" data-translate="calidad_titulo">Calidad</h4>
+        <p class="valor-descripcion" data-translate="calidad_descripcion">
+          Cada producto que ofrecemos está cuidadosamente seleccionado para garantizar frescura, sabor y excelencia.
+        </p>
+      </div>
     </div>
+  </section>
 
-<!--Mission section-->
-<div class="mission-section">
-  <div class="text-content1">
-      <h4>Nuestra Misión</h4>
-      <p>Nuestra misión es simple: proporcionar una experiencia incomparable en cada taza. En FLOR DE TÉ, creemos que el té y el café son mucho más que bebidas; son momentos de conexión, inspiración y calma. Nos esforzamos por enriquecer tus rituales diarios con productos auténticos, sabrosos y elaborados con dedicación. Al priorizar la calidad, la sostenibilidad y la satisfacción de nuestros clientes, aspiramos a convertirnos en tu aliado de confianza en la exploración del maravilloso mundo del té y el café.</p>
-  </div>
-  <div class="image-content">
-      <img src="mission.webp" alt="misión">
-  </div>
-  </div>
-</div>
-
-<!--valores section-->
-<div class="valores-section">
-  <div class="text-content">
-    <h3>Valores</h3>
-     <p>En Flor De Te, creemos que el té y el café son mucho más que bebidas: son experiencias que conectan, inspiran y elevan los momentos cotidianos. Cada grano y hoja que ofrecemos refleja nuestra dedicación a la excelencia, la innovación, la sostenibilidad, el cuidado al cliente y la calidad. Estos valores guían todo lo que hacemos, asegurando que cada taza sea un testimonio de nuestra pasión por la perfección.</p>
-  </div>
-</div>
-
-<!--Compromiso section-->
-
-
-<section class="valores">
-  <div class="valores-container">
-    <div class="valores-div">
-      <h4>Compromiso:</h4>
-      <p class="texto-valores">
-        Nos dedicamos a ofrecer lo mejor en cada aspecto de nuestra tienda, desde la selección de productos hasta el servicio al cliente.
-        Nuestro compromiso se extiende a las comunidades productoras, asegurando prácticas justas y responsables.
-      </p>
+  <!--Visión Section-->
+  <section class="oferta-especial">
+    <div class="oferta-contenedor">
+      <div class="oferta-imagen">
+        <img src="../img/inicio/pexels-photo-8329272.webp" alt="Oferta Especial" class="imagen-oferta" />
+      </div>
+      <div class="oferta-detalle">
+        <h4 class="oferta-titulo" data-translate="vision_titulo">Nuestra Visión</h4>
+        <p class="oferta-descripcion" data-translate="vision_descripcion">
+          En Flor De Té, aspiramos a ser un referente en la creación de experiencias únicas alrededor del té y el café, ofreciendo productos de la más alta calidad que conecten a las personas con los sabores auténticos de todo el mundo.
+        </p>
+      </div>
     </div>
-    <div class="valores-div">
-      <h4>Innovación</h4>
-      <p class="texto-valores">
-        Buscamos constantemente nuevas formas de sorprender a nuestros clientes, combinando tradición con creatividad. 
-        Experimentamos con sabores, técnicas y presentaciones para crear experiencias únicas y memorables.
-      </p>
-    </div>
-    <div class="valores-div">
-<h4>Cuidado al cliente</h4>
-      <p class="texto-valores">
-        El cliente es el centro de todo lo que hacemos. 
-        Ofrecemos una atención cálida y personalizada, asegurándonos de que cada visita a nuestra tienda sea especial y satisfactoria.
-      </p>
-    </div>
-    <div class="valores-div">
-<h4>Calidad</h4>
-      <p class="texto-valores">
-        Cada producto que ofrecemos está cuidadosamente seleccionado para garantizar frescura, sabor y excelencia. 
-        Nos comprometemos a mantener los más altos estándares en cada taza de té o café que llega a nuestros clientes.
-      </p>
-    </div>
-  </div>
-</section>
+  </section>
 
-
-   <!--vission section-->
-      <div class="vission-section">
-        <div class="image-content">
-          <img src="vission.webp" alt="Vision Image" />
-        </div>
-        <div class="text-content2">
-          <h>Nuestra Visión</h>
-          <p3> En Flor De Te, aspiramos a ser un referente en la creación de experiencias únicas alrededor del té y el café, ofreciendo productos de la más alta calidad que conecten a las personas con los sabores auténticos de todo el mundo. Nuestra visión es construir una comunidad apasionada por el té y el café, donde la tradición y la innovación se encuentren para inspirar momentos inolvidables. Nos comprometemos a liderar con sostenibilidad, respeto por el medio ambiente y apoyo a los pequeños productores, elevando cada taza a una expresión de arte y dedicación.</p3>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="comercio-justo">
+        <p data-translate="comercio_justo"><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
+        <p data-translate="sin_crueldad"><i class="fa-solid fa-seedling"></i> Sin crueldad animal</p>
+        <p data-translate="organico"><i class="fa-solid fa-leaf"></i> 100% Orgánico</p>
+        <p data-translate="sin_microplasticos"><i class="fa-solid fa-trash"></i> Sin microplásticos</p>
+      </div>
+      <hr class="linea-fina" />
+      <div class="newsletter">
+        <img
+          src="../img/logos/logo_horizontal.svg"
+          alt="logo Flor de Té"
+          class="logo-footer"
+        />
+        <h3 data-translate="suscribete">Suscríbete a nuestra newsletter</h3>
+        <p data-translate="ofertas">
+          Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?
+        </p>
+        <form>
+          <input data-translate="input_placeholder" type="email" placeholder="Introduce tu email" />
+          <button type="submit">Suscribirse</button>
+        </form>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
         </div>
       </div>
-      
-
-
-    <!-- Footer -->
-
-    <footer>
-      <div class="footer-container">
-        <div class="comercio-justo">
-          <p><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
-          <p><i class="fa-solid fa-seedling"></i> Sin crueldad animal</p>
-          <p><i class="fa-solid fa-leaf"></i> 100% Orgánico</p>
-          <p><i class="fa-solid fa-trash"></i> Sin microplasticos</p>
-        </div>
-        <hr class="linea-fina" />
-        <div class="newsletter">
-          <img
-            src="../img/logos/logo_horizontal.svg"
-            alt="logo Flor de Té"
-            class="logo-footer"
-          />
-          <h3>Suscríbete a nuestra newsletter</h3>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4 data-translate="enlaces">Enlaces Útiles</h4>
           <p>
-            Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?
+            <a href="index.html" data-translate="inicio">Inicio</a>
+            <a href="nosotros.html" data-translate="nosotros">Nosotros</a>
+            <a href="contacto.html" data-translate="contacto">Contacto</a>
+            <a href="carrito.html" data-translate="carrito">Carrito</a>
           </p>
-          <form>
-            <input type="email" placeholder="Introduce tu email" />
-            <button type="submit">Suscribirse</button>
-          </form>
-          <div class="social-media">
-            <a href="#"><i class="fab fa-tiktok"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-          </div>
         </div>
-        <div class="footer-columns">
-          <div class="footer-column">
-            <h4>Enlaces Útiles</h4>
-            <p>
-              <a href="index.html">Inicio</a>
-              <a href="nosotros.html">Nosotros</a>
-              <a href="contacto.html">Contacto</a>
-              <a href="carrito.html">Carrito</a>
-            </p>
-          </div>
-          <div class="footer-column">
-            <h4>Políticas</h4>
-            <p>
-              <a href="#">Políticas</a>
-              <a href="#">Aviso Legal</a>
-              <a href="#">Política de Cookies</a>
-              <a href="#">Políticas de Privacidad</a>
-            </p>
-          </div>
+        <div class="footer-column">
+          <h4 data-translate="politicas">Políticas</h4>
+          <p>
+            <a href="#" data-translate="politicas">Políticas</a>
+            <a href="#" data-translate="aviso">Aviso Legal</a>
+            <a href="#" data-translate="cookies">Política de Cookies</a>
+            <a href="#" data-translate="privacidad">Políticas de Privacidad</a>
+          </p>
         </div>
       </div>
-      <div class="subfooter">
-        <p>© 2024 Flor de Té</p>
-      </div>
-    </footer>
+    </div>
+    <div class="subfooter">
+      <p>© 2024 Flor de Té</p>
+    </div>
+  </footer>
 
-<script src="nosotros.js"></script>
-<script src="../inicio/carrusel.js"></script>
+  <script src="idiomas_nosotros.js"></script>
 </body>
 </html>

@@ -58,9 +58,9 @@
 <!-- Precios -->
  <section> 
 <div id="cart-summary">
-  <p class="precioTotal"><b>Total: $<span id="total"></span></b></p>
-  <p>Subtotal: $<span id="subtotal">0.00</span></p>
-  <p>IVA: $<span id="iva"></span></p>
+  <p class="precioTotal"><b>Total: <span id="total"></span>€</b></p>
+  <p>Subtotal: <span id="subtotal"></span>€</p>
+  <p>IVA: <span id="iva"></span>€</p>
   <button id="finalizarCompra">Confirmar compra</button>
   
 </div>
@@ -134,44 +134,49 @@ document.addEventListener('DOMContentLoaded', () => {
 setTimeout(obtenerPrecio, 100);
 setTimeout(borrarProducto, 100);
 
-function obtenerPrecio(){ 
-  let sumaTotal = 0;
-  let subTotal = 0;
-  let ivaTotal = 0;
+function obtenerPrecio() { 
+    let sumaTotal = 0;
+    let subTotal = 0;
+    let ivaTotal = 0;
 
-  const precios = document.querySelectorAll(".precio");
+    const precios = document.querySelectorAll(".precio");
+    const montos = document.querySelectorAll(".monto");
 
-    precios.forEach(elemento =>{
-    const precio = parseFloat (elemento.innerText); 
-      if (!isNaN(precio)) { 
-      sumaTotal += precio;
-   
-    } 
+    // Extraer los valores numéricos de montos
+    const numeros = Array.from(montos).map(monto => {
+        const match = monto.innerText.match(/\d+/); // Busca un número en el texto
+        return match ? parseInt(match[0], 10) : 1; // Si no encuentra un número, usa 1 como valor predeterminado
     });
-    
+
+    // Iterar sobre los precios y multiplicar por los montos correspondientes
+    precios.forEach((elemento, index) => {
+        const precio = parseFloat(elemento.innerText); 
+        const monto = numeros[index] || 1; // Si no hay un monto, asumir 1 como predeterminado
+
+        if (!isNaN(precio)) { 
+            sumaTotal += precio * monto; // Multiplicar precio por monto
+        } 
+    });
+
+    // Calcular IVA y subtotal
     ivaTotal = sumaTotal * 0.21;
     subTotal = sumaTotal - ivaTotal;
 
+    // Actualizar los valores en el DOM
+    const total = document.getElementById("total");
+    total.innerText = sumaTotal.toFixed(2); // Con 2 decimales
 
-        const total = document.getElementById("total");
-        total.innerText = sumaTotal.toFixed(2); //con 2 decimales
+    const total2 = document.getElementById("iva");
+    total2.innerText = ivaTotal.toFixed(2);
 
-        const total2 = document.getElementById("iva");
-        total2.innerText = ivaTotal.toFixed(2);
-
-        const total3 = document.getElementById("subtotal");
-        total3.innerText = subTotal.toFixed(2);
-
-
+    const total3 = document.getElementById("subtotal");
+    total3.innerText = subTotal.toFixed(2);
 }
 
- 
 function borrarProducto(){
 
   const papelera = document.querySelectorAll(".carrito_container li span");
   
-
-
   papelera.forEach(item => {
     item.addEventListener('click', function() {
       
@@ -181,25 +186,15 @@ function borrarProducto(){
       item.parentNode.remove();
       obtenerPrecio()
 
-
-
-
-
     });
   });
 
 
 }
-
-
-
-
-
-
   </script>
 
-<script src="../inicio/inicio.js"></script>
 <script src="../inicio/fechayhora.js"></script>
+<script> scr="../catalogo/inicio.js"</script>
 
 </body>
 </html>

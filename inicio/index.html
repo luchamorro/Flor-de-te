@@ -27,7 +27,7 @@
         </ul>
       </div>
       <div class="right-section">
-        <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." />
+        <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." id="buscador" />
         <div class="user-area"><i class="fa-solid fa-user"></i></div>
         <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
         <select id="language-select" title="idioma">
@@ -83,49 +83,64 @@
           </div>
         </div>
       </section>
+
+      <section class="intro">
+        <h3>Placeres Orgánicos, Té e Infusiones a Granel</h3>
+        <div class="intro-container">
+          <p class="intro-texto">
+            En Flor de Té, nuestra pasión por el bienestar y el sabor auténtico
+            se refleja en cada hoja y mezcla que seleccionamos. Ofrecemos una
+            cuidada variedad de tés e infusiones a granel, 100% orgánicos, que
+            están pensados para deleitar tus sentidos y enriquecer tus momentos
+            cotidianos. Desde aromas reconfortantes hasta sabores
+            revitalizantes, nuestras mezclas son el equilibrio perfecto entre
+            tradición y modernidad. Además, contamos con accesorios y
+            complementos especialmente diseñados para que disfrutes cada taza
+            como una experiencia única. En Flor de Té, cada sorbo te invita a un
+            mundo de calma, sabor y bienestar.
+          </p>
+        </div>
+      </section>
+      
 <!-- Catálogo -->
+
+<section class="bestsellers-section">
+  <div class="bestsellers-container">
+    <div class="bestsellers-texto">
+      <h4 data-translate="">
+        Tés e infusiones que todos quereis tener en casa
+      </h4>
+      <p data-translate="">
+        En Flor de Té, tus preferencias nos inspiran. Explora nuestra
+        selección de los tés más queridos por nuestra comunidad. Desde
+        mezclas revitalizantes hasta infusiones reconfortantes, aquí
+        encontrarás esos sabores que hacen de cada sorbo un momento
+        especial. 🌿✨
+      </p>
+      <button
+        data-translate="product-of-the-month-cta"
+        class="btn-te-mes"
+      >
+        ¡Compra Ahora!
+      </button>
+    </div>
+
+    <div class="bestsellers-productos">
+      <div class="div-catalogo" id="catalogoProductos"></div>
+    </div>
+  </div>
+</section>
+
+
 <h3 data-translate="catalog-title">Catálogo</h3>
 <section class="productos">
   <aside class="filtros">
-    <h4 data-translate="filters-title">Filtrar por:</h4>
     <form id="filtrosForm">
-      <!-- Categorías -->
-      <fieldset>
-        <legend data-translate="filter-category">Tipo de bebida</legend>
-        <label><input data-translate="infusion" type="checkbox" name="categoria" value="infusión"> Infusiones</label><br>
-        <label><input data-translate="tea" type="checkbox" name="categoria" value="té"> Té</label><br>
-      </fieldset>
-
-      <!-- Propiedades -->
-      <fieldset>
-        <legend data-translate="filter-properties">Propiedades</legend>
-        <label><input data-translate="antioxidants" type="checkbox" name="propiedades" value="antioxidantes"> Antioxidante </label><br>
-        <label><input data-translate="stimulant" type="checkbox" name="propiedades" value="estimulante"> Estimulante </label><br>
-        <label><input data-translate="relaxing" type="checkbox" name="propiedades" value="relajante"> Relajante </label><br>
-        <label><input data-translate="digestive" type="checkbox" name="propiedades" value="digestivo"> Digestivo </label><br>
-        <label><input data-translate="rest" type="checkbox" name="propiedades" value="descanso"> Descanso </label><br>
-        <label><input data-translate="anti-inflammatory" type="checkbox" name="propiedades" value="antiinflamatorio"> Antiinflamatorio </label><br>
-        <label><input data-translate="dental-health" type="checkbox" name="propiedades" value="salud dental"> Salud Dental </label><br>
-        <label><input data-translate="detox" type="checkbox" name="propiedades" value="detox"> Detox </label><br>
-        <label><input data-translate="refreshing" type="checkbox" name="propiedades" value="refrescante"> Refrescante </label><br>
-      </fieldset>
-            <button data-translate="apply-filters" type="submit">Aplicar Filtros</button>
           </form>
             <button data-translate="clear-filters" id="borrarFiltros">Borrar Filtros</button>
         </aside>
-
         <div class="div-catalogo" id="catalogoProductos"></div>
-        <!-- CARRITO-->
-        <article class="carritoSection">
-          <h4 data-translate="title-carrito">Carrito de compra</h4>
-          <div>
-            <ul id="carrito">
-            </ul>
-          </div>
-          <div>
-            <button type="button" onclick="checkOut()">Checkout</button>
-          </div>
-        </article>
+      
       </section>
 
      <!--Popup de productos-->
