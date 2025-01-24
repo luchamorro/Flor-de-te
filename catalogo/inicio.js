@@ -14,7 +14,7 @@ function mostrarProductos(datos, lista) {
     item.innerHTML = `
       <img src="../${producto.img}" alt="${producto.nombre}" width="205" height="212" class="imagenCatalogo">
       <p class="tituloProducto">${producto.nombre}</p>
-      <p>${producto.precio}€ <button class="botonCarrito" onclick="anadirCompra(${producto.id})"><i>Comprar --></i><i class="fa-solid fa-cart-shopping"></i></button></p>
+      <p>${producto.precio}€ <button class="botonCarrito" onclick="anadirCompra(${producto.id})"><i>Comprar </i><i class="fa-solid fa-cart-shopping"></i></button></p>
     `;
 
     // Añadir eventos a la imagen y título
@@ -131,7 +131,7 @@ function irPagina(id) {
 
   if (producto) {
     localStorage.setItem('productoSeleccionado', JSON.stringify(producto));
-    window.location.href = 'pagina_producto.html';
+    window.location.href = '../inicio/pagina_producto.html';
   }
 }
 
@@ -170,50 +170,6 @@ document.getElementById('cerrarBtn').addEventListener('click', cerrar);
 // Cargar los datos al cargar la página
 cargarDatos();
 
-function anadirCompra(id) {
-  const producto = productos.find(p => p.id == id);
-  // Comprueba si el producto está en el carrito
-  const carritoList = document.getElementById('carrito');
-  const comprobacion = carritoList.querySelectorAll('.tituloProducto');
-
-  for (let item of comprobacion) {
-    if (item.textContent === producto.nombre) {
-      return; // Termina si el producto existe
-    }
-  }
-
-  if (producto) {
-    let anadirProducto = document.createElement("li");
-    let nombre = document.createElement("p");
-    let pic = document.createElement('img');
-    let precio = document.createElement('p');
-    let borrar = document.createElement('span');
-
-    nombre.setAttribute('class', 'tituloProducto');
-    nombre.innerHTML = `${producto.nombre}`;
-
-    pic.setAttribute("src", `../${producto.img}`);
-    pic.setAttribute("alt", `${producto.nombre}`);
-    
-    precio.innerHTML = `${producto.precio}€`;
-
-    borrar.innerHTML = `&#128465;`
-
-    document.getElementById('carrito').appendChild(anadirProducto);
-    anadirProducto.appendChild(nombre);
-    anadirProducto.appendChild(pic);
-    anadirProducto.appendChild(precio);
-    anadirProducto.appendChild(borrar);
-
-    // borrar un producto de la cessta
-    borrar.addEventListener('click', function() {
-      anadirProducto.remove();
-    });
-
-    currentId = id; // Actualizar el ID actual
-  }
-}
-
  //Agregar el número de productos del carrito al icono del carrito
  let compra = document.querySelectorAll('#carrito li');
  let listaCompra = Array.from(compra);
@@ -248,8 +204,12 @@ function anadirCompra(id) {
    let resta = document.createElement('button');
    let monto = document.createElement('p');
 
-   monto.setAttribute('id', `monto${producto.id}` )
-   monto.innerText = 'x1'
+    precio.setAttribute('class', 'precio');
+   monto.setAttribute('id', `monto${producto.id}`);
+   monto.setAttribute('class', 'monto');
+   borrar.setAttribute('class', 'borrar');
+
+   monto.innerText = 'x1';
    divi.classList.add('masMenos');
 
    suma.innerText = '+';
@@ -312,6 +272,7 @@ function botonMas(id){
 
  //Cambiar el numero del monto
  let monto = document.getElementById(`monto${producto.id}`);
+ monto.setAttribute('class', 'monto');
  let aumento = listaCompra.filter(item => item.id === producto.id).length;
  monto.innerText = 'x' + aumento;
  console.log(monto.innerText);
@@ -332,6 +293,7 @@ function botonMenos(id){
  //Cambiar el numero del monto
  let monto = document.getElementById(`monto${producto.id}`)
  let aumento = listaCompra.filter(item => item.id === producto.id).length;
+ monto.setAttribute('class', 'monto');
  monto.innerText = 'x' + aumento;
 };
 
@@ -389,3 +351,13 @@ document.addEventListener('click', (e) => {
        menuBuscador.style.display = 'none';
    }
 });
+// Redirigir a la página del carrito
+function checkOut() {
+  const carritoList = document.getElementById('carrito');
+
+  if (carritoList) {
+    localStorage.setItem('carritoLleno', carritoList.innerHTML);
+    // Redirigir a otra página
+    window.location.href = '../carrito/carrito.html';
+  }
+}
