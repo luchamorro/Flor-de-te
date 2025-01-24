@@ -88,7 +88,6 @@ button:hover {
 .menu ul li a{
   color: var(--negro);
   text-decoration: none;
-  font-size: 1.2rem;
 }
 
 .menu ul li a:hover{
@@ -104,16 +103,13 @@ button:hover {
 .right-section {
   display: flex;
   align-items: center;
-  gap:1rem;
-  width: 30%;
 }
 
 .right-section input[type="search"] {
   padding: 8px;
   margin-right: 10px;
-  width: 50%;
   border: none;
-  border-radius: 1rem;
+  border-radius: 4px;
   background-color: rgb(255, 206, 173);
 }
 /*Menu desplegable del buscador*/
@@ -136,14 +132,11 @@ button:hover {
   }
 
 .right-section select {
-  padding: 0.8rem;
-  margin-left: 1rem;
+  padding: 8px;
+  margin-right: 10px;
   border: none;
-  border-radius: 1rem;
+  border-radius: 4px;
   background-color: #fff;
-}
-.user-area i, .cart i {
-  font-size: 1.3rem; /* Ajusta el tamaño según tus necesidades */
 }
 
 .right-section .user-area,
@@ -151,7 +144,6 @@ button:hover {
   color: var(--negro);
   margin-left: 10px;
   cursor: pointer;
-  
 }
 
 .right-section .cart {
@@ -162,8 +154,8 @@ button:hover {
 .right-section .cart::after {
   content: attr(data-content);
   position: absolute;
-  top: -3px;
-  right: -15px;
+  top: -5px;
+  right: -5px;
   background-color: var(--burdeos);
   color: #fff;
   border-radius: 50%;
@@ -196,7 +188,6 @@ button:hover {
   justify-content: center;
   align-items: center;
   z-index: 1;
-
 }
 
 .hero-slide.active {
@@ -206,23 +197,20 @@ button:hover {
 }
 
 .hero-text-1 {
-  max-width: 40rem;
   text-align: right;
-  margin: 5rem 0 0 65rem;
+  margin: 5rem 0 0 60rem;
 }
 .hero-carousel p{
   color: white;
 }
 
 .hero-text-2 {
-  max-width: 40rem;
-  margin: 5rem 60rem 0 0;
+  margin: 5rem 55rem 0 0;
   animation: none; /* Por defecto, sin animación */
 }
 
 .hero-text-3 {
-  max-width: 30rem;
-  margin: 5rem 72rem 0 0;
+  margin: 5rem 55rem 0 0;
   animation: none; /* Por defecto, sin animación */
 }
 
@@ -520,12 +508,10 @@ ul {
 
 .te-mes-imagen {
   max-width: 40%;
-  
 }
 
 .te-mes-imagen .imagen-te {
   width: 100%;
-  border-radius: 1rem;
 
 }
 /* Estilos para la Sección de Testimonios */
@@ -604,7 +590,7 @@ ul {
 }
 
 .oferta-detalle p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #333;
   margin-bottom: 0.5rem;
 }

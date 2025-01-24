@@ -16,7 +16,7 @@
 
 .cerrar{
 
-  width: 1.8rem;
+width: 1.8rem;
 align-self:last baseline;
 }
 
@@ -61,8 +61,8 @@ height: auto;
 }
 
 .productoTexto{
-  width: auto;
-  height: auto;
+width: auto;
+height: auto;
 }
 
 .descripcionProducto{
@@ -74,10 +74,10 @@ height: auto;
 }
 
 #paginaProductoAparte {
-  display: none; /* Oculto por defecto */
-  flex-direction: column; /* Asegúrate de usar flex si lo necesitas */
-  padding: 20px;
-  background-color: white;
+display: none; /* Oculto por defecto */
+flex-direction: column; /* Asegúrate de usar flex si lo necesitas */
+padding: 20px;
+background-color: white;
 }
 
 .contador{
