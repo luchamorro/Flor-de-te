@@ -1,10 +1,3 @@
-:root {
-  --negro: black;
-  --burdeos: #cd0038;
-  --morado: #6f005e;
-  --naranja: #ff6600;
-  --blanco: white;
-}
 .cuerpo-panelAdministracion {
   margin: 5rem auto;
   padding: 100px;

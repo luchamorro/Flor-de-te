@@ -1,0 +1,60 @@
+{
+    "en": {
+        "inicio": "Home",
+        "catalogo-nav": "Catalog",
+        "nosotros": "About Us",
+        "contacto": "Contact",
+        "placeholder-nav":"Looking for...",
+
+        "contacto_title": "CONTACT US",
+        "siempre_clientes": "Always by our Clients' Side",
+        
+        "direccion": "Address",
+        "direccion_detalle": "Avda. de Ercilla, 48901 Bilbao, Vizcaya",
+        "telefono": "Phone",
+        "correo_electronico": "Email",
+        "correo_email": "flor-de-té@hotmail.com",
+    
+        "ayuda_title": "Can we help you?",
+        "asunto": "Subject",
+        "asunto_opciones": {
+          "atencion-cliente": "Customer Service",
+          "sugerencias": "Suggestions"
+        },
+        "nombre": "First Name",
+        "apellido": "Last Name",
+        "telefono_form": "Phone",
+        "telefono_placeholder": "999-999-999",
+        "email_form": "Email Address",
+        "email_placeholder": "your@email.com",
+        "mensaje": "Message",
+        "mensaje_placeholder": "How can we help you?",
+        "privacidad_form": "I have read and accept the privacy policy",
+        "enviar": "Send",
+        "politica_privacidad_texto": "We inform you that the personal data provided through this form will be processed by CAFÉS SALZILLO as the entity responsible for this website. The purpose of collecting and processing the personal data we request is to provide the service you request herein and, where applicable, to send commercial communications that may be of interest to you. Authorization is granted through the consent of the individual concerned. We inform you that the provided data will be stored on servers with security measures in compliance with GDPR and Law 3/2018. You may exercise your rights to access, rectify, delete, and object, as well as to data portability, restriction, and withdrawal, using the forms we provide or by sending an email to salzillo@cafes-salzillo.es. You also have the right to file a complaint with a supervisory authority. You can consult additional and detailed information about Data Protection in our Privacy Policy. Please check the box if you wish to receive information about our products and/or services.",
+    
+        "tiendas_title": "Visit Our Stores",
+
+          "direccion3": "Max Center Shopping Center",
+    
+
+        "comercio_justo": "Fair Trade",
+        "sin_crueldad": "Cruelty-Free",
+        "organico": "100% Organic",
+        "sin_microplasticos": "No Microplastics",
+        
+        "suscribete": "Subscribe to our newsletter",
+        "ofertas": "Offers, news, and exclusive discounts. Don't miss it!",
+        "input_placeholder": "Enter your email",
+        
+        "enlaces": "Useful Links",
+        "politicas": "Policies",
+        "aviso": "Legal Notice",
+        "cookies": "Cookie Policy",
+        "privacidad": "Privacy Policy",
+        
+        "social_tiktok": "TikTok",
+        "social_instagram": "Instagram",
+        "social_facebook": "Facebook"
+    }
+}

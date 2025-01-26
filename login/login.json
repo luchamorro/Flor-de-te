@@ -1,0 +1,41 @@
+{
+    "en": {
+        "inicio": "Home",
+        "catalogo-nav": "Catalog",
+        "nosotros": "About Us",
+        "contacto": "Contact",
+        "placeholder-nav":"Looking for...",
+
+        "login_title": "Log In",
+        "login_subtitle": "Already have an account? Log in to continue.",
+        "email_label": "Email Address",
+        "password_label": "Password",
+        "login_button": "Log In",
+        "forgot_password": "Forgot your password?",
+    
+        "register_title": "New Here? DISCOVER THE BEST SPECIALTY TEA",
+        "register_features1": "View orders and manage account information",
+        "register_features2":  "Add products to the wishlist",
+        "register_features3":  "Create your free account in just a few steps",
+        "register_button": "Create an Account",
+
+        "comercio_justo": "Fair Trade",
+        "sin_crueldad": "Cruelty-Free",
+        "organico": "100% Organic",
+        "sin_microplasticos": "No Microplastics",
+        
+        "suscribete": "Subscribe to our newsletter",
+        "ofertas": "Offers, news, and exclusive discounts. Don't miss it!",
+        "input_placeholder": "Enter your email",
+        
+        "enlaces": "Useful Links",
+        "politicas": "Policies",
+        "aviso": "Legal Notice",
+        "cookies": "Cookie Policy",
+        "privacidad": "Privacy Policy",
+        
+        "social_tiktok": "TikTok",
+        "social_instagram": "Instagram",
+        "social_facebook": "Facebook"
+    }
+}

@@ -1,67 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-  <title>Perfil de usuario</title>
-    <link rel="stylesheet" href="estilo_popup.css">
-    <link rel="stylesheet" href="popUpLogin.css">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="../inicio/inicio.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b58110c1d4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Perfil de usuario</title>
+    <link rel="stylesheet" href="estilo_popup.css" />
+    <link rel="stylesheet" href="popUpLogin.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="../inicio/inicio.css" />
+  </head>
 
-<body>
-  <nav class="menu">
-    <div class="left-section">
-      <a href="../inicio/index.html">
-        <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo" />
-      </a>
-      <ul>
-        <li><a href="../inicio/index.html" data-translate="inicio">Inicio</a></li>
-        <li><a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a></li>
-        <li><a href="../nosotros/nosotros.html" data-translate="nosotros">Nosotros</a></li>
-        <li><a href="../contacto/contacto.html" data-translate="contacto">Contacto</a></li>
-      </ul>
-    </div>
-    <div class="right-section">
-      <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." />
-      <div class="user-area"><i class="fa-solid fa-user"></i></div>
-      <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
-      <select id="language-select" title="idioma">
-        <option value="es">ES</option>
-        <option value="en">EN</option>
-      </select>
-    </div>
-    <div id="fechayhora"></div> <!--reubicar este div-->
-  </nav>
+  <body>
+    <nav class="menu">
+      <div class="left-section">
+        <a href="../inicio/index.html">
+          <img
+            src="../img/logos/logo_horizontal.svg"
+            alt="logo Flor de Té"
+            class="logo"
+          />
+        </a>
+        <ul>
+          <li>
+            <a href="../inicio/index.html" data-translate="inicio">Inicio</a>
+          </li>
+          <li>
+            <a href="../catalogo/catalogo.html" data-translate="catalogo-nav"
+              >Catálogo</a
+            >
+          </li>
+          <li>
+            <a href="../nosotros/nosotros.html" data-translate="nosotros"
+              >Nosotros</a
+            >
+          </li>
+          <li>
+            <a href="../contacto/contacto.html" data-translate="contacto"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="right-section">
+        <input
+          data-translate="placeholder-nav"
+          type="search"
+          placeholder="Buscar..."
+        />
+        <div class="user-area" id="iconoUsuarioLogin">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+        <select id="language-select" title="idioma">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+      <div id="fechayhora"></div>
+      <!--reubicar este div-->
+    </nav>
 
     <main class="perfil-contenedor">
-    <div class="perfil-header">
-      <div class="foto-contenedor">
-        <!-- Imagen vacía con borde -->
-        <img id="profilePicture" alt="Foto de Perfil">
-        <input type="file" id="uploadPhoto" accept="image/*">
+      <div class="perfil-header">
+        <div class="foto-contenedor">
+          <!-- Imagen vacía con borde -->
+          <img id="profilePicture" alt="Foto de Perfil" />
+          <label for="uploadPhoto">Subir foto de perfil</label>
+          <input
+            type="file"
+            id="uploadPhoto"
+            accept="image/*"
+            title="Subir foto de perfil"
+          />
+        </div>
+        <h1>Bienvenido, <span id="userName">Andrés</span></h1>
       </div>
-      <h1>Bienvenido, <span id="userName">Andrés</span></h1>
-    </div>
-    
-    <div class="perfil-opciones">
-      <button>Mis Pedidos</button>
-      <button>Configuración</button>
-      <button>Favoritos</button>
-      <button>Soporte</button>
-    </div>
-    <div class="cerrar-sesion">
-      <button id="logoutBtn">Cerrar Sesión</button>
-    </div>
-  </main>
 
-<script src="login.js"></script>
- 
-</body>
+      <div class="perfil-opciones">
+        <button>Mis Pedidos</button>
+        <button>Configuración</button>
+        <button>Favoritos</button>
+        <button>Soporte</button>
+      </div>
+      <div class="cerrar-sesion">
+        <button id="logoutBtn">Cerrar Sesión</button>
+      </div>
+    </main>
+
+    <script src="login.js"></script>
+  </body>
 </html>

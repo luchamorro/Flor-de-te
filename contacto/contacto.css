@@ -1,9 +1,8 @@
-
 :root {
   --negro: black;
-  --burdeos: #CD0038;
-  --morado: #6F005E;
-  --naranja: #FF6600;
+  --burdeos: #cd0038;
+  --morado: #6f005e;
+  --naranja: #ff6600;
   --blanco: white;
 }
 
@@ -14,11 +13,11 @@
   width: 100%;
   height: 30rem;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   text-align: center;
-  transition: transform 0.3s ease-in-out; 
+  transition: transform 0.3s ease-in-out;
 }
-.contacto-texto:hover{
+.contacto-texto:hover {
   transform: scale(1.05);
 }
 /* Estilos generales */
@@ -31,7 +30,7 @@ html {
   font-family: "Space Grotesk", serif;
 }
 
-h1{
+h1 {
   color: var(--blanco);
   font-size: 5rem;
   margin-bottom: 1rem;
@@ -44,19 +43,19 @@ h3 {
   text-align: center;
 }
 
-h4{
+h4 {
   color: var(--burdeos);
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-p{
+p {
   font-size: 1rem;
   color: #333;
   margin-bottom: 0.5rem;
 }
 
-button{
+button {
   padding: 0.5rem 1rem; /* Relleno del botón */
   background-color: var(--naranja); /* Color de fondo */
   color: white; /* Color del texto */
@@ -70,13 +69,12 @@ button:hover {
   background-color: var(--burdeos); /* Cambio de color al pasar el ratón */
 }
 
-.cuerpo-contacto{
+.cuerpo-contacto {
   margin: 5rem auto;
   padding: 100px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
 }
 
 /* Estilos del menú */
@@ -99,7 +97,6 @@ button:hover {
 .menu img {
   height: 65px;
   margin-left: 2rem;
-  ;
 }
 
 .menu ul {
@@ -107,7 +104,6 @@ button:hover {
   list-style: none;
   width: 20%;
   justify-content: space-evenly;
-
 }
 
 .menu ul li a {
@@ -161,7 +157,7 @@ button:hover {
 }
 
 .right-section .cart::after {
-  content: '4';
+  content: "4";
   /* Example for cart item count */
   position: absolute;
   top: -5px;
@@ -175,12 +171,12 @@ button:hover {
 
 /*estilos iconos*/
 .contactanos {
-display: flex;
-flex-direction: column;
-gap: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 
-.contactanos h2{
+.contactanos h2 {
   text-align: center;
   color: var(--morado);
   font-weight: bold;
@@ -194,7 +190,7 @@ gap: 5rem;
   gap: 2rem;
 }
 
-.icono-lugar{
+.icono-lugar {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -204,7 +200,7 @@ gap: 5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.icono-tel{
+.icono-tel {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -213,7 +209,7 @@ gap: 5rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.icono-email{
+.icono-email {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -229,7 +225,7 @@ gap: 5rem;
 
 .iconos-contacto i {
   font-size: 40px; /* Tamaño del ícono */
-  color: var(--morado); 
+  color: var(--morado);
   margin-bottom: 10px; /* Espacio debajo del ícono */
 }
 
@@ -241,27 +237,24 @@ gap: 5rem;
 
 .iconos-contacto p {
   font-size: 16px;
-  color: #333 /* Texto verde oscuro */
+  color: #333; /* Texto verde oscuro */
 }
-
 
 /* Formulario */
 
-.contenedor1{
+.contenedor1 {
   display: flex;
   align-items: center;
-  justify-content:center;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 90%;           /* Ajusta el ancho máximo */
-  gap: 2rem;                /* Añade separación entre los contenedores */
+  justify-content: center;
+  max-width: 100%; /* Ajusta el ancho máximo */
+  gap: 2rem; /* Añade separación entre los contenedores */
 }
-.contenedor-logo{
+.contenedor-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;/* Hace que el contenedor del logo ocupe un espacio flexible */
-  max-width: 45%; 
+  flex: 1; /* Hace que el contenedor del logo ocupe un espacio flexible */
+  max-width: 45%;
 }
 
 .contenedor-formulario {
@@ -270,17 +263,13 @@ gap: 5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px auto;
   padding: 50px;
-  width: 30%;
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.formulario{
-  position: absolute;
-  z-index: 1;
-  max-height: 50px;
-  
+#formulario {
+  width: 60%;
 }
 .form-group {
   width: 100%;
@@ -323,16 +312,16 @@ gap: 5rem;
 
 .checkbox-group input [type="checkbox"] {
   margin: 0;
-  width:16px;
-  height:16px ;
+  width: 16px;
+  height: 16px;
 }
 .checkbox-group a {
-  color: var(--morado); 
+  color: var(--morado);
   text-decoration: none;
 }
 
 .checkbox-group a:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 button {
@@ -368,14 +357,13 @@ button:hover {
   text-align: center;
   width: 80%;
   padding: 1rem;
-  }
-  
-  #contacto iframe { 
+}
+
+#contacto iframe {
   width: 80%;
   height: 60vh;
-  margin:0;
-  }
-
+  margin: 0;
+}
 
 /*estilos iconos*/
 
@@ -393,7 +381,7 @@ button:hover {
   gap: 2rem;
 }
 
-.icono-tienda1{
+.icono-tienda1 {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -403,7 +391,7 @@ button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.icono-tienda2{
+.icono-tienda2 {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -412,7 +400,7 @@ button:hover {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.icono-tienda3{
+.icono-tienda3 {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -428,7 +416,7 @@ button:hover {
 
 .iconos-tiendas i {
   font-size: 40px; /* Tamaño del ícono */
-  color: var(--morado); 
+  color: var(--morado);
   margin-bottom: 10px; /* Espacio debajo del ícono */
 }
 
@@ -440,7 +428,7 @@ button:hover {
 
 .iconos-tiendas p {
   font-size: 16px;
-  color: #333 /* Texto verde oscuro */
+  color: #333; /* Texto verde oscuro */
 }
 
 /*FOOTER*/
@@ -454,21 +442,21 @@ button:hover {
   align-items: flex-start;
 }
 
-.comercio-justo { 
-  width: 55%; 
-  text-align: center; 
-  margin-bottom: 1rem; 
+.comercio-justo {
+  width: 55%;
+  text-align: center;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: 0 auto;
-} 
-.comercio-justo p { 
-  margin: 0; 
+}
+.comercio-justo p {
+  margin: 0;
   padding: 0.5rem 0;
   color: white;
 }
-.comercio-justo i{
+.comercio-justo i {
   color: white;
 }
 .linea-fina {
@@ -485,7 +473,7 @@ button:hover {
   margin-right: 1rem;
 }
 
-.logo-footer{
+.logo-footer {
   width: 150px;
 }
 

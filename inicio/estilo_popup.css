@@ -1,0 +1,198 @@
+.ventanaSuperpuesta{
+  position: fixed;
+  top: 10%;
+  left: 23%;
+  height: 65%;
+  background-color: rgb(255, 255, 255);
+  z-index: 1000;
+  filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
+  width: 50%;
+  display: none;
+  flex-direction: column;
+  padding-bottom: 4rem;
+  border-radius: 1rem;
+
+}
+
+.cerrar{
+
+  width: 1.8rem;
+align-self:last baseline;
+}
+
+#paginaProducto{
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content:first baseline;
+  /*flex-wrap: wrap;*/
+  align-items: center;
+  gap: 1rem;
+  /*width: 60%;*/  
+ /* padding-right: 10rem;
+  padding-left: 10rem;*/
+  padding: 2rem;
+  padding-left: 3rem;
+}
+
+
+.botonesPaginaProducto{
+ display: flex;
+ justify-content:center;
+
+
+}
+
+.botones{
+display: flex;
+justify-content: center;
+
+}
+.botonCarritoProducto{
+background: none;
+}
+
+
+.divImagenProducto{
+height: auto;    
+/*position: fixed;*/
+  right: 2rem;
+  top: 4rem;
+}
+
+.productoTexto{
+  width: auto;
+  height: auto;
+}
+
+.descripcionProducto{
+  font-family: "Space Grotesk", serif;
+  max-width: 90%;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+#paginaProductoAparte {
+  display: none; /* Oculto por defecto */
+  flex-direction: column; /* Asegúrate de usar flex si lo necesitas */
+  padding: 20px;
+  background-color: white;
+}
+
+.contador{
+display: flex;
+}
+.num{
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+.precioDisplay{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+button.cerrarBtn{
+width: 2rem;
+align-self:last baseline;
+background: none;
+color: rgb(64, 58, 58);
+padding: 2rem;
+padding-right: 3rem;
+font-size: 1.3rem;
+}
+
+.cerrarBtn:hover{
+
+background: none;
+color: var(--burdeos);
+font-weight: 600;
+}
+
+button.botonFlecha{
+background-color: white;
+border-radius: 100%;
+border: solid rgb(161, 159, 159) 0.03rem;
+padding: 0.8rem;
+font-size: 1rem;
+color: grey;
+transition: background-color 0.3s ease;
+}
+
+
+button.botonFlecha:hover{
+
+background: solid;
+background-color: rgb(161, 159, 159);
+color: aliceblue;
+
+}
+
+button.verPaginaProducto {
+background: none;
+color: var(--morado);
+padding: 0;
+margin-bottom: 1rem;
+font-weight: bold;
+font-size: 2rem;
+
+}
+
+
+@media only screen and (max-width: 1050px) {
+
+  .ventanaSuperpuesta{
+    position: fixed;
+    top: 0;
+    left: 5%;
+    height: 90%;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000;
+    filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
+    width: 90%;
+    display: none;
+    flex-direction: column;
+    padding-bottom: 4rem;
+  
+  }
+  
+  #paginaProducto{
+    height:100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content:center;
+    align-items: center;
+    /*width: 60%;*/  
+   /* padding-right: 10rem;
+    padding-left: 10rem;*/
+    
+    padding-left: 3rem;
+    flex-wrap:wrap-reverse;
+
+  }
+  
+  .divImagenProducto{
+    height: auto;    
+    /*position: fixed;*/
+      right: 2rem;
+      top: 4rem
+    }
+    
+  
+
+     .botones{
+      display: flex;
+      gap: 2rem;
+      position: relative;
+     }
+
+     .divImagenProducto{
+      height: fit-content;  
+      width: fit-content; 
+      /*position: fixed;*/
+        right: 2rem;
+        top: 0rem;
+      }
+
+}

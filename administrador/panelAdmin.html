@@ -9,38 +9,70 @@
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <title>Flor de Té</title>
     <link rel="stylesheet" href="panelAdmin.css" />
     <link rel="stylesheet" href="../inicio/inicio.css" />
-  
-
   </head>
   <body>
     <nav class="menu">
       <div class="left-section">
         <a href="../inicio/index.html">
-          <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo" />
+          <img
+            src="../img/logos/logo_horizontal.svg"
+            alt="logo Flor de Té"
+            class="logo"
+          />
         </a>
         <ul>
-          <li><a href="../inicio/index.html" data-translate="inicio">Inicio</a></li>
-          <li><a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a></li>
-          <li><a href="../nosotros/nosotros.html" data-translate="nosotros">Nosotros</a></li>
-          <li><a href="../contacto/contacto.html" data-translate="contacto">Contacto</a></li>
+          <li>
+            <a href="../inicio/index.html" data-translate="inicio">Inicio</a>
+          </li>
+          <li>
+            <a href="../catalogo/catalogo.html" data-translate="catalogo-nav"
+              >Catálogo</a
+            >
+          </li>
+          <li>
+            <a href="../nosotros/nosotros.html" data-translate="nosotros"
+              >Nosotros</a
+            >
+          </li>
+          <li>
+            <a href="../contacto/contacto.html" data-translate="contacto"
+              >Contacto</a
+            >
+          </li>
         </ul>
       </div>
       <div class="right-section">
-        <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." />
-        <div class="user-area"><i class="fa-solid fa-user"></i></div>
+        <input
+          data-translate="placeholder-nav"
+          type="search"
+          placeholder="Buscar..."
+        />
+        <div class="user-area" id="iconoUsuarioLogin">
+          <i class="fa-solid fa-user"></i>
+        </div>
         <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
         <select id="language-select" title="idioma">
           <option value="es">ES</option>
           <option value="en">EN</option>
         </select>
       </div>
-      <div id="fechayhora"></div> <!--reubicar este div-->
+      <div id="fechayhora"></div>
+      <!--reubicar este div-->
     </nav>
 
     <div id="panelAdministracion">
@@ -51,15 +83,11 @@
           </div>
 
           <div class="iconos-opcionesPanel">
-            <div
-              class="icono-opcionProducto"
-              onclick="window.location.href='tablaProductos.html'">
+            <div id="productosBtn" class="icono-opcionProducto">
               <i class="fa-solid fa-table"></i>
               <p>Productos</p>
             </div>
-            <div
-              class="icono-opcionUsuarios"
-              onclick="window.location.href='../inicio/index.html'">
+            <div class="icono-opcionUsuarios" id="logoutBtn">
               <i class="fa-solid fa-user"></i>
               <p>cerrar sesion</p>
             </div>
@@ -67,12 +95,76 @@
         </div>
       </div>
     </div>
-
-    <script src="inicio.js"></script>
-    <script src="fechayhora.js"></script>
-    <script src="carrusel.js"></script>
-    <script src="pop-up-newsletter.js"></script>
-    <script src="idiomas_inicio.js"></script>
-    <script src="popUpLogin.js"></script>
   </body>
+  <footer>
+    <div class="footer-container">
+      <div class="comercio-justo">
+        <p data-translate="comercio_justo">
+          <i class="fa-solid fa-handshake"></i> Comercio Justo
+        </p>
+        <p data-translate="sin_crueldad">
+          <i class="fa-solid fa-seedling"></i> Sin crueldad animal
+        </p>
+        <p data-translate="organico">
+          <i class="fa-solid fa-leaf"></i> 100% Orgánico
+        </p>
+        <p data-translate="sin_microplasticos">
+          <i class="fa-solid fa-trash"></i> Sin microplásticos
+        </p>
+      </div>
+      <hr class="linea-fina" />
+      <div class="newsletter">
+        <img
+          src="../img/logos/logo_horizontal.svg"
+          alt="logo Flor de Té"
+          class="logo-footer"
+        />
+        <h3 data-translate="suscribete">Suscríbete a nuestra newsletter</h3>
+        <p data-translate="ofertas">
+          Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?
+        </p>
+        <form>
+          <input
+            data-translate="input_placeholder"
+            type="email"
+            placeholder="Introduce tu email"
+          />
+          <button type="submit">Suscribirse</button>
+        </form>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4 data-translate="enlaces">Enlaces Útiles</h4>
+          <p>
+            <a href="index.html" data-translate="inicio">Inicio</a>
+            <a
+              href="../catalogo/catalogo.html"
+              data-translate="catalogo-nav"
+            ></a>
+            <a href="nosotros.html" data-translate="nosotros">Nosotros</a>
+            <a href="contacto.html" data-translate="contacto">Contacto</a>
+            <a href="carrito.html" data-translate="carrito">Carrito</a>
+          </p>
+        </div>
+        <div class="footer-column">
+          <h4 data-translate="politicas">Políticas</h4>
+          <p>
+            <a href="#" data-translate="politicas">Políticas</a>
+            <a href="#" data-translate="aviso">Aviso Legal</a>
+            <a href="#" data-translate="cookies">Política de Cookies</a>
+            <a href="#" data-translate="privacidad">Políticas de Privacidad</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="subfooter">
+      <p>© 2024 Flor de Té</p>
+    </div>
+  </footer>
+  <script src="panelAdmin.js"></script>
 </html>

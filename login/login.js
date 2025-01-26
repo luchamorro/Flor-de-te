@@ -1,10 +1,15 @@
+// Lógica para mostrar el nombre del usuario en la barra de navegación
 document.addEventListener("DOMContentLoaded", function () {
-  // Cargar datos del usuario desde localStorage
   const usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
-  if (usuarioConectado) {
-    document.getElementById("userName").textContent = usuarioConectado.nombre;
-  } else {
-    window.location.href = "../inicio/login.html";
+
+  if (
+    usuarioConectado &&
+    usuarioConectado != null &&
+    usuarioConectado != undefined
+  ) {
+    const areaUsuario = document.getElementById("iconoUsuarioLogin");
+    areaUsuario.innerHTML =
+      "<span> Hola, " + usuarioConectado.nombre + "</span>";
   }
 
   // Logout

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b58110c1d4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="inicio.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Flor de Té</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="inicio.css" />
+    <link rel="stylesheet" href="estilo_popup.css" />
+
+    <style>
+      #paginaProductoAparte {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .productoDescrip {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        width: 60%;
+      }
+
+      .separador {
+        height: 7rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu">
+      <div class="left-section">
+        <img
+          src="../img/logos/logo_horizontal.svg"
+          alt="logo Flor de Té"
+          class="logo"
+        />
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="right-section">
+        <input type="text" placeholder="Buscar..." />
+        <div class="user-area"><i class="fa-solid fa-user"></i></div>
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+        <select title="idioma">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+      <div id="fechayhora"></div>
+      <!--reubicar este div-->
+    </nav>
+
+    <section>
+      <div class="separador"></div>
+      <div id="paginaProductoAparte" style="display: flex"></div>
+      <div class="botonesPaginaProducto">
+        <button id="anteriorBtn" class="botonFlecha">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button id="siguienteBtn" class="botonFlecha">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Sección de Productos de Merchandising -->
+    <section class="merch-section">
+      <h3>Nuestra Colección de Merchandising</h3>
+      <div class="merch-container">
+        <div class="merch-item">
+          <img
+            src="../img/inicio/merch/White And Black Minimalist Mug Mockup Instagram Post.png"
+            alt="Taza Flor de Té"
+            class="merch-image"
+          />
+          <h4>Taza Flor de Té</h4>
+          <p>Disfruta de tu té favorito en nuestra taza exclusiva.</p>
+          <button class="btn-merch">Comprar</button>
+        </div>
+        <div class="merch-item">
+          <img
+            src="../img/inicio/merch/Beige Minimalist Totebag Mockup Instagram Post.png"
+            alt="Tote Bag Flor de Té"
+            class="merch-image"
+          />
+          <h4>Tote Bag Flor de Té</h4>
+          <p>Lleva tus cosas con nuestra tote bag ecológica.</p>
+          <button class="btn-merch">Comprar</button>
+        </div>
+        <div class="merch-item">
+          <img
+            src="../img/inicio/merch/White Black Minimalist Mockup Cup Coffee Instagram Post.png"
+            alt="Tumbler Flor de Té"
+            class="merch-image"
+          />
+          <h4>Tumbler Flor de Té</h4>
+          <p>Mantén tu bebida caliente o fría con estilo.</p>
+          <button class="btn-merch">Comprar</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="comercio-justo">
+          <p><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
+          <p><i class="fa-solid fa-seedling"></i> Sin crueldad animal</p>
+          <p><i class="fa-solid fa-leaf"></i> 100% Orgánico</p>
+          <p><i class="fa-solid fa-trash"></i> Sin microplasticos</p>
+        </div>
+        <hr class="linea-fina" />
+        <div class="newsletter">
+          <h3>Suscríbete a nuestra newsletter</h3>
+          <p>
+            Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?
+          </p>
+          <form>
+            <input type="email" placeholder="Introduce tu email" />
+            <button type="submit">Suscribirse</button>
+          </form>
+          <div class="social-media">
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h4>Enlaces Útiles</h4>
+            <p>
+              <a href="index.html">Inicio</a>
+              <a href="nosotros.html">Nosotros</a>
+              <a href="contacto.html">Contacto</a>
+              <a href="carrito.html">Carrito</a>
+            </p>
+          </div>
+          <div class="footer-column">
+            <h4>Políticas</h4>
+            <p>
+              <a href="#">Políticas</a>
+              <a href="#">Aviso Legal</a>
+              <a href="#">Política de Cookies</a>
+              <a href="#">Políticas de Privacidad</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="subfooter">
+        <p>© 2024 Flor de Té</p>
+      </div>
+    </footer>
+
+    <script>
+      let productos = [];
+      let currentId = 0;
+
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          const respuesta = await fetch("productos.json");
+          productos = await respuesta.json();
+
+          const productoSeleccionado = JSON.parse(
+            localStorage.getItem("productoSeleccionado")
+          );
+          if (productoSeleccionado) {
+            currentId = productoSeleccionado.id;
+            mostrarProducto(productoSeleccionado);
+          } else {
+            document.getElementById("paginaProductoAparte").innerHTML =
+              "<p>Error al cargar el producto.</p>";
+          }
+
+          // Asignar eventos a los botones
+          document
+            .getElementById("anteriorBtn")
+            .addEventListener("click", mostrarAnterior);
+          document
+            .getElementById("siguienteBtn")
+            .addEventListener("click", mostrarSiguiente);
+        } catch (error) {
+          console.error("Error al cargar los datos del JSON:", error);
+        }
+      });
+
+      function mostrarProducto(producto) {
+        document.getElementById("paginaProductoAparte").innerHTML = `
+        <h3>${producto.nombre}</h3>
+        <div class = "productoDescrip">
+          <img src="../${producto.img}" alt="${producto.nombre}" width="503px" height="563px">
+        <div ><p>${producto.descripcion}</p>
+        <p>${producto.precio}€ <button>Comprar</button></p></div> </div>`;
+      }
+
+      function mostrarAnterior() {
+        const index = productos.findIndex((p) => p.id === currentId);
+        if (index > 0) {
+          currentId = productos[index - 1].id;
+        } else {
+          currentId = productos[productos.length - 1].id; // Último producto
+        }
+        mostrarProducto(productos.find((p) => p.id === currentId));
+      }
+
+      function mostrarSiguiente() {
+        const index = productos.findIndex((p) => p.id === currentId);
+        if (index < productos.length - 1) {
+          currentId = productos[index + 1].id;
+        } else {
+          currentId = productos[0].id; // Primer producto
+        }
+        mostrarProducto(productos.find((p) => p.id === currentId));
+      }
+    </script>
+
+    <script src="inicio.js"></script>
+    <script src="pagina_producto.js"></script>
+    <script src="fechayhora.js"></script>
+  </body>
+</html>
