@@ -14,7 +14,7 @@ function mostrarProductos(datos, lista) {
     item.innerHTML = `
       <img src="../${producto.img}" alt="${producto.nombre}" width="205" height="212" class="imagenCatalogo">
       <p class="tituloProducto">${producto.nombre}</p>
-      <p>${producto.precio}€ <button class="botonCarrito" onclick="anadirCompra(${producto.id})"><i>Comprar </i><i class="fa-solid fa-cart-shopping"></i></button></p>
+      <p>${producto.precio}€ <button class="botonCarrito" onclick="location.href='../catalogo/catalogo.html'"><i>Comprar </i><i class="fa-solid fa-cart-shopping"></i></button></p>
     `;
 
     // Añadir eventos a la imagen y título
@@ -101,14 +101,8 @@ function mostrarProducto(id) {
           </p>
           <p class="precioDisplay">${producto.precio}€</p> 
           <p>100 gramos</p>
-          <div class="contador">
-            <button onclick="botonMenos(${producto.id})">-</button>
-            <p class="num" id="contador"></p>
-            <button onclick="botonMas(${producto.id})">+</button>
-            <br>
-        </div>
         <br>
-          <button onclick="anadirCompra(${producto.id})" id="botonCarrito"><i>Comprar</i></button>
+          <button onclick="location.href='../catalogo/catalogo.html'" id="botonCarrito"><i>Ver más</i></button>
           <p class="descripcionProducto">${producto.descripcion}</p>
           <ul class="listaPropiedades">
           <li>${producto.filtros}</li>
@@ -168,65 +162,6 @@ document.getElementById('cerrarBtn').addEventListener('click', cerrar);
 // Cargar los datos al cargar la página
 cargarDatos();
 
-function anadirCompra(id) {
-  const producto = productos.find(p => p.id == id);
-  // Comprueba si el producto está en el carrito
-  const carritoList = document.getElementById('carrito');
-  const comprobacion = carritoList.querySelectorAll('.tituloProducto');
-
-  for (let item of comprobacion) {
-    if (item.textContent === producto.nombre) {
-      return; // Termina si el producto existe
-    }
-  }
-
-  if (producto) {
-    let anadirProducto = document.createElement("li");
-    let nombre = document.createElement("p");
-    let pic = document.createElement('img');
-    let precio = document.createElement('p');
-    let borrar = document.createElement('span');
-
-    nombre.setAttribute('class', 'tituloProducto');
-    nombre.innerHTML = `${producto.nombre}`;
-
-    pic.setAttribute("src", `../${producto.img}`);
-    pic.setAttribute("alt", `${producto.nombre}`);
-    precio.setAttribute('class', 'precio');
-
-    precio.innerHTML = `${producto.precio}€`;
-
-    borrar.setAttribute('class', 'papelera');
-
-    borrar.innerHTML = `&#128465;`
-
-    document.getElementById('carrito').appendChild(anadirProducto);
-    anadirProducto.appendChild(nombre);
-    anadirProducto.appendChild(pic);
-    anadirProducto.appendChild(precio);
-    anadirProducto.appendChild(borrar);
-
-    // borrar un producto de la cessta
-    borrar.addEventListener('click', function () {
-      anadirProducto.remove();
-    });
-
-    currentId = id; // Actualizar el ID actual
-  }
-}
-
-// Redirigir a la página del carrito
-function checkOut() {
-  const carritoList = document.getElementById('carrito');
-
-  if (carritoList) {
-    localStorage.setItem('carritoLleno', carritoList.innerHTML);
-    // Redirigir a otra página
-    window.location.href = '../carrito/carrito.html';
-  }
-}
-
-
 
 
 
@@ -245,179 +180,75 @@ function irPagina(id) {
 
 */
 
-//Agregar el número de productos del carrito al icono del carrito
-let compra = document.querySelectorAll('#carrito li');
-let listaCompra = Array.from(compra);
-let carritoIcon = document.querySelector('.right-section .cart');
-
-carritoIcon.setAttribute('data-content', listaCompra.length);
-
-function anadirCompra(id) {
-  const producto = productos.find(p => p.id == id);
-  // Comprueba si el producto está en el carrito
-  const carritoList = document.getElementById('carrito');
-
-  const comprobacion = carritoList.querySelectorAll('.tituloProducto');
-  for (let item of comprobacion) {
-    if (item.textContent === producto.nombre) {
-      return; // Termina si el producto existe
-    }
-  }
-
-  if (producto) {
-    //añade el producto al array
-    listaCompra.push(producto);
-
-    let anadirProducto = document.createElement("li");
-    let nombre = document.createElement("p");
-    let pic = document.createElement('img');
-    let precio = document.createElement('p');
-    let borrar = document.createElement('span');
-
-    let divi = document.createElement('div');
-    let suma = document.createElement('button');
-    let resta = document.createElement('button');
-    let monto = document.createElement('p');
-
-    monto.setAttribute('id', `monto${producto.id}`)
-    monto.innerText = 'x1'
-    divi.classList.add('masMenos');
-
-    suma.innerText = '+';
-    suma.classList.add('suma');
-    suma.setAttribute('onclick', `botonMas(${producto.id})`)
-
-    resta.innerText = '-';
-    resta.classList.add('resta')
-    resta.setAttribute('onclick', `botonMenos(${producto.id})`)
-
-    anadirProducto.setAttribute('id', `${producto.id}`)
-
-    nombre.setAttribute('class', 'tituloProducto');
-    nombre.innerHTML = `${producto.nombre}`;
-
-    pic.setAttribute("src", `../${producto.img}`);
-    pic.setAttribute("alt", `${producto.nombre}`);
-
-    precio.innerHTML = `${producto.precio}€`;
-
-    borrar.innerHTML = `&#128465;`
-
-    document.getElementById('carrito').appendChild(anadirProducto);
-    anadirProducto.appendChild(nombre);
-    anadirProducto.appendChild(pic);
-    anadirProducto.appendChild(divi);
-    divi.appendChild(suma);
-    divi.appendChild(monto);
-    divi.appendChild(resta);
-    anadirProducto.appendChild(precio);
-    anadirProducto.appendChild(borrar);
-
-
-    carritoIcon.setAttribute('data-content', listaCompra.length);
-
-    // borrar un producto de la cessta
-    borrar.addEventListener('click', function () {
-      listaCompra.pop(producto);
-      anadirProducto.remove();
-      carritoIcon.setAttribute('data-content', listaCompra.length);
-    });
-
-    currentId = id; // Actualizar el ID actual
-  }
-}
-
-// botones de añadir y reducir
-
-function botonMas(id) {
-  const producto = productos.find(p => p.id == id);
-
-  //Añadir producto al array
-  if (producto) {
-    listaCompra.push(producto);
-  }
-
-   // Actualizar contador carrito
-   let cantidad = listaCompra.length;
-   carritoIcon.setAttribute('data-content', listaCompra.length);
-
- //Cambiar el numero del monto
- let monto = document.getElementById(`monto${producto.id}`)
- let aumento = listaCompra.length;
- monto.innerText = 'x' + aumento;
- console.log(listaCompra);
-};
-
-//
-function botonMenos(id) {
-  const producto = productos.find(p => p.id == id);
-
-  //Añadir producto al array
-  if (producto) {
-    listaCompra.pop(producto);
-  }
-
-  // Actualizar contador carrito
-  carritoIcon.setAttribute('data-content', listaCompra.length);
-
- //Cambiar el numero del monto
- let monto = document.getElementById(`monto${producto.id}`)
- let aumento = listaCompra.length;
- monto.innerText = 'x' + aumento;
- console.log(listaCompra);
-};
-
 
 // Buscador
+
 const buscador = document.getElementById('buscador');
 const menuBuscador = document.createElement('div');
 menuBuscador.classList.add('menuBuscador');
 document.querySelector('.right-section').appendChild(menuBuscador);
 
-// Evento de búsqueda
-buscador.addEventListener('input', function (item) {
-  const busca = item.target.value.toLowerCase().trim();
+// Variable para almacenar todos los productos
+let catalogoCompleto = [];
 
-  if (busca.length < 2) {
-    menuBuscador.style.display = 'none';
-    return;
+// Cargar el catálogo completo
+async function cargarCatalogoCompleto() {
+  try {
+    const respuesta = await fetch('../catalogo/productos.json');
+    catalogoCompleto = await respuesta.json();
+  } catch (error) {
+    console.error('Error al cargar el catálogo:', error);
   }
+}
 
-  // Filtrar productos
-  const filtro = productos.filter(producto =>
+// Cargar el catálogo al iniciar
+cargarCatalogoCompleto();
+
+
+// Evento de búsqueda
+buscador.addEventListener('input', function(item) {
+   const busca = item.target.value.toLowerCase().trim();
+   
+   if (busca.length < 2) {
+       menuBuscador.style.display = 'none';
+       return;
+   }
+
+   // Filtrar productos
+   const filtro = catalogoCompleto.filter(producto => 
     producto.nombre.toLowerCase().includes(busca));
 
-  // Mostrar resultados
-  if (filtro.length) {
-    menuBuscador.style.display = 'block';
-    menuBuscador.innerHTML = filtro.map(producto => `
-          <div class="productoBuscado" onclick="anadirCompra(${producto.id})" id='${producto.id}' style="
-              display: flex;
-              align-items: center;
-              padding: 0.5rem;
-              border-bottom: 1px solid #eee;
-              cursor: pointer;
-          ">
-              <img src="../${producto.img}" alt="${producto.nombre}" style="
-                  width: 50px;
-                  height: 50px;
-                  object-fit: cover;
-                  margin-right: 1rem;
-              ">
-              <div>
-                  <div style="font-weight: bold;">${producto.nombre}</div>
-                  <div>${producto.precio}€</div>
-              </div>
-          </div>
-      `).join('');
-  } else {
-    menuBuscador.innerHTML = '<div style="padding: 1rem;">No se encontraron resultados</div>';
-  };
+   // Mostrar resultados
+   if (filtro.length) {
+       menuBuscador.style.display = 'block';
+       menuBuscador.innerHTML = filtro.map(producto => `
+           <div class="productoBuscado" onclick="anadirCompra(${producto.id})" id='${producto.id}' style="
+               display: flex;
+               align-items: center;
+               padding: 0.5rem;
+               border-bottom: 1px solid #eee;
+               cursor: pointer;
+           ">
+               <img src="../${producto.img}" alt="${producto.nombre}" style="
+                   width: 50px;
+                   height: 50px;
+                   object-fit: cover;
+                   margin-right: 1rem;
+               ">
+               <div>
+                   <div style="font-weight: bold;">${producto.nombre}</div>
+                   <div>${producto.precio}€</div>
+               </div>
+           </div>
+       `).join('');
+   } else {
+       menuBuscador.innerHTML = '<div style="padding: 1rem;">No se encontraron resultados</div>';
+   };
 });
 
 // Cerrar resultados al hacer click fuera
 document.addEventListener('click', (e) => {
-  if (!menuBuscador.contains(e.target) && e.target !== buscador) {
-    menuBuscador.style.display = 'none';
-  }
+   if (!menuBuscador.contains(e.target) && e.target !== buscador) {
+       menuBuscador.style.display = 'none';
+   }
 });

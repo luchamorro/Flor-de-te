@@ -177,6 +177,7 @@ cargarDatos();
 
  carritoIcon.setAttribute('data-content', listaCompra.length);
  
+ //funcion para añadir cosas al carrito
 function anadirCompra(id) {
  const producto = productos.find(p => p.id == id);
  // Comprueba si el producto está en el carrito
@@ -204,7 +205,7 @@ function anadirCompra(id) {
    let resta = document.createElement('button');
    let monto = document.createElement('p');
 
-    precio.setAttribute('class', 'precio');
+   precio.setAttribute('class', 'precio');
    monto.setAttribute('id', `monto${producto.id}`);
    monto.setAttribute('class', 'monto');
    borrar.setAttribute('class', 'borrar');
@@ -246,10 +247,10 @@ function anadirCompra(id) {
    carritoIcon.setAttribute('data-content', listaCompra.length);
 
    // borrar un producto de la cessta
-   borrar.addEventListener('click', function() {
-     listaCompra.pop(producto);
-     anadirProducto.remove();
-     carritoIcon.setAttribute('data-content', listaCompra.length);
+   borrar.addEventListener('click', function(id) {
+    listaCompra = listaCompra.filter(item => item.id !== producto.id);
+    anadirProducto.remove();
+    carritoIcon.setAttribute('data-content', listaCompra.length);
    });
    
    currentId = id; // Actualizar el ID actual
@@ -260,6 +261,7 @@ function anadirCompra(id) {
 
 function botonMas(id){
  const producto = productos.find(p => p.id == id);
+ let contador = document.getElementById('contador');
 
  //Añadir producto al array
  if(producto){
@@ -275,7 +277,7 @@ function botonMas(id){
  monto.setAttribute('class', 'monto');
  let aumento = listaCompra.filter(item => item.id === producto.id).length;
  monto.innerText = 'x' + aumento;
- console.log(monto.innerText);
+ contador.innerText = 'x' + aumento;
 };
 
 //
@@ -292,17 +294,35 @@ function botonMenos(id){
 
  //Cambiar el numero del monto
  let monto = document.getElementById(`monto${producto.id}`)
- let aumento = listaCompra.filter(item => item.id === producto.id).length;
+ let reduce = listaCompra.filter(item => item.id === producto.id).length;  
  monto.setAttribute('class', 'monto');
- monto.innerText = 'x' + aumento;
+ monto.innerText = 'x' + reduce;
+ contador.innerText = 'x' + reduce;
 };
 
-
 // Buscador
+
 const buscador = document.getElementById('buscador');
 const menuBuscador = document.createElement('div');
 menuBuscador.classList.add('menuBuscador');
 document.querySelector('.right-section').appendChild(menuBuscador);
+
+// Variable para almacenar todos los productos
+let catalogoCompleto = [];
+
+// Cargar el catálogo completo
+async function cargarCatalogoCompleto() {
+  try {
+    const respuesta = await fetch('../catalogo/productos.json');
+    catalogoCompleto = await respuesta.json();
+  } catch (error) {
+    console.error('Error al cargar el catálogo:', error);
+  }
+}
+
+// Cargar el catálogo al iniciar
+cargarCatalogoCompleto();
+
 
 // Evento de búsqueda
 buscador.addEventListener('input', function(item) {
@@ -314,8 +334,8 @@ buscador.addEventListener('input', function(item) {
    }
 
    // Filtrar productos
-   const filtro = productos.filter(producto => 
-       producto.nombre.toLowerCase().includes(busca));
+   const filtro = catalogoCompleto.filter(producto => 
+    producto.nombre.toLowerCase().includes(busca));
 
    // Mostrar resultados
    if (filtro.length) {
