@@ -184,6 +184,7 @@ function irPagina(id) {
 */
 
 
+
 // Buscador
 
 const buscador = document.getElementById('buscador');
@@ -197,7 +198,8 @@ let catalogoCompleto = [];
 // Cargar el catálogo completo
 async function cargarCatalogoCompleto() {
   try {
-    const respuesta = await fetch('../catalogo/productos.json');
+    const idiomaSeleccionado = localStorage.getItem("selectedLanguage") || "es"; 
+    const respuesta = await fetch(idiomaSeleccionado === "en" ? 'productos_en.json' : '../catalogo/productos_es.json');
     catalogoCompleto = await respuesta.json();
   } catch (error) {
     console.error('Error al cargar el catálogo:', error);
@@ -247,6 +249,13 @@ buscador.addEventListener('input', function(item) {
    } else {
        menuBuscador.innerHTML = '<div style="padding: 1rem;">No se encontraron resultados</div>';
    };
+});
+
+// Cerrar resultados al hacer click fuera
+document.addEventListener('click', (e) => {
+   if (!menuBuscador.contains(e.target) && e.target !== buscador) {
+       menuBuscador.style.display = 'none';
+   }
 });
 
 // Cerrar resultados al hacer click fuera
