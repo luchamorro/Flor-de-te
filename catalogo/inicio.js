@@ -259,47 +259,49 @@ function anadirCompra(id) {
  }
 }
 
+// botones
 // botones de añadir y reducir
 
 function botonMas(id){
- const producto = productos.find(p => p.id == id);
-
- //Añadir producto al array
- if(producto){
- listaCompra.push(producto);
- }
-
-   // Actualizar contador carrito
- let cantidad = listaCompra.length;
- carritoIcon.setAttribute('data-content', listaCompra.length);
-
- //Cambiar el numero del monto
- let monto = document.getElementById(`monto${producto.id}`);
- monto.setAttribute('class', 'monto');
- let aumento = listaCompra.filter(item => item.id === producto.id).length;
- monto.innerText = 'x' + aumento;
- console.log(monto.innerText);
-};
-
-//
-function botonMenos(id){
- const producto = productos.find(p => p.id == id);
-
- //Añadir producto al array
- if(producto){
- listaCompra.pop(producto);
- }
-
-   // Actualizar contador carrito
- carritoIcon.setAttribute('data-content', listaCompra.length);
-
- //Cambiar el numero del monto
- let monto = document.getElementById(`monto${producto.id}`)
- let aumento = listaCompra.filter(item => item.id === producto.id).length;
- monto.setAttribute('class', 'monto');
- monto.innerText = 'x' + aumento;
-};
-
+  const producto = productos.find(p => p.id == id);
+  let contador = document.getElementById('contador');
+ 
+  //Añadir producto al array
+  if(producto){
+  listaCompra.push(producto);
+  }
+ 
+    // Actualizar contador carrito
+  let cantidad = listaCompra.length;
+  carritoIcon.setAttribute('data-content', listaCompra.length);
+ 
+  //Cambiar el numero del monto
+  let monto = document.getElementById(`monto${producto.id}`);
+  monto.setAttribute('class', 'monto');
+  let aumento = listaCompra.filter(item => item.id === producto.id).length;
+  monto.innerText = 'x' + aumento;
+  contador.innerText = 'x' + aumento;
+ };
+ 
+ //
+ function botonMenos(id){
+  const producto = productos.find(p => p.id == id);
+ 
+  //Añadir producto al array
+  if(producto){
+  listaCompra.pop(producto);
+  }
+ 
+    // Actualizar contador carrito
+  carritoIcon.setAttribute('data-content', listaCompra.length);
+ 
+  //Cambiar el numero del monto
+  let monto = document.getElementById(`monto${producto.id}`)
+  let reduce = listaCompra.filter(item => item.id === producto.id).length;  
+  monto.setAttribute('class', 'monto');
+  monto.innerText = 'x' + reduce;
+  contador.innerText = 'x' + reduce;
+ };
 
 // Buscador
 const buscador = document.getElementById('buscador');
