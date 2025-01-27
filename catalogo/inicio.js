@@ -249,10 +249,10 @@ function anadirCompra(id) {
    carritoIcon.setAttribute('data-content', listaCompra.length);
 
    // borrar un producto de la cessta
-   borrar.addEventListener('click', function() {
-     listaCompra.pop(producto);
-     anadirProducto.remove();
-     carritoIcon.setAttribute('data-content', listaCompra.length);
+   borrar.addEventListener('click', function(id) {
+    listaCompra = listaCompra.filter(item => item.id !== producto.id);
+    anadirProducto.remove();
+    carritoIcon.setAttribute('data-content', listaCompra.length);
    });
    
    currentId = id; // Actualizar el ID actual
