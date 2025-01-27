@@ -176,49 +176,49 @@ cargarCatalogoCompleto();
 
 
 // Evento de búsqueda
-buscador.addEventListener('input', function(item) {
-   const busca = item.target.value.toLowerCase().trim();
-   
-   if (busca.length < 2) {
-       menuBuscador.style.display = 'none';
-       return;
-   }
+buscador.addEventListener('input', function (item) {
+  const busca = item.target.value.toLowerCase().trim();
 
-   // Filtrar productos
-   const filtro = catalogoCompleto.filter(producto => 
+  if (busca.length < 2) {
+    menuBuscador.style.display = 'none';
+    return;
+  }
+
+  // Filtrar productos
+  const filtro = catalogoCompleto.filter(producto =>
     producto.nombre.toLowerCase().includes(busca));
 
-   // Mostrar resultados
-   if (filtro.length) {
-       menuBuscador.style.display = 'block';
-       menuBuscador.innerHTML = filtro.map(producto => `
-           <div class="productoBuscado" onclick="anadirCompra(${producto.id})" id='${producto.id}' style="
-               display: flex;
-               align-items: center;
-               padding: 0.5rem;
-               border-bottom: 1px solid #eee;
-               cursor: pointer;
-           ">
-               <img src="../${producto.img}" alt="${producto.nombre}" style="
-                   width: 50px;
-                   height: 50px;
-                   object-fit: cover;
-                   margin-right: 1rem;
-               ">
-               <div>
-                   <div style="font-weight: bold;">${producto.nombre}</div>
-                   <div>${producto.precio}€</div>
-               </div>
-           </div>
-       `).join('');
-   } else {
-       menuBuscador.innerHTML = '<div style="padding: 1rem;">No se encontraron resultados</div>';
-   };
+  // Mostrar resultados
+  if (filtro.length) {
+    menuBuscador.style.display = 'block';
+    menuBuscador.innerHTML = filtro.map(producto => `
+          <div class="productoBuscado" onclick="anadirCompra(${producto.id})" id='${producto.id}' style="
+            display: flex;
+              lign-items: center;
+              padding: 0.5rem;
+              border-bottom: 1px solid #eee;
+              cursor: pointer;
+          ">
+              <img src="../${producto.img}" alt="${producto.nombre}" style="
+                  width: 50px;
+                  height: 50px;
+                  object-fit: cover;
+                  margin-right: 1rem;
+              ">
+              <div>
+                  <div style="font-weight: bold;">${producto.nombre}</div>
+                  <div>${producto.precio}€</div>
+              </div>
+          </div>
+      `).join('');
+  } else {
+    menuBuscador.innerHTML = '<div style="padding: 1rem;">No se encontraron resultados</div>';
+  };
 });
 
 // Cerrar resultados al hacer click fuera
 document.addEventListener('click', (e) => {
-   if (!menuBuscador.contains(e.target) && e.target !== buscador) {
-       menuBuscador.style.display = 'none';
-   }
+  if (!menuBuscador.contains(e.target) && e.target !== buscador) {
+    menuBuscador.style.display = 'none';
+  }
 });

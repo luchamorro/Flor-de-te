@@ -19,18 +19,15 @@
       <a href="../inicio/index.html">
         <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo" />
       </a>
+      <ul>
+        <li><a href="../inicio/index.html" data-translate="inicio">Inicio</a></li>
+        <li><a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a></li>
+        <li><a href="../nosotros/nosotros.html" data-translate="nosotros">Nosotros</a></li>
+        <li><a href="../contacto/contacto.html" data-translate="contacto">Contacto</a></li>
+      </ul>
     </div>
-    <div class="hamburger-menu" onclick="toggleMenu()">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-    <ul>
-      <li><a href="../inicio/index.html" data-translate="inicio">Inicio</a></li>
-      <li><a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a></li>
-      <li><a href="../nosotros/nosotros.html" data-translate="nosotros">Nosotros</a></li>
-      <li><a href="../contacto/contacto.html" data-translate="contacto">Contacto</a></li>
-    </ul>
     <div class="right-section">
-      <input data-translate="placeholder-nav" type="text" placeholder="Buscar..." />
+      <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." id="buscador" />
       <div class="user-area"><i class="fa-solid fa-user"></i></div>
       <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
       <select id="language-select" title="idioma">
@@ -38,6 +35,7 @@
         <option value="en">EN</option>
       </select>
     </div>
+    <div id="fechayhora"></div>
   </nav>
   
 
@@ -175,5 +173,6 @@
 
   <script src="idiomas_nosotros.js"></script>
   <script src="hamurguesa.js"></script>
+  <script src="../inicio/fechayhora.js"></script>
 </body>
 </html>
