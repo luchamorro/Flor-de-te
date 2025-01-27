@@ -47,3 +47,4 @@ document.addEventListener("DOMContentLoaded", () => {
     applyLanguage(selectedLanguage); // Aplicar el idioma sin recargar la página
   });
 });
+

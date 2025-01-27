@@ -1,25 +1,90 @@
-
+:root {
+  --negro: black;
+  --burdeos: #cd0038;
+  --morado: #6f005e;
+  --naranja: #ff6600;
+  --blanco: white;
+}
 
 .contacto-texto {
-  background-image: url(hojas-y-flores-para-infusion.jpg);
+  background-image: url(6-poderosas-infusiones-y-para-que-sirven.webp);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 30rem;
   display: flex;
-  justify-content:center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+.contacto-texto:hover {
+  transform: scale(1.05);
+}
+/* Estilos generales */
+body,
+html {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Space Grotesk", serif;
+}
+
+h1 {
+  color: var(--blanco);
+  font-size: 5rem;
+  margin-inline:auto;
+}
+
+h3 {
+  color: var(--morado);
+  font-size: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
+}
+
+h4 {
+  color: var(--burdeos);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem; /* Relleno del botón */
+  background-color: var(--naranja); /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Mano al pasar el ratón */
+  transition: background-color 0.3s ease;
+}
+
+
+
+.cuerpo-contacto {
+  margin: 5rem auto;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 
 /*estilos iconos*/
 .contactanos {
-display: flex;
-flex-direction: column;
-gap: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 
-.contactanos h2{
+.contactanos h2 {
   text-align: center;
   color: var(--morado);
   font-weight: bold;
@@ -33,15 +98,33 @@ gap: 5rem;
   gap: 2rem;
 }
 
-.icono-lugar{
+.icono-lugar {
   background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.icono-tel{
+.icono-tel {
   background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.icono-email{
+.icono-email {
   background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .iconos-contacto div {
   flex: 1; /* Asegura que los elementos ocupen espacio igual */
@@ -50,7 +133,7 @@ gap: 5rem;
 
 .iconos-contacto i {
   font-size: 40px; /* Tamaño del ícono */
-  color: var(--morado); 
+  color: var(--morado);
   margin-bottom: 10px; /* Espacio debajo del ícono */
 }
 
@@ -62,44 +145,50 @@ gap: 5rem;
 
 .iconos-contacto p {
   font-size: 16px;
-  color: #333 /* Texto verde oscuro */
+  color: #333; /* Texto verde oscuro */
 }
 
 /* Formulario */
-.contenedor1{
+
+.contenedor1 {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  max-width: 100%; /* Ajusta el ancho máximo */
+  gap: 2rem; /* Añade separación entre los contenedores */
 }
+.contenedor-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Hace que el contenedor del logo ocupe un espacio flexible */
+  max-width: 45%;
+}
+
 .contenedor-formulario {
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px;
-  width: 400px;
+  padding: 50px;
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-form {
-  width: 100%;
+#formulario {
+  width: 60%;
 }
-
 .form-group {
   width: 100%;
   margin-bottom: 1.5rem;
 }
-
 .form-group label {
   font-size: 1.2rem;
   color: var(--morado);
   display: block;
   margin-bottom: 0.5rem;
 }
-
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -111,27 +200,35 @@ form {
   background-color: #f4f4f4;
   transition: all 0.3s ease;
 }
-
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--morado);
   box-shadow: 0 0 5px rgba(111, 0, 94, 0.5);
 }
-
 .form-group textarea {
   resize: vertical;
   height: 150px;
 }
-
 .checkbox-group {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
+  color: var(--morado);
+  margin: 1rem;
+  padding: 2rem;
+  text-align: center;
 }
 
-.checkbox-group input {
-  margin-right: 10px;
+.checkbox-group input [type="checkbox"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+.checkbox-group a {
+  color: var(--morado);
+  text-decoration: none;
+}
+
+.checkbox-group a:hover {
+  text-decoration: underline;
 }
 
 button {
@@ -149,6 +246,7 @@ button:hover {
   background-color: var(--morado);
 }
 
+
 /* Estilo para el texto de la política */
 .politica p {
   font-size: 0.8rem;
@@ -163,26 +261,24 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ccc;
-  margin: 2rem;
+  margin: 2rem auto;
   text-align: center;
   width: 80%;
-  padding: 0.5rem;
-  }
-  
-  #contacto iframe { 
-  width: 95%;
-  height: 60vh;
-  margin:0;
-  }
+  padding: 1rem;
+}
 
+#contacto iframe {
+  width: 80%;
+  height: 60vh;
+  margin: 0;
+}
 
 /*estilos iconos*/
 
-.nuestras-tiendas h2{
-  text-align: center;
-  color: var(--morado);
-  font-weight: bold;
+.nuestras-tiendas {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 .iconos-tiendas {
   display: flex;
@@ -193,15 +289,33 @@ button:hover {
   gap: 2rem;
 }
 
-.icono-tienda1{
+.icono-tienda1 {
   background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.icono-tienda2{
+.icono-tienda2 {
   background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.icono-tienda3{
+.icono-tienda3 {
   background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .iconos-tiendas div {
   flex: 1; /* Asegura que los elementos ocupen espacio igual */
@@ -210,7 +324,7 @@ button:hover {
 
 .iconos-tiendas i {
   font-size: 40px; /* Tamaño del ícono */
-  color: var(--morado); 
+  color: var(--morado);
   margin-bottom: 10px; /* Espacio debajo del ícono */
 }
 
@@ -222,7 +336,7 @@ button:hover {
 
 .iconos-tiendas p {
   font-size: 16px;
-  color: #333 /* Texto verde oscuro */
+  color: #333; /* Texto verde oscuro */
 }
 
 /*FOOTER*/
@@ -236,21 +350,21 @@ button:hover {
   align-items: flex-start;
 }
 
-.comercio-justo { 
-  width: 55%; 
-  text-align: center; 
-  margin-bottom: 1rem; 
+.comercio-justo {
+  width: 55%;
+  text-align: center;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: 0 auto;
-} 
-.comercio-justo p { 
-  margin: 0; 
+}
+.comercio-justo p {
+  margin: 0;
   padding: 0.5rem 0;
   color: white;
 }
-.comercio-justo i{
+.comercio-justo i {
   color: white;
 }
 .linea-fina {
@@ -267,7 +381,7 @@ button:hover {
   margin-right: 1rem;
 }
 
-.logo-footer{
+.logo-footer {
   width: 150px;
 }
 

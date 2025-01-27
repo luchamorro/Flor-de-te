@@ -1,27 +1,36 @@
-document.getElementById('login-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que el formulario se envíe automáticamente
+// Lógica para mostrar el nombre del usuario en la barra de navegación
+document.addEventListener("DOMContentLoaded", function () {
+  const usuarioConectado = JSON.parse(localStorage.getItem("usuarioConectado"));
 
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+  if (
+    usuarioConectado &&
+    usuarioConectado != null &&
+    usuarioConectado != undefined
+  ) {
+    const areaUsuario = document.getElementById("iconoUsuarioLogin");
+    areaUsuario.innerHTML =
+      "<span> Hola, " + usuarioConectado.nombre + "</span>";
+  }
 
-    if (email === '' || password === '') {
-        alert('Por favor, complete todos los campos.');
-        return;
+  // Logout
+  document.getElementById("logoutBtn").addEventListener("click", function () {
+    localStorage.removeItem("usuarioConectado");
+    window.location.href = "../inicio/index.html";
+  });
+
+  // Subir y mostrar la foto
+  const uploadPhoto = document.getElementById("uploadPhoto");
+  const profilePicture = document.getElementById("profilePicture");
+
+  uploadPhoto.addEventListener("change", function (event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        profilePicture.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
     }
-
-    // Simulación de validación
-    if (email === 'usuario@ejemplo.com' && password === '123456') {
-        alert('Inicio de sesión exitoso.');
-    } else {
-        alert('Credenciales incorrectas. Por favor, intente de nuevo.');
-    }
+  });
 });
 
-// Suponiendo que el nombre de usuario es el dato que quieres guardar
-const usuario = {
-    nombre: 'pepito',
-    email: 'pepito@hotmail.com'
-};
-
-// Guardamos el objeto en el localStorage en formato JSON
-localStorage.setItem('usuario', JSON.stringify(usuario));
