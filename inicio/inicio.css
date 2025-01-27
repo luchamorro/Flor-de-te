@@ -1094,7 +1094,8 @@ button.botonCarrito:hover {
   padding-right: 1rem;
   color: var(--morado);
   padding-bottom: 0.3rem;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  opacity: 0.4;
   }
 
 

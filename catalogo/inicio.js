@@ -180,6 +180,7 @@ cargarDatos();
 
  carritoIcon.setAttribute('data-content', listaCompra.length);
  
+ //funcion para añadir cosas al carrito
 function anadirCompra(id) {
  const producto = productos.find(p => p.id == id);
  // Comprueba si el producto está en el carrito
@@ -207,7 +208,7 @@ function anadirCompra(id) {
    let resta = document.createElement('button');
    let monto = document.createElement('p');
 
-    precio.setAttribute('class', 'precio');
+   precio.setAttribute('class', 'precio');
    monto.setAttribute('id', `monto${producto.id}`);
    monto.setAttribute('class', 'monto');
    borrar.setAttribute('class', 'borrar');
@@ -304,10 +305,29 @@ function botonMas(id){
  };
 
 // Buscador
+
 const buscador = document.getElementById('buscador');
 const menuBuscador = document.createElement('div');
 menuBuscador.classList.add('menuBuscador');
 document.querySelector('.right-section').appendChild(menuBuscador);
+
+// Variable para almacenar todos los productos
+let catalogoCompleto = [];
+
+// Cargar el catálogo completo
+async function cargarCatalogoCompleto() {
+  try {
+    const idiomaSeleccionado = localStorage.getItem("selectedLanguage") || "es"; 
+    const respuesta = await fetch(idiomaSeleccionado === "en" ? 'productos_en.json' : 'productos_es.json');
+    catalogoCompleto = await respuesta.json();
+  } catch (error) {
+    console.error('Error al cargar el catálogo:', error);
+  }
+}
+
+// Cargar el catálogo al iniciar
+cargarCatalogoCompleto();
+
 
 // Evento de búsqueda
 buscador.addEventListener('input', function(item) {
@@ -319,8 +339,8 @@ buscador.addEventListener('input', function(item) {
    }
 
    // Filtrar productos
-   const filtro = productos.filter(producto => 
-       producto.nombre.toLowerCase().includes(busca));
+   const filtro = catalogoCompleto.filter(producto => 
+    producto.nombre.toLowerCase().includes(busca));
 
    // Mostrar resultados
    if (filtro.length) {
