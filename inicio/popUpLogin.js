@@ -6,61 +6,59 @@ const userArea = document.querySelector(".user-area");
 
 // Mostrar el popup de login al hacer clic en el ícono de usuario
 userArea.addEventListener("click", () => {
-  popupLoginBackground.style.display = "block";
-  popupLoginDiv.style.display = "block";
+popupLoginBackground.style.display = "block";
+popupLoginDiv.style.display = "block";
 });
 
 // Cerrar el popup al hacer clic en el botón de cerrar
 closeLoginPopup.addEventListener("click", () => {
-  popupLoginBackground.style.display = "none";
-  popupLoginDiv.style.display = "none";
+popupLoginBackground.style.display = "none";
+popupLoginDiv.style.display = "none";
 });
 
 // Cerrar el popup al hacer clic fuera del formulario
 popupLoginBackground.addEventListener("click", () => {
-  popupLoginBackground.style.display = "none";
-  popupLoginDiv.style.display = "none";
+popupLoginBackground.style.display = "none";
+popupLoginDiv.style.display = "none";
 });
 
 // Evento para el envío del formulario de inicio de sesión
-document
-  .getElementById("formularioLogin")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita que el formulario se envíe automáticamente
+document.getElementById("formularioLogin").addEventListener("submit", function (event) {
+event.preventDefault(); // Evita que el formulario se envíe automáticamente
 
-    const email = document.getElementById("loginEmail").value;
-    const password = document.getElementById("password").value;
+const email = document.getElementById("loginEmail").value;
+const password = document.getElementById("password").value;
 
-    let usuario = null;
+let usuario = null;
 
-    // Simulación de validación
-    if (email === "admin@ejemplo.com" && password === "123456") {
-      usuario = {
-        nombre: "Admin",
-        email: "admin@ejemplo.com",
-        esAdmin: true,
-      };
-    } else if (email === "andres@ejemplo.com" && password === "123456") {
-      usuario = {
-        nombre: "Andrés",
-        email: "andres@ejemplo.com",
-        esAdmin: false,
-      };
-    } else {
-      alert("Credenciales incorrectas");
-      return;
-    }
+// Simulación de validación
+if (email === "admin@ejemplo.com" && password === "123456") {
+    usuario = {
+    nombre: "Admin",
+    email: "admin@ejemplo.com",
+    esAdmin: true,
+  };
+} else if (email === "andres@ejemplo.com" && password === "123456") {
+    usuario = {
+    nombre: "Andrés",
+    email: "andres@ejemplo.com",
+    esAdmin: false,
+  };
+} else {
+  alert("Credenciales incorrectas");
+  return;
+}
 
-    // Guardamos el objeto en el localStorage como JSON
-    localStorage.setItem("usuarioConectado", JSON.stringify(usuario));
+// Guardamos el objeto en el localStorage como JSON
+localStorage.setItem("usuarioConectado", JSON.stringify(usuario));
 
-    // Redireccionamos según el tipo de usuario
-    if (usuario.esAdmin) {
-      window.location.href = "../administrador/panelAdmin.html";
-    } else {
-      window.location.href = "../login/login.html";
-    }
-  });
+// Redireccionamos según el tipo de usuario
+if (usuario.esAdmin) {
+  window.location.href = "../administrador/panelAdmin.html";
+} else {
+  window.location.href = "../login/login.html";
+}
+});
 
 // Logout
 document.getElementById("logoutBtn").addEventListener("click", function () {

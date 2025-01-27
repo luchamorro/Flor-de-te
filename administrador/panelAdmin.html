@@ -1,95 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/b58110c1d4.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <title>Flor de Té</title>
-    <link rel="stylesheet" href="panelAdmin.css" />
-    <link rel="stylesheet" href="../inicio/inicio.css" />
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <title>Flor de Té</title>
+  <link rel="stylesheet" href="panelAdmin.css" />
+  <link rel="stylesheet" href="../inicio/inicio.css" />
   </head>
   <body>
     <nav class="menu">
       <div class="left-section">
         <a href="../inicio/index.html">
-          <img
-            src="../img/logos/logo_horizontal.svg"
-            alt="logo Flor de Té"
-            class="logo"
-          />
+          <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo" />
         </a>
         <ul>
-          <li>
-            <a href="../inicio/index.html" data-translate="inicio">Inicio</a>
-          </li>
-          <li>
-            <a href="../catalogo/catalogo.html" data-translate="catalogo-nav"
-              >Catálogo</a
-            >
-          </li>
-          <li>
-            <a href="../nosotros/nosotros.html" data-translate="nosotros"
-              >Nosotros</a
-            >
-          </li>
-          <li>
-            <a href="../contacto/contacto.html" data-translate="contacto"
-              >Contacto</a
-            >
-          </li>
+          <li><a href="../inicio/index.html" data-translate="inicio">Inicio</a></li>
+          <li><a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a></li>
+          <li><a href="../nosotros/nosotros.html" data-translate="nosotros">Nosotros</a></li>
+          <li><a href="../contacto/contacto.html" data-translate="contacto">Contacto</a></li>
         </ul>
       </div>
       <div class="right-section">
-        <input
-          data-translate="placeholder-nav"
-          type="search"
-          placeholder="Buscar..."
-        />
-        <div class="user-area" id="iconoUsuarioLogin">
-          <i class="fa-solid fa-user"></i>
-        </div>
+        <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." id="buscador" />
+        <div class="user-area"><i class="fa-solid fa-user"></i></div>
         <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
         <select id="language-select" title="idioma">
           <option value="es">ES</option>
           <option value="en">EN</option>
         </select>
       </div>
-      <div id="fechayhora"></div>
-      <!--reubicar este div-->
+      <div id="fechayhora"></div> <!--reubicar este div-->
     </nav>
 
     <div id="panelAdministracion">
       <div class="cuerpo-panelAdministracion">
         <div class="opcionesPanel">
           <div class="texto-opcionesPanel">
-            <h3>Panel de administración</h3>
+            <h3 data-translate="panel_Admin">Panel de administración</h3>
           </div>
 
           <div class="iconos-opcionesPanel">
             <div id="productosBtn" class="icono-opcionProducto">
               <i class="fa-solid fa-table"></i>
-              <p>Productos</p>
+              <p data-translate="productos">Productos</p>
             </div>
             <div class="icono-opcionUsuarios" id="logoutBtn">
               <i class="fa-solid fa-user"></i>
-              <p>cerrar sesion</p>
+              <p data-translate="cerrar_sesion">cerrar sesion</p>
             </div>
           </div>
         </div>

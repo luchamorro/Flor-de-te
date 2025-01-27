@@ -185,3 +185,9 @@ function limpiarFormulario() {
   // Borrar el campo de archivo
   formulario.querySelector("input[type='file']").value = "";
 }
+
+// Logout
+document.getElementById("logoutBtn").addEventListener("click", function () {
+  localStorage.removeItem("usuarioConectado");
+  window.location.href = "../inicio/index.html";
+});

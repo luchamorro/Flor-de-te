@@ -1,103 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/b58110c1d4.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <title>Flor de Té</title>
-    <link rel="stylesheet" href="../inicio/inicio.css" />
-    <link rel="stylesheet" href="tablaProductos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <title>Flor de Té</title>
+  <link rel="stylesheet" href="../inicio/inicio.css" />
+  <link rel="stylesheet" href="tablaProductos.css" />
   </head>
 
   <body>
-    <nav class="menu">
-      <div class="left-section">
-        <a href="../inicio/index.html">
-          <img
-            src="../img/logos/logo_horizontal.svg"
-            alt="logo Flor de Té"
-            class="logo"
-        /></a>
-        <ul>
-          <li>
-            <a href="../inicio/index.html" data-translate="inicio">Inicio</a>
-          </li>
-          <li>
-            <a href="../catalogo/catalogo.html" data-translate="catalogo-nav"
-              >Catálogo</a
-            >
-          </li>
-          <li>
-            <a href="../nosotros/nosotros.html" data-translate="nosotros"
-              >Nosotros</a
-            >
-          </li>
-          <li>
-            <a href="../contacto/contacto.html" data-translate="contacto"
-              >Contacto</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="right-section">
-        <input
-          data-translate="placeholder-nav"
-          type="search"
-          placeholder="Buscar..."
-        />
-        <div class="user-area"><i class="fa-solid fa-user"></i></div>
-        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
-        <select id="language-select" title="idioma">
-          <option value="es">ES</option>
-          <option value="en">EN</option>
-        </select>
-      </div>
-      <div id="fechayhora"></div>
-      <!--reubicar este div-->
-    </nav>
+  <nav class="menu">
+    <div class="left-section">
+      <a href="../inicio/index.html">
+        <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo" />
+      </a>
+      <ul>
+        <li><a href="../inicio/index.html" data-translate="inicio">Inicio</a></li>
+        <li><a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a></li>
+        <li><a href="../nosotros/nosotros.html" data-translate="nosotros">Nosotros</a></li>
+        <li><a href="../contacto/contacto.html" data-translate="contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="right-section">
+      <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." id="buscador" />
+      <div class="user-area"><i class="fa-solid fa-user"></i></div>
+      <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+      <select id="language-select" title="idioma">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+      </select>
+    </div>
+    <div id="fechayhora"></div>
+  </nav>
 
     <!-- Tabla de productos -->
     <div class="contenedor-tabla">
-      <h1>Productos</h1>
+      <h1 data-translate="titulo-productos">Productos</h1>
       <!-- Botones de acción -->
       <div class="acciones">
-        <button class="btn-nuevo" onclick="agregarProducto()">
+        <button class="btn-nuevo" onclick="agregarProducto()" data-translate="boton-nuevo">
           <i class="fa-solid fa-plus"></i> Nuevo
         </button>
-        <button class="btn-modificar" onclick="editarProducto()">
+        <button class="btn-modificar" onclick="editarProducto()" data-translate="boton-modificar">
           <i class="fa-solid fa-pen"></i> Modificar
         </button>
-        <button class="btn-eliminar" onclick="eliminarProducto()">
+        <button class="btn-eliminar" onclick="eliminarProducto()" data-translate="boton-eliminar">
           <i class="fa-solid fa-trash"></i> Eliminar
         </button>
+        <div class="cerrar-sesion">
+          <button id="logoutBtn" data-translate="cerrar-sesion">Cerrar Sesión</button>
+        </div>
       </div>
 
       <table>
         <thead>
           <tr>
             <th><input type="checkbox" id="select-all" /></th>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Imagen</th>
-            <th>Filtros</th>
-            <th>Precio</th>
+            <th data-translate="columna-nombre">Nombre</th>
+            <th data-translate="columna-descripcion">Descripción</th>
+            <th data-translate="columna-imagen">Imagen</th>
+            <th data-translate="columna-filtros">Filtros</th>
+            <th data-translate="columna-precio">Precio</th>
           </tr>
         </thead>
 
