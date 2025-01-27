@@ -30,7 +30,10 @@ function mostrarProductos(datos, lista) {
 // Función principal para cargar los datos del archivo JSON
 async function cargarDatos() {
   try {
-    const respuesta = await fetch('productos.json');
+    const idiomaSeleccionado = localStorage.getItem("selectedLanguage") || "es"; // Obtener el idioma seleccionado
+
+    // Cargar el archivo JSON correspondiente al idioma seleccionado
+    const respuesta = await fetch(idiomaSeleccionado === "en" ? 'productos_en.json' : 'productos_es.json');
     productos = await respuesta.json();
 
     const div = document.getElementById('catalogoProductos');
@@ -313,7 +316,8 @@ let catalogoCompleto = [];
 // Cargar el catálogo completo
 async function cargarCatalogoCompleto() {
   try {
-    const respuesta = await fetch('../catalogo/productos.json');
+    const idiomaSeleccionado = localStorage.getItem("selectedLanguage") || "es"; 
+    const respuesta = await fetch(idiomaSeleccionado === "en" ? 'productos_en.json' : 'productos_es.json');
     catalogoCompleto = await respuesta.json();
   } catch (error) {
     console.error('Error al cargar el catálogo:', error);
