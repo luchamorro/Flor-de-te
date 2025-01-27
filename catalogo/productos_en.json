@@ -1,0 +1,231 @@
+[
+  {
+    "id": 1,
+    "nombre": "Lavender Infusion",
+    "descripcion": "Has relaxing properties, improves sleep quality, and is anti-inflammatory.",
+    "img": "/img/productos/01_infulavanda.png",
+    "filtros": [
+      "Relaxing",
+      "Infusion",
+      "Rest",
+      "Anti-inflammatory"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 2,
+    "nombre": "Black Tea",
+    "descripcion": "Rich in antioxidants, may reduce the risk of heart disease and stimulates the mind.",
+    "img": "/img/productos/02_tenegro.png",
+    "filtros": [
+      "Tea",
+      "Antioxidants",
+      "Stimulating"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 3,
+    "nombre": "Green Tea",
+    "descripcion": "High in catechins, improves metabolism, has anti-inflammatory properties, benefits skin and immune system health.",
+    "img": "/img/productos/03_teverde.png",
+    "filtros": [
+      "Tea",
+      "Antioxidants",
+      "Anti-inflammatory"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 4,
+    "nombre": "Oolong Tea",
+    "descripcion": "Also known as Blue Tea. Helps control weight by accelerating metabolism, improves dental health due to its fluoride content.",
+    "img": "/img/productos/04_teoolong.png",
+    "filtros": [
+      "Tea",
+      "Dental health"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 5,
+    "nombre": "Red Tea",
+    "descripcion": "Aids digestion, has detoxifying properties, and is a natural stimulant.",
+    "img": "/img/productos/05_terojo.png",
+    "filtros": [
+      "Tea",
+      "Stimulating",
+      "Digestive",
+      "Detox"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 6,
+    "nombre": "White Tea",
+    "descripcion": "Contains polyphenols that help combat premature aging. Strengthens the immune system due to its high antioxidant content and has a mild, delicate flavor.",
+    "img": "/img/productos/06_teblanco.png",
+    "filtros": [
+      "Tea",
+      "Antioxidants"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 7,
+    "nombre": "Mint Infusion",
+    "descripcion": "Digestive relief, ideal for refreshing, may help reduce stress.",
+    "img": "/img/productos/07_infumenta.png",
+    "filtros": [
+      "Infusion",
+      "Digestive"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 8,
+    "nombre": "Ginger Infusion",
+    "descripcion": "Improves digestion with anti-inflammatory properties and boosts the immune system.",
+    "img": "/img/productos/08_infujengibre.png",
+    "filtros": [
+      "Infusion",
+      "Digestive",
+      "Anti-inflammatory"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 9,
+    "nombre": "Chamomile Infusion",
+    "descripcion": "Helps with sleep, is anti-inflammatory, and provides digestive relief.",
+    "img": "/img/productos/09_infumanzanilla.png",
+    "filtros": [
+      "Infusion",
+      "Digestive",
+      "Anti-inflammatory",
+      "Rest"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 10,
+    "nombre": "Hibiscus Infusion",
+    "descripcion": "Reduces blood pressure, has antioxidant properties, and has a sour, refreshing, and unique flavor.",
+    "img": "/img/productos/10_infuhibisco.png",
+    "filtros": [
+      "Infusion",
+      "Refreshing",
+      "Antioxidants"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 11,
+    "nombre": "Raspberry Infusion",
+    "descripcion": "Rich in antioxidants, anti-inflammatory properties, and refreshing flavor.",
+    "img": "/img/productos/11_infuframbuesa.png",
+    "filtros": [
+      "Infusion",
+      "Refreshing",
+      "Anti-inflammatory",
+      "Antioxidants"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 12,
+    "nombre": "Lemon Infusion",
+    "descripcion": "Detox, relieves cold symptoms, and is refreshing.",
+    "img": "/img/productos/12_infulimon.png",
+    "filtros": [
+      "Infusion",
+      "Refreshing",
+      "Detox"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 13,
+    "nombre": "Ginseng Infusion",
+    "descripcion": "A natural energizer, boosts the immune system, and improves concentration.",
+    "img": "/img/productos/13_infuginseng.png",
+    "filtros": [
+      "Infusion",
+      "Stimulating"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 14,
+    "nombre": "Rose Infusion",
+    "descripcion": "Has relaxing properties, is a natural anti-inflammatory, and improves digestion.",
+    "img": "/img/productos/14_infurosa.png",
+    "filtros": [
+      "Infusion",
+      "Relaxing",
+      "Anti-inflammatory",
+      "Digestive"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 15,
+    "nombre": "Turmeric Infusion",
+    "descripcion": "Has anti-inflammatory, digestive properties, and boosts the immune system.",
+    "img": "/img/productos/15_infucurcuma.png",
+    "filtros": [
+      "Infusion",
+      "Anti-inflammatory",
+      "Digestive"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 16,
+    "nombre": "Aloe Vera Infusion",
+    "descripcion": "Has hydrating properties for the skin, provides digestive relief, and is anti-inflammatory.",
+    "img": "/img/productos/16_infualoe.png",
+    "filtros": [
+      "Infusion",
+      "Anti-inflammatory",
+      "Digestive"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 17,
+    "nombre": "Jasmine Infusion",
+    "descripcion": "Has relaxing and antioxidant properties with a unique aromatic flavor.",
+    "img": "/img/productos/17_infujazmin.png",
+    "filtros": [
+      "Infusion",
+      "Relaxing",
+      "Antioxidants"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 18,
+    "nombre": "Eucalyptus Infusion",
+    "descripcion": "Has decongestant, anti-inflammatory properties, and a flavor that refreshes breath.",
+    "img": "/img/productos/18_infueucalipto.png",
+    "filtros": [
+      "Infusion",
+      "Refreshing",
+      "Anti-inflammatory"
+    ],
+    "precio": 4.15
+  },
+  {
+    "id": 19,
+    "nombre": "Lemon Verbena Infusion",
+    "descripcion": "Has digestive properties, calming effects, and a refreshing taste.",
+    "img": "/img/productos/19_infuhierbaluisa.png",
+    "filtros": [
+      "Infusion",
+      "Digestive",
+      "Refreshing"
+    ],
+    "precio": 4.15
+  }
+]

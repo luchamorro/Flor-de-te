@@ -30,7 +30,9 @@ function mostrarProductos(datos, lista) {
 // Función principal para cargar los datos del archivo JSON
 async function cargarDatos() {
   try {
-    const respuesta = await fetch('productos2.json');
+    const idiomaSeleccionado = localStorage.getItem("selectedLanguage") || "es"; // Obtener el idioma seleccionado
+    // Cargar el archivo JSON correspondiente al idioma seleccionado
+    const respuesta = await fetch(idiomaSeleccionado === "en" ? 'productos2_en.json' : 'productos2_es.json');
     productos = await respuesta.json();
 
     const div = document.getElementById('catalogoProductosMini');
@@ -79,6 +81,7 @@ async function cargarDatos() {
     document.getElementById('catalogoProductosMini').textContent = 'Error al cargar los datos.';
   }
 }
+
 
 
 function calcularTotal() {
