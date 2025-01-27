@@ -1,53 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/b58110c1d4.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <title>Flor de Té</title>
     <link rel="stylesheet" href="contacto.css" />
-    <link rel="stylesheet" href="inicio.css" />
+    <link rel="stylesheet" href="../inicio/inicio.css" />
   </head>
   <body>
     <nav class="menu">
       <div class="left-section">
-        <img
-          src="../img/logos/logo_horizontal.svg"
-          alt="logo Flor de Té"
-          class="logo"
-        />
+        <a href="../inicio/index.html">
+          <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo" />
+        </a>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="../inicio/index.html" data-translate="inicio">Inicio</a></li>
+          <li><a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a></li>
+          <li><a href="../nosotros/nosotros.html" data-translate="nosotros">Nosotros</a></li>
+          <li><a href="../contacto/contacto.html" data-translate="contacto">Contacto</a></li>
         </ul>
       </div>
       <div class="right-section">
-        <input type="text" placeholder="Buscar..." />
+        <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." id="buscador" />
         <div class="user-area"><i class="fa-solid fa-user"></i></div>
         <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
-        <select title="idioma">
+        <select id="language-select" title="idioma">
           <option value="es">ES</option>
           <option value="en">EN</option>
         </select>
       </div>
+      <div id="fechayhora"></div> 
     </nav>
 
     <div id="contacto">
@@ -125,19 +112,19 @@
                 ></textarea>
               </div>
 
-              <div class="form-group checkbox-group">
-                <input
-                  type="checkbox"
-                  id="privacidad"
-                  name="privacidad"
-                  required
-                />
-                <label for="privacidad"
-                  >He leído y acepto la política de privacidad</label
-                >
-              </div>
-
               <button type="submit">Enviar</button>
+
+              <div class="checkbox-group">
+                <input type="checkbox" id="privacidad" name="privacidad" required />
+                <label for="privacidad">
+                  He leído y acepto 
+                  <a href="politica.html" target="_blank">la política de privacidad</a>
+                </label>
+              </div>
+              
+              <div id="politica">
+                <p>Antes de rellenar el formulario recuerda que es importante que conozcas la política de protección de tus datos personales. Responsable: Flor de té S.L.. Finalidad: Envío de artículos del blog, novedades, así como el aviso de nuevas actividades de carácter comercial de flor-de-té@hotmail.com Legitimación: Consentimiento del interesado. Destinatarios: No se cederán datos a terceros, salvo autorización expresa u obligación legal. Derechos: Tienes derecho a acceder, rectificar y suprimir los datos en todo momento, portabilidad de los datos, limitación u oposición a su tratamiento, transparencia y derecho a no ser objeto de decisiones automatizadas. Plazo de conservación de los datos: Hasta que no se solicite su supresión por el interesado. Información adicional: Puede consultar la información adicional y detallada sobre nuestra Política de Privacidad y Aviso Legal.</p>
+              </div>
             </form>
           </div>
         </div>

@@ -7,14 +7,15 @@
 }
 
 .contacto-texto {
-  background-image: url(hojas-y-flores-para-infusion.jpg);
+  background-image: url(6-poderosas-infusiones-y-para-que-sirven.webp);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 30rem;
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-content: center;
+  align-items: center;
   transition: transform 0.3s ease-in-out;
 }
 .contacto-texto:hover {
@@ -33,7 +34,7 @@ html {
 h1 {
   color: var(--blanco);
   font-size: 5rem;
-  margin-bottom: 1rem;
+  margin-inline:auto;
 }
 
 h3 {
@@ -65,9 +66,7 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: var(--burdeos); /* Cambio de color al pasar el ratón */
-}
+
 
 .cuerpo-contacto {
   margin: 5rem auto;
@@ -77,97 +76,6 @@ button:hover {
   gap: 2rem;
 }
 
-/* Estilos del menú */
-.menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgb(255, 235, 222);
-  padding: 1rem;
-  border-radius: 50px;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  line-height: normal;
-  position: fixed;
-  width: 115.7rem;
-  top: 0;
-  z-index: 100;
-}
-
-.menu img {
-  height: 65px;
-  margin-left: 2rem;
-}
-
-.menu ul {
-  display: flex;
-  list-style: none;
-  width: 20%;
-  justify-content: space-evenly;
-}
-
-.menu ul li a {
-  color: var(--negro);
-  text-decoration: none;
-}
-
-.menu ul li a:hover {
-  color: #cd0038;
-  font-size: 1.1rem;
-}
-
-.left-section {
-  display: flex;
-  align-items: center;
-  width: 70%;
-}
-
-.right-section {
-  display: flex;
-  align-items: center;
-  width: 20%;
-}
-
-.right-section input[type="text"] {
-  padding: 8px;
-  margin-right: 10px;
-  border: none;
-  border-radius: 4px;
-  background-color: rgb(255, 206, 173);
-}
-
-.right-section select {
-  padding: 8px;
-  margin-left: 15px;
-  border: none;
-  border-radius: 4px;
-  background-color: #fff;
-}
-
-.right-section .user-area,
-.right-section .cart {
-  color: var(--negro);
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-.right-section .cart {
-  position: relative;
-  width: 2.3rem;
-}
-
-.right-section .cart::after {
-  content: "4";
-  /* Example for cart item count */
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background-color: var(--burdeos);
-  color: #fff;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 12px;
-}
 
 /*estilos iconos*/
 .contactanos {
@@ -303,11 +211,10 @@ button:hover {
   height: 150px;
 }
 .checkbox-group {
-  display: flex;
-  align-items: center;
-  gap: 1px;
-  font-size: 0.9rem;
-  color: #555;
+  color: var(--morado);
+  margin: 1rem;
+  padding: 2rem;
+  text-align: center;
 }
 
 .checkbox-group input [type="checkbox"] {
@@ -338,6 +245,7 @@ button {
 button:hover {
   background-color: var(--morado);
 }
+
 
 /* Estilo para el texto de la política */
 .politica p {
