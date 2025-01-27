@@ -58,11 +58,58 @@
 <!-- Precios -->
  <section> 
 <div id="cart-summary">
+
+<h4 class="h4Datos">Datos de envío</h4>
+
+
+
+  <form class="formularioCheckout">
+    <label for="nombre">Nombre:</label><br>
+    <input class="input" type="text" id="nombre" name="nombre"><br>
+    <label for="apellido">Apellido:</label><br>
+    <input class="input" type="text" id="apellido" name="apellido"><br>
+    <label for="calle">Calle:</label><br>
+    <input class="input" type="text" id="calle" name="calle">
+    <label for="numeroDireccion">Número:</label><br>
+    <input class="input" type="text" id="numeroDireccion" name="numeroDireccion"><br>
+    <label for="pisoDireccion">Piso:</label><br>
+    <input class="input" type="text" id="pisoDireccion" name="pisoDireccion"><br>
+    <label for="cp">Código Postal:</label><br>
+    <input class="input" type="text" id="cp" name="cp"><br>
+    <label for="poblacion">Provincia:</label><br>
+    <input class="input" type="text" id="poblacion" name="poblacion"><br>
+
+    <p>Envíos dentro de España y Portugal en menos de 72hs.</p>
+
+
+
+<div class="datosPrecio"> 
+<div> 
   <p class="precioTotal"><b>Total: <span id="total"></span>€</b></p>
   <p>Subtotal: <span id="subtotal"></span>€</p>
   <p>IVA: <span id="iva"></span>€</p>
-  <button id="finalizarCompra">Confirmar compra</button>
-  
+  <p class = "envio"><span class="precio">Gastos de envío: </span> <span class="precio"> 5 €</span></p>
+</div>
+<div class="pagoFinal"> 
+  <p>Método de pago:</p>
+  <div class="bizumTarjetas"> 
+  <input type="checkbox" value="1" > 
+  <img src="../img/logos/Logo-Bizum.png" alt="Bizum" width="120px">
+</div>
+  <br>
+  <div class="bizumTarjetas"> 
+
+  <input type="checkbox" value="2" class="bizumTarjetas"> <img src="../img/logos/visamastercard.png" alt="Bizum" width="120px">
+</div>
+  <br>
+  <br>
+</div>
+</div> 
+
+
+<button id="finalizarCompra">Confirmar compra</button>
+</form> 
+
 </div>
 
 <!------------------------------------->
@@ -131,6 +178,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// Función para aumentar el monto
+window.botonMas = (id) => {
+    const montoElement = document.getElementById(`monto${id}`);
+    let monto = parseInt(montoElement.textContent.replace('x', ''), 10);
+    monto += 1;
+    montoElement.textContent = `x${monto}`;
+    obtenerPrecio(); // Actualiza el precio total
+  };
+
+  // Función para disminuir el monto
+  window.botonMenos = (id) => {
+    const montoElement = document.getElementById(`monto${id}`);
+    let monto = parseInt(montoElement.textContent.replace('x', ''), 10);
+    if (monto > 1) { // Evita que el monto sea menor a 1
+      monto -= 1;
+      montoElement.textContent = `x${monto}`;
+      obtenerPrecio(); // Actualiza el precio total
+    }
+  };
+
+
+
 setTimeout(obtenerPrecio, 100);
 setTimeout(borrarProducto, 100);
 
@@ -148,6 +217,7 @@ function obtenerPrecio() {
         return match ? parseInt(match[0], 10) : 1; // Si no encuentra un número, usa 1 como valor predeterminado
     });
 
+    
     // Iterar sobre los precios y multiplicar por los montos correspondientes
     precios.forEach((elemento, index) => {
         const precio = parseFloat(elemento.innerText); 
@@ -190,6 +260,7 @@ function borrarProducto(){
   });
 
 }
+
   </script>
 
 <script src="../inicio/fechayhora.js"></script>
