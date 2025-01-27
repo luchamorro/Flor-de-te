@@ -9,24 +9,28 @@
   main{
 display:flex;
 width: 100%;
+justify-content: space-around;
+background-color: #f9f8f9;
 
   }
 
 
 #cart-summary {
  
-   border: solid rgb(182, 90, 232) 0.05rem;
    border-radius: 1rem;
-    width: 20rem;
-    margin: 15rem 4rem;
+    margin-top: 11rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgb(244, 226, 245);
-    padding-bottom: 2rem;
+    border: solid rgb(222, 155, 222) 0.05rem;
+    border-radius: 2rem;
+    padding-bottom: 3rem;
+    padding-left: 4rem;
+    padding-right: 6rem;
+    background-color: white;
     
-
 }
 
 
@@ -37,7 +41,10 @@ button {
     padding: 0.8rem 1rem;
     cursor: pointer;
     margin-top: 0.3rem;
-}
+    height: fit-content;
+    font-size: 1rem;
+    font-family: "Space Grotesk", serif;
+  }
 
 button:hover {
     background-color: #df3308;
@@ -46,13 +53,10 @@ button:hover {
 
 /*-------------------------------*/
 
-  .separador{
-  
-  height: 7rem;
-  }
+
 
   #carrito_container img {
-    width: 180px; 
+    width: 15rem; 
     height: auto; 
     object-fit: cover; /* Ajusta cómo se escala la imagen */
     border-radius: 0.5rem;
@@ -62,7 +66,7 @@ button:hover {
     display: flex;
     gap: 1rem;
 
-    margin: 3rem;
+    margin: 1rem;
     flex-wrap: wrap;
 
   }
@@ -70,6 +74,8 @@ button:hover {
 .carrito_section{
     margin-top: 7.5rem;
 }
+
+
 
 
   #carrito_container li {
@@ -80,7 +86,7 @@ button:hover {
   border: solid rgb(222, 155, 222) 0.05rem;
   border-radius: 2rem;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    background-color: white;
   }
 
 
@@ -109,7 +115,11 @@ button:hover {
   cursor: pointer;
 }
 
+.datosPrecio{
+display: flex;
+gap: 3rem;
 
+}
 
 @media (max-width: 768px) {
    main {
@@ -140,3 +150,92 @@ button:hover {
       
     
 }
+
+.masMenos{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  border-radius: 5%;
+}
+
+
+
+.resta, .suma {
+  background: none;
+  color: black;
+  font-size: 1.5rem;
+  padding: 0.9rem;
+  line-height: 0.3rem;
+  margin: 0;
+
+}
+
+.resta:hover, .suma:hover{
+  background:none;
+  color: #cd0038;
+}
+
+
+span.precio{
+  color: rgb(70, 68, 68);
+}
+
+.envio{
+  display: flex;
+  gap: 0.3rem;
+}
+
+.input{
+  border: none;
+  border-radius: 2rem;
+  width: 100%;
+  height: 2rem;
+  margin: 0.3rem 0.3rem;
+  background-color: rgb(236, 199, 242);
+  
+}
+
+.elementoDireccion{
+  border: solid var(--morado) 0.05rem;
+  border-radius: 1rem;
+  height: 2rem;
+  width: fit-content;
+}
+
+.direccion{
+  display: flex;
+  gap: 3rem;
+}
+
+
+
+.formularioCheckout{
+  color: rgb(38, 38, 38);
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.formularioCheckout p{
+  color: rgb(38, 38, 38);
+
+}
+
+.formularioCheckout input{
+  font-size: 1.3rem;
+  padding-left: 1rem;
+ 
+}
+
+.pagoFinal{
+  margin-top: 2rem;
+
+}
+
+.bizumTarjetas{
+display: flex;  
+gap:0.5rem;
+
+}
+
