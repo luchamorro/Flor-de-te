@@ -1,0 +1,40 @@
+[
+    {
+      "id": 1,
+      "nombre": "Lavender Infusion",
+      "descripcion": "Has relaxing properties, improves sleep quality, and is anti-inflammatory.",
+      "img": "/img/productos/01_infulavanda.png",
+      "filtros": [
+        "Relaxing",
+        "Infusion",
+        "Rest",
+        "Anti-inflammatory"
+      ],
+      "precio": 4.15
+    },
+    {
+      "id": 3,
+      "nombre": "Green Tea",
+      "descripcion": "High in catechins, improves metabolism, has anti-inflammatory properties, benefits skin and immune system health.",
+      "img": "/img/productos/03_teverde.png",
+      "filtros": [
+        "Tea",
+        "Antioxidants",
+        "Anti-inflammatory"
+      ],
+      "precio": 4.15
+    },
+    {
+      "id": 15,
+      "nombre": "Turmeric Infusion",
+      "descripcion": "Has anti-inflammatory, digestive properties, and boosts the immune system.",
+      "img": "/img/productos/15_infucurcuma.png",
+      "filtros": [
+        "Infusion",
+        "Anti-inflammatory",
+        "Digestive"
+      ],
+      "precio": 4.15
+    }
+  ]
+  

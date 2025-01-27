@@ -1,55 +1,270 @@
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../inicio/inicio.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-  <title>Document</title>
-</head>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../inicio/inicio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Flor de Té</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="../inicio/estilo_popup.css">
+      <link rel="stylesheet" href="carrito.css">
+      <link rel="stylesheet" href="../inicio/inicio.css">
+
+  </head>
 <body>
+
   <nav class="menu">
-    <label for="menu-toggle" class="menu-icon">☰</label>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-    <img src="../img/logos/logo_horizontal.svg" alt="logo flor de te" />
-    <ul class="ul1">
-      <li class="menu"><a href="index.html">Inicio</a></li>
-      <li class="menu"><a href="nosotros.html">Nosotros</a></li>
-      <li class="menu"><a href="contacto.html">Contacto</a></li>
-      <li class="menu"><a href="carrito.html">Carrito</a></li>
-    </ul>
+    <div class="left-section">
+      <img
+        src="../img/logos/logo_horizontal.svg"
+        alt="logo Flor de Té"
+        class="logo"
+      />
+      <ul>
+        <li><a href="../inicio/index.html" data-translate="inicio">Inicio</a></li>
+        <li><a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a></li>
+        <li><a href="../nosotros/nosotros.html" data-translate="nosotros">Nosotros</a></li>
+        <li><a href="../contacto/contacto.html" data-translate="contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="right-section">
+      <input type="text" placeholder="Buscar..." />
+      <div class="user-area"><i class="fa-solid fa-user"></i></div>
+      <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+      <select title="idioma">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+      </select>
+    </div>
+    <div id="fechayhora"></div> <!--reubicar este div-->
   </nav>
-
-  <section>
-    
+ 
+  <main>
+    <div class="separador"></div>
+  <section class="carrito_section">
+    <p class="saludoCliente"><span>Juan Carlos</span>, estos son los productos de tu carrito:</p>
+   
+    <ul id="carrito_container" style="display: flex;" class="carrito_container"></ul>
   </section>
-  
-  <footer>
-    <p class="column-foo-1">
-      <a href="index.html">Inicio</a>
-      <a href="nosotros.html">Nosotros</a>
-      <a href="contacto.html">Contacto</a>
-      <a href="carrito.html">Carrito</a>
-    </p>
-    <p class="column-foo-2">
-      <a href="https://goo.gl/maps/8V5H3QJjH6gQYVJj6" target="_blank">Calle 123, Ciudad de México</a>
-      <a href="tel:+525555555555">+52 55 5555 5555</a>
-    </p>
-    <p class="column-foo-3">
-     <a href="#">Politicas</a> 
-     <a href="#">Aviso Legal</a> 
-     <a href="#">Politica de Cookies</a> 
-     <a href="#">Politicas de Privacidad</a>
-    </p>
-  </footer>
-  <div class="subfooter">     
-    © 2024 Flor de Te
-    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-  </div>
-</body>
 
+<!------------------------------------->
+
+<!-- Precios -->
+ <section> 
+<div id="cart-summary">
+
+<h4 class="h4Datos">Datos de envío</h4>
+
+
+
+  <form class="formularioCheckout">
+    <label for="nombre">Nombre:</label><br>
+    <input class="input" type="text" id="nombre" name="nombre"><br>
+    <label for="apellido">Apellido:</label><br>
+    <input class="input" type="text" id="apellido" name="apellido"><br>
+    <label for="calle">Calle:</label><br>
+    <input class="input" type="text" id="calle" name="calle">
+    <label for="numeroDireccion">Número:</label><br>
+    <input class="input" type="text" id="numeroDireccion" name="numeroDireccion"><br>
+    <label for="pisoDireccion">Piso:</label><br>
+    <input class="input" type="text" id="pisoDireccion" name="pisoDireccion"><br>
+    <label for="cp">Código Postal:</label><br>
+    <input class="input" type="text" id="cp" name="cp"><br>
+    <label for="poblacion">Provincia:</label><br>
+    <input class="input" type="text" id="poblacion" name="poblacion"><br>
+
+    <p>Envíos dentro de España y Portugal en menos de 72hs.</p>
+
+
+
+<div class="datosPrecio"> 
+<div> 
+  <p class="precioTotal"><b>Total: <span id="total"></span>€</b></p>
+  <p>Subtotal: <span id="subtotal"></span>€</p>
+  <p>IVA: <span id="iva"></span>€</p>
+  <p class = "envio"><span class="precio">Gastos de envío: </span> <span class="precio"> 5 €</span></p>
+</div>
+<div class="pagoFinal"> 
+  <p>Método de pago:</p>
+  <div class="bizumTarjetas"> 
+  <input type="checkbox" value="1" > 
+  <img src="../img/logos/Logo-Bizum.png" alt="Bizum" width="120px">
+</div>
+  <br>
+  <div class="bizumTarjetas"> 
+
+  <input type="checkbox" value="2" class="bizumTarjetas"> <img src="../img/logos/visamastercard.png" alt="Bizum" width="120px">
+</div>
+  <br>
+  <br>
+</div>
+</div> 
+
+
+<button id="finalizarCompra">Confirmar compra</button>
+</form> 
+
+</div>
+
+<!------------------------------------->
+</section>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="comercio-justo">
+      <p><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
+      <p><i class="fa-solid fa-seedling"></i> Sin crueldad animal</p>
+      <p><i class="fa-solid fa-leaf"></i> 100% Orgánico</p>
+      <p><i class="fa-solid fa-trash"></i> Sin microplasticos</p>
+    </div>
+    <hr class="linea-fina">
+    <div class="newsletter">
+      <h3>Suscríbete a nuestra newsletter</h3>
+      <p>Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?</p>
+      <form>
+        <input type="email" placeholder="Introduce tu email">
+        <button type="submit">Suscribirse</button>
+      </form>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h4>Enlaces Útiles</h4>
+        <p>
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="carrito.html">Carrito</a>
+        </p>
+      </div>
+      <div class="footer-column">
+        <h4>Políticas</h4>
+        <p>
+          <a href="#">Políticas</a>
+          <a href="#">Aviso Legal</a>
+          <a href="#">Política de Cookies</a>
+          <a href="#">Políticas de Privacidad</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="subfooter">
+    <p>© 2024 Flor de Té</p>
+  </div>
+</footer>
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  const carritoDestino = document.getElementById('carrito_container'); 
+
+  const carritoGuardado = localStorage.getItem('carritoLleno');
+
+  if (carritoDestino && carritoGuardado) {
+    
+    carritoDestino.innerHTML = carritoGuardado;
+  }
+});
+
+// Función para aumentar el monto
+window.botonMas = (id) => {
+    const montoElement = document.getElementById(`monto${id}`);
+    let monto = parseInt(montoElement.textContent.replace('x', ''), 10);
+    monto += 1;
+    montoElement.textContent = `x${monto}`;
+    obtenerPrecio(); // Actualiza el precio total
+  };
+
+  // Función para disminuir el monto
+  window.botonMenos = (id) => {
+    const montoElement = document.getElementById(`monto${id}`);
+    let monto = parseInt(montoElement.textContent.replace('x', ''), 10);
+    if (monto > 1) { // Evita que el monto sea menor a 1
+      monto -= 1;
+      montoElement.textContent = `x${monto}`;
+      obtenerPrecio(); // Actualiza el precio total
+    }
+  };
+
+
+
+setTimeout(obtenerPrecio, 100);
+setTimeout(borrarProducto, 100);
+
+function obtenerPrecio() { 
+    let sumaTotal = 0;
+    let subTotal = 0;
+    let ivaTotal = 0;
+
+    const precios = document.querySelectorAll(".precio");
+    const montos = document.querySelectorAll(".monto");
+
+    // Extraer los valores numéricos de montos
+    const numeros = Array.from(montos).map(monto => {
+        const match = monto.innerText.match(/\d+/); // Busca un número en el texto
+        return match ? parseInt(match[0], 10) : 1; // Si no encuentra un número, usa 1 como valor predeterminado
+    });
+
+    
+    // Iterar sobre los precios y multiplicar por los montos correspondientes
+    precios.forEach((elemento, index) => {
+        const precio = parseFloat(elemento.innerText); 
+        const monto = numeros[index] || 1; // Si no hay un monto, asumir 1 como predeterminado
+
+        if (!isNaN(precio)) { 
+            sumaTotal += precio * monto; // Multiplicar precio por monto
+        } 
+    });
+
+    // Calcular IVA y subtotal
+    ivaTotal = sumaTotal * 0.21;
+    subTotal = sumaTotal - ivaTotal;
+
+    // Actualizar los valores en el DOM
+    const total = document.getElementById("total");
+    total.innerText = sumaTotal.toFixed(2); // Con 2 decimales
+
+    const total2 = document.getElementById("iva");
+    total2.innerText = ivaTotal.toFixed(2);
+
+    const total3 = document.getElementById("subtotal");
+    total3.innerText = subTotal.toFixed(2);
+}
+
+function borrarProducto(){
+
+  const papelera = document.querySelectorAll(".carrito_container li span");
+  
+  papelera.forEach(item => {
+    item.addEventListener('click', function() {
+      
+      item.setAttribute("cursor", "pointer");
+
+      /* anadirProducto.remove();*/
+      item.parentNode.remove();
+      obtenerPrecio()
+
+    });
+  });
+
+}
+
+  </script>
+
+<script src="../inicio/fechayhora.js"></script>
+<script> scr="../catalogo/inicio.js"</script>
+
+</body>
 </html>

@@ -1,0 +1,78 @@
+.cuerpo-panelAdministracion {
+  margin: 5rem auto;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/*estilos iconos*/
+.opcionesPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.opcionesPanel h2 {
+  text-align: center;
+  color: var(--morado);
+  font-weight: bold;
+}
+.iconos-opcionesPanel {
+  display: flex;
+  justify-content: space-around; /* Espaciado igual entre los elementos */
+  text-align: center; /* Centra el texto de cada ícono */
+  padding: 20px;
+  background-color: var(--blanco);
+  gap: 2rem;
+}
+
+.icono-opcionProducto {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icono-opcionUsuarios {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.icono-email {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.iconos-opcionesPanel div {
+  flex: 1; /* Asegura que los elementos ocupen espacio igual */
+  margin: 0 10px; /* Margen entre columnas */
+}
+
+.iconos-opcionesPanel i {
+  font-size: 40px; /* Tamaño del ícono */
+  color: var(--morado);
+  margin-bottom: 10px; /* Espacio debajo del ícono */
+}
+
+.iconos-opcionesPanel h3 {
+  font-size: 18px;
+  color: #555; /* Color gris oscuro */
+  margin: 10px 0;
+}
+
+.iconos-opcionesPanel p {
+  font-size: 16px;
+  color: #333; /* Texto verde oscuro */
+}
