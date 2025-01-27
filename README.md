@@ -34,21 +34,16 @@
 
 <p>Una página de inicio</p>
 
-![Página de inicio](img/screenShots/Inicio.png)
+![Página de inicio](img/screenShots/inicio.png)
 
 <p>Más abajo de la misma una selección de los productos mejor valorados por nuestros custommers</p>
 
-![Más valorados](FALTA FOTO!!!!!!!)
-
-<p>Un pequeño apartado para el producto del mes</p>
-
-![Formualrio de contacto](img/screenShots/teDelMes.png)
+![Más valorados](img/screenShots/productosValorados.png)
 
 <p>Y por ultimo una sección a promociones, otros artículos y testimonios</p>
 
-![promo](img/screenShots/promo.png)
-![otros artículos](img/screenShots/merch.png)
-![testimonios](img/screenShots/testimonio.png)
+![promo](img/screenShots/info.png)
+
 
 
 

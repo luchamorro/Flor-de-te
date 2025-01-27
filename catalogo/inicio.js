@@ -83,13 +83,10 @@ async function cargarDatos() {
   }
 }
 
-
-
 function calcularTotal() {
   const total = (contador * precio);
   document.getElementById('resultado').innerText = `Total: ${total.toFixed(2)}€`;
 }
-
 
   // Función para mostrar un producto basado en su ID
   function mostrarProducto(id) {
@@ -249,7 +246,7 @@ function anadirCompra(id) {
 
    carritoIcon.setAttribute('data-content', listaCompra.length);
 
-   // borrar un producto de la cessta
+   // borrar un producto de la cesta
    borrar.addEventListener('click', function(id) {
     listaCompra = listaCompra.filter(item => item.id !== producto.id);
     anadirProducto.remove();
@@ -260,7 +257,6 @@ function anadirCompra(id) {
  }
 }
 
-// botones
 // botones de añadir y reducir
 
 function botonMas(id){
@@ -282,6 +278,7 @@ function botonMas(id){
   let aumento = listaCompra.filter(item => item.id === producto.id).length;
   monto.innerText = 'x' + aumento;
   contador.innerText = 'x' + aumento;
+
  };
  
  //
@@ -302,6 +299,7 @@ function botonMas(id){
   monto.setAttribute('class', 'monto');
   monto.innerText = 'x' + reduce;
   contador.innerText = 'x' + reduce;
+
  };
 
 // Buscador
@@ -376,6 +374,7 @@ document.addEventListener('click', (e) => {
        menuBuscador.style.display = 'none';
    }
 });
+
 // Redirigir a la página del carrito
 function checkOut() {
   const carritoList = document.getElementById('carrito');
@@ -385,4 +384,4 @@ function checkOut() {
     // Redirigir a otra página
     window.location.href = '../carrito/carrito.html';
   }
-}
+};
