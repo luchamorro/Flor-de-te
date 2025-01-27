@@ -1,0 +1,25 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start;     
+    text-align: left;            
+    padding: 30px;
+    margin: 150px auto;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  .proteccion-datos img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 5px auto;
+  }
+  
+ li{   
+font-size: 1rem;
+color: #333;
+margin-bottom: 0.5rem;
+ }

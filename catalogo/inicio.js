@@ -27,10 +27,47 @@ function mostrarProductos(datos, lista) {
   });
 }
 
+// Función para aplicar el idioma estático
+function applyLanguage(lang) {
+  if (lang === "es") {
+    // Si es español, no hacemos traducción porque ya está en el HTML
+    document.querySelectorAll("[data-translate]").forEach((el) => {
+      el.textContent = el.getAttribute("data-original") || el.textContent; // Restaurar texto original si existe
+    });
+    return;
+  }
+
+  // Cargar las traducciones desde el archivo JSON
+  fetch("catalogo.json")
+    .then((response) => response.json())
+    .then((translations) => {
+      document.querySelectorAll("[data-translate]").forEach((el) => {
+        const key = el.getAttribute("data-translate");
+        const translation = translations[lang]?.[key];
+        if (translation) {
+          if (!el.getAttribute("data-original")) {
+            el.setAttribute("data-original", el.textContent); // Guardar el texto original para restaurarlo si se vuelve a "es"
+          }
+          if (el.tagName === "INPUT" && el.type === "checkbox") {
+            const label = document.querySelector(`label[for="${el.id}"]`);
+            if (label) label.textContent = translation;
+          } else if (el.hasAttribute("placeholder")) {
+            el.setAttribute("placeholder", translation);
+          } else {
+            el.textContent = translation;
+          }
+        }
+      });
+    })
+    .catch((error) => console.error("Error al cargar las traducciones:", error));
+}
+
 // Función principal para cargar los datos del archivo JSON
-async function cargarDatos() {
+async function cargarDatos(idiomaSeleccionado) {
   try {
-    const respuesta = await fetch('productos.json');
+    const idiomaSeleccionado = localStorage.getItem("selectedLanguage") || "es"; // Obtener el idioma seleccionado
+    // Cargar el archivo JSON correspondiente al idioma seleccionado
+    const respuesta = await fetch(idiomaSeleccionado === "en" ? 'productos_en.json' : 'productos_es.json');
     productos = await respuesta.json();
 
     const div = document.getElementById('catalogoProductos');
@@ -80,50 +117,42 @@ async function cargarDatos() {
   }
 }
 
+// Función para mostrar un producto basado en su ID
+function mostrarProducto(id) {
+  const producto = productos.find(p => p.id === id);
 
+  if (producto) {
+    document.getElementById("paginaProducto").innerHTML = `
+          <div class="divImagenProducto">
+        <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">
+      </div>
+      <div class="productoTexto">
+        <p class="tituloProductoGrande" id="tituloProductoGrande">
+          <button id="verPaginaProducto" class = "verPaginaProducto">${producto.nombre}</button>
+        </p>
+        <p class="precioDisplay">${producto.precio}€</p> 
+        <p>100 gramos</p>
+        <div class="contador">
+          <button onclick="botonMenos(${producto.id})">-</button>
+          <p class="num" id="contador"></p>
+          <button onclick="botonMas(${producto.id})">+</button>
+          <br>
+      </div>
+      <br>
+        <button onclick="anadirCompra(${producto.id})" id="botonCarrito"><i>Comprar</i></button>
+        <p class="descripcionProducto">${producto.descripcion}</p>
+        <ul class="listaPropiedades">
+        <li>${producto.filtros}</li>
+        </ul>
+      </div>
+    `;
+    document.getElementById("ventanaSuperpuesta").style.display = "flex"; // Mostrar ventana
+    currentId = id; // Actualizar ID actual
 
-function calcularTotal() {
-  const total = (contador * precio);
-  document.getElementById('resultado').innerText = `Total: ${total.toFixed(2)}€`;
-}
-
-
-  // Función para mostrar un producto basado en su ID
-  function mostrarProducto(id) {
-    const producto = productos.find(p => p.id === id);
-
-    if (producto) {
-      document.getElementById("paginaProducto").innerHTML = `
-            <div class="divImagenProducto">
-          <img src="../${producto.img}" alt="${producto.nombre}" width="350px" height="362px">
-        </div>
-        <div class="productoTexto">
-          <p class="tituloProductoGrande" id="tituloProductoGrande">
-            <button id="verPaginaProducto" class = "verPaginaProducto">${producto.nombre}</button>
-          </p>
-          <p class="precioDisplay">${producto.precio}€</p> 
-          <p>100 gramos</p>
-          <div class="contador">
-            <button onclick="botonMenos(${producto.id})">-</button>
-            <p class="num" id="contador"></p>
-            <button onclick="botonMas(${producto.id})">+</button>
-            <br>
-        </div>
-        <br>
-          <button onclick="anadirCompra(${producto.id})" id="botonCarrito"><i>Comprar</i></button>
-          <p class="descripcionProducto">${producto.descripcion}</p>
-          <ul class="listaPropiedades">
-          <li>${producto.filtros}</li>
-          </ul>
-        </div>
-      `;
-      document.getElementById("ventanaSuperpuesta").style.display = "flex"; // Mostrar ventana
-      currentId = id; // Actualizar ID actual
-
-      // Eventos para botones en la ventana emergente
-      document.getElementById('verPaginaProducto').addEventListener('click', () => irPagina(id));
-    }
+    // Eventos para botones en la ventana emergente
+    document.getElementById('verPaginaProducto').addEventListener('click', () => irPagina(id));
   }
+}
 
 // Función para redirigir a la página del producto
 function irPagina(id) {
@@ -168,15 +197,32 @@ document.getElementById('anteriorBtn').addEventListener('click', anterior);
 document.getElementById('cerrarBtn').addEventListener('click', cerrar);
 
 // Cargar los datos al cargar la página
-cargarDatos();
+document.addEventListener("DOMContentLoaded", () => {
+  const languageSelect = document.getElementById("language-select");
 
- //Agregar el número de productos del carrito al icono del carrito
- let compra = document.querySelectorAll('#carrito li');
- let listaCompra = Array.from(compra);
- let carritoIcon = document.querySelector('.right-section .cart');
+  // Comprobar si hay un idioma guardado en localStorage
+  const savedLanguage = localStorage.getItem("selectedLanguage") || "es"; // Por defecto "es"
+  languageSelect.value = savedLanguage; // Seleccionar el idioma guardado en el dropdown
+  applyLanguage(savedLanguage); // Aplicar el idioma guardado
+  cargarDatos(savedLanguage); // Cargar los datos del catálogo en el idioma guardado
+
+  // Cambiar el idioma al seleccionar una opción del dropdown
+  languageSelect.addEventListener("change", (event) => {
+    const selectedLanguage = event.target.value;
+    localStorage.setItem("selectedLanguage", selectedLanguage); // Guardar el idioma seleccionado
+    applyLanguage(selectedLanguage); // Aplicar el idioma sin recargar la página
+    cargarDatos(selectedLanguage); // Recargar los productos en el idioma seleccionado
+  });
+});
+
+// Función para agregar al carrito
+let compra = document.querySelectorAll('#carrito li');
+let listaCompra = Array.from(compra);
+let carritoIcon = document.querySelector('.right-section .cart');
 
  carritoIcon.setAttribute('data-content', listaCompra.length);
  
+ //funcion para añadir cosas al carrito
 function anadirCompra(id) {
  const producto = productos.find(p => p.id == id);
  // Comprueba si el producto está en el carrito
@@ -204,7 +250,7 @@ function anadirCompra(id) {
    let resta = document.createElement('button');
    let monto = document.createElement('p');
 
-    precio.setAttribute('class', 'precio');
+   precio.setAttribute('class', 'precio');
    monto.setAttribute('id', `monto${producto.id}`);
    monto.setAttribute('class', 'monto');
    borrar.setAttribute('class', 'borrar');
@@ -246,10 +292,10 @@ function anadirCompra(id) {
    carritoIcon.setAttribute('data-content', listaCompra.length);
 
    // borrar un producto de la cessta
-   borrar.addEventListener('click', function() {
-     listaCompra.pop(producto);
-     anadirProducto.remove();
-     carritoIcon.setAttribute('data-content', listaCompra.length);
+   borrar.addEventListener('click', function(id) {
+    listaCompra = listaCompra.filter(item => item.id !== producto.id);
+    anadirProducto.remove();
+    carritoIcon.setAttribute('data-content', listaCompra.length);
    });
    
    currentId = id; // Actualizar el ID actual
@@ -260,6 +306,7 @@ function anadirCompra(id) {
 
 function botonMas(id){
  const producto = productos.find(p => p.id == id);
+ let contador = document.getElementById('contador');
 
  //Añadir producto al array
  if(producto){
@@ -275,7 +322,7 @@ function botonMas(id){
  monto.setAttribute('class', 'monto');
  let aumento = listaCompra.filter(item => item.id === producto.id).length;
  monto.innerText = 'x' + aumento;
- console.log(monto.innerText);
+ contador.innerText = 'x' + aumento;
 };
 
 //
@@ -292,17 +339,36 @@ function botonMenos(id){
 
  //Cambiar el numero del monto
  let monto = document.getElementById(`monto${producto.id}`)
- let aumento = listaCompra.filter(item => item.id === producto.id).length;
+ let reduce = listaCompra.filter(item => item.id === producto.id).length;  
  monto.setAttribute('class', 'monto');
- monto.innerText = 'x' + aumento;
+ monto.innerText = 'x' + reduce;
+ contador.innerText = 'x' + reduce;
 };
 
-
 // Buscador
+
 const buscador = document.getElementById('buscador');
 const menuBuscador = document.createElement('div');
 menuBuscador.classList.add('menuBuscador');
 document.querySelector('.right-section').appendChild(menuBuscador);
+
+// Variable para almacenar todos los productos
+let catalogoCompleto = [];
+
+// Cargar el catálogo completo
+async function cargarCatalogoCompleto() {
+  try {
+    const idiomaSeleccionado = localStorage.getItem("selectedLanguage") || "es"; 
+    const respuesta = await fetch(idiomaSeleccionado === "en" ? 'productos_en.json' : 'productos_es.json');
+    catalogoCompleto = await respuesta.json();
+  } catch (error) {
+    console.error('Error al cargar el catálogo:', error);
+  }
+}
+
+// Cargar el catálogo al iniciar
+cargarCatalogoCompleto();
+
 
 // Evento de búsqueda
 buscador.addEventListener('input', function(item) {
@@ -314,8 +380,8 @@ buscador.addEventListener('input', function(item) {
    }
 
    // Filtrar productos
-   const filtro = productos.filter(producto => 
-       producto.nombre.toLowerCase().includes(busca));
+   const filtro = catalogoCompleto.filter(producto => 
+    producto.nombre.toLowerCase().includes(busca));
 
    // Mostrar resultados
    if (filtro.length) {

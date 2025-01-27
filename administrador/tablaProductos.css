@@ -1,0 +1,103 @@
+.contenedor-tabla {
+width: 80%;
+max-width: 1200px;
+text-align: center;
+margin: 5px auto;
+}
+  
+
+
+/* Estilos para los botones */
+.acciones {
+display: flex;
+justify-content: flex-start;
+gap: 15px;
+margin-top: 20px;
+}
+
+button {
+background-color: #e4007f; /* Rosa claro */
+color: white;
+border: none;
+padding: 10px 20px;
+font-size: 1em;
+display: flex;
+align-items: center;
+gap: 10px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button i {
+font-size: 1.5em; /* Ajusta el tamaño del icono */
+}
+
+button:hover {
+background-color: #d3006a; /* Cambio de color al pasar el ratón */
+}
+
+button:focus {
+outline: none; /* Elimina el contorno del botón al hacer clic */
+}
+
+button:hover {
+background-color: #d1006a;
+}
+
+/* Estilos para la tabla */
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+
+th,
+td {
+padding: 10px;
+text-align: left;
+border: 1px solid #f5d2d2; /* Rosa muy claro */
+}
+
+th {
+background-color: #fce5e7; /* Rosa pastel */
+color: #e4007f;
+font-weight: bold;
+}
+
+td {
+background-color: #fff8f2; /* Fondo amarillo claro */
+}
+
+img {
+width: 50px;
+height: 50px;
+object-fit: cover;
+border-radius: 5px;
+}
+
+.filtro {
+background-color: #fce5e7; /* Rosa pastel */
+padding: 5px 10px;
+border-radius: 15px;
+color: #e4007f;
+}
+
+/* Estilos para el checkbox en la tabla */
+input[type="checkbox"] {
+margin: 0;
+}
+
+.tabla-container {
+max-height: 400px;
+overflow-y: auto;
+border: 1px solid #ddd;
+margin-top: 20px;
+}
+
+.tabla-container {
+max-height: 800px; /* Ajusta la altura según sea necesario */
+overflow-y: auto; /* Activa el scroll vertical cuando el contenido sobrepase el tamaño */
+border: 1px solid #ddd; /* Opcional: Agrega un borde alrededor de la tabla */
+margin-top: 20px; /* Opcional: Margen superior para separación */
+}
+
