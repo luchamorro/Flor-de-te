@@ -65,6 +65,7 @@ function applyLanguage(lang) {
 // Función principal para cargar los datos del archivo JSON
 async function cargarDatos(idiomaSeleccionado) {
   try {
+    const idiomaSeleccionado = localStorage.getItem("selectedLanguage") || "es"; // Obtener el idioma seleccionado
     // Cargar el archivo JSON correspondiente al idioma seleccionado
     const respuesta = await fetch(idiomaSeleccionado === "en" ? 'productos_en.json' : 'productos_es.json');
     productos = await respuesta.json();

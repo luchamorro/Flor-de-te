@@ -82,11 +82,21 @@ async function cargarDatos() {
   }
 }
 
+// Función para cambiar el idioma
+function cambiarIdioma(event) {
+  const idiomaSeleccionado = event.target.value;
+  localStorage.setItem("selectedLanguage", idiomaSeleccionado); // Guardar idioma en localStorage
+  cargarDatos(); // Recargar los datos en el nuevo idioma
+}
 
+// Función para redirigir a la página del producto
+function irPagina(id) {
+  const producto = productos.find(p => p.id === id);
 
-function calcularTotal() {
-const total = (contador * precio);
-document.getElementById('resultado').innerText = `Total: ${total.toFixed(2)}€`;
+  if (producto) {
+    localStorage.setItem('productoSeleccionado', JSON.stringify(producto));
+    window.location.href = 'pagina_producto.html';
+  }
 }
 
 // Función para mostrar un producto basado en su ID
@@ -120,54 +130,11 @@ function mostrarProducto(id) {
   }
 }
 
-// Función para redirigir a la página del producto
-function irPagina(id) {
-  const producto = productos.find(p => p.id === id);
-
-  if (producto) {
-    localStorage.setItem('productoSeleccionado', JSON.stringify(producto));
-    window.location.href = 'pagina_producto.html';
-  }
-}
-
-// Función para mostrar el producto anterior
-function anterior() {
-  const index = productos.findIndex(p => p.id === currentId);
-  if (index > 0) {
-    currentId = productos[index - 1].id;
-  } else {
-    currentId = Math.max(...productos.map(p => p.id)); // Ir al último producto
-  }
-  mostrarProducto(currentId);
-}
-
-// Función para mostrar el siguiente producto
-function siguiente() {
-  const index = productos.findIndex(p => p.id === currentId);
-  if (index < productos.length - 1) {
-    currentId = productos[index + 1].id;
-  } else {
-    currentId = Math.min(...productos.map(p => p.id)); // Ir al primer producto
-  }
-  mostrarProducto(currentId);
-}
-
-// Función para cerrar la ventana superpuesta
-function cerrar() {
-  document.getElementById("ventanaSuperpuesta").style.display = "none";
-}
-
-// Asignar eventos a los botones principales
-document.getElementById('siguienteBtn').addEventListener('click', siguiente);
-document.getElementById('anteriorBtn').addEventListener('click', anterior);
-document.getElementById('cerrarBtn').addEventListener('click', cerrar);
+// Asignar eventos para cambiar el idioma
+document.getElementById('language-select').addEventListener('change', cambiarIdioma);
 
 // Cargar los datos al cargar la página
 cargarDatos();
-
-
-
-
 
 
 /*
