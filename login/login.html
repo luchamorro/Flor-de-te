@@ -1,69 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/b58110c1d4.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Perfil de usuario</title>
-    <link rel="stylesheet" href="estilo_popup.css" />
-    <link rel="stylesheet" href="popUpLogin.css" />
-    <link rel="stylesheet" href="login.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <title>Flor de Té</title>
     <link rel="stylesheet" href="../inicio/inicio.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="../inicio/estilo_popup.css">
+    <link rel="stylesheet" href="../login/popUpLogin.css">
   </head>
 
   <body>
     <nav class="menu">
       <div class="left-section">
         <a href="../inicio/index.html">
-          <img
-            src="../img/logos/logo_horizontal.svg"
-            alt="logo Flor de Té"
-            class="logo"
-          />
+          <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo" />
         </a>
         <ul>
-          <li>
-            <a href="../inicio/index.html" data-translate="inicio">Inicio</a>
-          </li>
-          <li>
-            <a href="../catalogo/catalogo.html" data-translate="catalogo-nav"
-              >Catálogo</a
-            >
-          </li>
-          <li>
-            <a href="../nosotros/nosotros.html" data-translate="nosotros"
-              >Nosotros</a
-            >
-          </li>
-          <li>
-            <a href="../contacto/contacto.html" data-translate="contacto"
-              >Contacto</a
-            >
-          </li>
+          <li><a href="../inicio/index.html" data-translate="inicio">Inicio</a></li>
+          <li><a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a></li>
+          <li><a href="../nosotros/nosotros.html" data-translate="nosotros">Nosotros</a></li>
+          <li><a href="../contacto/contacto.html" data-translate="contacto">Contacto</a></li>
         </ul>
       </div>
       <div class="right-section">
-        <input
-          data-translate="placeholder-nav"
-          type="search"
-          placeholder="Buscar..."
-        />
-        <div class="user-area" id="iconoUsuarioLogin">
-          <i class="fa-solid fa-user"></i>
-        </div>
+        <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." id="buscador" />
+        <div class="user-area"><i class="fa-solid fa-user"></i></div>
         <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
         <select id="language-select" title="idioma">
           <option value="es">ES</option>
@@ -71,7 +38,6 @@
         </select>
       </div>
       <div id="fechayhora"></div>
-      <!--reubicar este div-->
     </nav>
 
     <main class="perfil-contenedor">
@@ -100,6 +66,28 @@
         <button id="logoutBtn">Cerrar Sesión</button>
       </div>
     </main>
+    <!-- Popup de login -->
+<div id="popupLoginBackground" class="popup-background oculto"></div>
+<div id="popupLoginDiv" class="popup oculto">
+  <button id="closeLoginPopup" class="close-popup">&times;</button>
+  <div class="contenedor-login">
+    <div class="caja-login">
+      <h2>Identificarse</h2>
+      <p>¿Ya tiene una cuenta? Inicie sesión para continuar.</p>
+      <form id="formularioLogin">
+        <label for="loginEmail" >Dirección de correo electrónico</label>
+        <input type="email" id="loginEmail" name="email" required />
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" required />
+        <button type="submit">Identificarse</button>
+        <a href="#" class="forgot-password">¿Ha olvidado su contraseña?</a>
+        <p>
+          <a href="#" id="abrirPopupRegistro">¿No tienes cuenta? Crear cuenta</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>  
   <footer>
     <div class="footer-container">
       <div class="comercio-justo">
@@ -156,6 +144,7 @@
     </div>
   </footer>
 <script src="login.js"></script>
+<script src="../inicio/popUpLogin.js"></script>
 
   </body>
 </html>
