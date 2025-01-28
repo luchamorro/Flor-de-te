@@ -1,0 +1,52 @@
+{
+    "en":{
+    "inicio": "Home",
+    "catalogo-nav": "Catalog",
+    "nosotros": "About Us",
+    "contacto": "Contact",
+    "saludoCliente": "{name}, these are the items in your cart:",
+    "h4Datos": "Shipping Information",
+    "nombre": "Name:",
+    "apellido": "Last Name:",
+    "calle": "Street:",
+    "numeroDireccion": "Number:",
+    "pisoDireccion": "Floor:",
+    "cp": "Postal Code:",
+    "poblacion": "Province:",
+    "infoEnvios": "Shipments within Spain and Portugal in less than 72 hours.",
+    "total": "Total:",
+    "subtotal": "Subtotal:",
+    "iva": "VAT:",
+    "envio": "Shipping Costs:",
+    "metodoPago": "Payment Method:",
+    "finalizarCompra": "Confirm Purchase",
+
+    "popup-login-title": "Sign In",
+    "popup-login-text": "Already have an account? Log in to continue.",
+    "popup-login-email-label": "Email Address",
+    "popup-login-password-label": "Password",
+    "popup-login-button": "Sign In",
+    "popup-login-forgot-password": "Forgot your password?",
+    "popup-login-create-account": "Don’t have an account? Create one",
+
+        "comercio_justo": "Fair Trade",
+        "sin_crueldad": "Cruelty-Free",
+        "organico": "100% Organic",
+        "sin_microplasticos": "No Microplastics",
+        
+        "suscribete": "Subscribe to our newsletter",
+        "ofertas": "Offers, news, and exclusive discounts. Don't miss it!",
+        "input_placeholder": "Enter your email",
+        
+        "enlaces": "Useful Links",
+        "politicas": "Policies",
+        "aviso": "Legal Notice",
+        "cookies": "Cookie Policy",
+        "privacidad": "Privacy Policy",
+        
+        "social_tiktok": "TikTok",
+        "social_instagram": "Instagram",
+        "social_facebook": "Facebook"
+  }
+  
+}
