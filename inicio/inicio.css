@@ -1068,7 +1068,7 @@ ul {
 }
 
 .carritoSection button {
-  margin: 1rem auto 0 auto;
+  margin: 0 auto 0 auto;
   width: 100%;
   font-size: 1rem;
   padding: 0.6rem;
@@ -1094,10 +1094,15 @@ button.botonCarrito:hover {
   padding-right: 1rem;
   color: var(--morado);
   padding-bottom: 0.3rem;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  opacity: 0.4;
   }
 
-
+#checkOut p{
+  background-color: var(--naranja);
+  color: var(--blanco);
+  border-radius: 2rem 2rem 0 0;
+}
 
   /*login*/
   /* Fondo del popup /

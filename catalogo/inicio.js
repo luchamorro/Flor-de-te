@@ -291,7 +291,7 @@ function anadirCompra(id) {
 
    carritoIcon.setAttribute('data-content', listaCompra.length);
 
-   // borrar un producto de la cessta
+   // borrar un producto de la cesta
    borrar.addEventListener('click', function(id) {
     listaCompra = listaCompra.filter(item => item.id !== producto.id);
     anadirProducto.remove();
@@ -305,45 +305,34 @@ function anadirCompra(id) {
 // botones de añadir y reducir
 
 function botonMas(id){
- const producto = productos.find(p => p.id == id);
- let contador = document.getElementById('contador');
+  const producto = productos.find(p => p.id == id);
+  let contador = document.getElementById('contador');
+ 
+  //Añadir producto al array
+  if(producto){
+  listaCompra.push(producto);
+  }
+ 
+    // Actualizar contador carrito
+  let cantidad = listaCompra.length;
+  carritoIcon.setAttribute('data-content', listaCompra.length);
+ 
+  //Cambiar el numero del monto
+  let monto = document.getElementById(`monto${producto.id}`);
+  monto.setAttribute('class', 'monto');
+  let aumento = listaCompra.filter(item => item.id === producto.id).length;
+  monto.innerText = 'x' + aumento;
+  contador.innerText = 'x' + aumento;
 
- //Añadir producto al array
- if(producto){
- listaCompra.push(producto);
- }
+ };
+ 
+ //
+ function botonMenos(id){
+  const producto = productos.find(p => p.id == id);
+  té
+  contador.innerText = 'x' + reduce;
 
-   // Actualizar contador carrito
- let cantidad = listaCompra.length;
- carritoIcon.setAttribute('data-content', listaCompra.length);
-
- //Cambiar el numero del monto
- let monto = document.getElementById(`monto${producto.id}`);
- monto.setAttribute('class', 'monto');
- let aumento = listaCompra.filter(item => item.id === producto.id).length;
- monto.innerText = 'x' + aumento;
- contador.innerText = 'x' + aumento;
-};
-
-//
-function botonMenos(id){
- const producto = productos.find(p => p.id == id);
-
- //Añadir producto al array
- if(producto){
- listaCompra.pop(producto);
- }
-
-   // Actualizar contador carrito
- carritoIcon.setAttribute('data-content', listaCompra.length);
-
- //Cambiar el numero del monto
- let monto = document.getElementById(`monto${producto.id}`)
- let reduce = listaCompra.filter(item => item.id === producto.id).length;  
- monto.setAttribute('class', 'monto');
- monto.innerText = 'x' + reduce;
- contador.innerText = 'x' + reduce;
-};
+ };
 
 // Buscador
 
@@ -417,6 +406,7 @@ document.addEventListener('click', (e) => {
        menuBuscador.style.display = 'none';
    }
 });
+
 // Redirigir a la página del carrito
 function checkOut() {
   const carritoList = document.getElementById('carrito');
@@ -426,4 +416,4 @@ function checkOut() {
     // Redirigir a otra página
     window.location.href = '../carrito/carrito.html';
   }
-}
+};
