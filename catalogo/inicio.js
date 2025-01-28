@@ -329,7 +329,7 @@ function botonMas(id){
  //
  function botonMenos(id){
   const producto = productos.find(p => p.id == id);
-  té
+  
   contador.innerText = 'x' + reduce;
 
  };
