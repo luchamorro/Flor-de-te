@@ -90,9 +90,9 @@
 |---------------------------------------|----------------------------------------|------------------------------|
 | [![Alejandro](img/logos/Alejandro.png)](https://github.com/Varushet) | Alejandro: Product Owner | Programador Jr. encargado de la selección de productos, el carrito, el buscador y el Readme. |
 | [![Carla](img/logos/Carla.png)](https://github.com/carlasiles1) | Carla: Git Manager | Programadora Jr. Repsonsble del login y la página de contacto, así como de la intranet. |
-| [![Lucia](img/logos/Lucia.png)](https://github.com/luchamorro) | Lucia: Diseñadora | Programadora Jr. Encargada del diseño del packagin y el logo de la página, la página del catálogo y la página del checkout.|
+| [![Lucia](img/logos/Lucia.png)](https://github.com/luchamorro) | Lucia: Graphic Designer | Programadora Jr. Encargada del diseño del packagin y el logo de la página, la página del catálogo y la página del checkout.|
 | [![Maham](img/logos/Maham.png)](https://github.com/mahamsajid55) | Maham: Scrum Master | Programadora Jr. encargada de la página nosotros, el menú responsive y selección de fotos.|
-| [![Thais](img/logos/Thais.png)](https://github.com/intxaurtietadev) | Thais:  | Programadora Jr. encargada de la página de inicio, header y footer, estilos y responsive y traducción al Inglés y Euskera |
+| [![Thais](img/logos/Thais.png)](https://github.com/intxaurtietadev) | Thais: Graphic Designer | Programadora Jr. encargada de la página de inicio, header y footer, estilos y responsive y traducción al Inglés y Euskera |
 
 <p>El sitio cumple con los requisitos de la RGPD en vigor y cuenta con una página donde se describen los derechos de los usuarios con respecto a los datos que facilitan a Flor de Té.</p>
 </body>
