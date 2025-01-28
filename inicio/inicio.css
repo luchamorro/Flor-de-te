@@ -281,29 +281,6 @@ button:hover {
   margin: 0 auto;
 }
 
-.catalog-title{
-  margin: 10rem 0 3rem;
-}
-.productosGrande {
-  display: flex;
-  margin-top: 10rem;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.filtros {
-  width: 20%;  /*cambiado de 60 -> 100 -AL*/
-  height: 25%; /*añadido -AL*/
-  border-radius: 1rem;
-  background-color: white;
-  color: var(--burdeos);
-  text-align: left; /* Cambia el alineamiento del texto a la izquierda */
-  display: flex;
-  flex-direction: column; /* Alinea elementos verticalmente */
-  align-items: flex-start; /* Alinea los hijos al inicio */
-  margin-top: -1.2rem;
-}
-
 ul {
   list-style: none;
 }
@@ -1188,3 +1165,176 @@ button.botonCarrito:hover {
     width: 100%;
     transition: background-color 0.3s;
   }
+
+
+
+
+  /* Estilos Responsivos para Tablet */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+
+
+  .hero-text-1,
+  .hero-text-2,
+  .hero-text-3 {
+    margin: 2rem auto;
+    max-width: 80%;
+    text-align: center;
+  }
+
+  .productos,
+  .productosGrande {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .filtros {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .intro{
+    margin: 4rem 0 3rem 0;
+  }
+  .intro-container {
+    width: 90%;
+  }
+
+  .bestsellers-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .bestsellers-texto {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .te-del-mes{
+    margin-top: -2rem;
+  }
+  .te-mes-container {
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .te-mes-texto {
+    max-width: 100%;
+  }
+
+  .te-mes-imagen {
+    max-width: 60%;
+  }
+
+  .testimonios-container,
+  .oferta-contenedor {
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+/* Estilos Responsivos para Móvil */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .hero-text-1,
+  .hero-text-2,
+  .hero-text-3 {
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .productos,
+  .productosGrande {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .filtros {
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  .intro{
+    margin: -18rem 0 3rem 0;
+  }
+
+  .intro-container {
+    width: 95%;
+  }
+
+  .bestsellers-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .bestsellers-texto {
+    width: 85%;
+  }
+
+  .te-mes-container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .te-mes-texto {
+    max-width: 100%;
+  }
+  .te-mes-imagen .imagen-te {
+    width: 65%;
+  }
+  
+
+  .testimonios-container,
+  .oferta-contenedor {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .oferta-imagen {
+    max-width: 70%;
+  }
+
+  .listaProductos {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .productoItem {
+    width: 90%;
+  }
+}

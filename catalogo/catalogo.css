@@ -1,0 +1,255 @@
+.catalog-title{
+    margin: 10rem 0 3rem;
+  }
+.filtros {
+    width: 20%;  /*cambiado de 60 -> 100 -AL*/
+    height: 25%; /*añadido -AL*/
+    border-radius: 1rem;
+    background-color: white;
+    color: var(--burdeos);
+    text-align: left; /* Cambia el alineamiento del texto a la izquierda */
+    display: flex;
+    flex-direction: column; /* Alinea elementos verticalmente */
+    align-items: flex-start; /* Alinea los hijos al inicio */
+    margin-top: -1.2rem;
+  }
+  
+.productosGrande {
+    display: flex;
+    margin-top: 10rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .carritoSection {
+    background-color: rgb(246, 234, 245);
+    position: sticky;
+    top: 7rem;
+    z-index: 15;
+    width: 28rem;
+    height: 30rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0 0 0 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .carritoSection h4 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--burdeos);
+    margin-bottom: 1rem;
+  }
+  
+  .carritoSection ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .carritoSection li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carritoSection img {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    margin-right: 1rem;
+  }
+  
+  .carritoSection .tituloProducto {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    flex: 1;
+  }
+  
+  .carritoSection p {
+    width: auto;
+    text-align: center;
+    margin: 0 1rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .carritoSection span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #333;
+    font-size: 1.2rem;
+  }
+  
+  .carritoSection .masMenos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carritoSection .suma,
+  .carritoSection .resta {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.3rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    background-color: var(--burdeos);
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carritoSection .suma:hover,
+  .carritoSection .resta:hover {
+    background-color: var(--naranja);
+  }
+  
+  .carritoSection button {
+    margin: 1rem auto 0 auto;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--burdeos);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #none{
+    display: none;
+  }
+  
+  button.botonCarrito:hover {
+    background-color: var(--naranja);
+  }
+    
+
+  /* Estilos Responsivos para Tablet */
+  @media (max-width: 1024px) {
+    h1 {
+      font-size: 3rem;
+    }
+  
+    h3 {
+      font-size: 1.5rem;
+    }
+  
+    h4 {
+      font-size: 1.2rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  
+    .catalog-title {
+        margin: 6rem 0 2rem; /* Reduce márgenes en tablet */
+      }
+    
+      .filtros {
+        width: 50%; /* Ocupa más espacio horizontal */
+        margin: 1rem auto; /* Centra los filtros en tablet */
+      }
+    
+      .productosGrande {
+        flex-direction: column; /* Coloca los productos en columna */
+        align-items: center;
+        margin-top: 5rem; /* Reduce espacio superior */
+      }
+    
+      .carritoSection {
+        width: 100%; /* Ocupa todo el ancho */
+        margin: 2rem 0; /* Añade margen superior e inferior */
+        height: auto; /* Ajusta la altura según contenido */
+      }
+    
+      .carritoSection h4 {
+        font-size: 1.1rem; /* Ajusta tamaño de fuente */
+      }
+  }
+  
+  /* Estilos Responsivos para Móvil */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    h3 {
+      font-size: 1.2rem;
+    }
+  
+    h4 {
+      font-size: 1rem;
+    }
+  
+    p {
+      font-size: 0.8rem;
+    }
+
+    .catalog-title {
+        margin: 8rem 0 -2rem; /* Reduce márgenes en móvil */
+      }
+    
+      .filtros {
+        display: none;
+      }
+    
+      .productosGrande {
+        width: 100%; /* Ocupa todo el ancho */
+      }
+    
+      .carritoSection {
+        width: 90%; /* Ocupa todo el ancho */
+        height: auto; /* Altura dinámica */
+        margin: 1rem 0; /* Reduce margen */
+        padding: 0.8rem; /* Ajusta relleno */
+      }
+    
+      .carritoSection h4 {
+        font-size: 1rem; /* Reduce el tamaño del encabezado */
+      }
+    
+      .carritoSection li {
+        align-items: flex-start;
+      }
+    
+      .carritoSection img {
+        width: 20%; /* Imagen ocupa todo el ancho */
+        height: auto; /* Ajusta altura proporcionalmente */
+        margin-bottom: 1rem; /* Espacio inferior */
+      }
+    
+      .carritoSection .tituloProducto {
+        font-size: 0.9rem; /* Ajusta tamaño de fuente */
+      }
+    
+      .carritoSection button {
+        font-size: 0.9rem; /* Ajusta tamaño de fuente del botón */
+        padding: 0.5rem; /* Reduce padding */
+      }
+  
+  }
+  
