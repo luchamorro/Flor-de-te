@@ -469,12 +469,42 @@ margin-top: 5rem;
     align-items: center;
     height: 5rem;
   }
-
-  .right-section {
-    flex-direction: column; 
+  .menu .right-section .cart, .menu .right-section .user-area{
+    display: none;
+  }
+  .menu .right-section.active .cart, .menu .right-section.active .user-area{
+    display: flex;
+    position: absolute; 
+    background-color: var(--burdeos); 
+    top: 5rem; 
+    padding: 1rem;
+    border-radius: 8px; 
+    width: 35rem;
     align-items: center;
-    gap: 0.5rem;
+  }
+  .menu .right-section.active .cart{
+    right: 7rem;
+    width: 5%;
+  }
+  .menu .right-section.active .user-area{
+    right: 5rem;
+  }
+  .menu .right-section.active .user-area i{
+    margin-left: 25rem;
+  }
+  .menu .right-section input[type="text"]{
+    display: flex;
+    position: absolute;
+    top: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
     width: 10rem;
+  }
+  .menu .right-section #language-select{
+    display: flex;
+    position: absolute;
+    top: 1.3rem;
+    right: 7rem;
   }
 
   .right-section input[type="text"] {
@@ -504,7 +534,7 @@ margin-top: 5rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   } 
 
-  .right-section {
+  .right-section.active {
     justify-content: space-between;
     width: 100%;
     padding: 0.5rem;
@@ -531,7 +561,7 @@ margin-top: 5rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   }
 
-  .menu ul.active {
+  .menu ul.active { 
     display: flex; 
   }
   /* Show user-area and cart in hamburger menu */
@@ -539,5 +569,8 @@ margin-top: 5rem;
   .right-section .cart {
     margin-top: 10px;
   }
+}
+.right-section.active{
+  width: 100%;
 }
 
