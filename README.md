@@ -57,61 +57,43 @@
 
 ![Checkout](img/screenShots/checkout.png)
 
-<h4>Nosotros es una página donde el 
+<h4>Nosotros</h4>
 
+<p>Es una página donde el dueño del dominio puede presentarse al público, traemos una primera vista de cómo se podría ver, qué información y fotos podría aportar</p>
 
+![Nosotros](img/screenShots/nosotros.png)
 
+<h4>Contacto</h4>
 
+<p>Una página simple pero eficiente, te proporcionará un contacto con el cliente excelente para recibir sugerencias, buenas críticas y ofrecer soporte virtual</p>
 
+![Contacto](img/screenShots/contacto.png)
 
+<h4>Login</h4>
 
+<p>Junto con contacto y en el nav, una página de login para fidelizar clientes y una cuenta admin que te permitirá editar personalmente tu tienda y los productos que en ella ofreces</p>
 
+![Login](img/screenShots/login.png)
 
-
-
-
-
-
-<p>Los socios se han mostrado interesados en manifestar su apoyo por lo que se ha creado una página donde se recogen sus comentarios.</p>
-
-![Testimonios](Assets/Read_me/Testimonios.jpg)
-<p>También se cuenta con una página llamada FAQ donde se muestran las preguntas más comunes para una primera resolución de cuestiones. Para mayor información existe el formulario de contacto.</p>
-
-![FAQ](Assets/Read_me/FAQ.jpg)
-
-<p>Todas ellas cuentan con un menú responsive formato “hamburguesa” para los tamaños móvil y tablet y completo para el formato desktop.</p>
-
-![Hamburguesa](Assets/Read_me/Ham.jpg)
-
-<p>Una vez que un usuario es dado de alta como socio del club existe la posibilidad de loguearse para ser reconocido como tal y no tener que pagar por las actividades en las que participe aunque sigue siendo necesaria su inscripción a los mismos. Esta parte queda pendiente de un posterior desarrollo que no es objeto de este proyecto y se realizará usando programación en Javascript.</p>
+![Página_Login](img/screenShots/FALTAIMAGEN!!!!)
      
-<h1>Dónde pueden recibir ayuda los usuarios</h1>
-<p>Los usuarios pueden ponerse en contacto con el propio club a través de los canales de comunicación con los que cuenta el club:</p>
-    <ul>
-        <li>Sede: Calle mayor s/n. 48930-Getxo, Bizkaia</li>
-        <li>Teléfono: 944 01 23 45</li>
-        <li>Correo electrónico: <a href="mailto:info@oriongetxo.com">info@oriongetxo.com</a></li>
-    </ul>
+<h2>Quién mantiene y contribuye al proyecto</h2>
 
-![Grupo 3](/about/assets_about/Banner.png)
+![Grupo ECOders](img/logos/bannerEcoders.png)
 
-<p>Para cualquier cuestión técnica se pueden poner en contacto con Grupo3 en el email: <a href="mailto:info@grupo3.com">info@grupo3.com</a></p>
-     
-<h1>Quién mantiene y contribuye al proyecto</h1>
-<p>Este proyecto está mantenido por el propio club Orion Getxo quien se encarga de alimentar con información de primera mano y actualizadas de las propias actividades, noticias del mundo del tiro con arco, etc.</p>
-<p>La parte técnica recae en la empresa Grupo3 que asegura el buen funcionamiento de la página web actualizándola con todos aquellos elementos que sean necesarios.</p>
+<p>Este proyecto está mantenido por el equpido Ecoders que ofrece soporte web y el dueño del dominio particular que lo adquiriese encargdo de alimentar con información de primera mano y las peticiones de actualización, tanto de mejora como de nuevas funcionalidades</p>
 
-<p>Grupo3 está formado por un equipo especializado en el diseño de páginas web con Html5, Css3 y Javascript. Los integrantes son:</p>
+<p>ECOders está formado por un equipo de desarrolladores web FullStack:</p> 
 
 
-| EQUIPO | FUNCIONES |
-|------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [![Alejandro](about/assets_about/Alejandro.jpg)](https://github.com/Varushet) | Alejandro: Programador senior de Html5 y Css 2-3. Responsable de home, Ham-button, carrusel y elemntos comunes |
-| [![Allan](about/assets_about/Allan.jpg)](https://github.com/Allan941709) | Allan: Scrum Master. Programador senior de Html5 y Css 2-3. Repsonsble de noticas |
-| [![Azalfa](about/assets_about/Azalfa.jpg)](https://github.com/zille5) | Azalfa:Programador senior de Html5 y Css 2-3. Responsable de testimonios |
-| [![Igor](about/assets_about/Igor.jpg)](https://github.com/igoribon) | Igor: Product owner. Programador senior de Html5 y Css 2-3. Responsable de formularios y elementos legales |
-| [![Najwa](about/assets_about/Najwa.jpg)](https://github.com/Najwaelqortobi) | Najwa: Programador senior de Html5 y Css 2-3. Responsable de actividades y programas |
+| EQUIPO | FUNCIONES | DESARROLLO |
+|---------------------------------------|----------------------------------------|------------------------------|
+| [![Alejandro](img/logos/Alejandro.png)](https://github.com/Varushet) | Alejandro: Product Owner | Programador Jr. encargado de la selección de productos, el carrito, el buscador y el Readme. |
+| [![Carla](img/logos/Carla.png)](https://github.com/carlasiles1) | Carla: Git Manager | Programadora Jr. Repsonsble del login y la página de contacto, así como de la intranet. |
+| [![Lucia](img/logos/Lucia.png)](https://github.com/luchamorro) | Lucia: Diseñadora | Programadora Jr. Encargada del diseño del packagin y el logo de la página, la página del catálogo y la página del checkout.|
+| [![Maham](img/logos/Maham.png)](https://github.com/mahamsajid55) | Maham: Scrum Master | Programadora Jr. encargada de la página nosotros, el menú responsive y selección de fotos.|
+| [![Thais](img/logos/Thais.png)](https://github.com/intxaurtietadev) | Thais:  | Programadora Jr. encargada de la página de inicio, header y footer, estilos y responsive y traducción al Inglés y Euskera |
 
-<p>El sitio cumple con los requisitos de la RGPD en vigor y cuenta con una página donde se describen los derechos de los usuarios con respecto a los datos que facilitan a Orion Getxo.</p>
+<p>El sitio cumple con los requisitos de la RGPD en vigor y cuenta con una página donde se describen los derechos de los usuarios con respecto a los datos que facilitan a Flor de Té.</p>
 </body>
 </html>
