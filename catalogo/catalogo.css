@@ -166,7 +166,7 @@
     }
   
     .catalog-title {
-        margin: 6rem 0 2rem; /* Reduce márgenes en tablet */
+        margin: 12rem 0 -1rem; /* Reduce márgenes en móvil */
       }
     
       .filtros {
@@ -185,7 +185,11 @@
         margin: 2rem 0; /* Añade margen superior e inferior */
         height: auto; /* Ajusta la altura según contenido */
       }
-    
+
+      .filtros {
+        display: none;
+      }
+
       .carritoSection h4 {
         font-size: 1.1rem; /* Ajusta tamaño de fuente */
       }
@@ -232,9 +236,6 @@
         font-size: 1rem; /* Reduce el tamaño del encabezado */
       }
     
-      .carritoSection li {
-        align-items: flex-start;
-      }
     
       .carritoSection img {
         width: 20%; /* Imagen ocupa todo el ancho */
