@@ -1,9 +1,9 @@
 .perfil-contenedor {
   max-width: 600px;
   width: 90%;
-  margin: 300px auto;
+  margin: 150px auto;
   padding: 20px;
-  background-color:rgb(255, 206, 173);
+  background-color: rgb(255, 235, 222);
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -22,7 +22,7 @@
   position: relative;
   width: 120px;
   height: 120px;
-  border: 2px dashed #d1a561;
+  border: 2px dashed white;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -48,7 +48,7 @@
 
 .perfil-header h1 {
   font-size: 24px;
-  color: #333;
+  color: black;
 }
 
 .perfil-opciones {
@@ -60,9 +60,8 @@
 }
 
 .perfil-opciones button {
-  background-color:
-  #ff6600;
-  color: black;
+  background-color: #ff6600;
+  color: white;
   border: none;
   padding: 15px;
   border-radius: 5px;
@@ -72,10 +71,47 @@
 }
 
 .perfil-opciones button:hover {
-  background-color:#cd0038;
+  background-color: #cd0038;
 }
 
-.cerrar-sesion{
+.cerrar-sesion {
   margin: 20px;
 }
 
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .perfil-contenedor {
+    margin: 100px auto;
+    padding: 15px;
+  }
+
+  .foto-contenedor {
+    width: 100px;
+    height: 100px;
+  }
+
+  .perfil-header h1 {
+    font-size: 20px;
+  }
+
+  .perfil-opciones button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* Responsivo para pantallas grandes */
+@media (min-width: 1200px) {
+  .perfil-contenedor {
+    max-width: 800px;
+    padding: 30px;
+  }
+
+  .perfil-header h1 {
+    font-size: 28px;
+  }
+
+  .perfil-opciones button {
+    font-size: 18px;
+  }
+}

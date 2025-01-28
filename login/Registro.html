@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-  <title>Flor de Té</title>
-  <link rel="stylesheet" href="../inicio/inicio.css" />
-  <link rel="stylesheet" href="registro.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title data-translate="titulo">Flor de Té</title>
+    <link rel="stylesheet" href="../inicio/inicio.css" />
+    <link rel="stylesheet" href="registro.css" />
   </head>
 
   <body>
@@ -35,34 +41,34 @@
           <option value="en">EN</option>
         </select>
       </div>
-      <div id="fechayhora"></div> <!--reubicar este div-->
+      <div id="fechayhora"></div> 
     </nav>
 
-    <!-- Popup de registro -->
-      <div class="contenedor-login">
-        <div class="caja-login">
-          <h2>Crear cuenta</h2>
-          <p>Complete el formulario para crear una cuenta.</p>
-          <form id="formularioRegistro">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required />
+    <!-- formulario de registro -->
+    <div class="contenedor-login">
+      <div class="caja-login">
+        <h2 data-translate="crear_cuenta">Crear cuenta</h2>
+        <p data-translate="formulario_cuenta">Complete el formulario para crear una cuenta.</p>
+        <form id="formularioRegistro">
+          <label for="nombre" data-translate="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required />
 
-            <label for="apellidos">Apellidos</label>
-            <input type="text" id="apellidos" name="apellidos" required />
+          <label for="apellidos" data-translate="apellidos">Apellidos</label>
+          <input type="text" id="apellidos" name="apellidos" required />
 
-            <label for="registroEmail">Correo electrónico</label>
-            <input type="email" id="registroEmail" name="email" required />
+          <label for="registroEmail" data-translate="correo">Correo electrónico</label>
+          <input type="email" id="registroEmail" name="email" required />
 
-            <label for="confirmarEmail">Confirmar correo electrónico</label>
-            <input type="email" id="confirmarEmail" name="confirmarEmail" required/>
+          <label for="confirmarEmail" data-translate="confirmar_correo">Confirmar correo electrónico</label>
+          <input type="email" id="confirmarEmail" name="confirmarEmail" required />
 
-            <label for="registroPassword">Contraseña</label>
-            <input type="password" id="registroPassword" name="password" required/>
+          <label for="registroPassword" data-translate="contraseña">Contraseña</label>
+          <input type="password" id="registroPassword" name="password" required />
 
-          <button type="submit">Registrar</button>
-          </form>
-        </div>
+          <button type="submit" data-translate="registrar">Registrar</button>
+        </form>
       </div>
+    </div>
   </body>
   <footer>
     <div class="footer-container">
@@ -82,14 +88,14 @@
       </div>
       <hr class="linea-fina" />
       <div class="newsletter">
-        <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo-footer"/>
+        <img src="../img/logos/logo_horizontal.svg" alt="logo Flor de Té" class="logo-footer" />
         <h3 data-translate="suscribete">Suscríbete a nuestra newsletter</h3>
         <p data-translate="ofertas">
           Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?
         </p>
         <form>
-          <input data-translate="input_placeholder" type="email" placeholder="Introduce tu email"/>
-          <button type="submit">Suscribirse</button>
+          <input data-translate="input_placeholder" type="email" placeholder="Introduce tu email" />
+          <button type="submit" data-translate="suscribirse">Suscribirse</button>
         </form>
         <div class="social-media">
           <a href="#"><i class="fab fa-tiktok"></i></a>
@@ -102,7 +108,7 @@
           <h4 data-translate="enlaces">Enlaces Útiles</h4>
           <p>
             <a href="index.html" data-translate="inicio">Inicio</a>
-            <a href="../catalogo/catalogo.html" data-translate="catalogo-nav"></a>
+            <a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a>
             <a href="nosotros.html" data-translate="nosotros">Nosotros</a>
             <a href="contacto.html" data-translate="contacto">Contacto</a>
             <a href="carrito.html" data-translate="carrito">Carrito</a>
@@ -125,5 +131,7 @@
   </footer>
 
   <script src="fechayhora.js"></script>
-   <script src="registro.js"></script>
+  <script src="registro.js"></script>
+  <script src="idioma_registro.js"></script>
+
 </html>

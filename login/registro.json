@@ -1,0 +1,32 @@
+{ "en": {
+    "inicio": "Home",
+    "catalogo-nav": "Catalog",
+    "nosotros": "About Us",
+    "contacto": "Contact",
+    "placeholder-nav": "Search...",
+    "titulo": "Tea Blossom",
+    "crear_cuenta": "Create Account",
+    "formulario_cuenta": "Complete the form to create an account.",
+    "nombre": "Name",
+    "apellidos": "Last Name",
+    "correo": "Email Address",
+    "confirmar_correo": "Confirm Email Address",
+    "contraseña": "Password",
+    "registrar": "Register",
+    "comercio_justo": "Fair Trade",
+    "sin_crueldad": "Cruelty-Free",
+    "organico": "100% Organic",
+    "sin_microplasticos": "Microplastic-Free",
+    "suscribete": "Subscribe to our newsletter",
+    "ofertas": "Offers, news, and exclusive discounts. Don't miss out!",
+    "input_placeholder": "Enter your email",
+    "suscribirse": "Subscribe",
+    "enlaces": "Useful Links",
+    "carrito": "Cart",
+    "politicas": "Policies",
+    "aviso": "Legal Notice",
+    "cookies": "Cookie Policy",
+    "privacidad": "Privacy Policy"
+  }
+}
+  

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/b58110c1d4.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,9 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
   <title>Flor de Té</title>
-  <link rel="stylesheet" href="panelAdmin.css" />
-  <link rel="stylesheet" href="../inicio/inicio.css" />
-  </head>
+    <link rel="stylesheet" href="../inicio/inicio.css">
+    <link rel="stylesheet" href="../inicio/estilo_popup.css">
+    <link rel="stylesheet" href="../login/popUpLogin.css">
+    <link rel="stylesheet" href="panelAdmin.css">
+
+</head>
+  
   <body>
     <nav class="menu">
       <div class="left-section">
@@ -27,14 +31,14 @@
       </div>
       <div class="right-section">
         <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." id="buscador" />
-        <div class="user-area"><i class="fa-solid fa-user"></i></div>
+        <div id="iconoUsuarioLogin" class="user-area"><i class="fa-solid fa-user"></i></div>
         <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
         <select id="language-select" title="idioma">
           <option value="es">ES</option>
           <option value="en">EN</option>
         </select>
       </div>
-      <div id="fechayhora"></div> <!--reubicar este div-->
+      <div id="fechayhora"></div>
     </nav>
 
     <div id="panelAdministracion">
