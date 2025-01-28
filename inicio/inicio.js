@@ -151,6 +151,7 @@ function irPagina(id) {
 */
 
 
+
 // Buscador
 
 const buscador = document.getElementById('buscador');
@@ -164,7 +165,8 @@ let catalogoCompleto = [];
 // Cargar el catálogo completo
 async function cargarCatalogoCompleto() {
   try {
-    const respuesta = await fetch('../catalogo/productos.json');
+    const idiomaSeleccionado = localStorage.getItem("selectedLanguage") || "es"; 
+    const respuesta = await fetch(idiomaSeleccionado === "en" ? 'productos_en.json' : '../catalogo/productos_es.json');
     catalogoCompleto = await respuesta.json();
   } catch (error) {
     console.error('Error al cargar el catálogo:', error);
@@ -192,7 +194,7 @@ buscador.addEventListener('input', function (item) {
   if (filtro.length) {
     menuBuscador.style.display = 'block';
     menuBuscador.innerHTML = filtro.map(producto => `
-          <div class="productoBuscado" onclick="anadirCompra(${producto.id})" id='${producto.id}' style="
+          <div class="productoBuscado" onclick="location.href='../catalogo/catalogo.html'" id='${producto.id}' style="
             display: flex;
               lign-items: center;
               padding: 0.5rem;
@@ -222,3 +224,14 @@ document.addEventListener('click', (e) => {
     menuBuscador.style.display = 'none';
   }
 });
+
+// Redirigir a la página del carrito
+function checkOut() {
+  const carritoList = document.getElementById('carrito');
+
+  if (carritoList) {
+    localStorage.setItem('carritoLleno', carritoList.innerHTML);
+    // Redirigir a otra página
+    window.location.href = '../carrito/carrito.html';
+  }
+};
