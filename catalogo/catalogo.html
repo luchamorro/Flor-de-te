@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../inicio/inicio.css">
     <link rel="stylesheet" href="../inicio/estilo_popup.css">
     <link rel="stylesheet" href="../login/popUpLogin.css">
+    <link rel="stylesheet" href="catalogo.css">
 </head>
 
   <body>
@@ -81,8 +82,8 @@
     <div>
       <ul id="carrito"></ul>
     </div>
-    <div id="checkOut">
-      <p id="precioTotal">Total: 0.00€</p>
+    <div>
+      <span>Total:&nbsp;<span id="sumaTotal"></span>€</span>
       <button type="button" onclick="checkOut()">Checkout</button>  
     </div>
   </article>
@@ -180,6 +181,7 @@
     <script src="../inicio/inicio.js"></script>
     <script src="../inicio/fechayhora.js"></script>
     <script src="../inicio/pagina_producto.js"></script>
+    <script src="catalogo.js"></script>
     <script src="../inicio/popUpLogin.js"></script>
   </body>
 </html>
