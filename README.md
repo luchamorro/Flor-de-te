@@ -20,29 +20,44 @@
 
 <p>En Flor De Té, creemos que el té y el café son mucho más que bebidas: son experiencias que conectan, inspiran y elevan los momentos cotidianos.</p>
 
-
-<h1>Desarrollo del proyecto</h1>
+<h2>Desarrollo del proyecto</h2>
 
 <p>Se han empleado para este proyecto los lenguajes de programación HTML5, CSS & javaScript, además de prototipado en figma y por su puesto GitHub para el control de versiones.</p>
 
 <p>El diseño ha sido una preocupación fundamental para el buen resultado de nuestra e-commerce y todas las imagenes en él incluidas son de creación y edicióon propia, con programas de diseño gráfico como Gymp e Inkscape y el uso de inteligencias artificiales como Dall-e mini de Crayon y Leonardo.Ai para obtener fuentes de isnpiración y bocetos rápidos de lo que pretendíamos hacer</p>
 
      
-<h1>Estructura del sitio</h1>
+<h3>Estructura del sitio</h3>
 
 <p>Nuestra primera intuición nos ha llevado a hacer una web con la menor cantidad de páginas posible, con el fin de evitar el laberinto de enlaces y pestañas en que estas suelen convertirse. Finalmente la web Flor de Té consta de:</p>
 
-<p>Una página de inicio</p>
+<h4>Una página de inicio</h4>
+
+<p>Una cabecera que te acompaña por todo el sitio, con con un navegador integrado y su propio buscador, totalmente funcional y desplegable.</p>
 
 ![Página de inicio](img/screenShots/inicio.png)
 
-<p>Más abajo de la misma una selección de los productos mejor valorados por nuestros custommers</p>
+<p>Más abajo de la misma, una selección de los productos mejor valorados por nuestros custommers</p>
 
 ![Más valorados](img/screenShots/productosValorados.png)
 
 <p>Y por ultimo una sección a promociones, otros artículos y testimonios</p>
 
 ![promo](img/screenShots/info.png)
+
+<h4>El catálogo</h4>
+
+<p>Una página que recopila todos nuestros productos y se pueden filtrar por preferencias del usuario, que añade una página de detalle del producto</p>
+
+![catalogo](img/screenShots/catalogo.png)
+
+![Detalle](img/screenShots/paginaDetalle.png)
+
+<p>Y claro está una página de checkout donde el cliente puede dar sus datos de dirección y pago y registrar su pedido</p>
+
+![Checkout](img/screenShots/checkout.png)
+
+<h4>Nosotros es una página donde el 
 
 
 

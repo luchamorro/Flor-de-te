@@ -194,7 +194,7 @@ buscador.addEventListener('input', function (item) {
   if (filtro.length) {
     menuBuscador.style.display = 'block';
     menuBuscador.innerHTML = filtro.map(producto => `
-          <div class="productoBuscado" onclick="anadirCompra(${producto.id})" id='${producto.id}' style="
+          <div class="productoBuscado" onclick="location.href='../catalogo/catalogo.html'" id='${producto.id}' style="
             display: flex;
               lign-items: center;
               padding: 0.5rem;
@@ -223,13 +223,6 @@ document.addEventListener('click', (e) => {
   if (!menuBuscador.contains(e.target) && e.target !== buscador) {
     menuBuscador.style.display = 'none';
   }
-});
-
-// Cerrar resultados al hacer click fuera
-document.addEventListener('click', (e) => {
-   if (!menuBuscador.contains(e.target) && e.target !== buscador) {
-       menuBuscador.style.display = 'none';
-   }
 });
 
 // Redirigir a la página del carrito

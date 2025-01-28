@@ -329,20 +329,7 @@ function botonMas(id){
  //
  function botonMenos(id){
   const producto = productos.find(p => p.id == id);
- 
-  //Añadir producto al array
-  if(producto){
-  listaCompra.pop(producto);
-  }
- 
-    // Actualizar contador carrito
-  carritoIcon.setAttribute('data-content', listaCompra.length);
- 
-  //Cambiar el numero del monto
-  let monto = document.getElementById(`monto${producto.id}`)
-  let reduce = listaCompra.filter(item => item.id === producto.id).length;  
-  monto.setAttribute('class', 'monto');
-  monto.innerText = 'x' + reduce;
+  té
   contador.innerText = 'x' + reduce;
 
  };

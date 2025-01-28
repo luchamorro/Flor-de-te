@@ -16,7 +16,7 @@ margin-top: 20px;
 }
 
 button {
-background-color: #e4007f; /* Rosa claro */
+background-color:#ff6600; 
 color: white;
 border: none;
 padding: 10px 20px;
@@ -33,16 +33,13 @@ font-size: 1.5em; /* Ajusta el tamaño del icono */
 }
 
 button:hover {
-background-color: #d3006a; /* Cambio de color al pasar el ratón */
+background-color: #cd0038; 
 }
 
 button:focus {
-outline: none; /* Elimina el contorno del botón al hacer clic */
+outline: none; 
 }
 
-button:hover {
-background-color: #d1006a;
-}
 
 /* Estilos para la tabla */
 table {
@@ -55,13 +52,12 @@ th,
 td {
 padding: 10px;
 text-align: left;
-border: 1px solid #f5d2d2; /* Rosa muy claro */
+border: 1px solid  rgb(255, 235, 222); 
 }
 
 th {
-background-color: #fce5e7; /* Rosa pastel */
-color: #e4007f;
-font-weight: bold;
+background-color: rgb(255, 206, 173); 
+color:white;
 }
 
 td {
@@ -76,22 +72,13 @@ border-radius: 5px;
 }
 
 .filtro {
-background-color: #fce5e7; /* Rosa pastel */
 padding: 5px 10px;
 border-radius: 15px;
-color: #e4007f;
 }
 
 /* Estilos para el checkbox en la tabla */
 input[type="checkbox"] {
 margin: 0;
-}
-
-.tabla-container {
-max-height: 400px;
-overflow-y: auto;
-border: 1px solid #ddd;
-margin-top: 20px;
 }
 
 .tabla-container {
