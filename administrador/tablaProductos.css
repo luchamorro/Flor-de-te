@@ -81,10 +81,11 @@ margin: 0;
 }
 
 .tabla-container {
-max-height: 800px; /* Ajusta la altura según sea necesario */
-overflow-y: auto; /* Activa el scroll vertical cuando el contenido sobrepase el tamaño */
-border: 1px solid #ddd; /* Opcional: Agrega un borde alrededor de la tabla */
-margin-top: 20px; /* Opcional: Margen superior para separación */
+max-height: 800px; 
+overflow-y: auto; 
+border: 1px solid #ddd; 
+margin-top: 20px; 
+margin-bottom: 40px;
 }
 
 
