@@ -1257,3 +1257,86 @@ button.botonCarrito:hover {
     gap: 1rem;
   }
 }
+/* Estilos Responsivos para Móvil */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .hero-text-1,
+  .hero-text-2,
+  .hero-text-3 {
+    margin: 1.5rem auto;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .productos,
+  .productosGrande {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .filtros {
+    width: 95%;
+    margin: 1rem auto;
+  }
+
+  .intro {
+    margin: -18rem 0 2rem 0;
+  }
+
+  .intro-container {
+    width: 95%;
+  }
+
+  .bestsellers-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .bestsellers-texto {
+    width: 95%;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .te-del-mes {
+    margin-top: -1rem;
+  }
+
+  .te-mes-container {
+    gap: 0.5rem;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .te-mes-texto {
+    max-width: 100%;
+  }
+
+  .te-mes-imagen {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .testimonios-container,
+  .oferta-contenedor {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
