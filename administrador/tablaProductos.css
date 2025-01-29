@@ -4,7 +4,6 @@ max-width: 1200px;
 text-align: center;
 margin: 5px auto;
 }
-  
 
 
 /* Estilos para los botones */
@@ -87,4 +86,40 @@ overflow-y: auto; /* Activa el scroll vertical cuando el contenido sobrepase el 
 border: 1px solid #ddd; /* Opcional: Agrega un borde alrededor de la tabla */
 margin-top: 20px; /* Opcional: Margen superior para separación */
 }
+
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+.contenedor-tabla {
+    width: 95%;
+}
+
+.acciones {
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    width: 100%;
+    justify-content: center;
+}
+
+table {
+    font-size: 12px;
+}
+
+th, td {
+    padding: 6px;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+}
+
+.tabla-container {
+    overflow-x: auto;
+}
+}
+
 
