@@ -82,7 +82,7 @@
 
 .iconos-contacto i {
   font-size: 40px; /* Tamaño del ícono */
-  color: var(--morado);
+  color: var(--naranja);
   margin-bottom: 10px; /* Espacio debajo del ícono */
 }
 
@@ -273,7 +273,7 @@ button:hover {
 
 .iconos-tiendas i {
   font-size: 40px; /* Tamaño del ícono */
-  color: var(--morado);
+  color: var(--naranja);
   margin-bottom: 10px; /* Espacio debajo del ícono */
 }
 
