@@ -232,6 +232,6 @@ function checkOut() {
   if (carritoList) {
     localStorage.setItem('carritoLleno', carritoList.innerHTML);
     // Redirigir a otra página
-    window.location.href = '../carrito/carrito.html';
+    window.location.href = '../catalogo/catalogo.html';
   }
 };
