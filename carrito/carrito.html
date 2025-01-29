@@ -43,7 +43,7 @@
   <main>
     <div class="separador"></div>
   <section class="carrito_section">
-    <p class="saludoCliente" data-translate="saludoCliente"><span>Juan Carlos</span>, estos son los productos de tu carrito:</p>
+    <p class="saludoCliente" data-translate="saludoCliente"><span>Andrés</span>, estos son los productos de tu carrito:</p>
    
     <ul id="carrito_container" style="display: flex;" class="carrito_container"></ul>
   </section>
@@ -60,19 +60,19 @@
 
   <form class="formularioCheckout">
     <label for="nombre" data-translate="nombre">Nombre:</label><br>
-    <input class="input" type="text" id="nombre" name="nombre"><br>
+    <input class="input" type="text" id="nombre" name="nombre" required><br>
     <label for="apellido" data-translate="apellido">Apellido:</label><br>
-    <input class="input" type="text" id="apellido" name="apellido"><br>
+    <input class="input" type="text" id="apellido" name="apellido" required><br>
     <label for="calle" data-translate="calle">Calle:</label><br>
-    <input class="input" type="text" id="calle" name="calle">
+    <input class="input" type="text" id="calle" name="calle" required>
     <label for="numeroDireccion" data-translate="numeroDireccion">Número:</label><br>
-    <input class="input" type="text" id="numeroDireccion" name="numeroDireccion"><br>
-    <label for="pisoDireccion" data-translate="pisoDireccion">Piso:</label><br>
+    <input class="input" type="text" id="numeroDireccion" name="numeroDireccion" required><br>
+    <label for="pisoDireccion" data-translate="pisoDireccion" required>Piso:</label><br>
     <input class="input" type="text" id="pisoDireccion" name="pisoDireccion"><br>
     <label for="cp" data-translate="cp">Código Postal:</label><br>
-    <input class="input" type="text" id="cp" name="cp"><br>
+    <input class="input" type="text" id="cp" name="cp" required><br>
     <label for="poblacion" data-translate="poblacion">Provincia:</label><br>
-    <input class="input" type="text" id="poblacion" name="poblacion"><br>
+    <input class="input" type="text" id="poblacion" name="poblacion" required><br>
 
     <p data-translate="infoEnvios">Envíos dentro de España y Portugal en menos de 72hs.</p>
 
@@ -80,10 +80,10 @@
 
 <div class="datosPrecio"> 
 <div> 
-  <p class="precioTotal" data-translate="total"><b>Total: <span id="total"></span>€</b></p>
-  <p data-translate="subtotal">Subtotal: <span id="subtotal"></span>€</p>
-  <p data-translate="iva">IVA: <span id="iva"></span>€</p>
-  <p class = "envio" data-translate="envio"><span class="precio">Gastos de envío: </span> <span class="precio"> 5€</span></p>
+  <p class="precioTotal"><b>Total: <span data-translate="total" id="total"></span>€</b></p>
+  <p>Subtotal: <span data-translate="subtotal" id="subtotal"></span>€</p>
+  <p>IVA: <span data-translate="iva" id="iva"></span>€</p>
+  <p class = "envio"><span class="precio">Gastos de envío: </span> <span class="precio" data-translate="envio"> 5€</span></p>
 </div>
 <div class="pagoFinal"> 
   <p data-translate="metodoPago">Método de pago:</p>
@@ -102,11 +102,12 @@
 </div> 
 
 
-<button id="finalizarCompra" data-translate="finalizarCompra">Confirmar compra</button>
+<button id="finalizarCompra" data-translate="finalizarCompra" onclick="finalizarCompra()">Confirmar compra</button>
 </form> 
 
 </div>
 
+<div id="divFinalizarCompra"></div>
 <!------------------------------------->
 </section>
 <!-- Popup de login -->
@@ -196,5 +197,16 @@
 <script scr="../catalogo/inicio.js"></script>
 <script src="../inicio/popUpLogin.js"></script>
 
+<script>
+  
+  function finalizarCompra() {
+    const divFinalizar = document.getElementById('divFinalizarCompra');
+    divFinalizar.innerHTML = "<p>Gracias por su compra!</p>";
+  }
+
+</script>
+
 </body>
 </html>
+
+<!--comentario excusa para hacer un commit-->
