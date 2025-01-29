@@ -61,7 +61,6 @@
     .menu .right-section #language-select{
       display: flex;
       position: absolute;
-      top: 1.3rem;
       right: 7rem;
     }
   
