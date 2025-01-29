@@ -235,3 +235,35 @@ function checkOut() {
     window.location.href = '../carrito/carrito.html';
   }
 };
+
+// Función para mostrar el producto anterior
+function anterior() {
+  const index = productos.findIndex(p => p.id === currentId);
+  if (index > 0) {
+    currentId = productos[index - 1].id;
+  } else {
+    currentId = Math.max(...productos.map(p => p.id)); // Ir al último producto
+  }
+  mostrarProducto(currentId);
+}
+
+// Función para mostrar el siguiente producto
+function siguiente() {
+  const index = productos.findIndex(p => p.id === currentId);
+  if (index < productos.length - 1) {
+    currentId = productos[index + 1].id;
+  } else {
+    currentId = Math.min(...productos.map(p => p.id)); // Ir al primer producto
+  }
+  mostrarProducto(currentId);
+}
+
+// Función para cerrar la ventana superpuesta
+function cerrar() {
+  document.getElementById("ventanaSuperpuesta").style.display = "none";
+}
+
+// Asignar eventos a los botones principales
+document.getElementById('siguienteBtn').addEventListener('click', siguiente);
+document.getElementById('anteriorBtn').addEventListener('click', anterior);
+document.getElementById('cerrarBtn').addEventListener('click', cerrar);

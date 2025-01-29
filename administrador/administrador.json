@@ -1,0 +1,36 @@
+{
+    "en": {
+        "inicio": "Home",
+        "catalogo-nav": "Catalog",
+        "nosotros": "About Us",
+        "contacto": "Contact",
+        "placeholder-nav": "Looking for...",
+        "panel_Admin": "Administration Panel",
+        "productos": "Products",
+        "cerrar_sesion": "Log Out",
+        "comercio_justo": "Fair Trade",
+        "sin_crueldad": "Cruelty-Free",
+        "organico": "100% Organic",
+        "sin_microplasticos": "No Microplastics",
+        "suscribete": "Subscribe to our newsletter",
+        "ofertas": "Offers, news, and exclusive discounts. Don't miss it!",
+        "input_placeholder": "Enter your email",
+        "enlaces": "Useful Links",
+        "politicas": "Policies",
+        "aviso": "Legal Notice",
+        "cookies": "Cookie Policy",
+        "privacidad": "Privacy Policy",
+        "carrito": "Cart",
+
+        "titulo-productos": "Products",
+        "boton-nuevo": "New",
+        "boton-modificar": "Edit",
+        "boton-eliminar": "Delete",
+        "cerrar-sesion": "Log Out",
+        "columna-nombre": "Name",
+        "columna-descripcion": "Description",
+        "columna-imagen": "Image",
+        "columna-filtros": "Filters",
+        "columna-precio": "Price"
+    }
+}

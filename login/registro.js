@@ -31,6 +31,8 @@ document.getElementById('formularioRegistro').addEventListener('submit', functio
   
     // Redireccionamos a otra página o limpiamos el formulario
     document.getElementById('formularioRegistro').reset();
+
+    window.location.href="../inicio/index.html";
   });
   
   
