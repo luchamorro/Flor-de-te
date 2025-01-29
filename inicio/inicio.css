@@ -41,6 +41,10 @@ p{
   margin-bottom: 0.5rem;
 }
 
+.cart a{
+  color: black;
+}
+
 button{
   padding: 0.5rem 1rem; /* Relleno del botón */
   background-color: var(--naranja); /* Color de fondo */
