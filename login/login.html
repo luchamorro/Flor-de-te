@@ -16,6 +16,7 @@
   </head>
 
   <body>
+    <main>
     <nav class="menu">
       <div class="left-section">
         <a href="../inicio/index.html">
@@ -45,7 +46,7 @@
         <div class="foto-contenedor">
           <!-- Imagen vacía con borde -->
           <img id="profilePicture" alt="Foto de Perfil" />
-          <label for="uploadPhoto">Subir foto de perfil</label>
+          <label for="uploadPhoto" data-translate="subir-foto">Subir foto de perfil</label>
           <input
             type="file"
             id="uploadPhoto"
@@ -53,98 +54,102 @@
             title="Subir foto de perfil"
           />
         </div>
-        <h1>Bienvenido, <span id="userName">Andrés</span></h1>
+        <h1 data-translate="bienvenido">Bienvenido, <span id="userName">Andrés</span></h1>
       </div>
 
       <div class="perfil-opciones">
-        <button>Mis Pedidos</button>
-        <button>Configuración</button>
-        <button>Favoritos</button>
-        <button>Soporte</button>
+        <button data-translate="mis-pedidos">Mis Pedidos</button>
+        <button data-translate="configuracion">Configuración</button>
+        <button data-translate="favoritos">Favoritos</button>
+        <button data-translate="soporte">Soporte</button>
       </div>
       <div class="cerrar-sesion">
-        <button id="logoutBtn">Cerrar Sesión</button>
+        <button id="logoutBtn" data-translate="cerrar-sesion">Cerrar Sesión</button>
       </div>
     </main>
+    
     <!-- Popup de login -->
-<div id="popupLoginBackground" class="popup-background oculto"></div>
-<div id="popupLoginDiv" class="popup oculto">
-  <button id="closeLoginPopup" class="close-popup">&times;</button>
-  <div class="contenedor-login">
-    <div class="caja-login">
-      <h2>Identificarse</h2>
-      <p>¿Ya tiene una cuenta? Inicie sesión para continuar.</p>
-      <form id="formularioLogin">
-        <label for="loginEmail" >Dirección de correo electrónico</label>
-        <input type="email" id="loginEmail" name="email" required />
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" required />
-        <button type="submit">Identificarse</button>
-        <a href="#" class="forgot-password">¿Ha olvidado su contraseña?</a>
-        <p>
-          <a href="Registro.html" id="abrirPopupRegistro">¿No tienes cuenta? Crear cuenta</a>
-        </p>
-      </form>
-    </div>
-  </div>
-</div>  
-  <footer>
-    <div class="footer-container">
-      <div class="comercio-justo">
-        <p data-translate="comercio_justo"><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
-        <p data-translate="sin_crueldad"><i class="fa-solid fa-seedling"></i> Sin crueldad animal</p>
-        <p data-translate="organico"><i class="fa-solid fa-leaf"></i> 100% Orgánico</p>
-        <p data-translate="sin_microplasticos"><i class="fa-solid fa-trash"></i> Sin microplásticos</p>
-      </div>
-      <hr class="linea-fina" />
-      <div class="newsletter">
-        <img
-          src="../img/logos/logo_horizontal.svg"
-          alt="logo Flor de Té"
-          class="logo-footer"
-        />
-        <h3 data-translate="suscribete">Suscríbete a nuestra newsletter</h3>
-        <p data-translate="ofertas">
-          Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?
-        </p>
-        <form>
-          <input data-translate="input_placeholder" type="email" placeholder="Introduce tu email" />
-          <button type="submit">Suscribirse</button>
-        </form>
-        <div class="social-media">
-          <a href="#"><i class="fab fa-tiktok"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
+    <div id="popupLoginBackground" class="popup-background oculto"></div>
+    <div id="popupLoginDiv" class="popup oculto">
+      <button id="closeLoginPopup" class="close-popup">&times;</button>
+      <div class="contenedor-login">
+        <div class="caja-login">
+          <h2 data-translate="identificarse">Identificarse</h2>
+          <p data-translate="ya-tiene-cuenta">¿Ya tiene una cuenta? Inicie sesión para continuar.</p>
+          <form id="formularioLogin">
+            <label for="loginEmail" data-translate="email-label">Dirección de correo electrónico</label>
+            <input type="email" id="loginEmail" name="email" required />
+            <label for="password" data-translate="password-label">Contraseña</label>
+            <input type="password" id="password" name="password" required />
+            <button type="submit" data-translate="login-button">Identificarse</button>
+            <a href="#" class="forgot-password" data-translate="forgot-password">¿Ha olvidado su contraseña?</a>
+            <p>
+              <a href="Registro.html" id="abrirPopupRegistro" data-translate="crear-cuenta">¿No tienes cuenta? Crear cuenta</a>
+            </p>
+          </form>
         </div>
       </div>
-      <div class="footer-columns">
-        <div class="footer-column">
-          <h4 data-translate="enlaces">Enlaces Útiles</h4>
-          <p>
-            <a href="index.html" data-translate="inicio">Inicio</a>
-            <a href="../catalogo/catalogo.html" data-translate="catalogo-nav"></a>
-            <a href="nosotros.html" data-translate="nosotros">Nosotros</a>
-            <a href="contacto.html" data-translate="contacto">Contacto</a>
-            <a href="carrito.html" data-translate="carrito">Carrito</a>
+    </div>  
+  </main>
+    <footer>
+      <div class="footer-container">
+        <div class="comercio-justo">
+          <p data-translate="comercio_justo"><i class="fa-solid fa-handshake"></i> Comercio Justo</p>
+          <p data-translate="sin_crueldad"><i class="fa-solid fa-seedling"></i> Sin crueldad animal</p>
+          <p data-translate="organico"><i class="fa-solid fa-leaf"></i> 100% Orgánico</p>
+          <p data-translate="sin_microplasticos"><i class="fa-solid fa-trash"></i> Sin microplásticos</p>
+        </div>
+        <hr class="linea-fina" />
+        <div class="newsletter">
+          <img
+            src="../img/logos/logo_horizontal.svg"
+            alt="logo Flor de Té"
+            class="logo-footer"
+          />
+          <h3 data-translate="suscribete">Suscríbete a nuestra newsletter</h3>
+          <p data-translate="ofertas">
+            Ofertas, novedades y descuentos exclusivos. ¿Te lo vas a perder?
           </p>
+          <form>
+            <input data-translate="input_placeholder" type="email" placeholder="Introduce tu email" />
+            <button type="submit" data-translate="suscribirse">Suscribirse</button>
+          </form>
+          <div class="social-media">
+            <a href="#" data-translate="social_tiktok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" data-translate="social_instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" data-translate="social_facebook"><i class="fab fa-facebook"></i></a>
+          </div>
         </div>
-        <div class="footer-column">
-          <h4 data-translate="politicas">Políticas</h4>
-          <p>
-            <a href="#" data-translate="politicas">Políticas</a>
-            <a href="#" data-translate="aviso">Aviso Legal</a>
-            <a href="#" data-translate="cookies">Política de Cookies</a>
-            <a href="#" data-translate="privacidad">Políticas de Privacidad</a>
-          </p>
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h4 data-translate="enlaces">Enlaces Útiles</h4>
+            <p>
+              <a href="index.html" data-translate="inicio">Inicio</a>
+              <a href="../catalogo/catalogo.html" data-translate="catalogo-nav">Catálogo</a>
+              <a href="nosotros.html" data-translate="nosotros">Nosotros</a>
+              <a href="contacto.html" data-translate="contacto">Contacto</a>
+              <a href="carrito.html" data-translate="carrito">Carrito</a>
+            </p>
+          </div>
+          <div class="footer-column">
+            <h4 data-translate="politicas">Políticas</h4>
+            <p>
+              <a href="#" data-translate="politicas">Políticas</a>
+              <a href="#" data-translate="aviso">Aviso Legal</a>
+              <a href="#" data-translate="cookies">Política de Cookies</a>
+              <a href="#" data-translate="privacidad">Políticas de Privacidad</a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="subfooter">
-      <p>© 2024 Flor de Té</p>
-    </div>
-  </footer>
-<script src="login.js"></script>
-<script src="../inicio/popUpLogin.js"></script>
+      <div class="subfooter">
+        <p data-translate="copyright">© 2024 Flor de Té</p>
+      </div>
+    </footer>
 
+    <script src="login.js"></script>
+    <script src="../inicio/popUpLogin.js"></script>
+    <script src="fechayhora.js"></script>
+    <script src="idioma_login.js"></script>
   </body>
 </html>

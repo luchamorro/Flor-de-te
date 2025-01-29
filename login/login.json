@@ -4,7 +4,7 @@
         "catalogo-nav": "Catalog",
         "nosotros": "About Us",
         "contacto": "Contact",
-        "placeholder-nav":"Looking for...",
+        "placeholder-nav": "Looking for...",
 
         "login_title": "Log In",
         "login_subtitle": "Already have an account? Log in to continue.",
@@ -36,6 +36,23 @@
         
         "social_tiktok": "TikTok",
         "social_instagram": "Instagram",
-        "social_facebook": "Facebook"
+        "social_facebook": "Facebook",
+
+        "subir-foto": "Upload Profile Picture",
+        "bienvenido": "Welcome",
+        "mis-pedidos": "My Orders",
+        "configuracion": "Settings",
+        "favoritos": "Favorites",
+        "soporte": "Support",
+        "cerrar-sesion": "Log Out",
+        "identificarse": "Log In",
+        "ya-tiene-cuenta": "Already have an account? Log in to continue.",
+        "login-email": "Email Address",
+        "login-password": "Password",
+        "login-button": "Log In",
+        "forgot-password": "Forgot your password?",
+        "crear-cuenta": "Don't have an account? Create one",
+        "carrito": "Cart",
+        "copyright": "© 2024 Flor de Té"
     }
 }

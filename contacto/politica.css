@@ -11,6 +11,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
   }
+  
   .proteccion-datos img {
     max-width: 100%;
     height: auto;
@@ -18,8 +19,31 @@ main {
     margin: 5px auto;
   }
   
+h3{
+  text-align: left;
+}
  li{   
 font-size: 1rem;
 color: #333;
 margin-bottom: 0.5rem;
  }
+
+ /* Estilos responsivos para pantallas de hasta 768px */
+@media (max-width: 768px) {
+  main {
+      display: flex;
+      flex-direction: column-reverse; /* Cambia el orden para que la imagen vaya antes del texto */
+      padding: 20px;
+      margin: 100px auto;
+  }
+
+  .proteccion-datos img {
+      margin-bottom: 20px; /* Añade un margen inferior a la imagen para separar del texto */
+  }
+
+  li {
+      font-size: 0.9rem; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+  }
+}
+
+
