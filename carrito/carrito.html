@@ -13,7 +13,7 @@
       <link rel="stylesheet" href="carrito.css">
       <link rel="stylesheet" href="../inicio/inicio.css">
       <link rel="stylesheet" href="../login/popUpLogin.css">
-
+      <link rel="stylesheet" href="../inicio/hamButton.css">
   </head>
 <body>
 
@@ -38,6 +38,7 @@
       </select>
     </div>
     <div id="fechayhora"></div> <!--reubicar este div-->
+    <div class="hamburger-menu" onclick="toggleMenu()"><i>☰</i></div>  
   </nav>
  
   <main>
@@ -83,7 +84,7 @@
   <p class="precioTotal"><b>Total: <span data-translate="total" id="total"></span>€</b></p>
   <p>Subtotal: <span data-translate="subtotal" id="subtotal"></span>€</p>
   <p>IVA: <span data-translate="iva" id="iva"></span>€</p>
-  <p class = "envio" data-translate="envio"><span class="precio">Gastos de envío: </span> <span class="precio"> 5€</span></p>
+  <p class = "envio"><span class="precio">Gastos de envío: </span> <span class="precio" data-translate="envio"> 5€</span></p>
 </div>
 <div class="pagoFinal"> 
   <p data-translate="metodoPago">Método de pago:</p>
@@ -196,6 +197,7 @@
 <script src="../inicio/fechayhora.js"></script>
 <script scr="../catalogo/inicio.js"></script>
 <script src="../inicio/popUpLogin.js"></script>
+<script src="../nosotros/nosotros.js"></script>
 
 <script>
   
@@ -208,3 +210,5 @@
 
 </body>
 </html>
+
+<!--comentario excusa para hacer un commit-->

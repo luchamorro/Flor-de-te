@@ -11,6 +11,7 @@
   <title>Flor de Té</title>
   <link rel="stylesheet" href="nosotros.css" />
   <link rel="stylesheet" href="../inicio/inicio.css" />
+  <link rel="stylesheet" href="../inicio/hamButton.css">
 </head>
 
 <body>
@@ -36,6 +37,7 @@
       </select>
     </div>
     <div id="fechayhora"></div>
+    <div class="hamburger-menu" onclick="toggleMenu()"><i>☰</i></div>
   </nav>
 
   <div id="contacto">
@@ -160,7 +162,7 @@
         <div class="footer-column">
           <h4 data-translate="politicas">Políticas</h4>
           <p>
-            <a href="#" data-translate="politicas">Políticas</a>
+            <a href="../contacto/politica.html" data-translate="politicas">Políticas</a>
             <a href="#" data-translate="aviso">Aviso Legal</a>
             <a href="#" data-translate="cookies">Política de Cookies</a>
             <a href="#" data-translate="privacidad">Políticas de Privacidad</a>
@@ -175,6 +177,7 @@
 
 
   <script src="nosotros.js"></script>
+  <script src="../inicio/inicio.js"></script>
   <script src="../inicio/fechayhora.js"></script>
   <script src="idiomas_nosotros.js"></script>
   <script src="../inicio/popUpLogin.js"></script>
