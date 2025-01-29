@@ -75,7 +75,11 @@
 
 ![Login](img/screenShots/login.png)
 
-![Página_Login](img/screenShots/FALTAIMAGEN!!!!)
+![Perfil](img/screenShots/Intranet.png)
+
+<p>O si eres el admin una página para administrar los productos de tu tienda y leer los mensajes de los usuarios</p>
+
+![Página_Login](img/screenShots/admin.png)
      
 <h2>Quién mantiene y contribuye al proyecto</h2>
 
