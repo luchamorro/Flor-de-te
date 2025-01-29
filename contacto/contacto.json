@@ -37,7 +37,14 @@
 
           "direccion3": "Max Center Shopping Center",
     
-
+          "popup-login-title": "Sign In",
+          "popup-login-text": "Already have an account? Log in to continue.",
+          "popup-login-email-label": "Email Address",
+          "popup-login-password-label": "Password",
+          "popup-login-button": "Sign In",
+          "popup-login-forgot-password": "Forgot your password?",
+          "popup-login-create-account": "Don’t have an account? Create one",
+          
         "comercio_justo": "Fair Trade",
         "sin_crueldad": "Cruelty-Free",
         "organico": "100% Organic",

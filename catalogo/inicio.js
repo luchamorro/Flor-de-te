@@ -307,12 +307,13 @@ function anadirCompra(id) {
 function botonMas(id){
   const producto = productos.find(p => p.id == id);
   let contador = document.getElementById('contador');
+
+  anadirCompra(id)
  
   //Añadir producto al array
   if(producto){
   listaCompra.push(producto);
   }
- 
     // Actualizar contador carrito
   let cantidad = listaCompra.length;
   carritoIcon.setAttribute('data-content', listaCompra.length);
@@ -329,7 +330,20 @@ function botonMas(id){
  //
  function botonMenos(id){
   const producto = productos.find(p => p.id == id);
-  té
+ 
+  //Añadir producto al array
+  if(producto){
+  listaCompra.pop(producto);
+  }
+ 
+    // Actualizar contador carrito
+  carritoIcon.setAttribute('data-content', listaCompra.length);
+ 
+  //Cambiar el numero del monto
+  let monto = document.getElementById(`monto${producto.id}`)
+  let reduce = listaCompra.filter(item => item.id === producto.id).length;  
+  monto.setAttribute('class', 'monto');
+  monto.innerText = 'x' + reduce;
   contador.innerText = 'x' + reduce;
 
  };

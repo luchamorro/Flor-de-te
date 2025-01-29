@@ -57,3 +57,37 @@
   width: 100%;
   transition: background-color 0.3s;
 }
+
+@media (max-width: 768px) {
+  .contenedor-login {
+    margin: 20px;
+  }
+
+  .caja-login {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .caja-login label {
+    font-size: 13px;
+    margin: 8px 0 4px;
+  }
+
+  .caja-login input {
+    width: calc(100% - 16px);
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .caja-login button {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+
+  .forgot-password {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}

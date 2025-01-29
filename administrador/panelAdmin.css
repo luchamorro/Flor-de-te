@@ -20,8 +20,8 @@
 }
 .iconos-opcionesPanel {
   display: flex;
-  justify-content: space-around; /* Espaciado igual entre los elementos */
-  text-align: center; /* Centra el texto de cada ícono */
+  justify-content: space-around; 
+  text-align: center; 
   padding: 20px;
   background-color: var(--blanco);
   gap: 2rem;
@@ -56,23 +56,58 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .iconos-opcionesPanel div {
-  flex: 1; /* Asegura que los elementos ocupen espacio igual */
-  margin: 0 10px; /* Margen entre columnas */
+  flex: 1; 
+  margin: 0 10px; 
 }
 
 .iconos-opcionesPanel i {
-  font-size: 40px; /* Tamaño del ícono */
+  font-size: 40px; 
   color: var(--morado);
-  margin-bottom: 10px; /* Espacio debajo del ícono */
+  margin-bottom: 10px; /
 }
 
 .iconos-opcionesPanel h3 {
   font-size: 18px;
-  color: #555; /* Color gris oscuro */
+  color: #555; 
   margin: 10px 0;
 }
 
 .iconos-opcionesPanel p {
   font-size: 16px;
-  color: #333; /* Texto verde oscuro */
+  color: #333; 
+}
+
+/* Diseño responsive para el panel de administración en pantallas de hasta 768px */
+
+@media (max-width: 768px) {
+  .cuerpo-panelAdministracion {
+    margin: 2rem auto;
+    padding: 50px;
+    gap: 1.5rem;
+  }
+
+  .opcionesPanel {
+    gap: 2rem;
+  }
+
+  .iconos-opcionesPanel {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .icono-opcionProducto,
+  .icono-opcionUsuarios {
+    max-width: 100%;
+    width: 80%;
+    padding: 1rem;
+  }
+
+  .iconos-opcionesPanel i {
+    font-size: 30px;
+  }
+
+  .iconos-opcionesPanel p {
+    font-size: 14px;
+  }
 }
