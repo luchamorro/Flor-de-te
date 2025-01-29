@@ -4,6 +4,7 @@
   left: 23%;
   height: 65%;
   background-color: rgb(255, 255, 255);
+  border: 3px double var(--naranja);
   z-index: 19;
   filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
   width: 50%;
