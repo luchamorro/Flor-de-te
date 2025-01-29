@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <style>
+        #cart-items {
+            margin-bottom: 20px;
+        }
+
+        #cart-summary {
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        #cart-summary p {
+            margin: 5px 0;
+        }
+
+        button {
+            background-color: #e93e0a;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #df3308;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Productos en el carrito -->
+<div id="cart-items">
+    <!-- Aquí se mostrarán los productos -->
+</div>
+
+<!-- Resumen del carrito -->
+<div id="cart-summary">
+    <p>Subtotal: $<span id="subtotal">0.00</span></p>
+    <p>IVA: $<span id="iva">0.00</span></p>
+    <p><strong>Total: $<span id="total">0.00</span></strong></p>
+</div>
+
+<!-- Botón para eliminar IVA -->
+<button id="eliminar-iva">Eliminar IVA</button>
+
+
+
+
+<script>
+    // Datos del carrito (incluyendo cantidad)
+    let productos = [
+        { name: "Producto 1", price: 10.00, quantity: 2, iva: 21 },  // 2 productos de $10
+        { name: "Producto 2", price: 20.00, quantity: 1, iva: 21 }   // 1 producto de $20
+    ];
+
+    // Función para actualizar el carrito
+    function actualizarCarrito() {
+        let subtotal = 0;
+        let ivaTotal = 0;
+        let total = 0;
+
+        // Vaciar el carrito actual en la pantalla antes de actualizar
+        document.getElementById('cart-items').innerHTML = '';
+
+        // Mostrar los productos con su cantidad
+        productos.forEach(producto => {
+            const subtotalProducto = producto.price * producto.quantity;
+            const ivaProducto = (subtotalProducto * producto.iva) / 100;
+
+            // Crear el HTML para mostrar cada producto
+            const itemHTML = `
+                <p>${producto.name} - $${producto.price} x ${producto.quantity} = $${subtotalProducto.toFixed(2)}</p>
+            `;
+            document.getElementById('cart-items').insertAdjacentHTML('beforeend', itemHTML);
+
+            // Sumar al subtotal y al IVA
+            subtotal += subtotalProducto;
+            ivaTotal += ivaProducto;
+        });
+
+        // Calcular el total (subtotal + IVA)
+        total = subtotal + ivaTotal;
+
+        // Mostrar los valores actualizados en el carrito
+        document.getElementById('subtotal').textContent = subtotal.toFixed(2);
+        document.getElementById('iva').textContent = ivaTotal.toFixed(2);
+        document.getElementById('total').textContent = total.toFixed(2);
+    }
+
+    // Función para eliminar IVA de los productos
+    function eliminarIva() {
+        productos.forEach(producto => {
+            producto.iva = 0; // Eliminar IVA
+        });
+        actualizarCarrito(); // Volver a actualizar el carrito con IVA eliminado
+    }
+
+    // Asignar la función de eliminar IVA al botón
+    document.getElementById('eliminar-iva').addEventListener('click', eliminarIva);
+
+    // Inicializar el carrito
+    actualizarCarrito();
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
