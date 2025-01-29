@@ -43,15 +43,11 @@
 
 <p>Y por ultimo una sección a promociones, otros artículos y testimonios</p>
 
-![promo](img/screenShots/info.png)
-
 <h4>El catálogo</h4>
 
 <p>Una página que recopila todos nuestros productos y se pueden filtrar por preferencias del usuario, que añade una página de detalle del producto</p>
 
 ![catalogo](img/screenShots/catalogo.png)
-
-![Detalle](img/screenShots/paginaDetalle.png)
 
 <p>Y claro está una página de checkout donde el cliente puede dar sus datos de dirección y pago y registrar su pedido</p>
 
@@ -72,8 +68,6 @@
 <h4>Login</h4>
 
 <p>Junto con contacto y en el nav, una página de login para fidelizar clientes y una cuenta admin que te permitirá editar personalmente tu tienda y los productos que en ella ofreces</p>
-
-![Login](img/screenShots/login.png)
 
 ![Perfil](img/screenShots/Intranet.png)
 
