@@ -4,7 +4,7 @@
 
 ![Club Orión](/img/logos/logo_horizontal.svg)
 
-<p>For de Té es un proyecto de e-commerce del ámbito de herboristería, centrado en el deleite de los sentidos y la relajación, para los amantes de las infusiones y tisanas, hecho por un grupo de coders comprometidos con el medio ambiente.</p>
+<p>Flor de Té es un proyecto de e-commerce del ámbito de herboristería, centrado en el deleite de los sentidos y la relajación, para los amantes de las infusiones y tisanas, hecho por un grupo de coders comprometidos con el medio ambiente.</p>
 
 <p>En For de Té, aspiramos a ser un referente en la creación de experiencias únicas alrededor del té y el café, ofreciendo productos de la más alta calidad que conecten a las personas con los sabores auténticos de todo el mundo.</p>
 
