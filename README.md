@@ -33,37 +33,31 @@
 
 <h4>Una página de inicio</h4>
 
-<p>Una cabecera que te acompaña por todo el sitio, con con un navegador integrado y su propio buscador, totalmente funcional y desplegable.</p>
+<p>Una cabecera que te acompaña por todo el sitio, con con un navegador integrado y su propio buscador, totalmente funcional y desplegable. Un logo que enlaza a la página de inicio y una funcion de fecha y hora actualizado</p>
 
 ![Página de inicio](img/screenShots/inicio.png)
 
-<p>Más abajo de la misma, una selección de los productos mejor valorados por nuestros custommers</p>
-
-![Más valorados](img/screenShots/productosValorados.png)
+<p>Más abajo de la misma, una selección de los productos mejor valorados por nuestros custommers en un .json facilmente editable y cargado en la página de forma dinámica. Además de los icones de acceso al login y al carrito, el cual además mostrará la cantidad de productos cargados en el mismo.</p>
 
 <p>Y por ultimo una sección a promociones, otros artículos y testimonios</p>
 
 <h4>El catálogo</h4>
 
-<p>Una página que recopila todos nuestros productos y se pueden filtrar por preferencias del usuario, que añade una página de detalle del producto</p>
+<p>Una página que recopila todos los productos de un .json y se cargan en la página dinámicamente con una plantilla literal. Se pueden filtrar por preferencias del usuario usando un sistema de buscador de palabras claves por medio de checkboxes que el usuario ve como etiquetas del producto y se añade en un div flotante una página de detalle del producto que porta el mismo al carrito y desde la cual se puede aumentar y reducir la cantidad del mismo, así como dos botones flecha que pasan al siguiente y anterior producto.</p>
 
 ![catalogo](img/screenShots/catalogo.png)
 
-<p>Y claro está una página de checkout donde el cliente puede dar sus datos de dirección y pago y registrar su pedido</p>
+<p>Una previsualizacion del carrito, con varios botones de carga dinámica que añaden funciones de manejo de los productos, vinculado con el carrito del nav para mostrar la cantidad. Además del boton checkout que redirige a la página de compra y una previsualización del precio final de la compra</p>
 
-![Checkout](img/screenShots/checkout.png)
+<p>Y claro está una página de checkout donde el cliente puede dar sus datos de dirección y pago en un formulario y registrar su pedido si tiene una cuenta. Esta misma carga de forma dinámica el precio total de la compra con aranceles incluidos, sin estos y el precio de los mismos, en tres espacios cada uno.</p>
 
 <h4>Nosotros</h4>
 
 <p>Es una página donde el dueño del dominio puede presentarse al público, traemos una primera vista de cómo se podría ver, qué información y fotos podría aportar</p>
 
-![Nosotros](img/screenShots/nosotros.png)
-
 <h4>Contacto</h4>
 
 <p>Una página simple pero eficiente, te proporcionará un contacto con el cliente excelente para recibir sugerencias, buenas críticas y ofrecer soporte virtual</p>
-
-![Contacto](img/screenShots/contacto.png)
 
 <h4>Login</h4>
 
@@ -71,9 +65,7 @@
 
 ![Perfil](img/screenShots/Intranet.png)
 
-<p>O si eres el admin una página para administrar los productos de tu tienda y leer los mensajes de los usuarios</p>
-
-![Página_Login](img/screenShots/admin.png)
+<p>O si eres el admin una página para administrar los productos del .json de la web y leer los mensajes que los usuarios hayan dejado siguiendo el enlace del footer</p>
      
 <h2>Quién mantiene y contribuye al proyecto</h2>
 
