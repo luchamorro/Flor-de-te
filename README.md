@@ -69,7 +69,7 @@
      
 <h2>Quién mantiene y contribuye al proyecto</h2>
 
-![Grupo ECOders](img/logos/bannerEcoders.png)
+![Grupo ECOders](img/logos/reBanner.png)
 
 <p>Este proyecto está mantenido por el equpido Ecoders que ofrece soporte web y el dueño del dominio particular que lo adquiriese encargdo de alimentar con información de primera mano y las peticiones de actualización, tanto de mejora como de nuevas funcionalidades</p>
 
