@@ -267,3 +267,14 @@ function cerrar() {
 document.getElementById('siguienteBtn').addEventListener('click', siguiente);
 document.getElementById('anteriorBtn').addEventListener('click', anterior);
 document.getElementById('cerrarBtn').addEventListener('click', cerrar);
+
+const btnsHero = document.querySelectorAll('.btn-hero');
+
+btnsHero.forEach(function (btn) {
+  btn.addEventListener('click', openCatalog);
+});
+
+function openCatalog() {
+  window.open('../catalogo/catalogo.html', '_self'); 
+}
+

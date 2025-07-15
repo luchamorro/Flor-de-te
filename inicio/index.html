@@ -27,18 +27,22 @@
           <li><a href="../nosotros/nosotros.html" data-translate="nosotros">Nosotros</a></li>
           <li><a href="../contacto/contacto.html" data-translate="contacto">Contacto</a></li>
         </ul>
+        
       </div>
       <div class="right-section">
-        <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." id="buscador" />
-        <div class="user-area"><i class="fa-solid fa-user"></i></div>
-        <div class="cart"><a href="../catalogo/catalogo.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
-        <select id="language-select" title="idioma">
+        <div class="buscador-idioma">
+          <input data-translate="placeholder-nav" type="search" placeholder="Buscar..." id="buscador" />
+          <select id="language-select" title="idioma">
           <option value="es">ES</option>
           <option value="en">EN</option>
         </select>
+        </div>
+        <div class="user-area"><i class="fa-solid fa-user"></i></div>
+        <div class="cart"><a href="../catalogo/catalogo.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
+
       </div>
-      <div id="fechayhora"></div>
-      <div class="hamburger-menu" onclick="toggleMenu()"><i>☰</i></div>  
+      
+       <div class="hamburger-menu" onclick="toggleMenu()"><i>☰</i></div> 
     </nav>
     
     <main>
@@ -51,7 +55,7 @@
             <p class="texto-hero" data-translate="slide1-text">
               Sabores orgánicos, frescura moderna y <br />
               el equilibrio que mereces en cada sorbo
-            </p>
+            </p><br>
             <button class="btn-hero" data-translate="slide1-button" data-translate="slide1-button" >COMPRAR</button>
           </div>
         </div>
@@ -60,10 +64,10 @@
           style="background-image: url('../img/inicio/hero2-copia.jpeg')"
         >
           <div class="hero-text-2">
-            <h1 class="titulo-hero" data-translate="slide2-title">
+            <h2 class="titulo-hero" data-translate="slide2-title">
               Vive la vida <br />
               a sorbos
-            </h1>
+            </h2>
             <p class="texto-hero" data-translate="slide2-text">
               Descubre nuestros tés orgánicos y llenos de vida. <br />
               Cuidarte nunca fue tan fácil (ni tan delicioso).
@@ -76,14 +80,14 @@
           style="background-image: url('../img/inicio/hero3-copia.jpg')"
         >
           <div class="hero-text-3">
-            <h1 class="titulo-hero" data-translate="slide3-title">
+            <h2 class="titulo-hero" data-translate="slide3-title">
               El bienestar <br />empieza <br /><b>aquí</b>
-            </h1>
+            </h2>
             <p class="texto-hero" data-translate="slide3-text">
               En "Flor de Té", cuidamos de ti con <br />blends modernos,
               orgánicos y auténticos.
             </p>
-            <button class="btn-hero" data-translate="slide3-button">COMPRAR</button>
+            <button class="btn-hero" data-translate="slide3-button"><b>COMPRAR</b></button>
           </div>
         </div>
       </section>
@@ -156,7 +160,9 @@
      <!--Popup de productos-->
      <section id="ventanaSuperpuesta" class="ventanaSuperpuesta">
       <button class ="cerrarBtn" id="cerrarBtn">X</button>
+      
       <div id="paginaProducto"></div>
+
       <div class="botones">
         <button id="anteriorBtn" class="botonFlecha" title="Anterior"><i class="fa-solid fa-arrow-left"></i></button>
         <button id="siguienteBtn" class="botonFlecha" title="Siguiente"><i class="fa-solid fa-arrow-right"></i></button>
@@ -165,9 +171,20 @@
 
       <!-- Sección del Té del Mes -->
       <section class="te-del-mes">
-        <h3 data-translate="product-of-the-month-title">Té del Mes: Té Oolong</h3>
+
         <div class="te-mes-container">
+      <h3 data-translate="product-of-the-month-title">Té del Mes: Té Oolong</h3>
+                
           <div class="te-mes-texto">
+            <div class="te-mes-imagen">
+              <img
+                src="../img/productos/04_teoolong.png"
+                alt="Té Oolong"
+                class="imagen-te"
+              />
+          </div>
+          
+          <div> 
             <h4 data-translate="product-of-the-month-subtitle">Descubre el Té Oolong</h4>
             <p data-translate="product-of-the-month-description">
               El Té Oolong, también conocido como el té de los emperadores, es
@@ -184,13 +201,7 @@
             </ul>
             <a href="../catalogo/catalogo.html"><button data-translate="product-of-the-month-cta" class="btn-te-mes">¡Compra Ahora!</button></a>
           </div>
-          <div class="te-mes-imagen">
-            <img
-              src="../img/productos/04_teoolong.png"
-              alt="Té Oolong"
-              class="imagen-te"
-            />
-          </div>
+
         </div>
       </section>
       <!-- Sección de Productos de Merchandising -->

@@ -133,17 +133,17 @@ function mostrarProducto(id) {
         <p class="precioDisplay">${producto.precio}€</p> 
         <p>100 gramos</p>
         <div class="contador">
-          <button onclick="botonMenos(${producto.id})">-</button>
+          <button class="btnMasMenos" onclick="botonMenos(${producto.id})">-</button>
           <p class="num" id="contador"></p>
-          <button onclick="botonMas(${producto.id})">+</button>
+          <button class="btnMasMenos" onclick="botonMas(${producto.id})">+</button>
           <br>
       </div>
       <br>
         <button onclick="anadirCompra(${producto.id})" id="botonCarrito"><i>Comprar</i></button>
         <p class="descripcionProducto">${producto.descripcion}</p>
-        <ul class="listaPropiedades">
-        <li>${producto.filtros}</li>
-        </ul>
+        <p class="listaPropiedades">
+        <p>${producto.filtros}</p>
+        </p>
       </div>
     `;
     document.getElementById("ventanaSuperpuesta").style.display = "flex"; // Mostrar ventana
@@ -228,6 +228,7 @@ function anadirCompra(id) {
  // Comprueba si el producto está en el carrito
  const carritoList = document.getElementById('carrito');
 
+
  const comprobacion = carritoList.querySelectorAll('.tituloProducto');
  for (let item of comprobacion) {
    if (item.textContent === producto.nombre) {
@@ -287,6 +288,9 @@ function anadirCompra(id) {
    divi.appendChild(resta);
    anadirProducto.appendChild(precio);
    anadirProducto.appendChild(borrar);
+
+  const porAhora = document.getElementById('porAhora');
+  porAhora.style.display = "none";
 
 
    carritoIcon.setAttribute('data-content', listaCompra.length);

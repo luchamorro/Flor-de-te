@@ -19,5 +19,5 @@ document.getElementById("productosBtn").addEventListener("click", function () {
 // Logout
 document.getElementById("logoutBtn").addEventListener("click", function () {
   localStorage.removeItem("usuarioConectado");
-  window.location.href = "../inicio/index.html";
+  window.location.href = "/inicio/index.html";
 });

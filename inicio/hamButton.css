@@ -3,6 +3,7 @@
     font-size: 2rem;
     font-style: normal;
     display: none;
+    cursor: pointer;
   }
   
   .right-section.active{
@@ -12,7 +13,8 @@
 @media (max-width: 768px) {
     /* Hamburger menu visibility */
     body .menu{
-      width: 94%;
+      width: 100%;
+      flex-direction: row;
     }
     .menu ul {
         display: none;
@@ -20,12 +22,12 @@
     .menu ul.active {
       display: flex;
       position: absolute;
-      background-color: rgb(255, 235, 222);; 
+      background-color: rgb(240, 239, 239);; 
       top: 5rem; 
-      right: 50%;
-      transform: translateX(50%);
+      left: 0;
+      /* transform: translateX(50%); */
       padding: 1rem;
-      border-radius: 8px; 
+     
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       width: 35rem;
     }
@@ -34,13 +36,13 @@
     }
     .menu .right-section.active .cart, .menu .right-section.active .user-area{
       display: flex;
-      position: absolute; 
-      background-color: rgb(255, 235, 222); ; 
-      top: 5rem; 
-      right: 50%;
-      transform: translateX(50%);
+      position: relative; 
+      background-color: rgb(235, 234, 233); ; 
+       top: 0; 
+      left: 0;
+     
       padding: 1rem;
-      border-radius: 8px; 
+     
       width: 35rem;
       align-items: center;
     }
@@ -51,23 +53,26 @@
       margin-left: 25rem;
     }
     .menu .right-section input[type="search"]{
-      display: flex;
-      position: absolute;
-      top: 1.2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 10rem;
+   
+      width: 8rem;
+     
+     
+   
+      
     }
     .menu .right-section #language-select{
       display: flex;
-      position: absolute;
-      right: 7rem;
+      
+       right: 1rem; 
+      
     }
   
-    .right-section input[type="text"] {
+    /* .right-section input[type="text"] {
       width: 90%;
-    }
-  
+      
+    } */
+
+
     .menu ul li a {
       padding: 1rem 0; 
       font-size: 1.2rem; 
@@ -82,70 +87,75 @@
   @media (max-width: 768px) {
     .hamburger-menu {
       display:  flex; 
+      position: fixed;
+      left:0.5rem;
+      top:6rem
+
     }
     .hamburger-menu i{
-      display: flex;
-      margin: 0rem 2rem 0 0 ;
+      display: block;
+    
+     
     }
 
   
-    .right-section.active {
+    /* .right-section.active {
       justify-content: space-between;
       width: 100%;
       padding: 0.5rem;
-    }
+    } */
   }
   /* Adjust for mobile view: Hamburger menu */
   @media (max-width: 600px) {
     body .menu{
-      width: 87%;
+      width: 100%;
+
+
+      
     }
     .menu ul li a {
       padding: 1rem ; 
       font-size: 1.2rem; 
+      
     }
-    .hamburger-menu i{
+    /* .hamburger-menu i{
       margin: 0rem 3rem 0 0 ;
-    }
+    } */
     .menu ul {
       display: none; 
       flex-direction: column;
       align-items: center;
-      background-color: rgb(255, 235, 222);
+      background-color: rgb(250, 246, 242);
       position: absolute;
       top: 55px;
-      border-radius: 0 0 5px 5px; 
+ 
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     }
     .menu .right-section.active .cart, .menu .right-section.active .user-area{
       display: flex;
       position: absolute; 
-      background-color: rgb(255, 235, 222); ; 
-      top: 5rem; 
-      right: 50%;
-      transform: translateX(50%);
+      background-color: rgb(239, 239, 239); 
+      
+      top: 22rem; 
+      left: 7rem;
+      transform: translateX(100%);
       padding: 1rem;
-      border-radius: 8px; 
-      width: 40%;
+      width: 20%;
       align-items: center;
     } 
     .menu .right-section.active .cart{
       width: 5%;
     }
     .menu .right-section.active .user-area i{
-      margin-left: 12rem;
+      margin-left: 0;
     }
     .menu ul.active { 
       display: flex;
-      top: 6rem;
-      width: 40%;
+      position: absolute;
+      top: 8.5rem;
+      left: 0;
     }
-    /* Show user-area and cart in hamburger menu */
-    .right-section .user-area,
-    .right-section .cart {
-      margin-top: 10px;
-    }
-  
+
     nav #fechayhora{
       display: none;
       opacity: 0;

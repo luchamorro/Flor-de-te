@@ -34,7 +34,7 @@ margin-bottom: 0.5rem;
       display: flex;
       flex-direction: column-reverse; /* Cambia el orden para que la imagen vaya antes del texto */
       padding: 20px;
-      margin: 100px auto;
+      margin: 11rem auto;
   }
 
   .proteccion-datos img {

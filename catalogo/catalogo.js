@@ -22,6 +22,10 @@ precios.forEach((elemento, index) => {
     } 
 });
 
+//borrar "por ahora tu carrito está vacío"
+
+
+
 // Actualizar los valores en el DOM
 const total = document.getElementById("sumaTotal");
 total.innerText = sumaTotal.toFixed(2); // Con 2 decimales

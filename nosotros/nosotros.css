@@ -34,115 +34,24 @@ p{
   transition: transform 0.3s ease-in-out;
 }
 
+.contacto_title{
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+
+}
+
 .contacto-texto:hover {
   transform: scale(1.05);
 }
 
 
 .cuerpo-contacto {
-  margin: 5rem auto;
-  padding: 100px;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+padding-top: 3rem;
 }
 
 
-/* Estilos del menú */
-.menu {
-  display: flex;
-  background-color: rgb(255, 235, 222);
-  padding: 1rem;
-  border-radius: 50px;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  position: fixed;
-  width: 98%; 
-  top: 0;
-  z-index: 100;
-}
 
-.menu img {
-  height: 65px;
-  margin-left: 2rem;;
-}
-
-.menu ul{
-  display: flex;
-  list-style: none;
-  width: 30%;
-  justify-content: space-evenly;
-}
-.menu ul li a{
-  color: var(--negro);
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-.left-section{
-  display: flex;
-  align-items: center;
-  width:70%;
-}
-
-.right-section {
-  display: flex;
-  align-items: center;
-  gap:1rem;
-  width: 30%;
-}
-
-.right-section input[type="text"] {
-  padding: 0.8rem;
-  margin-right: 10px;   
-  width: 50%;
-  border: none;
-  border-radius: 1rem;
-  background-color: rgb(255, 206, 173);
-}
-
-.right-section select {
-  padding: 0.8rem;
-  margin-left: 1rem;
-  border: none;
-  border-radius: 1rem;
-  background-color: #fff;
-}
-.user-area i, .cart i {
-  font-size: 1.3rem; 
-}
-
-.right-section .user-area,
-.right-section .cart {
-  color: var(--negro);
-  margin-left: 10px;
-}
-
-.right-section .cart {
-  position: relative;
-  width: 2.3rem;
-}
-
-.right-section .cart::after {
-  content: '4'; 
-  position: absolute;
-  top: -3px;
-  right: -15px;
-  background-color: var(--burdeos);
-  color: #fff;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 12px;
-}
-
-/* Hamburger Menu Styling */
-.hamburger-menu {
-  display: none;
-  font-size: 1.6rem;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
 
 /* Mobile View: Adjustments for 480px */
 @media (max-width: 480px) {
@@ -176,6 +85,16 @@ p{
     width: 35rem;
     align-items: center;
   }
+
+
+ .oferta-descripcion{
+  
+  padding: 1rem;
+  
+ }
+
+
+
 }
 .titulo{
   display: flex;
@@ -200,6 +119,11 @@ p{
 width: 25%;
 }
 
+.te-mes-container{
+  padding-block: 2rem;
+}
+
+
 .mission-section {
   display: flex;
   justify-content: space-around;
@@ -216,13 +140,11 @@ width: 25%;
   font-size: 20px;
 }
 
+
 .te-mes-descripcion{
  text-align: center;
- font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
- font-weight: 500;
- background-color: rgb(255, 206, 173);
- box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
- border-radius: 1rem;
+ padding-inline: 3rem;
+
 }
 
 .te-mes-titulo{
@@ -247,8 +169,8 @@ width: 25%;
   align-items: center;
 }
 
-.text-content{
-  max-width: 30%;
+.text-content2{
+  max-width: 90%;
 }
 
 .text-content h2{
@@ -261,9 +183,9 @@ width: 25%;
 }
 
 .text-content p{
-  font-size: 20px;
+  font-size: 0.9rem;
   line-height: 1.6;
-  padding: 15px;
+  padding: 1.9rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -277,7 +199,7 @@ display: flex;
 justify-content: center;
 padding-bottom: 10px;
 margin-bottom: 0 ;
-margin-top: 5rem;
+margin-top: 1rem;
 }
 
 .valores-h3{
@@ -299,12 +221,15 @@ margin-top: 5rem;
 
  .oferta-descripcion{
   text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-weight: 500;
-  background-color: rgb(255, 206, 173);
-  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+
+  
+ } 
+
+.imagen-te{
+ 
   border-radius: 1rem;
- }
+  margin-bottom: 2.5rem;
+}
 
  .oferta-titulo{
   text-align: center;

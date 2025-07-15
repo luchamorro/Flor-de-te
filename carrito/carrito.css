@@ -23,7 +23,6 @@ background-color: #f9f8f9;
 
 #cart-summary {
  
-   border-radius: 1rem;
     margin-top: 11rem;
     margin-bottom: 2rem;
     display: flex;
@@ -142,6 +141,7 @@ gap: 3rem;
   padding: 0.9rem;
   line-height: 0.3rem;
   margin: 0;
+  border: none;
 
 }
 

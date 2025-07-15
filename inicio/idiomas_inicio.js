@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   languageSelect.value = savedLanguage; // Seleccionar el idioma guardado en el dropdown
   applyLanguage(savedLanguage); // Aplicar el idioma guardado
 
-  // Mostrar la fecha y hora en el idioma correcto al cargar la página
-  mostrarFechaHora(savedLanguage === "es" ? "es-ES" : savedLanguage === "en" ? "en-EN" : "eu-EU");
+  // // Mostrar la fecha y hora en el idioma correcto al cargar la página
+  // mostrarFechaHora(savedLanguage === "es" ? "es-ES" : savedLanguage === "en" ? "en-EN" : "eu-EU");
 
   function applyLanguage(lang) {
     if (lang === "es") {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Actualizar el reloj con el idioma seleccionado
-    mostrarFechaHora(lang === "es" ? "es-ES" : lang === "en" ? "en-EN" : "eu-EU");
+    // mostrarFechaHora(lang === "es" ? "es-ES" : lang === "en" ? "en-EN" : "eu-EU");
   }
 
   // Cambiar el idioma al seleccionar una opción del dropdown

@@ -1,19 +1,21 @@
-.ventanaSuperpuesta{
+.ventanaSuperpuesta {
   position: fixed;
-  top: 10%;
-  left: 23%;
-  height: 65%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrado exacto */
+  width: 70%;
+  max-width: 90%; /* para que no se salga en pantallas pequeñas */
+  height: 85%; /* o puedes mantener 65% si lo prefieres */
   background-color: rgb(255, 255, 255);
-  border: 3px double var(--naranja);
   z-index: 19;
-  filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
-  width: 50%;
+  filter: drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
   display: none;
   flex-direction: column;
-  padding-bottom: 4rem;
-  border-radius: 1rem;
+  justify-content:end;
+  padding: 2rem 2rem 2rem;
 
 }
+
 
 .cerrar{
 
@@ -22,16 +24,9 @@ align-self:last baseline;
 }
 
 #paginaProducto{
-  height: 100%;
-  width: 80%;
+
   display: flex;
-  justify-content:first baseline;
-  /*flex-wrap: wrap;*/
-  align-items: center;
   gap: 1rem;
-  /*width: 60%;*/  
- /* padding-right: 10rem;
-  padding-left: 10rem;*/
   padding: 2rem;
   padding-left: 3rem;
 }
@@ -47,6 +42,9 @@ align-self:last baseline;
 .botones{
 display: flex;
 justify-content: center;
+align-items: end;
+gap: 3rem;
+
 
 }
 .botonCarritoProducto{
@@ -55,16 +53,11 @@ background: none;
 
 
 .divImagenProducto{
-height: auto;    
+height: 50%;    
 /*position: fixed;*/
-  right: 2rem;
-  top: 4rem;
+
 }
 
-.productoTexto{
-width: auto;
-height: auto;
-}
 
 .descripcionProducto{
   font-family: "Space Grotesk", serif;
@@ -98,9 +91,10 @@ width: 2rem;
 align-self:last baseline;
 background: none;
 color: rgb(64, 58, 58);
-padding: 2rem;
-padding-right: 3rem;
-font-size: 1.3rem;
+padding: 0.3rem;
+font-size: 0.9rem;
+border: none;
+
 }
 
 .cerrarBtn:hover{
@@ -139,139 +133,66 @@ font-size: 2rem;
 
 }
 
+.listaPropiedades{
+  width: 5rm;
+}
+
+
 
 @media only screen and (max-width: 1024px) {
 
-  .ventanaSuperpuesta{
-    position: fixed;
-    top: 0;
-    left: 5%;
-    height: 90%;
-    background-color: rgb(255, 255, 255);
-    z-index: 1000;
-    filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
-    width: 90%;
-    display: none;
-    flex-direction: column;
-    padding-bottom: 4rem;
-  
-  }
-  
-  #paginaProducto{
-    height:100%;
+   .ventanaSuperpuesta{
+   
     width: 80%;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content:center;
-    align-items: center;
-    /*width: 60%;*/  
-   /* padding-right: 10rem;
-    padding-left: 10rem;*/
     
-    padding-left: 3rem;
-    flex-wrap:wrap-reverse;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
 
-  }
   
-  .divImagenProducto{
-    height: auto;    
-    /*position: fixed;*/
-      right: 2rem;
-      top: 4rem
-    }
-    
+  } 
+
+
+#paginaProducto{
+
+  display: flex;
+ flex-direction: column;
+  padding: 0.5rem;
   
+}
 
-     .botones{
-      display: flex;
-      gap: 2rem;
-      position: relative;
-     }
+button.verPaginaProducto{
 
-     .divImagenProducto{
-      height: fit-content;  
-      width: fit-content; 
-      /*position: fixed;*/
-        right: 2rem;
-        top: 0rem;
-      }
+  font-size: 1.3rem;
+  margin-bottom: 0;
+
 
 }
 
-@media only screen and (max-width: 1050px) {
+.precioDisplay{
+  font-size: 1.1rem;
 
-  .ventanaSuperpuesta{
-    position: fixed;
-    top: 0;
-    left: 5%;
-    height: 90%;
-    background-color: rgb(255, 255, 255);
-    z-index: 1000;
-    filter:drop-shadow(0.1rem 0.1rem 0.4rem #0000003a);
-    width: 90%;
-    display: none;
-    flex-direction: column;
-    padding-bottom: 4rem;
-  
-  }
-  
-  #paginaProducto{
-    height:100%;
-    width: 80%;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content:center;
-    align-items: center;
-    /*width: 60%;*/  
-   /* padding-right: 10rem;
-    padding-left: 10rem;*/
-    
-    padding-left: 3rem;
+}
 
-  }
-  
-  .divImagenProducto{
-    height: auto;    
+.listaPropiedades{
+  width: 90%;
+}
 
-    /*position: fixed;*/
-      right: 2rem;
-      top: 4rem
-    }
-    
-  
 
-     .botones{
-      display: flex;
-      gap: 2rem;
-      bottom: 2rem;
-      padding-inline: 3rem;
-      justify-content: center;
-      position:absolute;
 
-      
+ .divImagenProducto img{
+width:175px;
+height: 181px;
 
-     }
-
-     .divImagenProducto{
-      height: fit-content;  
-      width: fit-content; 
-      /*position: fixed;*/
-        right: 2rem;
-        top: 0rem;
-      }
-
-      .productoTexto{
-        width: auto;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .descripcionProducto{
-        display: flex;
-        align-items: center;
-      }
 
 } 
+
+.descripcionProducto{
+
+  font-size: 0.8rem;
+
+
+}
+
+
+}
+

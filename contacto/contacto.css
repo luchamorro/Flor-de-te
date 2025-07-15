@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 30rem;
+  height: 0rem;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -18,11 +18,10 @@
 
 
 .cuerpo-contacto {
-  margin: 5rem auto;
-  padding: 100px;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  margin-top: 7rem;
+  padding-top: 1rem;
+
+ 
 }
 
 
@@ -313,7 +312,7 @@ button:hover {
   }
 
   .cuerpo-contacto {
-    margin: 2rem auto;
+   
     padding: 2rem;
     width: 90%;
   }
@@ -326,7 +325,7 @@ button:hover {
   }
 
   .iconos-contacto div {
-    width: 100%; /
+    width: 100%; 
     margin-bottom: 1rem; 
   }
 

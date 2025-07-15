@@ -14,6 +14,8 @@ html {
   width: 100%;
   height: 100%;
   font-family: "Space Grotesk", serif;
+  overflow-x: hidden;
+  
 }
 
 h1{
@@ -47,39 +49,48 @@ p{
 
 button{
   padding: 0.5rem 1rem; /* Relleno del botón */
-  background-color: var(--naranja); /* Color de fondo */
-  color: white; /* Color del texto */
-  border: none; /* Sin borde */
+  background-color:white; /* Color de fondo */
+  color: black; /* Color del texto */
+  border: solid 0.05rem black; /* Sin borde */
   border-radius: 5px; /* Bordes redondeados */
   cursor: pointer; /* Mano al pasar el ratón */
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: var(--burdeos); /* Cambio de color al pasar el ratón */
+  background-color: rgb(226, 222, 222); /* Cambio de color al pasar el ratón */
+}
+
+.verPaginaProducto{
+  border:none;
+}
+
+.btnMasMenos{
+  padding:0.5rem;
+  
 }
 
 /* Estilos del menú */
 
 .menu {
   display: flex;
-  align-items: center;
+  align-items: flex-end;  
+  flex-wrap:nowrap;
   justify-content: space-between;
-  background-color: rgb(255, 235, 222);
-  padding: 1rem;
-  border-radius: 50px;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
-  margin: 20px;
+  background-color: rgb(248, 248, 248);
+  padding-top: 1rem;
+  padding-inline: 1rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.078);
   line-height: normal;
   position: fixed;
-  width: 98%;
+  width: 100%;
   top: 0;
   z-index: 18;
-  box-sizing: border-box;
 }
 .menu img {
-  height: 65px;
-  margin-left: 2rem;;
+  height: 110px;
+  margin-left: 2rem;
+ 
 }
 
 .menu ul{
@@ -92,7 +103,7 @@ button:hover {
 .menu ul li a{
   color: var(--negro);
   text-decoration: none;
-  font-size: 1.2rem;
+  
 }
 
 .menu ul li a:hover{
@@ -101,24 +112,26 @@ button:hover {
 
 .left-section{
   display: flex;
-  align-items: center;
+  align-items:baseline;
   width: 85%;
 }
 
 .right-section {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap:1rem;
   width: 30%;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
 }
 
 .right-section input[type="search"] {
   padding: 8px;
-  margin-right: 10px;
+  margin-right: 30px;
   width: 50%;
   border: none;
   border-radius: 1rem;
-  background-color: rgb(255, 206, 173);
+  background-color: rgb(237, 236, 236);
 }
 /*Menu desplegable del buscador*/
 
@@ -140,12 +153,20 @@ button:hover {
   }
 
 .right-section select {
-  padding: 0.8rem;
-  margin-left: 1rem;
-  border: none;
+  padding: 0.4rem;
+  border: solid 0.5px rgb(218, 216, 216);
   border-radius: 1rem;
   background-color: #fff;
+  width: 4rem;
 }
+
+.buscador-idioma{
+  display: flex;
+
+  gap: 0.5rem;
+}
+
+
 .user-area i, .cart i {
   font-size: 1.3rem; /* Ajusta el tamaño según tus necesidades */
 }
@@ -183,11 +204,13 @@ button:hover {
   height: 100vh;
   margin: 0; /* Elimina cualquier margen */
   padding: 0; /* Elimina cualquier padding */
+ 
+
 }
 
 .hero-slide {
   position: absolute;
-  top: 0;
+  top: 3rem;
   left: 0;
   width: 100%;
   height: 100%;
@@ -197,9 +220,11 @@ button:hover {
   opacity: 0;
   transition: opacity 1s ease-in-out;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: center; 
   z-index: 1;
+  padding-left: 3rem;
+   text-shadow: 2px 2px #0000003d;
 
 }
 
@@ -211,34 +236,39 @@ button:hover {
 
 .hero-text-1 {
   max-width: 40rem;
-  text-align: right;
-  margin: 5rem 0 0 65rem;
+ 
+ 
+  
 }
 .hero-carousel p{
   color: white;
+    
+
 }
 
 .hero-text-2 {
   max-width: 40rem;
-  margin: 5rem 60rem 0 0;
   animation: none; /* Por defecto, sin animación */
 }
 
 .hero-text-3 {
   max-width: 30rem;
-  margin: 5rem 72rem 0 0;
   animation: none; /* Por defecto, sin animación */
 }
 
 .hero-carousel p{
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .hero-slide.active .hero-text {
   animation: fadeInUp 1.2s ease-in-out;
 }
-.hero-text h1 {
+.titulo-hero {
   animation: fadeInUp 1s ease-out 0.5s both;
+  font-size: 2.3rem;
+  color: white;
+
 }
+
 
 .hero-text p {
   animation: fadeInUp 1s ease-out 1s both;
@@ -290,11 +320,11 @@ ul {
 }
 /*INTRO*/
 .intro{
-  margin:7rem 0 7rem 0rem;
+  margin:7rem 2rem 7rem 2rem;
 }
 
 .intro-container {
-  width: 60%;
+  
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -316,13 +346,14 @@ ul {
 }
 
 .bestsellers-texto{
-  background-color: rgb(255, 235, 222);
+  background-color: rgb(237, 237, 237);
+  border-radius: 18px;
   width: 33%;
   height: 30%;
   padding: 2rem;
   margin: 1.5rem 0 0 11rem;
-  border-radius: 1rem;
   text-align: justify;
+    
 }
 /* Contenedor principal del catálogo */
 #catalogoProductosMini {
@@ -422,16 +453,18 @@ ul {
 /* Estilo del botón */
 .elementoProducto button {
   padding: 0.5rem 1rem; /* Relleno del botón */
-  background-color: var(--naranja); /* Color de fondo */
-  color: white; /* Color del texto */
-  border: none; /* Sin borde */
+  background-color: white; /* Color de fondo */
+  color: var(--burdeos); /* Color del texto */
+  border: solid 1px var(--burdeos); /* Sin borde */
   border-radius: 5px; /* Bordes redondeados */
   cursor: pointer; /* Mano al pasar el ratón */
   transition: background-color 0.3s ease;
+  margin-inline: 0.8rem;
 }
 
 .elementoProducto button:hover {
-  background-color: var(--burdeos); /* Cambio de color al pasar el ratón */
+background-color: var(--burdeos);  
+color: white;
 }
 
 #borrarFiltros{
@@ -449,22 +482,26 @@ ul {
 .te-del-mes {
   background-color: var(--blanco);
   padding: 2rem 0;
-  text-align: center;
+  text-align: left;
 }
 
 .te-mes-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
   margin: 0 auto;
-  max-width: 80%;
+  
   align-items: center;
+  background-color: #f4f2f2;
 }
 
 .te-mes-texto {
-  max-width: 50%;
-  text-align: left;
+ 
+ padding-inline: 4rem;
+ display: flex;
+ gap: 2rem;
+ padding-bottom: 3rem;
 }
 
 .te-mes-texto p {
@@ -486,6 +523,7 @@ ul {
 
 .btn-te-mes {
   display: inline-block;
+  margin-top: 1rem;
   padding: 0.5rem 1rem;
   color: white;
   background-color: var(--naranja);
@@ -499,14 +537,19 @@ ul {
   background-color: var(--burdeos);
 }
 
-.te-mes-imagen {
-  max-width: 40%;
-  
+.agen {
+  max-width: 100%;
+  margin-bottom: 3rem;
+display: flex;
+justify-content: center;  
 }
 
+
+
 .te-mes-imagen .imagen-te {
-  width: 100%;
+ max-width: 100%;
   border-radius: 1rem;
+  padding-right: 2rem;
 
 }
 /* Estilos para la Sección de Testimonios */
@@ -874,55 +917,6 @@ ul {
   color: white;
 }
 
-/* Estilos responsive para el menú */
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: row;
-    align-items: center;
-    padding: 0;
-  }
-
-  .menu-icon {
-    display: block;
-    position: relative;
-    top: 1rem;
-    left: 1rem;
-    z-index: 10;
-  }
-
-  .menu ul {
-    flex-direction: column;
-    width: 100%;
-    display: none;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 1rem 0;
-  }
-
-  .menu ul li {
-    width: 100%;
-    margin: 0;
-  }
-
-  .menu ul li a {
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    border-top: 1px solid var(--blanco);
-  }
-
-  .menu-toggle:checked + ul {
-    display: flex;
-  }
-
-  .hero-text {
-    width: 80%;
-    font-size: 0.8rem;
-  }
-
-  .hero-slide {
-    height: 60vh;
-  }
-}
 
 ul {
  list-style: none;
@@ -945,7 +939,6 @@ ul {
 }
 
 .carritoSection {
-  background-color: rgb(246, 234, 245);
   position: sticky;
   top: 7rem;
   z-index: 15;
@@ -954,7 +947,8 @@ ul {
   overflow-y: auto;
   overflow-x: hidden;
   margin: 0 0 0 2rem;
-  border-radius: 1rem;
+ 
+  border: rgb(216, 215, 215) solid 1px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   display: flex;
@@ -1066,7 +1060,7 @@ ul {
 }
 
 button.botonCarrito:hover {
-  background-color: var(--naranja);
+  background-color: var(--burdeos);
 }
 
 #fechayhora{
@@ -1085,42 +1079,6 @@ button.botonCarrito:hover {
   border-radius: 2rem 2rem 0 0;
 }
 
-  /*login*/
-  /* Fondo del popup /
-#popupLoginBackground {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 9998;
-  }
-
-  / Contenedor del popup /
-  #popupLoginDiv {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    display: none;
-  }
-
-  / Estilo del botón cerrar /
-  #closeLoginPopup {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #444;
-  }
-
-  / Estilos del formulario */
   .caja-login {
     display: flex;
     flex-direction: column;
@@ -1175,8 +1133,70 @@ button.botonCarrito:hover {
     transition: background-color 0.3s;
   }
 
+/* Estilos responsive para el menú */
+@media (max-width: 768px) {
 
 
+
+  .menu {
+    flex-direction: column;
+    align-items:first baseline;
+    padding-left:  1rem;
+  }
+
+  .menu-icon {
+    display: block;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+  
+  }
+
+  .menu ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.95);
+     padding: 1rem 0; 
+   }
+
+  .menu ul li {
+    width: 100%;
+    margin: 0;
+  }
+
+  .menu ul li a {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border-top: 1px solid var(--blanco);
+  } 
+
+  .menu-toggle:checked + ul {
+    display: flex;
+  }
+
+  .hero-text {
+    width: 90%;
+    font-size: 0.8rem;
+  }
+
+  .hero-slide {
+    height: 60vh;
+    padding-left: 1rem;
+    /* top:8rem; */
+  }
+
+  .hero-carousel p{
+    font-size:1.3rem ;
+  }
+
+  /* .menu .right-section{
+    position:relative;
+   
+  } */
+}
 
   /* Estilos Responsivos para Tablet */
 @media (max-width: 1024px) {
@@ -1219,10 +1239,12 @@ button.botonCarrito:hover {
   }
 
   .intro{
-    margin: 4rem 0 3rem 0;
+    margin:9rem 0 3rem 0;
   }
   .intro-container {
-    width: 90%;
+ 
+    padding-top: 3rem;
+    padding-inline: 3rem;
   }
 
   .bestsellers-container {
@@ -1233,6 +1255,8 @@ button.botonCarrito:hover {
   .bestsellers-texto {
     width: 90%;
     margin: 1rem auto;
+    
+
   }
 
   .te-del-mes{
@@ -1243,9 +1267,10 @@ button.botonCarrito:hover {
     text-align: center;
   }
 
-  .te-mes-texto {
+  /* .te-mes-texto {
     max-width: 100%;
-  }
+
+  } */
 
   .te-mes-imagen {
     max-width: 60%;
@@ -1278,9 +1303,12 @@ button.botonCarrito:hover {
   .hero-text-1,
   .hero-text-2,
   .hero-text-3 {
-    margin: 1.5rem auto;
+    margin: 0 0;
     max-width: 90%;
-    text-align: center;
+    text-align: left;
+    padding-top: 6rem;
+   
+   
   }
 
   .productos,
@@ -1296,20 +1324,18 @@ button.botonCarrito:hover {
   }
 
   .intro {
-    margin: -18rem 0 2rem 0;
+    margin-top: -18rem;
   }
 
-  .intro-container {
-    width: 95%;
-  }
+  
 
   .bestsellers-container {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
   }
 
   .bestsellers-texto {
-    width: 95%;
+    width:80%;
     margin: 1rem auto;
     text-align: center;
   }
@@ -1325,7 +1351,7 @@ button.botonCarrito:hover {
   }
 
   .te-mes-texto {
-    max-width: 100%;
+  flex-direction: column;
   }
 
   .te-mes-imagen {
